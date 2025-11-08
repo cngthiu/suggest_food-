@@ -1,0 +1,22 @@
+{
+  "id": "sup-bi-do-20p",
+  "title": "Sup bi do 20 phut",
+  "summary": "Beo ngay tu nhien tu nuoc cot dua, khong sua bo.",
+  "ingredients": [
+    { "name": "bi do", "qty": 500, "unit": "g" },
+    { "name": "hanh tay", "qty": 80, "unit": "g" },
+    { "name": "toi", "qty": 6, "unit": "g" },
+    { "name": "nuoc cot dua", "qty": 150, "unit": "ml" },
+    { "name": "muoi", "qty": 3, "unit": "g" },
+    { "name": "tieu den", "qty": 1, "unit": "g" }
+  ],
+  "steps": ["Xao hanh toi, them bi do, do nuoc vua xam xap", "Nau mem 12–15 phut, xay min", "Them nuoc cot dua, nem vua an"],
+  "cook_time": 20,
+  "servings": 3,
+  "tags": ["dairy_free", "an nhe"],
+  "diet": ["chay", "dairy_free"],
+  "device": ["noi"],
+  "image": "sup-bi-do.jpg",
+  "region": "quoc_te",
+  "nutrition": { "kcal": 260 }
+}

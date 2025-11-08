@@ -1,0 +1,21 @@
+{
+  "id": "ca-hap-xi-dau-25p",
+  "title": "Ca hap xi dau 25 phut",
+  "summary": "It dau mo, thanh dam, hop cho 4 nguoi.",
+  "ingredients": [
+    { "name": "ca basa phi le", "qty": 700, "unit": "g", "aliases": ["ca basa", "phi le ca"] },
+    { "name": "gung", "qty": 15, "unit": "g" },
+    { "name": "hanh la", "qty": 30, "unit": "g" },
+    { "name": "xi dau", "qty": 40, "unit": "ml", "aliases": ["nuoc tuong"] },
+    { "name": "dau an", "qty": 10, "unit": "ml" }
+  ],
+  "steps": ["Uop ca 10 phut", "Hap 12–15 phut", "Ruoi xi dau, rang hanh gung tren be mat"],
+  "cook_time": 25,
+  "servings": 4,
+  "tags": ["it dau", "nhanh", "thanh dam"],
+  "diet": ["normal"],
+  "device": ["noi", "bep ga"],
+  "image": "ca-hap-xi-dau.jpg",
+  "region": "mien_nam",
+  "nutrition": { "kcal": 320 }
+}

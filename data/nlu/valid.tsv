@@ -1,0 +1,10 @@
+Toi muon mon ca it dau cho 4 nguoi suggest_recipe {"protein":"ca","style":"it dau","servings":4}
+Mon chay duoi 20 phut filter_diet {"diet":"chay","time":"<=20"}
+Khong an duoc sua suggest_recipe {"allergy":["sua"]}
+Co mon ga 15 phut khong filter_time {"protein":"ga","time":"<=15"}
+Xin chao ban greeting {}
+Can mon airfryer 25 phut suggest_recipe {"device":"airfryer","time":"<=25"}
+Mon keto voi thit bo filter_diet {"diet":"keto","protein":"bo"}
+Mon thanh dam ngay nong suggest_recipe {"style":"thanh dam"}
+Mon cho 3 nguoi toi nay suggest_recipe {"servings":3}
+Mon ca nuong giao nhanh filter_time {"protein":"ca","technique":"nuong"}

@@ -1,0 +1,66 @@
+{
+  "thit ga": [
+    { "sku": "chicken-thigh-500g", "name": "Dui ga 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 200, "unit": "g" }, "similarity_prior": 0.92, "preferred": true, "category": "Meat.Poultry" },
+    { "sku": "chicken-breast-500g", "name": "Uc ga 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 200, "unit": "g" }, "similarity_prior": 0.85 }
+  ],
+  "gung": [
+    { "sku": "ginger-100g", "name": "Gung 100g", "unitSize": { "qty": 100, "unit": "g" }, "ratio_per_serving": { "qty": 7, "unit": "g" }, "similarity_prior": 0.98 }
+  ],
+  "hanh la": [
+    { "sku": "spring-onion-bundle", "name": "Hanh la bo 100g", "unitSize": { "qty": 100, "unit": "g" }, "ratio_per_serving": { "qty": 10, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "nuoc mam": [
+    { "sku": "fish-sauce-500ml", "name": "Nuoc mam 500ml", "unitSize": { "qty": 500, "unit": "ml" }, "ratio_per_serving": { "qty": 10, "unit": "ml" }, "similarity_prior": 0.95 }
+  ],
+  "duong cat": [
+    { "sku": "sugar-1kg", "name": "Duong 1kg", "unitSize": { "qty": 1000, "unit": "g" }, "ratio_per_serving": { "qty": 2, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "tieu den": [
+    { "sku": "black-pepper-50g", "name": "Tieu den 50g", "unitSize": { "qty": 50, "unit": "g" }, "ratio_per_serving": { "qty": 1, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "ca basa phi le": [
+    { "sku": "basa-fillet-500g", "name": "Phi le ca basa 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 180, "unit": "g" }, "similarity_prior": 0.93 }
+  ],
+  "xi dau": [
+    { "sku": "soy-sauce-500ml", "name": "Xi dau 500ml", "unitSize": { "qty": 500, "unit": "ml" }, "ratio_per_serving": { "qty": 12, "unit": "ml" }, "similarity_prior": 0.96, "aliases": ["nuoc tuong"] }
+  ],
+  "dau an": [
+    { "sku": "cooking-oil-1l", "name": "Dau an 1L", "unitSize": { "qty": 1000, "unit": "ml" }, "ratio_per_serving": { "qty": 6, "unit": "ml" }, "similarity_prior": 0.85 }
+  ],
+  "thit bo": [
+    { "sku": "beef-slice-300g", "name": "Thit bo lat 300g", "unitSize": { "qty": 300, "unit": "g" }, "ratio_per_serving": { "qty": 150, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "hanh tay": [
+    { "sku": "onion-500g", "name": "Hanh tay 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 40, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "toi": [
+    { "sku": "garlic-100g", "name": "Toi 100g", "unitSize": { "qty": 100, "unit": "g" }, "ratio_per_serving": { "qty": 3, "unit": "g" }, "similarity_prior": 0.95 }
+  ],
+  "dau hao": [
+    { "sku": "oyster-sauce-300g", "name": "Dau hao 300g", "unitSize": { "qty": 300, "unit": "g" }, "ratio_per_serving": { "qty": 7, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "muoi": [
+    { "sku": "salt-500g", "name": "Muoi 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 1, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "rau muong": [
+    { "sku": "water-spinach-300g", "name": "Rau muong 300g", "unitSize": { "qty": 300, "unit": "g" }, "ratio_per_serving": { "qty": 130, "unit": "g" }, "similarity_prior": 0.92 }
+  ],
+  "bi do": [
+    { "sku": "pumpkin-1kg", "name": "Bi do 1kg", "unitSize": { "qty": 1000, "unit": "g" }, "ratio_per_serving": { "qty": 160, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "nuoc cot dua": [
+    { "sku": "coconut-milk-400ml", "name": "Nuoc cot dua 400ml", "unitSize": { "qty": 400, "unit": "ml" }, "ratio_per_serving": { "qty": 50, "unit": "ml" }, "similarity_prior": 0.9 }
+  ],
+  "dau hu trang": [
+    { "sku": "tofu-firm-400g", "name": "Dau hu trang 400g", "unitSize": { "qty": 400, "unit": "g" }, "ratio_per_serving": { "qty": 130, "unit": "g" }, "similarity_prior": 0.92 }
+  ],
+  "ca chua": [
+    { "sku": "tomato-500g", "name": "Ca chua 500g", "unitSize": { "qty": 500, "unit": "g" }, "ratio_per_serving": { "qty": 90, "unit": "g" }, "similarity_prior": 0.9 }
+  ],
+  "trung ga": [
+    { "sku": "egg-10pcs", "name": "Trung ga 10 qua", "unitSize": { "qty": 10, "unit": "cai" }, "ratio_per_serving": { "qty": 1, "unit": "cai" }, "similarity_prior": 0.95 }
+  ],
+  "mat ong": [
+    { "sku": "honey-350g", "name": "Mat ong 350g", "unitSize": { "qty": 350, "unit": "g" }, "ratio_per_serving": { "qty": 8, "unit": "g" }, "similarity_prior": 0.9 }
+  ]
+}

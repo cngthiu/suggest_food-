@@ -1,0 +1,41 @@
+Toi nay nau mon ga nhanh cho 3 nguoi duoi 20 phut suggest_recipe {"protein":"ga","servings":3,"time":"<=20"}
+Muon mon ca it dau cho 4 nguoi suggest_recipe {"protein":"ca","style":"it dau","servings":4}
+Cho mon chay duoi 30 phut filter_diet {"diet":"chay","time":"<=30"}
+Minh co di ung dau phong, goi y mon thich hop allergy_notice {"allergy":["dau phong"]}
+Co mon keto nao voi thit bo khong suggest_recipe {"diet":"keto","protein":"bo"}
+Chi co airfryer, mon 20 den 25 phut suggest_recipe {"device":"airfryer","time":"[20,25]"}
+Ngan sach duoi 150k cho 3 nguoi filter_time {"budget_per_meal":150000,"servings":3}
+Mon mien bac nhanh it dau suggest_recipe {"region":"mien_bac","style":"it dau","time":"<=30"}
+Khong an duoc sua, goi y mon ca suggest_recipe {"allergy":["sua"],"protein":"ca"}
+Mon ga nhung khong hanh la suggest_recipe {"protein":"ga","exclude_ingredient":["hanh la"]}
+Xin chao greeting {}
+Chao ban greeting {}
+Toi can goi y mon cho toi nay suggest_recipe {}
+Mon ga 15 phut filter_time {"protein":"ga","time":"<=15"}
+Mon ca nuong filter_time {"protein":"ca","technique":"nuong"}
+Mon chay giau dam filter_diet {"diet":"chay","macro":"high_protein"}
+Canh an nong ngay mua suggest_recipe {"temperature":"hot","mood":"rainy_day"}
+Mon mang di lam com hop suggest_recipe {"meal":"lunchbox","flavor":"man"}
+Toi muon mon ca hap thanh dam suggest_recipe {"protein":"ca","style":"thanh dam","technique":"hap"}
+Mon rau don gian 10 phut suggest_recipe {"diet":"chay","time":"<=10"}
+Mon trung cho 2 nguoi suggest_recipe {"protein":"trung","servings":2}
+Ga nuong 25 phut bang airfryer suggest_recipe {"protein":"ga","device":"airfryer","time":"<=25"}
+Mon viet cho 3 nguoi suggest_recipe {"region":"mien_bac","servings":3}
+Goi y thuc don 3 ngay voi ca meal_plan {"days":3,"protein":"ca"}
+Mon it dau nhung dam da suggest_recipe {"style":"it dau","flavor":"dam da"}
+Mon keto 20 phut filter_diet {"diet":"keto","time":"<=20"}
+Mon chay khong hanh la suggest_recipe {"diet":"chay","exclude_ingredient":["hanh la"]}
+Mon ca danh cho 4 nguoi filter_time {"protein":"ca","servings":4}
+Mon bo xao nhanh filter_time {"protein":"bo","time":"<=15"}
+Toi muon mon sup bi do greeting {}
+Sup bi do khong sua filter_diet {"diet":"dairy_free"}
+Mon dau hu sot ca chua greeting {}
+Mon trung chien ca chua greeting {}
+Mon rau muong xao toi greeting {}
+Mon ga rang gung greeting {}
+Mon ga nuong mat ong greeting {}
+Chon mon ca hap xi dau greeting {}
+Mon ca thanh dam it dau filter_time {"protein":"ca","style":"it dau"}
+Mon nhanh cho toi nay filter_time {"time":"<=20"}
+Mon cho tre em 2 tuoi filter_diet {"audience":"kid_2_3"}
+Mon giam can buoi toi suggest_recipe {"goal":"weight_loss","meal":"dinner"}

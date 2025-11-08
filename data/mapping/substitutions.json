@@ -1,0 +1,21 @@
+{
+  "hanh la": [
+    { "name": "hanh tay la (boa ro)", "similarity": 0.7, "note": "huong vi gan" },
+    { "name": "rau mui", "similarity": 0.45, "note": "chi trang tri" }
+  ],
+  "thit ga": [
+    { "name": "uc ga", "similarity": 0.85, "note": "it beo hon" }
+  ],
+  "xi dau": [
+    { "name": "nuoc mam", "similarity": 0.35, "note": "khac huong, can can nhac" }
+  ],
+  "dau an": [
+    { "name": "dau oliu", "similarity": 0.6, "note": "thay duoc trong xao nhanh" }
+  ],
+  "dau hu trang": [
+    { "name": "dau hu non", "similarity": 0.7, "note": "ket cau mem hon" }
+  ],
+  "bi do": [
+    { "name": "khoai tay", "similarity": 0.5, "note": "vitamin khac biet" }
+  ]
+}

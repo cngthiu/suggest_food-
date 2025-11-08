@@ -1,0 +1,22 @@
+{
+  "id": "ga-rang-gung-20p",
+  "title": "Ga rang gung 20 phut",
+  "summary": "Mon nhanh, it dau, phu hop bua toi cho 3 nguoi.",
+  "ingredients": [
+    { "name": "thit ga", "qty": 600, "unit": "g", "aliases": ["ga", "thit ga dui"] },
+    { "name": "gung", "qty": 20, "unit": "g" },
+    { "name": "hanh la", "qty": 30, "unit": "g" },
+    { "name": "nuoc mam", "qty": 30, "unit": "ml" },
+    { "name": "duong cat", "qty": 5, "unit": "g" },
+    { "name": "tieu den", "qty": 2, "unit": "g" }
+  ],
+  "steps": ["So che ga, thai gung soi", "Uop ga voi nuoc mam, duong 10 phut", "Rang lua vua 12–15 phut den khi san"],
+  "cook_time": 20,
+  "servings": 3,
+  "tags": ["it dau", "nhanh", "viet"],
+  "diet": ["normal"],
+  "device": ["chao"],
+  "image": "ga-rang-gung.jpg",
+  "region": "mien_bac",
+  "nutrition": { "kcal": 480 }
+}
