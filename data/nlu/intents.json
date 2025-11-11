@@ -3,8 +3,8 @@
     "suggest_recipe",
     "filter_time",
     "filter_diet",
-    "allergy_notice",
     "meal_plan",
-    "greeting"
+    "greeting",
+    "allergy_notice"
   ]
 }

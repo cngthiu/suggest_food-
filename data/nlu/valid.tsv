@@ -1,10 +1,10 @@
-Toi muon mon ca it dau cho 4 nguoi suggest_recipe {"protein":"ca","style":"it dau","servings":4}
-Mon chay duoi 20 phut filter_diet {"diet":"chay","time":"<=20"}
-Khong an duoc sua suggest_recipe {"allergy":["sua"]}
-Co mon ga 15 phut khong filter_time {"protein":"ga","time":"<=15"}
-Xin chao ban greeting {}
-Can mon airfryer 25 phut suggest_recipe {"device":"airfryer","time":"<=25"}
-Mon keto voi thit bo filter_diet {"diet":"keto","protein":"bo"}
-Mon thanh dam ngay nong suggest_recipe {"style":"thanh dam"}
-Mon cho 3 nguoi toi nay suggest_recipe {"servings":3}
-Mon ca nuong giao nhanh filter_time {"protein":"ca","technique":"nuong"}
+Tối nay làm món gà đơn giản trong 20 phút được không?   suggest_recipe   {"protein":"ga","time":"<=20"}
+Cho tôi món cá basa ít dầu ăn   suggest_recipe   {"protein":"ca","species":"basa","style":"it dau"}
+Món nào nấu bằng nồi trong khoảng 25 phút?  filter_time {"device":"noi","time":"<=25"}
+Tôi đang ăn chay, có món rau củ nào dễ nấu không?   filter_diet  {"diet":"chay","category":"rau cu"}
+Gợi ý món heo ba rọi rim mặn để ăn cơm  suggest_recipe  {"protein":"heo","cut":"ba roi","style":"rim man","tags":"dua com"}
+Món tôm nào nhanh nhất khoảng 10 phút?  filter_time {"protein":"tom","time":"<=10"}
+Có món bò nào hợp ăn sáng, ít dầu mỡ?   filter_diet  {"protein":"bo","style":"it dau","tags":"an sang"}
+Tôi bị dị ứng hải sản, có món nào thay thế không?   allergy_notice   {"exclude":"hai san","allergy":["hai san"]}
+Tôi muốn món canh thanh mát, có trứng vịt   filter_diet  {"protein":"trung vit","tags":"canh"}
+Xin chào, bạn gợi ý món gì hôm nay? smalltalk_greeting {}

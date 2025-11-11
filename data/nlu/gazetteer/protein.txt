@@ -1,6 +1,7 @@
-ga
-bo
-ca
-tom
-dau hu
-trung
+ga|thit ga|uc ga|canh ga
+bo|thit bo|dui bo|ba chi bo
+heo|thit heo|ba roi|suon non|heo xay
+ca|ca basa|basa|ca dieu hong
+tom|tom tuoi
+muc|muc tuoi
+trung|trung ga|trung vit

@@ -1,0 +1,24 @@
+{
+  "id": "canh-trung-vit-bi-xanh-18p",
+  "title": "Canh trung vit nau bi xanh 18 phut",
+  "summary": "Canh la mieng, beo nhe tu trung vit va bi xanh.",
+  "ingredients": [
+    { "name": "trung vit", "qty": 2, "unit": "cai" },
+    { "name": "bi xanh", "qty": 400, "unit": "g" },
+    { "name": "muoi", "qty": 4, "unit": "g" },
+    { "name": "tieu den", "qty": 1, "unit": "g" }
+  ],
+  "steps": [
+    "Danh trung vit nhe tay; bi xanh got vo, cat mieng.",
+    "Nau nuoc soi, cho bi xanh vao.",
+    "Ro trung vao khuay nhe, nem muoi vua an, rai tieu truoc khi tat bep."
+  ],
+  "cook_time": 18,
+  "servings": 3,
+  "tags": ["canh", "thanh dam"],
+  "diet": ["normal"],
+  "device": ["noi"],
+  "image": "canh-trung-vit-bi-xanh.jpg",
+  "region": "mien_bac",
+  "nutrition": { "kcal": 260 }
+}

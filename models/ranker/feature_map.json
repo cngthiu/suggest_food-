@@ -1,0 +1,10 @@
+{
+  "features": [
+    "semantic_sim",
+    "bm25",
+    "time_fit",
+    "diet_fit",
+    "availability",
+    "promo"
+  ]
+}

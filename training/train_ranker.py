@@ -39,11 +39,13 @@ def main():
     # Here, we provide a stub training showcasing LightGBM API.
 
     # Dummy training to make script runnable; replace with real features later.
-    X = np.random.rand(100, 6).astype(np.float32)
-    y = np.random.rand(100).astype(np.float32)
-    qid = np.array([10]*10 + [5]*5 + [20]*20 + [65]*65)  # group sizes sum to 100
+    # group_sizes must sum to len(X); each entry = #documents for one query.
+    group_sizes = np.array([10, 5, 20, 65], dtype=np.int32)
+    X = np.random.rand(group_sizes.sum(), 6).astype(np.float32)
+    # LightGBM ranking expects relevance labels as ints (0,1,2...) unless label_gain set.
+    y = np.random.randint(0, 3, size=group_sizes.sum(), dtype=np.int32)
 
-    dataset = lgb.Dataset(X, label=y, group=qid)
+    dataset = lgb.Dataset(X, label=y, group=group_sizes)
     params = dict(objective='lambdarank', metric='ndcg', ndcg_eval_at=[5])
     model = lgb.train(params, dataset, num_boost_round=50)
     model.save_model(str(out_dir/"lgbm.txt"))

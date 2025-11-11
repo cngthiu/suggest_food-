@@ -3,7 +3,7 @@
 
 import os, json, pickle
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
 
 from .utils import norm_text, load_json
@@ -22,6 +22,44 @@ except Exception:
     import re
     def vi_tokenize(s: str):
         return re.findall(r"[a-z0-9]+", s.lower())
+
+
+def resolve_encoder_device() -> str:
+    """Decide whether SentenceTransformer should run on CPU or GPU."""
+    pref = os.environ.get("SENTENCE_EMB_DEVICE", "auto").lower()
+    if pref != "auto":
+        return pref
+    try:
+        import torch
+        if torch.cuda.is_available():
+            return "cuda"
+    except Exception:
+        pass
+    return "cpu"
+
+
+def recipe_matches_protein(recipe: Dict[str, Any], protein: str) -> bool:
+    """Heuristic check whether recipe focuses on requested protein."""
+    if not protein:
+        return True
+    target = norm_text(protein, lowercase=True, strip_dia=True)
+    if not target:
+        return True
+    # check title & tags
+    title = norm_text(recipe.get("title", ""), lowercase=True, strip_dia=True)
+    if target in title:
+        return True
+    for tag in recipe.get("tags", []):
+        if target in norm_text(str(tag), lowercase=True, strip_dia=True):
+            return True
+    # check ingredients + aliases
+    for ing in recipe.get("ingredients", []):
+        names = [ing.get("name", "")]
+        names.extend(ing.get("aliases", []))
+        for name in names:
+            if target in norm_text(name, lowercase=True, strip_dia=True):
+                return True
+    return False
 
 
 class NLU:
@@ -88,7 +126,7 @@ class NLU:
 
 
 class Retriever:
-    def __init__(self, cfg: Dict[str, Any]):
+    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None):
         self.cfg = cfg
         paths = cfg["paths"]
         # BM25
@@ -99,11 +137,12 @@ class Retriever:
         # FAISS
         import faiss
         self.faiss = faiss.read_index(paths["faiss_index"])
-        self.emb = np.load(paths["embed_matrix"]).astype(np.float32)
+        self.emb = np.load(paths["embed_matrix"], mmap_mode="r")
         with open(paths["ids_path"], 'r', encoding='utf-8') as f:
             self.recipe_ids = json.load(f)["recipe_ids"]
         # Load recipes for metadata
         self.recipes = self._load_recipes(paths["recipes_dir"])
+        self.mapping = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
 
         self.idx_cfg = cfg["indexing"]
         self.ret_cfg = cfg["retrieval"]
@@ -111,7 +150,9 @@ class Retriever:
 
         # Prepare embedder for query
         from sentence_transformers import SentenceTransformer
-        self.embedder = SentenceTransformer(self.ret_cfg["embedder_model"])    
+        device_hint = resolve_encoder_device()
+        self.embedder = SentenceTransformer(self.ret_cfg["embedder_model"], device=device_hint)
+        self.encoder_device = device_hint
 
     def _load_recipes(self, recipes_dir: str) -> Dict[str, Any]:
         import glob
@@ -164,8 +205,24 @@ class Retriever:
         D, I = self.faiss.search(np.array(q_emb, dtype=np.float32), self.hy_cfg["k_emb"])  # (1, k)
         I = I[0]; D = D[0]
 
-        # Merge
-        candidate_indices = set(top_bm25_idx.tolist()) | set(I.tolist())
+        # Merge with ordering + cap to keep latency predictable
+        candidate_indices: List[int] = []
+        seen = set()
+        cap = int(self.hy_cfg.get("k_total", 0))
+
+        def add_indices(indices: List[int]) -> bool:
+            for idx in indices:
+                if idx < 0 or idx in seen:
+                    continue
+                candidate_indices.append(int(idx))
+                seen.add(int(idx))
+                if cap and len(candidate_indices) >= cap:
+                    return True
+            return False
+
+        if not add_indices(top_bm25_idx.tolist()):
+            add_indices(I.tolist())
+
         cand = []
         for idx in candidate_indices:
             rid = self.recipe_ids[idx]
@@ -216,8 +273,7 @@ class Retriever:
 
     def _availability_ratio(self, recipe: Dict[str, Any]) -> float:
         # simple check: every ingredient exists in mapping (stock not considered here)
-        paths = self.cfg["paths"]
-        mapping = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+        mapping = self.mapping
         need = recipe.get("ingredients", [])
         if not need:
             return 0.0
@@ -230,10 +286,10 @@ class Retriever:
 
 
 class CartMapper:
-    def __init__(self, cfg: Dict[str, Any]):
+    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None):
         self.cfg = cfg
         paths = cfg["paths"]
-        self.map = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+        self.map = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
         subs_path = os.path.join(paths["mapping_dir"], "substitutions.json")
         self.subs = load_json(subs_path) if os.path.exists(subs_path) else {}
 
@@ -293,6 +349,20 @@ def apply_slot_constraints(cand: List[Dict[str, Any]], slots: Dict[str, Any]) ->
         if slots.get("diet"):
             dfit = 1.0 if slots["diet"] in r.get("diet", []) else 0.0
         c["diet_fit"] = float(dfit)
+        # protein
+        pfit = 1.0
+        if slots.get("protein"):
+            pfit = 1.0 if recipe_matches_protein(r, slots["protein"]) else 0.0
+        c["protein_fit"] = float(pfit)
+        # servings
+        sfit = 1.0
+        desired_serv = slots.get("servings")
+        actual_serv = r.get("servings")
+        if desired_serv and actual_serv:
+            diff = abs(float(actual_serv) - float(desired_serv))
+            denom = max(float(desired_serv), 1.0)
+            sfit = max(0.0, 1.0 - diff/denom)
+        c["servings_fit"] = float(sfit)
 
 
 def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -303,6 +373,8 @@ def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Di
             w.get("w_semantic", 0.35) * c.get("semantic_n", 0.0) +
             w.get("w_timefit",  0.20) * c.get("time_fit", 1.0) +
             w.get("w_dietfit",  0.15) * c.get("diet_fit", 1.0) +
+            w.get("w_protein", 0.0) * c.get("protein_fit", 1.0) +
+            w.get("w_servings", 0.0) * c.get("servings_fit", 1.0) +
             w.get("w_avail",    0.15) * c.get("availability_ratio", 0.0) +
             w.get("w_promo",    0.10) * c.get("promo_coverage", 0.0) +
             w.get("w_history",  0.05) * c.get("history_affinity", 0.0)
@@ -319,16 +391,24 @@ class Pipeline:
         paths = self.cfg["paths"]
         # modules
         gaz_dir = "serverAI/data/nlu/gazetteer"
+        ingredient_map = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
         self.nlu = NLU(self.cfg["paths"]["nlu_model_dir"], gaz_dir)
-        self.retriever = Retriever(self.cfg)
-        self.mapper = CartMapper(self.cfg)
+        self.retriever = Retriever(self.cfg, ingredient_map=ingredient_map)
+        self.mapper = CartMapper(self.cfg, ingredient_map=ingredient_map)
+        # optional ranker
+        self.ranker = None
+        self.rank_features: List[str] = []
+        self._load_ranker(paths.get("ranker_dir"))
 
     def query(self, text: str, top_k: int = 5) -> Dict[str, Any]:
         intent = self.nlu.predict_intent(text)
         slots = self.nlu.extract_slots(text)
         cands = self.retriever.retrieve(text)
         apply_slot_constraints(cands, slots)
-        ranked = score_candidates(cands, self.cfg)[:top_k]
+        if self.ranker:
+            ranked = self._rank_with_lgbm(cands)[:top_k]
+        else:
+            ranked = score_candidates(cands, self.cfg)[:top_k]
         # format
         out_cand = []
         for c in ranked:
@@ -343,9 +423,11 @@ class Pipeline:
                 "score": c.get("score"),
                 "score_factors": {
                     "semantic": c.get("semantic_n"),
+                    "bm25_n":  c.get("bm25_n"),            # phải có! (đừng để default 0.5)
                     "time_fit": c.get("time_fit"),
                     "diet_fit": c.get("diet_fit"),
-                    "availability_ratio": c.get("availability_ratio")
+                    "availability_ratio": c.get("availability_ratio"),
+                    "promo_coverage": c.get("promo_coverage", 0.0)
                 }
             })
         return {
@@ -369,3 +451,63 @@ class Pipeline:
             "totals": {"estimated": cart["estimated"], "currency": cart["currency"]},
             "notes": cart["notes"]
         }
+
+    # ---- Ranker helpers ----
+
+    def _load_ranker(self, ranker_dir: Optional[str]) -> None:
+        if not ranker_dir:
+            return
+        model_path = Path(ranker_dir)/"lgbm.txt"
+        fmap_path = Path(ranker_dir)/"feature_map.json"
+        if not model_path.exists():
+            return
+        try:
+            import lightgbm as lgb
+            self.ranker = lgb.Booster(model_file=str(model_path))
+            if fmap_path.exists():
+                with open(fmap_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    self.rank_features = data.get("features", [])
+            if not self.rank_features:
+                self.rank_features = ["semantic_n", "bm25_n", "time_fit", "diet_fit", "protein_fit", "servings_fit", "availability_ratio"]
+            print(f"[INFO] Loaded ranker with {len(self.rank_features)} features from {model_path}")
+        except Exception as e:
+            print(f"[WARN] Failed to load ranker: {e}")
+            self.ranker = None
+            self.rank_features = []
+
+    def _rank_with_lgbm(self, cand: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        if not cand or not self.ranker:
+            return score_candidates(cand, self.cfg)
+        feature_alias = {
+            "semantic_sim": "semantic_n",
+            "semantic": "semantic_n",
+            "bm25": "bm25_n",
+            "bm25_n": "bm25_n",
+            "time_fit": "time_fit",
+            "diet_fit": "diet_fit",
+            "protein_fit": "protein_fit",
+            "servings_fit": "servings_fit",
+            "availability": "availability_ratio",
+            "availability_ratio": "availability_ratio",
+            "promo_coverage": "promo_coverage",
+            "history_affinity": "history_affinity"
+        }
+        feats = []
+        for c in cand:
+            vec = []
+            for name in self.rank_features:
+                key = feature_alias.get(name, name)
+                vec.append(float(c.get(key, 0.0)))
+            feats.append(vec)
+        feats_arr = np.asarray(feats, dtype=np.float32)
+        try:
+            scores = self.ranker.predict(feats_arr)
+        except Exception as e:
+            print(f"[WARN] Ranker prediction failed: {e}")
+            return score_candidates(cand, self.cfg)
+        out = []
+        for c, s in zip(cand, scores):
+            out.append({**c, "score": float(s)})
+        out.sort(key=lambda x: x["score"], reverse=True)
+        return out

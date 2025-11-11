@@ -1,0 +1,26 @@
+{
+  "id": "uc-ga-xao-hanh-tay-ca-rot-15p",
+  "title": "Uc ga xao hanh tay ca rot 15 phut",
+  "summary": "Uc ga mem, xao nhanh voi hanh tay va ca rot.",
+  "ingredients": [
+    { "name": "thit ga", "qty": 450, "unit": "g" },
+    { "name": "hanh tay", "qty": 80, "unit": "g" },
+    { "name": "ca rot", "qty": 150, "unit": "g" },
+    { "name": "dau an", "qty": 15, "unit": "ml" },
+    { "name": "hat nem", "qty": 4, "unit": "g" },
+    { "name": "tieu den", "qty": 1, "unit": "g" }
+  ],
+  "steps": [
+    "Uc ga thai mieng; hanh tay lat; ca rot soi.",
+    "Xao ga voi dau an, nem hat nem.",
+    "Cho hanh tay, ca rot vao dao nhanh; rau chin tai, tat bep, rai tieu."
+  ],
+  "cook_time": 15,
+  "servings": 3,
+  "tags": ["nhanh", "it dau"],
+  "diet": ["normal"],
+  "device": ["chao"],
+  "image": "uc-ga-xao-hanh-tay-ca-rot.jpg",
+  "region": "mien_bac",
+  "nutrition": { "kcal": 430 }
+}

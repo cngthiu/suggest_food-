@@ -1,0 +1,25 @@
+{
+  "id": "trung-ga-chien-ca-chua-10p",
+  "title": "Trung ga chien ca chua 10 phut",
+  "summary": "Trung ga chien mem, sot ca chua chua ngot.",
+  "ingredients": [
+    { "name": "trung ga", "qty": 4, "unit": "cai" },
+    { "name": "ca chua", "qty": 250, "unit": "g" },
+    { "name": "duong cat", "qty": 5, "unit": "g" },
+    { "name": "muoi", "qty": 3, "unit": "g" },
+    { "name": "dau an", "qty": 15, "unit": "ml" }
+  ],
+  "steps": [
+    "Danh trung, chien mem; gat ra dia.",
+    "Xao ca chua voi chut duong/muoi cho ra nuoc.",
+    "Do trung vao tron nhe; nem lai vua an."
+  ],
+  "cook_time": 10,
+  "servings": 3,
+  "tags": ["nhanh", "an nhe"],
+  "diet": ["normal"],
+  "device": ["chao"],
+  "image": "trung-ga-chien-ca-chua.jpg",
+  "region": "mien_bac",
+  "nutrition": { "kcal": 300 }
+}

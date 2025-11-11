@@ -1,21 +1,16 @@
 {
   "hanh la": [
-    { "name": "hanh tay la (boa ro)", "similarity": 0.7, "note": "huong vi gan" },
-    { "name": "rau mui", "similarity": 0.45, "note": "chi trang tri" }
+    { "name": "hanh tay", "reason": "Tao mui hanh, thay the mot phan huong vi", "similarity": 0.6 },
+    { "name": "rau muong", "reason": "Dung phan la xanh lam topping (tuy chon)", "similarity": 0.2 }
   ],
-  "thit ga": [
-    { "name": "uc ga", "similarity": 0.85, "note": "it beo hon" }
+  "toi": [
+    { "name": "hanh la", "reason": "Tang mui thom, phan nao bo sung thieu toi", "similarity": 0.4 },
+    { "name": "tieu den", "reason": "Them huong cay nong khi thieu toi", "similarity": 0.3 }
   ],
-  "xi dau": [
-    { "name": "nuoc mam", "similarity": 0.35, "note": "khac huong, can can nhac" }
+  "ca basa phi le": [
+    { "name": "ca basa", "reason": "Dung ca nguyen mieng, cat phi le khi che bien", "similarity": 0.9 }
   ],
-  "dau an": [
-    { "name": "dau oliu", "similarity": 0.6, "note": "thay duoc trong xao nhanh" }
-  ],
-  "dau hu trang": [
-    { "name": "dau hu non", "similarity": 0.7, "note": "ket cau mem hon" }
-  ],
-  "bi do": [
-    { "name": "khoai tay", "similarity": 0.5, "note": "vitamin khac biet" }
+  "trung ga": [
+    { "name": "trung vit", "reason": "Thay the tuong doi trong cac mon chien/kho", "similarity": 0.7 }
   ]
 }

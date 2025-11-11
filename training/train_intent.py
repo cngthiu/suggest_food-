@@ -5,7 +5,7 @@ Input: train.tsv, valid.tsv with format: text \t intent \t slots_json
 Output: models/nlu_intent/{vectorizer.pkl, classifier.pkl, label_map.json}
 """
 
-import os, json, argparse, sys
+import os, json, argparse, sys, re
 from pathlib import Path
 import unicodedata
 
@@ -30,6 +30,8 @@ def load_tsv(path: str):
             line = line.strip()
             if not line: continue
             parts = line.split("\t")
+            if len(parts) < 2:
+                parts = re.split(r"\s{2,}", line)
             if len(parts) < 2:
                 continue
             text = parts[0]

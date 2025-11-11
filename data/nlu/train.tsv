@@ -1,41 +1,40 @@
-Toi nay nau mon ga nhanh cho 3 nguoi duoi 20 phut suggest_recipe {"protein":"ga","servings":3,"time":"<=20"}
-Muon mon ca it dau cho 4 nguoi suggest_recipe {"protein":"ca","style":"it dau","servings":4}
-Cho mon chay duoi 30 phut filter_diet {"diet":"chay","time":"<=30"}
-Minh co di ung dau phong, goi y mon thich hop allergy_notice {"allergy":["dau phong"]}
-Co mon keto nao voi thit bo khong suggest_recipe {"diet":"keto","protein":"bo"}
-Chi co airfryer, mon 20 den 25 phut suggest_recipe {"device":"airfryer","time":"[20,25]"}
-Ngan sach duoi 150k cho 3 nguoi filter_time {"budget_per_meal":150000,"servings":3}
-Mon mien bac nhanh it dau suggest_recipe {"region":"mien_bac","style":"it dau","time":"<=30"}
-Khong an duoc sua, goi y mon ca suggest_recipe {"allergy":["sua"],"protein":"ca"}
-Mon ga nhung khong hanh la suggest_recipe {"protein":"ga","exclude_ingredient":["hanh la"]}
-Xin chao greeting {}
-Chao ban greeting {}
-Toi can goi y mon cho toi nay suggest_recipe {}
-Mon ga 15 phut filter_time {"protein":"ga","time":"<=15"}
-Mon ca nuong filter_time {"protein":"ca","technique":"nuong"}
-Mon chay giau dam filter_diet {"diet":"chay","macro":"high_protein"}
-Canh an nong ngay mua suggest_recipe {"temperature":"hot","mood":"rainy_day"}
-Mon mang di lam com hop suggest_recipe {"meal":"lunchbox","flavor":"man"}
-Toi muon mon ca hap thanh dam suggest_recipe {"protein":"ca","style":"thanh dam","technique":"hap"}
-Mon rau don gian 10 phut suggest_recipe {"diet":"chay","time":"<=10"}
-Mon trung cho 2 nguoi suggest_recipe {"protein":"trung","servings":2}
-Ga nuong 25 phut bang airfryer suggest_recipe {"protein":"ga","device":"airfryer","time":"<=25"}
-Mon viet cho 3 nguoi suggest_recipe {"region":"mien_bac","servings":3}
-Goi y thuc don 3 ngay voi ca meal_plan {"days":3,"protein":"ca"}
-Mon it dau nhung dam da suggest_recipe {"style":"it dau","flavor":"dam da"}
-Mon keto 20 phut filter_diet {"diet":"keto","time":"<=20"}
-Mon chay khong hanh la suggest_recipe {"diet":"chay","exclude_ingredient":["hanh la"]}
-Mon ca danh cho 4 nguoi filter_time {"protein":"ca","servings":4}
-Mon bo xao nhanh filter_time {"protein":"bo","time":"<=15"}
-Toi muon mon sup bi do greeting {}
-Sup bi do khong sua filter_diet {"diet":"dairy_free"}
-Mon dau hu sot ca chua greeting {}
-Mon trung chien ca chua greeting {}
-Mon rau muong xao toi greeting {}
-Mon ga rang gung greeting {}
-Mon ga nuong mat ong greeting {}
-Chon mon ca hap xi dau greeting {}
-Mon ca thanh dam it dau filter_time {"protein":"ca","style":"it dau"}
-Mon nhanh cho toi nay filter_time {"time":"<=20"}
-Mon cho tre em 2 tuoi filter_diet {"audience":"kid_2_3"}
-Mon giam can buoi toi suggest_recipe {"goal":"weight_loss","meal":"dinner"}
+Tôi muốn nấu món gà nhanh cho 3 người duới 20 phút	suggest_recipe	{"protein":"ga","servings":3,"time":"<=20"}
+Cho tôi món cá ít dầu cho 4 người	suggest_recipe	{"protein":"ca","style":"it dau","servings":4}
+Gợi ý món chay dưới 30 phút	filter_diet	{"diet":"chay","time":"<=30"}
+Tôi chỉ có airfryer và 25 phút, nấu gì được?	suggest_recipe	{"device":"airfryer","time":"<=25"}
+Tôi bị dị ứng sữa, có món cá nào phù hợp không?	allergy_notice	{"allergy":["sua"],"protein":"ca"}
+Hôm nay ăn thịt bò, khoảng 15 phút thôi	suggest_recipe	{"protein":"bo","time":"<=15"}
+Làm món canh thanh đạm với tôm	suggest_recipe	{"protein":"tom","tags":"canh"}
+Tôi muốn món kho từ sườn non	suggest_recipe	{"protein":"heo","cut":"suon non"}
+Tư vấn món cho người ăn keto	filter_diet	{"diet":"keto"}
+Món nào không có hải sản?	filter_diet	{"exclude":"hai san"}
+Chào bạn	smalltalk_greeting	{}
+Gợi ý món xào ít dầu với rau muống	filter_diet	{"style":"it dau","ingredient":"rau muong"}
+Món gà nào cho trẻ nhỏ ăn cơm	suggest_recipe	{"protein":"ga","tags":"dua com"}
+Cho tôi món cá basa 25 phút	filter_time	{"protein":"ca","species":"basa","time":"<=25"}
+Món mực dễ nấu trong 10 phút	suggest_recipe	{"protein":"muc","time":"<=10"}
+Tôi muốn món trứng vịt đơn giản	filter_diet	{"protein":"trung vit"}
+Có món heo ba rọi nào xào ngon không?	suggest_recipe	{"protein":"heo","cut":"ba roi"}
+Tôi ăn kiêng, món nào ít dầu	filter_diet	{"style":"it dau"}
+Món bò nào nhiều đạm, ít thời gian nấu	filter_time	{"protein":"bo","time":"<=20"}
+Tôi cần món cho 2 người, khoảng 30 phút	filter_time	{"servings":2,"time":"<=30"}
+Tôi muốn nấu món thịt heo xay 15 phút để ăn cơm suggest_recipe {"protein":"heo","cut":"xay","time":"<=15","tags":"dua com"}
+Có món nào dùng mực và khoai tây không? suggest_recipe {"protein":"muc","ingredient":"khoai tay"}
+Gợi ý món cho 4 người, không dùng dầu ăn    filter_diet   {"servings":4,"exclude":"dau an"}
+Tối nay ăn món bò xào hành tây trong 15 phút    suggest_recipe    {"protein":"bo","ingredient":"hanh tay","time":"<=15"}
+Tôi muốn ăn canh thanh mát nấu với cá diêu hồng filter_diet    {"protein":"ca","species":"dieu hong","tags":"canh"}
+Có món nào ít thời gian, dùng trứng gà không?   filter_time  {"protein":"trung ga","time":"<=10"}
+Cho tôi món gà chiên bằng airfryer  filter_diet {"protein":"ga","device":"airfryer"}
+Tôi muốn ăn món tôm xào rau muống ít dầu    filter_diet   {"protein":"tom","ingredient":"rau muong","style":"it dau"}
+Tôi cần món bò nấu 30 phút cho 3 người  suggest_recipe  {"protein":"bo","servings":3,"time":"<=30"}
+Có món cá nào hợp với người dị ứng sữa? allergy_notice {"protein":"ca","allergy":["sua"]}
+Món nào dùng rau muống và dễ nấu?   suggest_recipe   {"ingredient":"rau muong","tags":"nhanh"}
+Tư vấn món ăn chay với bắp cải trắng    filter_diet   {"diet":"chay","ingredient":"bap cai trang"}
+Cho món mặn để ăn với cơm trắng filter_diet    {"tags":"dua com"}
+Tôi muốn nấu món mực xào 12 phút    filter_time   {"protein":"muc","time":"<=12"}
+Gợi ý món canh cá basa nấu cà chua  filter_diet {"protein":"ca","species":"basa","ingredient":"ca chua","tags":"canh"}
+Món heo nào rim mặn ngon?   suggest_recipe   {"protein":"heo","style":"rim man"}
+Tôi chỉ có nồi, không có chảo   filter_diet  {"device":"noi"}
+Tối nay ăn gì có tôm và trứng gà?   suggest_recipe   {"protein":["tom","trung ga"]}
+Gợi ý món dễ nấu trong 10 phút  suggest_recipe  {"time":"<=10"}
+Món nào thích hợp cho người kiêng dầu mỡ?   filter_diet  {"style":"it dau"}

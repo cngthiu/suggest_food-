@@ -1,5 +1,3 @@
-airfryer
-chao
-noi
-lo_nuong
-bep ga
+airfryer|noi chien|noi chien khong dau
+chao|chao chong dinh
+noi|noi nau|noi sup

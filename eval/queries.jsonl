@@ -1,0 +1,30 @@
+{"query_id": "q001", "text": "Món gà nào nhanh trong 15 phút", "slots": {"protein": "ga", "time": "<=15"}}
+{"query_id": "q002", "text": "Gợi ý món xào ít dầu với thịt heo", "slots": {"protein": "heo", "style": "it dau", "tags": "xao"}}
+{"query_id": "q003", "text": "Tôi muốn ăn món cá thanh đạm", "slots": {"protein": "ca", "tags": "thanh dam"}}
+{"query_id": "q004", "text": "Có món canh nấu từ tôm không", "slots": {"protein": "tom", "tags": "canh"}}
+{"query_id": "q005", "text": "Cho tôi món rim từ sườn non", "slots": {"protein": "heo", "cut": "suon non", "style": "rim"}}
+{"query_id": "q006", "text": "Món bò nào phù hợp bữa trưa", "slots": {"protein": "bo", "tags": "dua com"}}
+{"query_id": "q007", "text": "Tôi cần món heo ba rọi xào rau", "slots": {"protein": "heo", "cut": "ba roi", "tags": "xao"}}
+{"query_id": "q008", "text": "Món canh nào dễ nấu dưới 20 phút", "slots": {"tags": "canh", "time": "<=20"}}
+{"query_id": "q009", "text": "Gợi ý món ăn không dùng sữa", "slots": {"exclude": "sua"}}
+{"query_id": "q010", "text": "Tôi muốn nấu món mực cay nhẹ", "slots": {"protein": "muc", "tags": "cay"}}
+{"query_id": "q011", "text": "Có món nào dùng trứng gà cho trẻ nhỏ", "slots": {"protein": "trung ga"}}
+{"query_id": "q012", "text": "Tư vấn món cho người ăn chay", "slots": {"diet": "chay"}}
+{"query_id": "q013", "text": "Món cá diêu hồng nào hợp mùa hè", "slots": {"protein": "ca", "species": "dieu hong"}}
+{"query_id": "q014", "text": "Gợi ý món bò xào hành tây", "slots": {"protein": "bo", "ingredient": "hanh tay", "tags": "xao"}}
+{"query_id": "q015", "text": "Tôi chỉ có nồi, không dùng chảo", "slots": {"device": "noi"}}
+{"query_id": "q016", "text": "Món heo nào rim mặn ngon", "slots": {"protein": "heo", "style": "rim man"}}
+{"query_id": "q017", "text": "Tôi cần món cho 3 người trong 30 phút", "slots": {"servings": 3, "time": "<=30"}}
+{"query_id": "q018", "text": "Món canh nào có bí xanh", "slots": {"tags": "canh", "ingredient": "bi xanh"}}
+{"query_id": "q019", "text": "Tôi muốn món tôm xào rau muống", "slots": {"protein": "tom", "ingredient": "rau muong", "tags": "xao"}}
+{"query_id": "q020", "text": "Có món kho nào từ cá basa không", "slots": {"protein": "ca", "species": "basa", "tags": "kho"}}
+{"query_id": "q021", "text": "Món bò nấu trong 20 phút là món nào", "slots": {"protein": "bo", "time": "<=20"}}
+{"query_id": "q022", "text": "Tư vấn món gà chiên bằng nồi chiên không dầu", "slots": {"protein": "ga", "device": "airfryer"}}
+{"query_id": "q023", "text": "Món nào ít dầu mỡ và dễ nấu", "slots": {"style": "it dau"}}
+{"query_id": "q024", "text": "Cho tôi món ăn nhanh trong 10 phút", "slots": {"time": "<=10", "tags": "nhanh"}}
+{"query_id": "q025", "text": "Món heo xay nào phù hợp ăn cơm", "slots": {"protein": "heo", "cut": "xay", "tags": "dua com"}}
+{"query_id": "q026", "text": "Gợi ý món thanh đạm cho buổi tối", "slots": {"tags": "thanh dam"}}
+{"query_id": "q027", "text": "Món nào không có hải sản", "slots": {"exclude": "hai san"}}
+{"query_id": "q028", "text": "Món canh nào dùng trứng vịt", "slots": {"protein": "trung vit", "tags": "canh"}}
+{"query_id": "q029", "text": "Tôi muốn món cá nấu cà chua", "slots": {"protein": "ca", "ingredient": "ca chua", "tags": "kho"}}
+{"query_id": "q030", "text": "Có món mực nào xào khoai tây không", "slots": {"protein": "muc", "ingredient": "khoai tay", "tags": "xao"}}

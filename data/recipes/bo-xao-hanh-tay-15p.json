@@ -1,23 +1,25 @@
 {
   "id": "bo-xao-hanh-tay-15p",
   "title": "Bo xao hanh tay 15 phut",
-  "summary": "Dam da, com hop, nau nhanh buoi toi.",
+  "summary": "Thit bo mem xao hanh tay thom nhe.",
   "ingredients": [
     { "name": "thit bo", "qty": 400, "unit": "g" },
     { "name": "hanh tay", "qty": 120, "unit": "g" },
-    { "name": "toi", "qty": 8, "unit": "g" },
-    { "name": "dau hao", "qty": 20, "unit": "ml" },
     { "name": "dau an", "qty": 15, "unit": "ml" },
-    { "name": "muoi", "qty": 3, "unit": "g" },
-    { "name": "tieu den", "qty": 2, "unit": "g" }
+    { "name": "nuoc mam", "qty": 8, "unit": "ml" },
+    { "name": "tieu den", "qty": 1, "unit": "g" }
   ],
-  "steps": ["Uop bo voi dau hao, tieu 10 phut", "Phi toi, xao bo lua lon 2–3 phut", "Them hanh tay, dao nhanh 1–2 phut"],
+  "steps": [
+    "Thit bo thai mong; hanh tay lat.",
+    "Xao bo lua to nhanh tay; bo hanh tay vao dao them 1–2 phut.",
+    "Niem nuoc mam, rai tieu, tat bep."
+  ],
   "cook_time": 15,
   "servings": 3,
-  "tags": ["nhanh", "com hop"],
+  "tags": ["nhanh", "it dau"],
   "diet": ["normal"],
   "device": ["chao"],
   "image": "bo-xao-hanh-tay.jpg",
-  "region": "quoc_te",
-  "nutrition": { "kcal": 520 }
+  "region": "mien_bac",
+  "nutrition": { "kcal": 420 }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "tom-xao-rau-muong-12p",
+  "title": "Tom xao rau muong 12 phut",
+  "summary": "Tom ngot, rau muong gion, xao nhanh it dau.",
+  "ingredients": [
+    { "name": "tom", "qty": 250, "unit": "g" },
+    { "name": "rau muong", "qty": 300, "unit": "g" },
+    { "name": "dau an", "qty": 12, "unit": "ml" },
+    { "name": "nuoc mam", "qty": 8, "unit": "ml" },
+    { "name": "ot", "qty": 5, "unit": "g" }
+  ],
+  "steps": [
+    "Tom boc vo (neu muon); rau muong cat khuc.",
+    "Xao tom nhanh; cho rau muong, nuoc mam vao dao deu 1–2 phut.",
+    "Them ot tuy khau vi, tat bep."
+  ],
+  "cook_time": 12,
+  "servings": 3,
+  "tags": ["nhanh", "it dau"],
+  "diet": ["normal", "dairy_free"],
+  "device": ["chao"],
+  "image": "tom-xao-rau-muong.jpg",
+  "region": "mien_nam",
+  "nutrition": { "kcal": 260 }
+}

@@ -1,6 +1,3 @@
-chay
-keto
-low_carb
-dairy_free
-gluten_free
-normal
+chay|an chay
+keto|lowcarb|low-carb
+dairy_free|khong sua|khong lactose

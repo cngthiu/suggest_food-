@@ -1,4 +1,3 @@
-dau phong
-sua
-gluten
-hai san
+sua|lactose
+dau phong|lac
+hai san|tom|muc|ca
