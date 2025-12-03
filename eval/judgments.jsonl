@@ -1,51 +1,300 @@
-{"query_id":"q001","recipe_id":"uc-ga-xao-hanh-tay-ca-rot-15p","label":3}
-{"query_id":"q001","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":1}
-{"query_id":"q001","recipe_id":"tom-xao-rau-muong-12p","label":1}
-
-{"query_id":"q002","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":3}
-{"query_id":"q002","recipe_id":"thit-heo-xay-xao-ca-chua-15p","label":2}
-{"query_id":"q002","recipe_id":"bo-xao-hanh-tay-15p","label":0}
-
-{"query_id":"q003","recipe_id":"ca-dieu-hong-nau-bi-xanh-25p","label":3}
-{"query_id":"q003","recipe_id":"ca-basa-kho-ca-chua-25p","label":2}
-{"query_id":"q003","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":0}
-
-{"query_id":"q004","recipe_id":"canh-bi-xanh-tom-20p","label":3}
-{"query_id":"q004","recipe_id":"tom-xao-rau-muong-12p","label":2}
-{"query_id":"q004","recipe_id":"ca-dieu-hong-nau-bi-xanh-25p","label":1}
-
-{"query_id":"q005","recipe_id":"suon-non-rim-man-30p","label":3}
-{"query_id":"q005","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":2}
-{"query_id":"q005","recipe_id":"bo-xao-hanh-tay-15p","label":0}
-
-{"query_id":"q010","recipe_id":"muc-xao-ot-10p","label":3}
-{"query_id":"q010","recipe_id":"muc-xao-khoai-tay-15p","label":2}
-{"query_id":"q010","recipe_id":"ca-basa-kho-ca-chua-25p","label":0}
-
-{"query_id":"q014","recipe_id":"bo-xao-hanh-tay-15p","label":3}
-{"query_id":"q014","recipe_id":"khoai-tay-xao-ba-chi-bo-18p","label":2}
-{"query_id":"q014","recipe_id":"uc-ga-xao-hanh-tay-ca-rot-15p","label":1}
-
-{"query_id":"q016","recipe_id":"suon-non-rim-man-30p","label":3}
-{"query_id":"q016","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":2}
-{"query_id":"q016","recipe_id":"ca-basa-kho-ca-chua-25p","label":1}
-
-{"query_id":"q018","recipe_id":"ca-dieu-hong-nau-bi-xanh-25p","label":3}
-{"query_id":"q018","recipe_id":"canh-bi-xanh-tom-20p","label":3}
-{"query_id":"q018","recipe_id":"canh-trung-vit-bi-xanh-18p","label":2}
-
-{"query_id":"q019","recipe_id":"tom-xao-rau-muong-12p","label":3}
-{"query_id":"q019","recipe_id":"canh-bi-xanh-tom-20p","label":2}
-{"query_id":"q019","recipe_id":"muc-xao-ot-10p","label":1}
-
-{"query_id":"q020","recipe_id":"ca-basa-kho-ca-chua-25p","label":3}
-{"query_id":"q020","recipe_id":"ca-dieu-hong-nau-bi-xanh-25p","label":2}
-{"query_id":"q020","recipe_id":"suon-non-rim-man-30p","label":0}
-
-{"query_id":"q028","recipe_id":"canh-trung-vit-bi-xanh-18p","label":3}
-{"query_id":"q028","recipe_id":"trung-ga-chien-ca-chua-10p","label":2}
-{"query_id":"q028","recipe_id":"ca-dieu-hong-nau-bi-xanh-25p","label":0}
-
-{"query_id":"q030","recipe_id":"muc-xao-khoai-tay-15p","label":3}
-{"query_id":"q030","recipe_id":"muc-xao-ot-10p","label":2}
-{"query_id":"q030","recipe_id":"heo-ba-roi-xao-bap-cai-20p","label":0}
+{"query_id": "q001", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 3}
+{"query_id": "q001", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 3}
+{"query_id": "q001", "recipe_id": "long-ga-xao-muop-15p", "label": 2}
+{"query_id": "q001", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q001", "recipe_id": "canh-trung-ca-chua-10p", "label": 0}
+{"query_id": "q002", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 3}
+{"query_id": "q002", "recipe_id": "heo-ba-roi-xao-bap-cai-20p", "label": 2}
+{"query_id": "q002", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 1}
+{"query_id": "q002", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 0}
+{"query_id": "q002", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q003", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q003", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 3}
+{"query_id": "q003", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q003", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q003", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q004", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q004", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q004", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q004", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q004", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q005", "recipe_id": "canh-khoai-tay-ca-rot-suon-30p", "label": 0}
+{"query_id": "q005", "recipe_id": "suon-non-kho-thom-30p", "label": 3}
+{"query_id": "q005", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q005", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q005", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q006", "recipe_id": "bo-xao-hanh-tay-15p", "label": 3}
+{"query_id": "q006", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q006", "recipe_id": "khoai-tay-xao-ba-chi-bo-18p", "label": 1}
+{"query_id": "q006", "recipe_id": "canh-bo-nau-ngot-20p", "label": 1}
+{"query_id": "q006", "recipe_id": "bo-luc-lac-25p", "label": 2}
+{"query_id": "q007", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 2}
+{"query_id": "q007", "recipe_id": "heo-ba-roi-xao-bap-cai-20p", "label": 3}
+{"query_id": "q007", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q007", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q007", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q008", "recipe_id": "canh-trung-ca-chua-10p", "label": 3}
+{"query_id": "q008", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 2}
+{"query_id": "q008", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q008", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 1}
+{"query_id": "q008", "recipe_id": "canh-rau-ngot-tom-15p", "label": 2}
+{"query_id": "q009", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q009", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 2}
+{"query_id": "q009", "recipe_id": "bo-xao-hanh-tay-15p", "label": 1}
+{"query_id": "q009", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q009", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 2}
+{"query_id": "q010", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q010", "recipe_id": "rau-muong-xao-10p", "label": 0}
+{"query_id": "q010", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q010", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 0}
+{"query_id": "q010", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q011", "recipe_id": "canh-trung-ca-chua-10p", "label": 2}
+{"query_id": "q011", "recipe_id": "trung-ga-chien-ca-chua-10p", "label": 3}
+{"query_id": "q011", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q011", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q011", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q012", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q012", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q012", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q012", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q012", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q013", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q013", "recipe_id": "ca-dieu-hong-sot-ca-25p", "label": 2}
+{"query_id": "q013", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q013", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q013", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q014", "recipe_id": "bo-xao-hanh-tay-15p", "label": 3}
+{"query_id": "q014", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 1}
+{"query_id": "q014", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q014", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q014", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q015", "recipe_id": "uc-ga-ap-chao-15p", "label": 3}
+{"query_id": "q015", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q015", "recipe_id": "ga-kho-nghe-30p", "label": 1}
+{"query_id": "q015", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q015", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q016", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q016", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q016", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 0}
+{"query_id": "q016", "recipe_id": "ca-dieu-hong-sot-ca-25p", "label": 0}
+{"query_id": "q016", "recipe_id": "tom-rim-ba-roi-25p", "label": 1}
+{"query_id": "q017", "recipe_id": "ga-kho-nghe-30p", "label": 1}
+{"query_id": "q017", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q017", "recipe_id": "ca-basa-kho-ca-chua-25p", "label": 2}
+{"query_id": "q017", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 3}
+{"query_id": "q017", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 2}
+{"query_id": "q018", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q018", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 2}
+{"query_id": "q018", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 1}
+{"query_id": "q018", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q018", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q019", "recipe_id": "tom-xao-rau-muong-12p", "label": 3}
+{"query_id": "q019", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q019", "recipe_id": "rau-muong-xao-10p", "label": 2}
+{"query_id": "q019", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q019", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q020", "recipe_id": "ca-basa-kho-ca-chua-25p", "label": 3}
+{"query_id": "q020", "recipe_id": "canh-chua-ca-basa-30p", "label": 2}
+{"query_id": "q020", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q020", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q020", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q021", "recipe_id": "canh-bo-nau-ngot-20p", "label": 3}
+{"query_id": "q021", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q021", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q021", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q021", "recipe_id": "muc-xao-sa-te-15p", "label": 0}
+{"query_id": "q022", "recipe_id": "chan-ga-rim-man-30p", "label": 3}
+{"query_id": "q022", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q022", "recipe_id": "ga-kho-nghe-30p", "label": 2}
+{"query_id": "q022", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 1}
+{"query_id": "q022", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 1}
+{"query_id": "q023", "recipe_id": "bo-xao-hanh-tay-15p", "label": 2}
+{"query_id": "q023", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 2}
+{"query_id": "q023", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 3}
+{"query_id": "q023", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 1}
+{"query_id": "q023", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q024", "recipe_id": "muc-xao-sa-te-15p", "label": 0}
+{"query_id": "q024", "recipe_id": "rau-muong-xao-10p", "label": 3}
+{"query_id": "q024", "recipe_id": "trung-chien-hanh-tay-10p", "label": 2}
+{"query_id": "q024", "recipe_id": "tom-xao-rau-muong-12p", "label": 0}
+{"query_id": "q024", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q025", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 3}
+{"query_id": "q025", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 2}
+{"query_id": "q025", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 0}
+{"query_id": "q025", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q025", "recipe_id": "trung-ga-chien-ca-chua-10p", "label": 0}
+{"query_id": "q026", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 1}
+{"query_id": "q026", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 2}
+{"query_id": "q026", "recipe_id": "chan-ga-rim-man-30p", "label": 3}
+{"query_id": "q026", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q026", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 1}
+{"query_id": "q027", "recipe_id": "mi-xao-hai-san-15p", "label": 0}
+{"query_id": "q027", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q027", "recipe_id": "ga-kho-nghe-30p", "label": 3}
+{"query_id": "q027", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q027", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q028", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 3}
+{"query_id": "q028", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 2}
+{"query_id": "q028", "recipe_id": "trung-chien-hanh-tay-10p", "label": 1}
+{"query_id": "q028", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q028", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q029", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q029", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q029", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q029", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q029", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q030", "recipe_id": "khoai-tay-xao-ba-chi-bo-18p", "label": 1}
+{"query_id": "q030", "recipe_id": "canh-khoai-tay-ca-rot-suon-30p", "label": 1}
+{"query_id": "q030", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q030", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q030", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q031", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 3}
+{"query_id": "q031", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 2}
+{"query_id": "q031", "recipe_id": "long-ga-xao-muop-15p", "label": 1}
+{"query_id": "q031", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 1}
+{"query_id": "q031", "recipe_id": "canh-trung-ca-chua-10p", "label": 0}
+{"query_id": "q032", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 3}
+{"query_id": "q032", "recipe_id": "heo-ba-roi-xao-bap-cai-20p", "label": 2}
+{"query_id": "q032", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 1}
+{"query_id": "q032", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 1}
+{"query_id": "q032", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q033", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q033", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 3}
+{"query_id": "q033", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q033", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q033", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q034", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q034", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q034", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q034", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q034", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q035", "recipe_id": "canh-khoai-tay-ca-rot-suon-30p", "label": 2}
+{"query_id": "q035", "recipe_id": "suon-non-kho-thom-30p", "label": 2}
+{"query_id": "q035", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q035", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q035", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q036", "recipe_id": "bo-xao-hanh-tay-15p", "label": 3}
+{"query_id": "q036", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q036", "recipe_id": "khoai-tay-xao-ba-chi-bo-18p", "label": 1}
+{"query_id": "q036", "recipe_id": "canh-bo-nau-ngot-20p", "label": 2}
+{"query_id": "q036", "recipe_id": "bo-luc-lac-25p", "label": 1}
+{"query_id": "q037", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 2}
+{"query_id": "q037", "recipe_id": "heo-ba-roi-xao-bap-cai-20p", "label": 3}
+{"query_id": "q037", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q037", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q037", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q038", "recipe_id": "canh-trung-ca-chua-10p", "label": 3}
+{"query_id": "q038", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 2}
+{"query_id": "q038", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q038", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 2}
+{"query_id": "q038", "recipe_id": "canh-rau-ngot-tom-15p", "label": 1}
+{"query_id": "q039", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q039", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 2}
+{"query_id": "q039", "recipe_id": "bo-xao-hanh-tay-15p", "label": 1}
+{"query_id": "q039", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q039", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 1}
+{"query_id": "q040", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q040", "recipe_id": "rau-muong-xao-10p", "label": 0}
+{"query_id": "q040", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q040", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 0}
+{"query_id": "q040", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q041", "recipe_id": "canh-trung-ca-chua-10p", "label": 3}
+{"query_id": "q041", "recipe_id": "trung-ga-chien-ca-chua-10p", "label": 2}
+{"query_id": "q041", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q041", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q041", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q042", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q042", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 1}
+{"query_id": "q042", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q042", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q042", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q043", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 2}
+{"query_id": "q043", "recipe_id": "ca-dieu-hong-sot-ca-25p", "label": 3}
+{"query_id": "q043", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q043", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q043", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q044", "recipe_id": "bo-xao-hanh-tay-15p", "label": 3}
+{"query_id": "q044", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q044", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q044", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q044", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q045", "recipe_id": "uc-ga-ap-chao-15p", "label": 1}
+{"query_id": "q045", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q045", "recipe_id": "ga-kho-nghe-30p", "label": 3}
+{"query_id": "q045", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q045", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q046", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q046", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q046", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 0}
+{"query_id": "q046", "recipe_id": "ca-dieu-hong-sot-ca-25p", "label": 0}
+{"query_id": "q046", "recipe_id": "tom-rim-ba-roi-25p", "label": 2}
+{"query_id": "q047", "recipe_id": "ga-kho-nghe-30p", "label": 2}
+{"query_id": "q047", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q047", "recipe_id": "ca-basa-kho-ca-chua-25p", "label": 3}
+{"query_id": "q047", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 1}
+{"query_id": "q047", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 1}
+{"query_id": "q048", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q048", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 2}
+{"query_id": "q048", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 2}
+{"query_id": "q048", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q048", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q049", "recipe_id": "tom-xao-rau-muong-12p", "label": 3}
+{"query_id": "q049", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q049", "recipe_id": "rau-muong-xao-10p", "label": 2}
+{"query_id": "q049", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q049", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q050", "recipe_id": "ca-basa-kho-ca-chua-25p", "label": 3}
+{"query_id": "q050", "recipe_id": "canh-chua-ca-basa-30p", "label": 2}
+{"query_id": "q050", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q050", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}
+{"query_id": "q050", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q051", "recipe_id": "canh-bo-nau-ngot-20p", "label": 3}
+{"query_id": "q051", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q051", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q051", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q051", "recipe_id": "muc-xao-sa-te-15p", "label": 0}
+{"query_id": "q052", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q052", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q052", "recipe_id": "ga-kho-nghe-30p", "label": 1}
+{"query_id": "q052", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q052", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 1}
+{"query_id": "q053", "recipe_id": "bo-xao-hanh-tay-15p", "label": 1}
+{"query_id": "q053", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 1}
+{"query_id": "q053", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q053", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 1}
+{"query_id": "q053", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 3}
+{"query_id": "q054", "recipe_id": "muc-xao-sa-te-15p", "label": 0}
+{"query_id": "q054", "recipe_id": "rau-muong-xao-10p", "label": 2}
+{"query_id": "q054", "recipe_id": "trung-chien-hanh-tay-10p", "label": 3}
+{"query_id": "q054", "recipe_id": "tom-xao-rau-muong-12p", "label": 0}
+{"query_id": "q054", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q055", "recipe_id": "thit-heo-xay-xao-ca-chua-15p", "label": 1}
+{"query_id": "q055", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 2}
+{"query_id": "q055", "recipe_id": "canh-bi-xanh-thit-bam-15p", "label": 3}
+{"query_id": "q055", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 1}
+{"query_id": "q055", "recipe_id": "trung-ga-chien-ca-chua-10p", "label": 2}
+{"query_id": "q056", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 3}
+{"query_id": "q056", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 2}
+{"query_id": "q056", "recipe_id": "chan-ga-rim-man-30p", "label": 1}
+{"query_id": "q056", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q056", "recipe_id": "ca-nuc-kho-tieu-40p", "label": 2}
+{"query_id": "q057", "recipe_id": "mi-xao-hai-san-15p", "label": 0}
+{"query_id": "q057", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q057", "recipe_id": "ga-kho-nghe-30p", "label": 1}
+{"query_id": "q057", "recipe_id": "bo-xao-ca-tim-20p", "label": 2}
+{"query_id": "q057", "recipe_id": "chan-ga-rim-man-30p", "label": 2}
+{"query_id": "q058", "recipe_id": "canh-trung-vit-bi-xanh-18p", "label": 3}
+{"query_id": "q058", "recipe_id": "thit-heo-xay-chung-trung-25p", "label": 0}
+{"query_id": "q058", "recipe_id": "trung-chien-hanh-tay-10p", "label": 2}
+{"query_id": "q058", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q058", "recipe_id": "tim-ga-xao-ot-chuong-20p", "label": 0}
+{"query_id": "q059", "recipe_id": "cai-ngot-xao-long-ga-15p", "label": 0}
+{"query_id": "q059", "recipe_id": "uc-ga-xao-hanh-tay-ca-rot-15p", "label": 0}
+{"query_id": "q059", "recipe_id": "bo-xao-ca-tim-20p", "label": 1}
+{"query_id": "q059", "recipe_id": "ca-dieu-hong-nau-bi-xanh-25p", "label": 0}
+{"query_id": "q059", "recipe_id": "bo-xao-hanh-tay-15p", "label": 0}
+{"query_id": "q060", "recipe_id": "khoai-tay-xao-ba-chi-bo-18p", "label": 2}
+{"query_id": "q060", "recipe_id": "canh-khoai-tay-ca-rot-suon-30p", "label": 1}
+{"query_id": "q060", "recipe_id": "ga-kho-nghe-30p", "label": 0}
+{"query_id": "q060", "recipe_id": "chan-ga-rim-man-30p", "label": 0}
+{"query_id": "q060", "recipe_id": "bo-xao-ca-tim-20p", "label": 0}

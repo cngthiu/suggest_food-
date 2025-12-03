@@ -1,0 +1,50 @@
+{
+  "id": "bun-gio-heo-15p",
+  "title": "Bun gio heo nau nhanh 15 phut",
+  "summary": "Bun gio heo an lien them thit dui heo luoc.",
+  "ingredients": [
+    {
+      "name": "bun gio heo hang nga",
+      "qty": 2,
+      "unit": "goi"
+    },
+    {
+      "name": "thit dui heo",
+      "qty": 100,
+      "unit": "g"
+    },
+    {
+      "name": "gia",
+      "qty": 50,
+      "unit": "g"
+    },
+    {
+      "name": "chanh khong hat",
+      "qty": 1,
+      "unit": "qua"
+    }
+  ],
+  "steps": [
+    "Thit dui luoc chin, thai mong.",
+    "Nau bun theo huong dan goi.",
+    "Them thit va rau an kem."
+  ],
+  "cook_time": 15,
+  "servings": 2,
+  "tags": [
+    "an sang",
+    "nhanh",
+    "tien loi"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "noi"
+  ],
+  "image": "bun-gio-heo.jpg",
+  "region": "mien_nam",
+  "nutrition": {
+    "kcal": 400
+  }
+}

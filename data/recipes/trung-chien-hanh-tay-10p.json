@@ -1,0 +1,50 @@
+{
+  "id": "trung-chien-hanh-tay-10p",
+  "title": "Trung chien hanh tay 10 phut",
+  "summary": "Trung chien hanh tay thom ngot, don gian.",
+  "ingredients": [
+    {
+      "name": "trung vit",
+      "qty": 3,
+      "unit": "qua"
+    },
+    {
+      "name": "hanh tay",
+      "qty": 100,
+      "unit": "g"
+    },
+    {
+      "name": "nuoc mam",
+      "qty": 10,
+      "unit": "ml"
+    },
+    {
+      "name": "tieu den",
+      "qty": 2,
+      "unit": "g"
+    }
+  ],
+  "steps": [
+    "Hanh tay thai mong, xao so.",
+    "Danh trung voi gia vi.",
+    "Do trung vao chien chin vang."
+  ],
+  "cook_time": 10,
+  "servings": 3,
+  "tags": [
+    "chien",
+    "nhanh",
+    "tiet kiem"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "trung-chien-hanh.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 300
+  }
+}

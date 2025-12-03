@@ -1,0 +1,50 @@
+{
+  "id": "cai-ngot-xao-long-ga-15p",
+  "title": "Cai ngot xao long ga 15 phut",
+  "summary": "Mon xao nhanh, du chat xo va dam.",
+  "ingredients": [
+    {
+      "name": "cai ngot",
+      "qty": 400,
+      "unit": "g"
+    },
+    {
+      "name": "long ga",
+      "qty": 200,
+      "unit": "g"
+    },
+    {
+      "name": "tieu den",
+      "qty": 3,
+      "unit": "g"
+    },
+    {
+      "name": "dau an",
+      "qty": 15,
+      "unit": "ml"
+    }
+  ],
+  "steps": [
+    "Long ga xao chin toi.",
+    "Cho cai ngot vao xao nhanh.",
+    "Nem gia vi, rac tieu."
+  ],
+  "cook_time": 15,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "nhanh",
+    "rau xanh"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "cai-ngot-xao.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 250
+  }
+}

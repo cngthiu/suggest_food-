@@ -1,0 +1,55 @@
+{
+  "id": "bo-luc-lac-25p",
+  "title": "Bo luc lac 25 phut",
+  "summary": "Dui bo cat khoi xao ot chuong, hanh tay, dam da.",
+  "ingredients": [
+    {
+      "name": "dui bo",
+      "qty": 400,
+      "unit": "g"
+    },
+    {
+      "name": "ot chuong",
+      "qty": 150,
+      "unit": "g"
+    },
+    {
+      "name": "hanh tay",
+      "qty": 100,
+      "unit": "g"
+    },
+    {
+      "name": "dau hao",
+      "qty": 20,
+      "unit": "ml"
+    },
+    {
+      "name": "ca chua",
+      "qty": 1,
+      "unit": "qua"
+    }
+  ],
+  "steps": [
+    "Bo uop gia vi, xao lua lon.",
+    "Xao rau cu chin toi.",
+    "Tron bo va rau cu, tat bep."
+  ],
+  "cook_time": 25,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "tiec",
+    "ngon mieng"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "bo-luc-lac.jpg",
+  "region": "quoc_te",
+  "nutrition": {
+    "kcal": 450
+  }
+}

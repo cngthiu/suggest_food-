@@ -1,7 +1,9 @@
-ga|thit ga|uc ga|canh ga
-bo|thit bo|dui bo|ba chi bo
-heo|thit heo|ba roi|suon non|heo xay
-ca|ca basa|basa|ca dieu hong
-tom|tom tuoi
-muc|muc tuoi
-trung|trung ga|trung vit
+ga|thit ga|uc ga|canh ga|dui ga|chan ga|ga ta|ga cong nghiep|ga ac
+bo|thit bo|dui bo|ba chi bo|thit bo my|bap bo|gan bo|duoi bo
+heo|thit heo|ba roi|suon non|heo xay|thit nac|chan gio|mong gio|tai heo
+ca|ca basa|basa|ca dieu hong|ca loc|ca ro|ca thu|ca hoi|ca chep|ca ngu
+tom|tom tuoi|tom su|tom hum|tom the|tep
+muc|muc tuoi|muc ong|muc trung|bach tuoc
+trung|trung ga|trung vit|trung cut|trung lon
+dau|dau phu|dau hu|dau rann|dau sot
+nam|nam huong|nam kim cham|nam rom|nam dui ga

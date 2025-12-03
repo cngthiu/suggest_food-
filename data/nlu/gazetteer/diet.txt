@@ -1,3 +1,5 @@
-chay|an chay
-keto|lowcarb|low-carb
+chay|an chay|thuan chay|vegan
+keto|lowcarb|low-carb|das|atkins
 dairy_free|khong sua|khong lactose
+eat clean|giam can|it calo|healthy|thuc duong
+tang can|nhieu dam|giau protein

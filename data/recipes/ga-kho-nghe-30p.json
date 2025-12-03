@@ -1,0 +1,50 @@
+{
+  "id": "ga-kho-nghe-30p",
+  "title": "Ga kho nghe 30 phut",
+  "summary": "Canh ga kho nghe vang uom, thom lung, tot cho da day.",
+  "ingredients": [
+    {
+      "name": "canh ga",
+      "qty": 500,
+      "unit": "g"
+    },
+    {
+      "name": "bot nghe",
+      "qty": 10,
+      "unit": "g"
+    },
+    {
+      "name": "nuoc mam",
+      "qty": 30,
+      "unit": "ml"
+    },
+    {
+      "name": "duong",
+      "qty": 10,
+      "unit": "g"
+    }
+  ],
+  "steps": [
+    "Ga chat mieng, uop bot nghe va gia vi.",
+    "Kho liu riu cho tham va len mau dep.",
+    "Nuoc set lai la duoc."
+  ],
+  "cook_time": 30,
+  "servings": 3,
+  "tags": [
+    "kho",
+    "man",
+    "dua com"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "noi"
+  ],
+  "image": "ga-kho-nghe.jpg",
+  "region": "mien_trung",
+  "nutrition": {
+    "kcal": 450
+  }
+}

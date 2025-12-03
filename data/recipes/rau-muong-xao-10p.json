@@ -1,0 +1,51 @@
+{
+  "id": "rau-muong-xao-10p",
+  "title": "Rau muong xao toi 10 phut",
+  "summary": "Rau muong xao xanh muot, gion gion.",
+  "ingredients": [
+    {
+      "name": "rau muong",
+      "qty": 500,
+      "unit": "g"
+    },
+    {
+      "name": "dau an",
+      "qty": 20,
+      "unit": "ml"
+    },
+    {
+      "name": "muoi",
+      "qty": 5,
+      "unit": "g"
+    },
+    {
+      "name": "nuoc mam",
+      "qty": 5,
+      "unit": "ml"
+    }
+  ],
+  "steps": [
+    "Rau luoc so qua nuoc soi.",
+    "Xao nhanh voi dau an lua lon.",
+    "Nem muoi hoac nuoc mam."
+  ],
+  "cook_time": 10,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "nhanh",
+    "chay"
+  ],
+  "diet": [
+    "chay",
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "rau-muong-xao.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 150
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "bo-xao-ca-tim-20p",
+  "title": "Bo xao ca tim 20 phut",
+  "summary": "Dui bo xao ca tim mem ngot, la mieng.",
+  "ingredients": [
+    {
+      "name": "dui bo",
+      "qty": 200,
+      "unit": "g"
+    },
+    {
+      "name": "ca tim",
+      "qty": 2,
+      "unit": "trai"
+    },
+    {
+      "name": "hanh ngo",
+      "qty": 10,
+      "unit": "g"
+    },
+    {
+      "name": "dau hao",
+      "qty": 15,
+      "unit": "ml"
+    }
+  ],
+  "steps": [
+    "Ca tim cat khuc, ngam nuoc muoi, xao mem.",
+    "Xao thit bo chin toi.",
+    "Dao chung bo va ca tim, nem dau hao."
+  ],
+  "cook_time": 20,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "com nha"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "bo-xao-ca-tim.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 350
+  }
+}

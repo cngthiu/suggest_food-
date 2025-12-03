@@ -1,0 +1,50 @@
+{
+  "id": "long-ga-xao-muop-15p",
+  "title": "Long ga xao muop huong 15 phut",
+  "summary": "Long ga gion, muop huong thom ngot.",
+  "ingredients": [
+    {
+      "name": "long ga",
+      "qty": 300,
+      "unit": "g"
+    },
+    {
+      "name": "muop huong",
+      "qty": 2,
+      "unit": "trai"
+    },
+    {
+      "name": "hanh ngo",
+      "qty": 10,
+      "unit": "g"
+    },
+    {
+      "name": "hat nem",
+      "qty": 5,
+      "unit": "g"
+    }
+  ],
+  "steps": [
+    "Long ga lam sach, xao chin.",
+    "Cho muop vao xao nhanh tay.",
+    "Nem gia vi vua an, rac hanh."
+  ],
+  "cook_time": 15,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "nhanh",
+    "dan da"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "long-ga-xao-muop.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 200
+  }
+}

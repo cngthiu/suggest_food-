@@ -1,0 +1,51 @@
+{
+  "id": "muc-hap-hanh-15p",
+  "title": "Muc nut hap hanh tay 15 phut",
+  "summary": "Muc nut ngot gion hap hanh tay thom lung.",
+  "ingredients": [
+    {
+      "name": "muc nut lam sach",
+      "qty": 500,
+      "unit": "g"
+    },
+    {
+      "name": "hanh tay",
+      "qty": 150,
+      "unit": "g"
+    },
+    {
+      "name": "hanh ngo",
+      "qty": 20,
+      "unit": "g"
+    },
+    {
+      "name": "nuoc mam",
+      "qty": 20,
+      "unit": "ml"
+    }
+  ],
+  "steps": [
+    "Muc rua sach.",
+    "Xep hanh tay, hanh ngo len tren.",
+    "Hap 10 phut, cham nuoc mam."
+  ],
+  "cook_time": 15,
+  "servings": 4,
+  "tags": [
+    "hap",
+    "thanh dam",
+    "nhanh"
+  ],
+  "diet": [
+    "diet",
+    "keto"
+  ],
+  "device": [
+    "noi"
+  ],
+  "image": "muc-hap-hanh.jpg",
+  "region": "mien_trung",
+  "nutrition": {
+    "kcal": 200
+  }
+}

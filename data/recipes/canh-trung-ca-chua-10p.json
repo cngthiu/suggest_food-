@@ -1,0 +1,51 @@
+{
+  "id": "canh-trung-ca-chua-10p",
+  "title": "Canh trung ca chua 10 phut",
+  "summary": "Canh may (canh trung) nau nhanh, de an.",
+  "ingredients": [
+    {
+      "name": "trung ga",
+      "qty": 2,
+      "unit": "qua"
+    },
+    {
+      "name": "ca chua",
+      "qty": 2,
+      "unit": "qua"
+    },
+    {
+      "name": "hanh ngo",
+      "qty": 10,
+      "unit": "g"
+    },
+    {
+      "name": "dau an",
+      "qty": 10,
+      "unit": "ml"
+    }
+  ],
+  "steps": [
+    "Xao ca chua mem.",
+    "Do nuoc soi.",
+    "Do trung vao khuay deu tao van.",
+    "Rac hanh ngo."
+  ],
+  "cook_time": 10,
+  "servings": 3,
+  "tags": [
+    "canh",
+    "nhanh",
+    "tiet kiem"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "noi"
+  ],
+  "image": "canh-trung.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 150
+  }
+}

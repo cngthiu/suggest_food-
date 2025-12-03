@@ -1,0 +1,55 @@
+{
+  "id": "muc-xao-sa-te-15p",
+  "title": "Muc xao sa te thap cam 15 phut",
+  "summary": "Muc xao cay nong voi ot chuong, dua leo, sa te.",
+  "ingredients": [
+    {
+      "name": "muc nut lam sach",
+      "qty": 400,
+      "unit": "g"
+    },
+    {
+      "name": "sa te",
+      "qty": 20,
+      "unit": "g"
+    },
+    {
+      "name": "ot chuong",
+      "qty": 1,
+      "unit": "trai"
+    },
+    {
+      "name": "dua leo",
+      "qty": 1,
+      "unit": "trai"
+    },
+    {
+      "name": "hanh tay",
+      "qty": 1,
+      "unit": "cu"
+    }
+  ],
+  "steps": [
+    "Muc xao san voi sa te.",
+    "Cho rau cu vao xao chin toi.",
+    "Nem gia vi vua an."
+  ],
+  "cook_time": 15,
+  "servings": 3,
+  "tags": [
+    "xao",
+    "cay",
+    "nhanh"
+  ],
+  "diet": [
+    "normal"
+  ],
+  "device": [
+    "chao"
+  ],
+  "image": "muc-xao-sa-te.jpg",
+  "region": "mien_nam",
+  "nutrition": {
+    "kcal": 300
+  }
+}

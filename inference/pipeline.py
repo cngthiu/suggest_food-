@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 """End-to-end inference pipeline: NLU → Retrieval → Ranking (rule) → SKU mapping → Cart suggestion."""
 
-import os, json, pickle
+import os, json, pickle, spacy, re 
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
 
 from .utils import norm_text, load_json
+from transformers import pipeline as hf_pipeline
 
 try:
     import yaml
@@ -71,7 +72,34 @@ class NLU:
         self.clf = joblib.load(Path(model_dir)/"classifier.pkl")
         with open(Path(model_dir)/"label_map.json", "r", encoding="utf-8") as f:
             self.labels = json.load(f)["labels"]
-
+        # # Load mô hình NER ---
+        # # Đường dẫn tới model bạn vừa train
+        # self.ner_path = "serverAI/models/ner_model" 
+        # try:
+        #     self.ner_model = spacy.load(self.ner_path)
+        #     print(f"[INFO] Đã load NER model từ {self.ner_path}")
+        # except Exception as e:
+        #     print(f"[WARN] Không load được NER model ({e}). Sẽ dùng Regex fallback.")
+        #     self.ner_model = None
+        # --- UPDATE: Load PhoBERT NER ---
+        self.ner_path = "serverAI/models/phobert_ner" # Folder model vừa train
+        self.ner_pipe = None
+        try:
+            if os.path.exists(self.ner_path):
+                print(f"[INFO] NLU: Đang load PhoBERT từ {self.ner_path}...")
+                # aggregation_strategy="simple" giúp gộp các sub-word và B- I- thành entity hoàn chỉnh
+                self.ner_pipe = hf_pipeline(
+                    "token-classification", 
+                    model=self.ner_path, 
+                    tokenizer=self.ner_path,
+                    aggregation_strategy="simple",
+                    device=-1 # -1 cho CPU, 0 cho GPU
+                )
+                print("[INFO] NLU: Load PhoBERT thành công.")
+            else:
+                print(f"[WARN] NLU: Không tìm thấy PhoBERT model. Chạy ở chế độ Regex.")
+        except Exception as e:
+            print(f"[WARN] NLU: Lỗi khi load PhoBERT ({e}). Chạy ở chế độ Regex.")
     def _load_gazetteer(self, root: str) -> Dict[str, List[str]]:
         gaz = {}
         if not root or not os.path.isdir(root):
@@ -92,38 +120,70 @@ class NLU:
         return {"name": self.labels[idx], "score": float(prob[idx])}
 
     def extract_slots(self, text: str) -> Dict[str, Any]:
+        """Trích xuất thông tin dùng PhoBERT (ưu tiên) + Regex/Dictionary (bổ trợ)."""
         s = norm_text(text, lowercase=True, strip_dia=True)
-        slots: Dict[str, Any] = {"servings": None, "time": None, "diet": None, "protein": None, "device": None, "allergy": []}
-        # servings
-        import re
-        m = re.search(r"(\d+)\s*(nguoi|suat)", s)
-        if m:
-            slots["servings"] = int(m.group(1))
-        # time (<=xx phut)
-        m = re.search(r"(<=|<|duoi)\s*(\d{1,3})\s*(phut|p)?", s)
-        if m:
-            slots["time"] = f"<= {m.group(2)}"
-        # protein from gazetteer
-        for p in self.gaz.get("protein", []):
-            if p in s:
-                slots["protein"] = p
-                break
-        # diet
-        for d in self.gaz.get("diet", []):
-            if d in s:
-                slots["diet"] = d
-                break
-        # device
-        for d in self.gaz.get("device", []):
-            if d in s:
-                slots["device"] = d
-                break
-        # allergy (multi)
-        for a in self.gaz.get("allergy", []):
-            if a in s:
-                slots["allergy"].append(a)
-        return slots
+        
+        slots: Dict[str, Any] = {
+            "servings": None, "time": None, "price": None, 
+            "diet": None, "protein": None, "device": None, "allergy": []
+        }
 
+        # --- GIAI ĐOẠN 1: Dùng PhoBERT NER ---
+        if self.ner_pipe:
+            # PhoBERT có thể phân biệt hoa thường, nhưng model train trên dữ liệu lowercase thì nên đưa vào lowercase
+            # Nếu model train trên text gốc thì để text gốc. Ở đây ta dùng norm_text nên là lowercase.
+            entities = self.ner_pipe(s)
+            
+            for ent in entities:
+                # ent có dạng: {'entity_group': 'FOOD', 'score': 0.99, 'word': 'gà', ...}
+                label = ent['entity_group']
+                val = ent['word']
+                
+                if label == "FOOD":
+                    slots["protein"] = val
+                elif label == "QUANTITY":
+                    import re
+                    m = re.search(r"\d+", val)
+                    if m: slots["servings"] = int(m.group(0))
+                elif label == "TIME":
+                    import re
+                    m = re.search(r"\d+", val)
+                    if m: slots["time"] = f"<= {m.group(0)}"
+                elif label == "PRICE":
+                    import re
+                    m = re.search(r"(\d+)(.*)", val)
+                    if m:
+                        num = int(m.group(1))
+                        unit = m.group(2).strip()
+                        if 'k' in unit or 'nghin' in unit or 'ngan' in unit:
+                            num *= 1000
+                        elif 'tr' in unit or 'trieu' in unit:
+                            num *= 1000000
+                        slots["price"] = num
+
+        # --- GIAI ĐOẠN 2: Fallback (Regex/Dictionary) ---
+        # ... (Giữ nguyên phần fallback như cũ để đảm bảo an toàn) ...
+        if not slots["protein"]:
+            for p in self.gaz.get("protein", []):
+                if p in s: slots["protein"] = p; break
+        
+        if not slots["servings"]:
+            m = re.search(r"(\d+)\s*(nguoi|suat|phan)", s)
+            if m: slots["servings"] = int(m.group(1))
+
+        if not slots["time"]:
+            m = re.search(r"(<=|<|duoi|trong|khoang)\s*(\d{1,3})\s*(phut|p)?", s)
+            if m: slots["time"] = f"<= {m.group(2)}"
+
+        # Các trường PhoBERT chưa học (Diet, Device, Allergy)
+        for d in self.gaz.get("diet", []):
+            if d in s: slots["diet"] = d; break
+        for d in self.gaz.get("device", []):
+            if d in s: slots["device"] = d; break
+        for a in self.gaz.get("allergy", []):
+            if a in s: slots["allergy"].append(a)
+
+        return slots
 
 class Retriever:
     def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None):

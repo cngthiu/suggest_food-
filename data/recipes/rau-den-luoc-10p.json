@@ -1,0 +1,41 @@
+{
+  "id": "rau-den-luoc-10p",
+  "title": "Rau den luoc 10 phut",
+  "summary": "Rau den luoc thanh mat, nuoc canh mau do dep.",
+  "ingredients": [
+    {
+      "name": "rau den",
+      "qty": 500,
+      "unit": "g"
+    },
+    {
+      "name": "muoi",
+      "qty": 3,
+      "unit": "g"
+    }
+  ],
+  "steps": [
+    "Rau nhat sach.",
+    "Luoc nuoc soi them chut muoi.",
+    "Vot ra dia, lay nuoc lam canh."
+  ],
+  "cook_time": 10,
+  "servings": 3,
+  "tags": [
+    "luoc",
+    "chay",
+    "thanh dam"
+  ],
+  "diet": [
+    "chay",
+    "diet"
+  ],
+  "device": [
+    "noi"
+  ],
+  "image": "rau-den-luoc.jpg",
+  "region": "mien_bac",
+  "nutrition": {
+    "kcal": 50
+  }
+}

@@ -1,10 +1,10 @@
 # ==== App config (MVP) ====
 paths:
   recipes_dir: "serverAI/data/recipes"
-  cache_dir:   "serverAI/.cache"
-  bm25_path:   "serverAI/.cache/bm25.pkl"
+  cache_dir: "serverAI/.cache"
+  bm25_path: "serverAI/.cache/bm25.pkl"
   corpus_path: "serverAI/.cache/corpus_tokens.pkl"
-  ids_path:    "serverAI/.cache/recipe_ids.json"
+  ids_path: "serverAI/.cache/recipe_ids.json"
   embed_matrix: "serverAI/.cache/recipe_embeds.npy"
   faiss_index: "serverAI/.cache/faiss.index"
   mapping_dir: "serverAI/data/mapping"
@@ -25,17 +25,17 @@ retrieval:
 
 hybrid:
   k_bm25: 30
-  k_emb:  30
+  k_emb: 30
   k_total: 50
 
 ranking:
   w_semantic: 0.30
-  w_timefit:  0.15
-  w_dietfit:  0.10
-  w_protein:  0.20
+  w_timefit: 0.15
+  w_dietfit: 0.10
+  w_protein: 0.30
   w_servings: 0.05
-  w_avail:    0.10
-  w_promo:    0.05
-  w_history:  0.05
-
+  w_avail: 0.10
+  w_promo: 0.05
+  w_history: 0.05
+  w_price_fit: 0.10
 seed: 2025
