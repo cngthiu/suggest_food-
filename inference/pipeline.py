@@ -72,34 +72,26 @@ class NLU:
         self.clf = joblib.load(Path(model_dir)/"classifier.pkl")
         with open(Path(model_dir)/"label_map.json", "r", encoding="utf-8") as f:
             self.labels = json.load(f)["labels"]
-        # # Load mô hình NER ---
-        # # Đường dẫn tới model bạn vừa train
-        # self.ner_path = "serverAI/models/ner_model" 
-        # try:
-        #     self.ner_model = spacy.load(self.ner_path)
-        #     print(f"[INFO] Đã load NER model từ {self.ner_path}")
-        # except Exception as e:
-        #     print(f"[WARN] Không load được NER model ({e}). Sẽ dùng Regex fallback.")
-        #     self.ner_model = None
+        
         # --- UPDATE: Load PhoBERT NER ---
-        self.ner_path = "serverAI/models/phobert_ner" # Folder model vừa train
+        self.ner_path = "serverAI/models/phobert_ner" 
         self.ner_pipe = None
         try:
             if os.path.exists(self.ner_path):
                 print(f"[INFO] NLU: Đang load PhoBERT từ {self.ner_path}...")
-                # aggregation_strategy="simple" giúp gộp các sub-word và B- I- thành entity hoàn chỉnh
                 self.ner_pipe = hf_pipeline(
                     "token-classification", 
                     model=self.ner_path, 
                     tokenizer=self.ner_path,
                     aggregation_strategy="simple",
-                    device=-1 # -1 cho CPU, 0 cho GPU
+                    device=-1 
                 )
                 print("[INFO] NLU: Load PhoBERT thành công.")
             else:
                 print(f"[WARN] NLU: Không tìm thấy PhoBERT model. Chạy ở chế độ Regex.")
         except Exception as e:
             print(f"[WARN] NLU: Lỗi khi load PhoBERT ({e}). Chạy ở chế độ Regex.")
+
     def _load_gazetteer(self, root: str) -> Dict[str, List[str]]:
         gaz = {}
         if not root or not os.path.isdir(root):
@@ -130,27 +122,22 @@ class NLU:
 
         # --- GIAI ĐOẠN 1: Dùng PhoBERT NER ---
         if self.ner_pipe:
-            # PhoBERT có thể phân biệt hoa thường, nhưng model train trên dữ liệu lowercase thì nên đưa vào lowercase
-            # Nếu model train trên text gốc thì để text gốc. Ở đây ta dùng norm_text nên là lowercase.
             entities = self.ner_pipe(s)
+            found_foods = []
             
             for ent in entities:
-                # ent có dạng: {'entity_group': 'FOOD', 'score': 0.99, 'word': 'gà', ...}
                 label = ent['entity_group']
                 val = ent['word']
                 
                 if label == "FOOD":
-                    slots["protein"] = val
+                    found_foods.append(val)
                 elif label == "QUANTITY":
-                    import re
                     m = re.search(r"\d+", val)
                     if m: slots["servings"] = int(m.group(0))
                 elif label == "TIME":
-                    import re
                     m = re.search(r"\d+", val)
                     if m: slots["time"] = f"<= {m.group(0)}"
                 elif label == "PRICE":
-                    import re
                     m = re.search(r"(\d+)(.*)", val)
                     if m:
                         num = int(m.group(1))
@@ -160,22 +147,29 @@ class NLU:
                         elif 'tr' in unit or 'trieu' in unit:
                             num *= 1000000
                         slots["price"] = num
+            
+            if found_foods:
+                slots["protein"] = " ".join(dict.fromkeys(found_foods))
 
         # --- GIAI ĐOẠN 2: Fallback (Regex/Dictionary) ---
-        # ... (Giữ nguyên phần fallback như cũ để đảm bảo an toàn) ...
         if not slots["protein"]:
             for p in self.gaz.get("protein", []):
                 if p in s: slots["protein"] = p; break
         
         if not slots["servings"]:
-            m = re.search(r"(\d+)\s*(nguoi|suat|phan)", s)
+            m = re.search(r"(\d+)\s*(nguoi|suat|phan|bat|to)", s)
             if m: slots["servings"] = int(m.group(1))
 
         if not slots["time"]:
-            m = re.search(r"(<=|<|duoi|trong|khoang)\s*(\d{1,3})\s*(phut|p)?", s)
-            if m: slots["time"] = f"<= {m.group(2)}"
+            m = re.search(r"(<=|<|duoi|trong|khoang|mat)\s*(\d{1,3})\s*(phut|p|h|tieng)?", s)
+            if m: 
+                val_time = int(m.group(2))
+                unit = m.group(3) if m.group(3) else ""
+                if unit in ["h", "tieng"]:
+                    val_time *= 60
+                slots["time"] = f"<= {val_time}"
 
-        # Các trường PhoBERT chưa học (Diet, Device, Allergy)
+        # Các trường PhoBERT chưa học
         for d in self.gaz.get("diet", []):
             if d in s: slots["diet"] = d; break
         for d in self.gaz.get("device", []):
@@ -185,8 +179,9 @@ class NLU:
 
         return slots
 
+
 class Retriever:
-    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None):
+    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None, product_catalog: Dict[str, Any] = None):
         self.cfg = cfg
         paths = cfg["paths"]
         # BM25
@@ -203,6 +198,9 @@ class Retriever:
         # Load recipes for metadata
         self.recipes = self._load_recipes(paths["recipes_dir"])
         self.mapping = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+        
+        # Lưu catalog để dùng tính điểm availability
+        self.catalog = product_catalog or {}
 
         self.idx_cfg = cfg["indexing"]
         self.ret_cfg = cfg["retrieval"]
@@ -222,21 +220,6 @@ class Retriever:
                 obj = json.load(f)
                 result[obj["id"]] = obj
         return result
-
-    def _recipe_index_text(self, r: Dict[str, Any]) -> str:
-        parts = []
-        for field in self.idx_cfg["fields"]:
-            if field == "ingredients":
-                names = [ing.get("name","") for ing in r.get("ingredients",[])]
-                parts.append(" ".join(names))
-            else:
-                v = r.get(field, "")
-                if isinstance(v, list): v = " ".join(map(str, v))
-                parts.append(str(v))
-        text = " . ".join(parts)
-        # same normalization as index
-        from .utils import norm_text
-        return norm_text(text, lowercase=self.idx_cfg["lowercase"], strip_dia=self.idx_cfg["strip_diacritics"])
 
     def _tokenize(self, s: str) -> List[str]:
         mode = self.idx_cfg.get("use_vietnamese_tokenizer", "auto")
@@ -265,7 +248,7 @@ class Retriever:
         D, I = self.faiss.search(np.array(q_emb, dtype=np.float32), self.hy_cfg["k_emb"])  # (1, k)
         I = I[0]; D = D[0]
 
-        # Merge with ordering + cap to keep latency predictable
+        # Merge with ordering + cap
         candidate_indices: List[int] = []
         seen = set()
         cap = int(self.hy_cfg.get("k_total", 0))
@@ -287,105 +270,156 @@ class Retriever:
         for idx in candidate_indices:
             rid = self.recipe_ids[idx]
             r = self.recipes[rid]
-            # collect both scores (normalized later)
             bm = float(bm25_scores[idx])
-            # semantic sim via cosine (FAISS IP already on normalized vectors ~ cosine)
-            # we'll recompute q • d
             d_emb = self.emb[idx]
             sem = float(np.dot(q_emb[0], d_emb))
-            cand.append({"id": rid, "bm25": bm, "semantic": sem, "recipe": r, "bm25_rank": None, "emb_rank": None})
+            cand.append({"id": rid, "bm25": bm, "semantic": sem, "recipe": r})
 
-        # Normalize & score rule-based
         if not cand:
             return []
-        bm_vals = np.array([c["bm25"] for c in cand]);
+        
+        bm_vals = np.array([c["bm25"] for c in cand])
         sem_vals = np.array([c["semantic"] for c in cand])
-        # min-max normalize
+        
         def mm(x):
             if x.size == 0: return x
             lo, hi = float(np.min(x)), float(np.max(x))
             if hi - lo < 1e-6:
                 return np.zeros_like(x)+0.5
             return (x - lo) / (hi - lo)
-        bm_n = mm(bm_vals); sem_n = mm(sem_vals)
+        
+        bm_n = mm(bm_vals)
+        sem_n = mm(sem_vals)
 
-        # business features
         out = []
         for i, c in enumerate(cand):
             r = c["recipe"]
-            time_fit = 1.0  # default; refined with slots later
-            diet_fit = 1.0
+            # Tính availability dựa trên catalog
             availability_ratio = self._availability_ratio(r)
-            promo_coverage = 0.0  # placeholder
-            history_affinity = 0.0
+            
             out.append({
                 "id": c["id"],
                 "bm25_n": float(bm_n[i]),
                 "semantic_n": float(sem_n[i]),
-                "time_fit": time_fit,
-                "diet_fit": diet_fit,
+                "time_fit": 1.0,
+                "diet_fit": 1.0,
                 "availability_ratio": float(availability_ratio),
-                "promo_coverage": float(promo_coverage),
-                "history_affinity": float(history_affinity),
+                "promo_coverage": 0.0,
+                "history_affinity": 0.0,
                 "recipe": r
             })
         return out
 
     def _availability_ratio(self, recipe: Dict[str, Any]) -> float:
-        # simple check: every ingredient exists in mapping (stock not considered here)
-        mapping = self.mapping
+        # CẬP NHẬT: Check tồn kho thực tế trong catalog
         need = recipe.get("ingredients", [])
         if not need:
             return 0.0
+        
         ok = 0
         for ing in need:
             name = ing.get("name", "").strip()
-            if name in mapping and len(mapping[name]) > 0:
+            mappings = self.mapping.get(name, [])
+            
+            is_in_stock = False
+            # Nếu có catalog, check stock trong catalog
+            if self.catalog:
+                for m in mappings:
+                    sku = m.get("sku")
+                    prod_info = self.catalog.get(sku)
+                    if prod_info and prod_info.get("stock", 0) > 0:
+                        is_in_stock = True
+                        break
+            else:
+                # Fallback: Chỉ check xem có mapping hay không
+                if mappings:
+                    is_in_stock = True
+
+            if is_in_stock:
                 ok += 1
-        return ok/len(need)
+                
+        return ok / len(need)
 
 
 class CartMapper:
-    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None):
+    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None, product_catalog: Dict[str, Any] = None):
         self.cfg = cfg
         paths = cfg["paths"]
         self.map = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
         subs_path = os.path.join(paths["mapping_dir"], "substitutions.json")
         self.subs = load_json(subs_path) if os.path.exists(subs_path) else {}
+        self.catalog = product_catalog or {}
 
     def suggest_cart(self, recipe: Dict[str, Any], servings: int) -> Dict[str, Any]:
         items = []
         total = 0
         notes = []
+        
         for ing in recipe.get("ingredients", []):
             name = ing.get("name")
-            mapping = self.map.get(name, [])
-            if not mapping:
-                items.append({"ingredient": name, "sku": None, "note": "no mapping"})
+            mappings = self.map.get(name, [])
+            
+            selected_product = None
+            
+            # 1. Tìm trong Catalog (Live DB)
+            if self.catalog:
+                for m in mappings:
+                    sku = m.get("sku")
+                    # Tìm sản phẩm trong catalog
+                    info = self.catalog.get(sku)
+                    if info and info.get("stock", 0) > 0:
+                        selected_product = {**m, **info}
+                        break
+            
+            # 2. Fallback về dữ liệu tĩnh nếu không tìm thấy trong DB
+            if not selected_product and mappings:
+                selected_product = mappings[0]
+
+            if not selected_product:
+                items.append({"ingredient": name, "sku": None, "note": "Chưa có sản phẩm"})
                 continue
-            best = mapping[0]
-            unitSize = best.get("unitSize", {"qty":1, "unit":"unit"})
-            ratio = best.get("ratio_per_serving", {"qty":1, "unit": unitSize.get("unit")})
-            need_qty = float(ratio.get("qty",1)) * float(servings)
-            # round packages
-            packages = int(np.ceil(need_qty / float(unitSize.get("qty",1))))
-            price = best.get("price", 0)  # optional if catalog merged later
+
+            # --- LOGIC MỚI: Xử lý Unit và Price ---
+            
+            # 1. Lấy đơn vị tính (gói/hộp/chai)
+            # Ưu tiên lấy từ DB ('unit'), nếu không có hoặc là đơn vị đo lường (g/ml) thì gán mặc định 'gói'
+            pack_unit = selected_product.get("unit")
+            if not pack_unit or pack_unit in ["g", "ml", "kg", "l", "gram", "liter"]:
+                pack_unit = "gói"
+
+            # 2. Lấy trọng lượng tịnh (để tính số lượng cần mua)
+            unit_val = selected_product.get("unitSize", 1)
+            if isinstance(unit_val, dict):
+                unit_qty = float(unit_val.get("qty", 1))
+            else:
+                unit_qty = float(unit_val)
+
+            # 3. Tính toán
+            ratio = selected_product.get("ratio_per_serving", {"qty": 1})
+            ratio_qty = float(ratio.get("qty", 1))
+            
+            need_qty = ratio_qty * float(servings)
+            packages = int(np.ceil(need_qty / unit_qty))
+            
+            # Giá tiền: Chuyển về float
+            price = float(selected_product.get("price", 0))
             subtotal = packages * price
             total += subtotal
+            
             items.append({
                 "ingredient": name,
-                "sku": best.get("sku"),
-                "name": best.get("name"),
-                "unitSize": unitSize,
-                "need": {"qty": need_qty, "unit": ratio.get("unit")},
+                "sku": selected_product.get("sku"),
+                "name": selected_product.get("name"),
+                "pack_unit": pack_unit,   # <--- Trường quan trọng cho hiển thị
+                "unit_weight": unit_qty,
                 "packages": packages,
                 "price": price,
                 "subtotal": subtotal,
-                "stock_ok": True,
+                "stock_ok": selected_product.get("stock", 1) > 0,
                 "alt": []
             })
+            
         return {"items": items, "estimated": total, "currency": "VND", "notes": notes}
-
 
 def apply_slot_constraints(cand: List[Dict[str, Any]], slots: Dict[str, Any]) -> None:
     # adjust time_fit & diet_fit based on slots
@@ -433,10 +467,10 @@ def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Di
             w.get("w_semantic", 0.35) * c.get("semantic_n", 0.0) +
             w.get("w_timefit",  0.20) * c.get("time_fit", 1.0) +
             w.get("w_dietfit",  0.15) * c.get("diet_fit", 1.0) +
-            w.get("w_protein", 0.0) * c.get("protein_fit", 1.0) +
-            w.get("w_servings", 0.0) * c.get("servings_fit", 1.0) +
-            w.get("w_avail",    0.15) * c.get("availability_ratio", 0.0) +
-            w.get("w_promo",    0.10) * c.get("promo_coverage", 0.0) +
+            w.get("w_protein", 0.20) * c.get("protein_fit", 0.0) + 
+            w.get("w_servings", 0.05) * c.get("servings_fit", 1.0) +
+            w.get("w_avail",    0.05) * c.get("availability_ratio", 0.0) + 
+            w.get("w_promo",    0.05) * c.get("promo_coverage", 0.0) +
             w.get("w_history",  0.05) * c.get("history_affinity", 0.0)
         )
         out.append({**c, "score": float(s)})
@@ -445,16 +479,21 @@ def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Di
 
 
 class Pipeline:
-    def __init__(self, cfg_path: str = "serverAI/config/app.yaml"):
+    def __init__(self, cfg_path: str = "serverAI/config/app.yaml", product_catalog: Dict[str, Any] = None):
         with open(cfg_path, 'r', encoding='utf-8') as f:
             self.cfg = yaml.safe_load(f)
         paths = self.cfg["paths"]
+        
+        self.catalog = product_catalog or {}
+
         # modules
         gaz_dir = "serverAI/data/nlu/gazetteer"
         ingredient_map = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
         self.nlu = NLU(self.cfg["paths"]["nlu_model_dir"], gaz_dir)
-        self.retriever = Retriever(self.cfg, ingredient_map=ingredient_map)
-        self.mapper = CartMapper(self.cfg, ingredient_map=ingredient_map)
+        
+        self.retriever = Retriever(self.cfg, ingredient_map=ingredient_map, product_catalog=self.catalog)
+        self.mapper = CartMapper(self.cfg, ingredient_map=ingredient_map, product_catalog=self.catalog)
+        
         # optional ranker
         self.ranker = None
         self.rank_features: List[str] = []
@@ -463,13 +502,23 @@ class Pipeline:
     def query(self, text: str, top_k: int = 5) -> Dict[str, Any]:
         intent = self.nlu.predict_intent(text)
         slots = self.nlu.extract_slots(text)
+        
+        # Check intent to avoid answering greeting with recipes
+        if intent["name"] in ["greeting", "smalltalk_greeting", "greeting_hello"]:
+            return {
+                "intents": [intent],
+                "slots": slots,
+                "candidates": [],
+                "explanations": ["Xin chào! Mình là trợ lý gợi ý món ăn. Bạn muốn ăn gì hôm nay?"]
+            }
+
         cands = self.retriever.retrieve(text)
         apply_slot_constraints(cands, slots)
         if self.ranker:
             ranked = self._rank_with_lgbm(cands)[:top_k]
         else:
             ranked = score_candidates(cands, self.cfg)[:top_k]
-        # format
+        
         out_cand = []
         for c in ranked:
             r = c["recipe"]
@@ -483,7 +532,7 @@ class Pipeline:
                 "score": c.get("score"),
                 "score_factors": {
                     "semantic": c.get("semantic_n"),
-                    "bm25_n":  c.get("bm25_n"),            # phải có! (đừng để default 0.5)
+                    "bm25_n":  c.get("bm25_n"),
                     "time_fit": c.get("time_fit"),
                     "diet_fit": c.get("diet_fit"),
                     "availability_ratio": c.get("availability_ratio"),
@@ -511,8 +560,6 @@ class Pipeline:
             "totals": {"estimated": cart["estimated"], "currency": cart["currency"]},
             "notes": cart["notes"]
         }
-
-    # ---- Ranker helpers ----
 
     def _load_ranker(self, ranker_dir: Optional[str]) -> None:
         if not ranker_dir:

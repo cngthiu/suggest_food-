@@ -6,7 +6,7 @@ import os
 from dotenv import load_dotenv
 
 from serverAI.inference.pipeline import Pipeline
-
+from serverAI.serving.db_connector import ProductDatabase
 load_dotenv()
 
 app = FastAPI(title="SmartShop AI")
@@ -17,6 +17,22 @@ PIPELINE = None
 @app.on_event("startup")
 async def startup_event():
     global PIPELINE
+    try:
+        # --- BƯỚC 1: KẾT NỐI DB & LẤY CATALOG TẠI ĐÂY ---
+        mongo_uri ="mongodb+srv://thieulk23:thieulk23@cluster0.es7pd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+        db_name = "test"
+        
+        print("[INFO] Connecting to MongoDB...")
+        db_conn = ProductDatabase(mongo_uri, db_name)
+        live_catalog = db_conn.get_product_catalog()
+        print(f"[INFO] Loaded {len(live_catalog)} products from DB.")
+        
+        # --- BƯỚC 2: TRUYỀN CATALOG VÀO PIPELINE (DEPENDENCY INJECTION) ---
+        PIPELINE = Pipeline("serverAI/config/app.yaml", product_catalog=live_catalog)
+        
+    except Exception as e:
+        print("[WARN] Pipeline init failed:", e)
+        PIPELINE = None
     try:
         PIPELINE = Pipeline("serverAI/config/app.yaml")
     except Exception as e:
