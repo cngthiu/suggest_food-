@@ -193,8 +193,8 @@ def process_tsv_file(file_path, gaz_map):
 def main():
     # Đường dẫn
     data_dir = "serverAI/data/nlu"
-    train_path = os.path.join(data_dir, "train1.tsv")
-    valid_path = os.path.join(data_dir, "valid1.tsv")
+    train_path = os.path.join(data_dir, "train.tsv")
+    valid_path = os.path.join(data_dir, "valid.tsv")
     gaz_dir = os.path.join(data_dir, "gazetteer")
     output_path = os.path.join(data_dir, "ner_train.json")
 

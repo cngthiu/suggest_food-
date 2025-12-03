@@ -1,10 +1,309 @@
-Tối nay làm món gà đơn giản trong 20 phút được không?   suggest_recipe   {"protein":"ga","time":"<=20"}
-Cho tôi món cá basa ít dầu ăn   suggest_recipe   {"protein":"ca","species":"basa","style":"it dau"}
-Món nào nấu bằng nồi trong khoảng 25 phút?  filter_time {"device":"noi","time":"<=25"}
-Tôi đang ăn chay, có món rau củ nào dễ nấu không?   filter_diet  {"diet":"chay","category":"rau cu"}
-Gợi ý món heo ba rọi rim mặn để ăn cơm  suggest_recipe  {"protein":"heo","cut":"ba roi","style":"rim man","tags":"dua com"}
-Món tôm nào nhanh nhất khoảng 10 phút?  filter_time {"protein":"tom","time":"<=10"}
-Có món bò nào hợp ăn sáng, ít dầu mỡ?   filter_diet  {"protein":"bo","style":"it dau","tags":"an sang"}
-Tôi bị dị ứng hải sản, có món nào thay thế không?   allergy_notice   {"exclude":"hai san","allergy":["hai san"]}
-Tôi muốn món canh thanh mát, có trứng vịt   filter_diet  {"protein":"trung vit","tags":"canh"}
-Xin chào, bạn gợi ý món gì hôm nay? smalltalk_greeting {}
+an gi trong 1 tieng ruoi cho kip gio di lam	filter_time	{"time": "1 tieng ruoi"}
+tim mon mien tom 5 phut khoang 120k	suggest_recipe	{"protein": "mien tom", "time": "5 phut", "price": "120k"}
+goi y mon bo nau lagu nuong it calo cho cho 2 nguoi trong 1 tieng	suggest_recipe	{"protein": "bo nau lagu", "tags": "nuong", "diet": "it calo", "servings": "cho 2 nguoi", "time": "1 tieng"}
+toi muon nau mon heo trong 25p gia 40 nghin	suggest_recipe	{"protein": "heo", "time": "25p", "price": "40 nghin"}
+mon nao tu trung vit vua it calo vua phu hop 2 to	filter_diet	{"protein": "trung vit", "diet": "it calo", "servings": "2 to"}
+an gi trong 50 phut cho kip gio di lam	filter_time	{"time": "50 phut"}
+goi y mon chao ga chien cho 4 nguoi	suggest_recipe	{"protein": "chao ga", "tags": "chien", "servings": "4 nguoi"}
+chi co sinh vien thi an mon gi	filter_price	{"price": "sinh vien"}
+goi y mon trung chien hap it dau mo cho cho tre nho trong 45p	suggest_recipe	{"protein": "trung chien", "tags": "hap", "diet": "it dau mo", "servings": "cho tre nho", "time": "45p"}
+mon ga kho gung cho nguoi an it calo	filter_diet	{"protein": "ga kho gung", "diet": "it calo"}
+mon trung chien cho nguoi an giam can	filter_diet	{"protein": "trung chien", "diet": "giam can"}
+neu co trung chien va nam huong thi nau mon gi ngon	suggest_recipe	{"protein": "trung chien", "ingredient": "nam huong"}
+mon ca cho nguoi an it dau mo	filter_diet	{"protein": "ca", "diet": "it dau mo"}
+mon ngon re tam nua trieu	suggest_recipe	{"price": "nua trieu"}
+bua toi muon nau gi trong vong 1 tieng	filter_time	{"time": "1 tieng"}
+tu van thuc don giam can cho 6 phan an	filter_diet	{"diet": "giam can", "servings": "6 phan an"}
+bua toi muon nau gi trong vong 1h30p	filter_time	{"time": "1h30p"}
+hom nay an ca ro phi voi canh rau cai thit bam cho 3 to	suggest_recipe	{"protein": "ca ro phi", "ingredient": "canh rau cai thit bam", "servings": "3 to"}
+mon nao tu ca basa vua giam can vua phu hop cho 3 nguoi	filter_diet	{"protein": "ca basa", "diet": "giam can", "servings": "cho 3 nguoi"}
+an kieu keto thi nen an gi tu trung chien	filter_diet	{"diet": "keto", "protein": "trung chien"}
+an gi duoi 100 nghin	filter_price	{"price": "100 nghin"}
+an kieu nhieu rau thi nen an gi tu tom	filter_diet	{"diet": "nhieu rau", "protein": "tom"}
+toi chi co hon 1 tieng de nau an thoi	filter_time	{"time": "hon 1 tieng"}
+an gi duoi sang chanh	filter_price	{"price": "sang chanh"}
+an gi trong 25p cho kip gio di lam	filter_time	{"time": "25p"}
+toi muon nau mon ba roi quay trong lam nhanh gia 70 nghin	suggest_recipe	{"protein": "ba roi quay", "time": "lam nhanh", "price": "70 nghin"}
+bua toi muon nau gi trong vong 60 phut	filter_time	{"time": "60 phut"}
+an sang mot bua gia vua tui tien thi nen an gi	filter_price	{"price": "vua tui tien"}
+mon tom nuong cho nguoi an eat clean	filter_diet	{"protein": "tom nuong", "diet": "eat clean"}
+com sinh vien gia 100 ngan	suggest_recipe	{"price": "100 ngan"}
+co mon nao lam 10p xong khong	filter_time	{"time": "10p"}
+an thit bo chay trong 15p voi ngan sach 500k	suggest_recipe	{"protein": "thit bo", "diet": "chay", "time": "15p", "price": "500k"}
+tim mon trung chuan bi toi qua khoang 200k	suggest_recipe	{"protein": "trung", "time": "chuan bi toi qua", "price": "200k"}
+doi mon it tinh bot trong ngay ma van re nhu 50k	filter_diet	{"diet": "it tinh bot", "price": "50k"}
+tu van thuc don thuc duong cho cho tre nho	filter_diet	{"diet": "thuc duong", "servings": "cho tre nho"}
+toi chi co 50 phut de nau an thoi	filter_time	{"time": "50 phut"}
+doi gio an muc chien gion nuong muoi ot kem rau muong luoc duoc khong	suggest_recipe	{"protein": "muc chien gion", "tags": "nuong muoi ot", "ingredient": "rau muong luoc"}
+mon bo xao hanh tay cho nguoi an khong dau mo	filter_diet	{"protein": "bo xao hanh tay", "diet": "khong dau mo"}
+an gi trong hon 1 tieng cho kip gio di lam	filter_time	{"time": "hon 1 tieng"}
+mon ngon re tam cao cap	suggest_recipe	{"price": "cao cap"}
+mon bo xao hanh tay cho nguoi an it dau mo	filter_diet	{"protein": "bo xao hanh tay", "diet": "it dau mo"}
+bua toi muon nau gi trong vong hon 1 tieng	filter_time	{"time": "hon 1 tieng"}
+an kieu khong dau mo thi nen an gi tu lau bo nhung dam	filter_diet	{"diet": "khong dau mo", "protein": "lau bo nhung dam"}
+hom nay an trung chien voi bap cai thit cho 6 phan an	suggest_recipe	{"protein": "trung chien", "ingredient": "bap cai thit", "servings": "6 phan an"}
+nau 1 suat an mon com ga het bao nhieu tien	suggest_recipe	{"protein": "com ga", "servings": "1 suat"}
+mon gan bo cho nguoi an it calo	filter_diet	{"protein": "gan bo", "diet": "it calo"}
+chi co 70 nghin thi an mon gi	filter_price	{"price": "70 nghin"}
+doi mon low carb trong ngay ma van re nhu 1 trieu	filter_diet	{"diet": "low carb", "price": "1 trieu"}
+an com thit kho eat clean trong lam nhanh voi ngan sach 50 nghin	suggest_recipe	{"protein": "com thit kho", "diet": "eat clean", "time": "lam nhanh", "price": "50 nghin"}
+an gi duoi an sang mot bua	filter_price	{"price": "an sang mot bua"}
+bua toi muon nau gi trong vong lam trong gio nghi trua	filter_time	{"time": "lam trong gio nghi trua"}
+doi mon giam can trong ngay ma van re nhu 100 ngan	filter_diet	{"diet": "giam can", "price": "100 ngan"}
+goi y mon thit rang chay canh lam goi cho cho minh toi	suggest_recipe	{"protein": "thit rang chay canh", "tags": "lam goi", "servings": "cho minh toi"}
+com sinh vien gia 50.000d	suggest_recipe	{"price": "50.000d"}
+doi mon it dau mo trong ngay ma van re nhu 300k	filter_diet	{"diet": "it dau mo", "price": "300k"}
+goi y mon dui ga xao cho cho 1 nguoi	suggest_recipe	{"protein": "dui ga", "tags": "xao", "servings": "cho 1 nguoi"}
+mon nao nau nhanh duoi 60 phut	filter_time	{"time": "60 phut"}
+doi gio an tom the lam goi kem bap cai thit duoc khong	suggest_recipe	{"protein": "tom the", "tags": "lam goi", "ingredient": "bap cai thit"}
+toi muon nau mon ca loc trong 45 phut gia sinh vien	suggest_recipe	{"protein": "ca loc", "time": "45 phut", "price": "sinh vien"}
+co mon nao lam 30p xong khong	filter_time	{"time": "30p"}
+mon trung kho thit nao nau bang noi com dien mat 50 phut	suggest_recipe	{"protein": "trung kho thit", "device": "noi com dien", "time": "50 phut"}
+toi muon nau mon ca ro phi trong lam trong gio nghi trua gia sang chanh	suggest_recipe	{"protein": "ca ro phi", "time": "lam trong gio nghi trua", "price": "sang chanh"}
+doi gio an ga luoc kho kem bi do duoc khong	suggest_recipe	{"protein": "ga luoc", "tags": "kho", "ingredient": "bi do"}
+toi muon nau mon ca hoi trong 5 phut gia 1tr	suggest_recipe	{"protein": "ca hoi", "time": "5 phut", "price": "1tr"}
+an sang mot bua gia 50k thi nen an gi	filter_price	{"price": "50k"}
+toi muon nau mon bo ham rau cu trong danh cho bua sang voi gia 70.000d	suggest_recipe	{"protein": "bo ham rau cu", "time": "danh cho bua sang voi", "price": "70.000d"}
+co mon nao lam 15p xong khong	filter_time	{"time": "15p"}
+doi gio an thit kho trung lam goi kem rau cai duoc khong	suggest_recipe	{"protein": "thit kho trung", "tags": "lam goi", "ingredient": "rau cai"}
+an kieu it calo thi nen an gi tu tom	filter_diet	{"diet": "it calo", "protein": "tom"}
+an gi duoi 100 nghin	filter_price	{"price": "100 nghin"}
+nau gia dinh 3 nguoi an mon bo ham rau cu het bao nhieu tien	suggest_recipe	{"protein": "bo ham rau cu", "servings": "gia dinh 3 nguoi"}
+co mon nao lam 60 phut xong khong	filter_time	{"time": "60 phut"}
+com sinh vien gia 40k	suggest_recipe	{"price": "40k"}
+an gi duoi 20k	filter_price	{"price": "20k"}
+xin chao, ban goi y mon gi hom nay	smalltalk_greeting	{}
+hom nay nen nau gi tu trung vit cho cho be	suggest_recipe	{"protein": "trung vit", "servings": "cho be"}
+tu van thuc don chay cho 2 bat	filter_diet	{"diet": "chay", "servings": "2 bat"}
+goi y mon trung ga kho cho 8 nguoi	suggest_recipe	{"protein": "trung ga", "tags": "kho", "servings": "8 nguoi"}
+mon nao nau nhanh duoi hon 1 tieng	filter_time	{"time": "hon 1 tieng"}
+toi chi co khong mat nhieu thoi gian de nau an thoi	filter_time	{"time": "khong mat nhieu thoi gian"}
+goi y mon ca basa kho cho gia dinh 3 nguoi	suggest_recipe	{"protein": "ca basa", "tags": "kho", "servings": "gia dinh 3 nguoi"}
+bua toi muon nau gi trong vong khong mat nhieu thoi gian	filter_time	{"time": "khong mat nhieu thoi gian"}
+bua toi muon nau gi trong vong 90p	filter_time	{"time": "90p"}
+nau 3 suat an mon uc ga het bao nhieu tien	suggest_recipe	{"protein": "uc ga", "servings": "3 suat"}
+hom nay nen nau gi tu bo nau lagu cho 3 nguoi	suggest_recipe	{"protein": "bo nau lagu", "servings": "3 nguoi"}
+chi co 250k thi an mon gi	filter_price	{"price": "250k"}
+mon canh ga chien nuoc mam cho nguoi an chay	filter_diet	{"protein": "canh ga chien nuoc mam", "diet": "chay"}
+an gi trong 2h cho kip gio di lam	filter_time	{"time": "2h"}
+mon nao tu bun rieu vua it calo vua phu hop 1 suat	filter_diet	{"protein": "bun rieu", "diet": "it calo", "servings": "1 suat"}
+an kieu it calo thi nen an gi tu gan bo	filter_diet	{"diet": "it calo", "protein": "gan bo"}
+an kieu low carb thi nen an gi tu tom nuong	filter_diet	{"diet": "low carb", "protein": "tom nuong"}
+an sang mot bua gia 200 ngan thi nen an gi	filter_price	{"price": "200 ngan"}
+chi co 60k thi an mon gi	filter_price	{"price": "60k"}
+nau 6 phan an an mon bo ham rau cu het bao nhieu tien	suggest_recipe	{"protein": "bo ham rau cu", "servings": "6 phan an"}
+com sinh vien gia sang chanh	suggest_recipe	{"price": "sang chanh"}
+bua toi muon nau gi trong vong lam sau gio lam	filter_time	{"time": "lam sau gio lam"}
+tim mon trung cut 5p khoang sang chanh	suggest_recipe	{"protein": "trung cut", "time": "5p", "price": "sang chanh"}
+mon nao tu com suon vua low carb vua phu hop dai gia dinh	filter_diet	{"protein": "com suon", "diet": "low carb", "servings": "dai gia dinh"}
+hom nay nen nau gi tu trung kho thit cho 2 to	suggest_recipe	{"protein": "trung kho thit", "servings": "2 to"}
+bua toi muon nau gi trong vong 15 phut	filter_time	{"time": "15 phut"}
+an sang mot bua gia 150 nghin thi nen an gi	filter_price	{"price": "150 nghin"}
+com sinh vien gia 120k	suggest_recipe	{"price": "120k"}
+goi y mon tom su kho tieu cho 4 nguoi	suggest_recipe	{"protein": "tom su", "tags": "kho tieu", "servings": "4 nguoi"}
+toi muon nau mon trung cut trong danh cho bua sang voi gia 70 nghin	suggest_recipe	{"protein": "trung cut", "time": "danh cho bua sang voi", "price": "70 nghin"}
+tu van thuc don chay cho gia dinh 5 nguoi	filter_diet	{"diet": "chay", "servings": "gia dinh 5 nguoi"}
+mon nao tu trung hap vua it calo vua phu hop cho 4 nguoi	filter_diet	{"protein": "trung hap", "diet": "it calo", "servings": "cho 4 nguoi"}
+mon bo xao hanh tay nao nau bang bep ga mat chuan bi toi qua	suggest_recipe	{"protein": "bo xao hanh tay", "device": "bep ga", "time": "chuan bi toi qua"}
+goi y mon com tam hap khong dau mo cho 2 vo chong trong nua tieng	suggest_recipe	{"protein": "com tam", "tags": "hap", "diet": "khong dau mo", "servings": "2 vo chong", "time": "nua tieng"}
+an sang mot bua gia 200.000 dong thi nen an gi	filter_price	{"price": "200.000 dong"}
+neu co tom va cai thao thi nau mon gi ngon	suggest_recipe	{"protein": "tom", "ingredient": "cai thao"}
+doi mon khong dau mo trong ngay ma van re nhu 70 nghin	filter_diet	{"diet": "khong dau mo", "price": "70 nghin"}
+bua toi muon nau gi trong vong 2 tieng	filter_time	{"time": "2 tieng"}
+hom nay nen nau gi tu tom rim man ngot cho 4 phan	suggest_recipe	{"protein": "tom rim man ngot", "servings": "4 phan"}
+com sinh vien gia 100 ngan	suggest_recipe	{"price": "100 ngan"}
+mon ngon re tam 1000k	suggest_recipe	{"price": "1000k"}
+doi gio an thit ga rim kem rau cai duoc khong	suggest_recipe	{"protein": "thit ga", "tags": "rim", "ingredient": "rau cai"}
+toi chi co 25p de nau an thoi	filter_time	{"time": "25p"}
+neu co tom the va rau cai thi nau mon gi ngon	suggest_recipe	{"protein": "tom the", "ingredient": "rau cai"}
+an sang mot bua gia 30 nghin thi nen an gi	filter_price	{"price": "30 nghin"}
+nau cho 2 be an mon pho bo het bao nhieu tien	suggest_recipe	{"protein": "pho bo", "servings": "cho 2 be"}
+mon nao tu tom vua it tinh bot vua phu hop cho 1 nguoi	filter_diet	{"protein": "tom", "diet": "it tinh bot", "servings": "cho 1 nguoi"}
+mon ngon re tam 70.000d	suggest_recipe	{"price": "70.000d"}
+mon muc hap cho nguoi an eat clean	filter_diet	{"protein": "muc hap", "diet": "eat clean"}
+an gi trong 5p cho kip gio di lam	filter_time	{"time": "5p"}
+doi gio an tom rim man ngot nau canh kem bi do duoc khong	suggest_recipe	{"protein": "tom rim man ngot", "tags": "nau canh", "ingredient": "bi do"}
+bua toi muon nau gi trong vong 1 tieng	filter_time	{"time": "1 tieng"}
+neu co com tam va ca chua thi nau mon gi ngon	suggest_recipe	{"protein": "com tam", "ingredient": "ca chua"}
+mon ngon re tam 30k	suggest_recipe	{"price": "30k"}
+chi co vua tui tien thi an mon gi	filter_price	{"price": "vua tui tien"}
+tu van thuc don keto cho 7 phan an	filter_diet	{"diet": "keto", "servings": "7 phan an"}
+an kieu thuc duong thi nen an gi tu muc hap	filter_diet	{"diet": "thuc duong", "protein": "muc hap"}
+chi co 300.000 dong thi an mon gi	filter_price	{"price": "300.000 dong"}
+mon pho ga nao nau bang bep ga mat khong mat nhieu thoi gian	suggest_recipe	{"protein": "pho ga", "device": "bep ga", "time": "khong mat nhieu thoi gian"}
+an kieu low carb thi nen an gi tu trung kho thit	filter_diet	{"diet": "low carb", "protein": "trung kho thit"}
+tu van thuc don thuc duong cho 3 bat	filter_diet	{"diet": "thuc duong", "servings": "3 bat"}
+nau 1 nguoi an mon thit xay het bao nhieu tien	suggest_recipe	{"protein": "thit xay", "servings": "1 nguoi"}
+mon ca kho to nao nau bang chao mat 1h30p	suggest_recipe	{"protein": "ca kho to", "device": "chao", "time": "1h30p"}
+an chao ga thuc duong trong nua tieng voi ngan sach 150.000 dong	suggest_recipe	{"protein": "chao ga", "diet": "thuc duong", "time": "nua tieng", "price": "150.000 dong"}
+bua toi muon nau gi trong vong 1 tieng ruoi	filter_time	{"time": "1 tieng ruoi"}
+bua toi muon nau gi trong vong nau nhanh	filter_time	{"time": "nau nhanh"}
+goi y mon suon non rim cho dai gia dinh	suggest_recipe	{"protein": "suon non", "tags": "rim", "servings": "dai gia dinh"}
+chi co 100 ngan thi an mon gi	filter_price	{"price": "100 ngan"}
+mon ba roi quay nao nau bang noi ap suat mat 1h30p	suggest_recipe	{"protein": "ba roi quay", "device": "noi ap suat", "time": "1h30p"}
+co mon nao lam cap toc xong khong	filter_time	{"time": "cap toc"}
+an gi duoi 30k	filter_price	{"price": "30k"}
+tim mon ca hap xi dau danh cho bua sang voi khoang 30 nghin	suggest_recipe	{"protein": "ca hap xi dau", "time": "danh cho bua sang voi", "price": "30 nghin"}
+mon nao tu muc hap vua it dau mo vua phu hop 10 phan an	filter_diet	{"protein": "muc hap", "diet": "it dau mo", "servings": "10 phan an"}
+goi y mon chao tom xao khong dau mo cho 6 nguoi trong 1 tieng	suggest_recipe	{"protein": "chao tom", "tags": "xao", "diet": "khong dau mo", "servings": "6 nguoi", "time": "1 tieng"}
+goi y mon ca basa luoc cho 3 bat	suggest_recipe	{"protein": "ca basa", "tags": "luoc", "servings": "3 bat"}
+com sinh vien gia 500.000 dong	suggest_recipe	{"price": "500.000 dong"}
+doi mon thuc duong trong ngay ma van re nhu 1 trieu ruoi	filter_diet	{"diet": "thuc duong", "price": "1 trieu ruoi"}
+an ba roi quay nhieu rau trong nua tieng voi ngan sach 50 nghin	suggest_recipe	{"protein": "ba roi quay", "diet": "nhieu rau", "time": "nua tieng", "price": "50 nghin"}
+chi co 120k thi an mon gi	filter_price	{"price": "120k"}
+mon nao nau nhanh duoi 90p	filter_time	{"time": "90p"}
+hom nay an chao ga voi rau cai cho 3 bat	suggest_recipe	{"protein": "chao ga", "ingredient": "rau cai", "servings": "3 bat"}
+bua toi muon nau gi trong vong 1 tieng	filter_time	{"time": "1 tieng"}
+toi chi co hon 1 tieng de nau an thoi	filter_time	{"time": "hon 1 tieng"}
+neu co com tam va bi do thi nau mon gi ngon	suggest_recipe	{"protein": "com tam", "ingredient": "bi do"}
+an gi duoi 80k	filter_price	{"price": "80k"}
+mon ngon re tam vua tui tien	suggest_recipe	{"price": "vua tui tien"}
+bua toi muon nau gi trong vong nau nhanh	filter_time	{"time": "nau nhanh"}
+mon pho bo cho nguoi an low carb	filter_diet	{"protein": "pho bo", "diet": "low carb"}
+mon nao nau nhanh duoi 30p	filter_time	{"time": "30p"}
+doi mon giam can trong ngay ma van re nhu re	filter_diet	{"diet": "giam can", "price": "re"}
+mon ngon re tam 60k	suggest_recipe	{"price": "60k"}
+com sinh vien gia 300k	suggest_recipe	{"price": "300k"}
+an mien ga it dau mo trong 1h voi ngan sach 70k	suggest_recipe	{"protein": "mien ga", "diet": "it dau mo", "time": "1h", "price": "70k"}
+chi co 40 nghin thi an mon gi	filter_price	{"price": "40 nghin"}
+doi gio an bo ham rau cu kho tieu kem khoai lang duoc khong	suggest_recipe	{"protein": "bo ham rau cu", "tags": "kho tieu", "ingredient": "khoai lang"}
+an gi trong 5p cho kip gio di lam	filter_time	{"time": "5p"}
+goi y mon muc xao chua ngot rim thuc duong cho cho 3 nguoi trong nau nhanh	suggest_recipe	{"protein": "muc xao chua ngot", "tags": "rim", "diet": "thuc duong", "servings": "cho 3 nguoi", "time": "nau nhanh"}
+an kieu nhieu rau thi nen an gi tu trung ga	filter_diet	{"diet": "nhieu rau", "protein": "trung ga"}
+com sinh vien gia 1tr	suggest_recipe	{"price": "1tr"}
+neu co pho bo va ca rot thi nau mon gi ngon	suggest_recipe	{"protein": "pho bo", "ingredient": "ca rot"}
+mon tom su cho nguoi an it dau mo	filter_diet	{"protein": "tom su", "diet": "it dau mo"}
+an sang mot bua gia 500k thi nen an gi	filter_price	{"price": "500k"}
+toi muon nau mon lau hai san trong lam trong gio nghi trua gia 60k	suggest_recipe	{"protein": "lau hai san", "time": "lam trong gio nghi trua", "price": "60k"}
+goi y mon ca ro phi xao toi keto cho 2 to trong 30p	suggest_recipe	{"protein": "ca ro phi", "tags": "xao toi", "diet": "keto", "servings": "2 to", "time": "30p"}
+chi co re thi an mon gi	filter_price	{"price": "re"}
+hom nay an ca hoi voi bi do cho gia dinh 5 nguoi	suggest_recipe	{"protein": "ca hoi", "ingredient": "bi do", "servings": "gia dinh 5 nguoi"}
+goi y mon lau ga chien it tinh bot cho 10 nguoi trong 45p	suggest_recipe	{"protein": "lau ga", "tags": "chien", "diet": "it tinh bot", "servings": "10 nguoi", "time": "45p"}
+doi gio an bo xao hanh tay xao toi kem canh rau den duoc khong	suggest_recipe	{"protein": "bo xao hanh tay", "tags": "xao toi", "ingredient": "canh rau den"}
+chi co 500.000 dong thi an mon gi	filter_price	{"price": "500.000 dong"}
+an canh ga chien nuoc mam nhieu rau trong lam trong gio nghi trua voi ngan sach vua tui tien	suggest_recipe	{"protein": "canh ga chien nuoc mam", "diet": "nhieu rau", "time": "lam trong gio nghi trua", "price": "vua tui tien"}
+com sinh vien gia 150 nghin	suggest_recipe	{"price": "150 nghin"}
+an tom rim man ngot it tinh bot trong nua tieng voi ngan sach 400k	suggest_recipe	{"protein": "tom rim man ngot", "diet": "it tinh bot", "time": "nua tieng", "price": "400k"}
+neu co muc chien gion va nam rom thi nau mon gi ngon	suggest_recipe	{"protein": "muc chien gion", "ingredient": "nam rom"}
+goi y mon ca dieu hong nuong cho dai gia dinh	suggest_recipe	{"protein": "ca dieu hong", "tags": "nuong", "servings": "dai gia dinh"}
+hom nay nen nau gi tu uc ga cho 1 suat	suggest_recipe	{"protein": "uc ga", "servings": "1 suat"}
+tim mon tom su khong mat nhieu thoi gian khoang 200.000 dong	suggest_recipe	{"protein": "tom su", "time": "khong mat nhieu thoi gian", "price": "200.000 dong"}
+an gi trong 1 tieng ruoi cho kip gio di lam	filter_time	{"time": "1 tieng ruoi"}
+com sinh vien gia 500k	suggest_recipe	{"price": "500k"}
+co mon nao lam nau nhanh xong khong	filter_time	{"time": "nau nhanh"}
+hom nay nen nau gi tu bo xao hanh tay cho 5 phan an	suggest_recipe	{"protein": "bo xao hanh tay", "servings": "5 phan an"}
+tim mon muc ong 1h khoang an sang mot bua	suggest_recipe	{"protein": "muc ong", "time": "1h", "price": "an sang mot bua"}
+an kieu it calo thi nen an gi tu canh ga	filter_diet	{"diet": "it calo", "protein": "canh ga"}
+goi y mon ca chien gion lam goi cho 2 bat	suggest_recipe	{"protein": "ca chien gion", "tags": "lam goi", "servings": "2 bat"}
+hom nay an bo nau lagu voi mang tay cho 1 nguoi	suggest_recipe	{"protein": "bo nau lagu", "ingredient": "mang tay", "servings": "1 nguoi"}
+com sinh vien gia 70.000d	suggest_recipe	{"price": "70.000d"}
+com sinh vien gia 1000k	suggest_recipe	{"price": "1000k"}
+tim mon bo nua tieng khoang vua tui tien	suggest_recipe	{"protein": "bo", "time": "nua tieng", "price": "vua tui tien"}
+chi co sang chanh thi an mon gi	filter_price	{"price": "sang chanh"}
+mon bun cha cho nguoi an it calo	filter_diet	{"protein": "bun cha", "diet": "it calo"}
+mon nao nau nhanh duoi 2 tieng	filter_time	{"time": "2 tieng"}
+mon nao nau nhanh duoi 20p	filter_time	{"time": "20p"}
+mon ca basa nao nau bang noi chien mat 90p	suggest_recipe	{"protein": "ca basa", "device": "noi chien", "time": "90p"}
+mon nao tu ca chien gion vua it dau mo vua phu hop 3 thanh vien	filter_diet	{"protein": "ca chien gion", "diet": "it dau mo", "servings": "3 thanh vien"}
+an kieu it tinh bot thi nen an gi tu ca chien gion	filter_diet	{"diet": "it tinh bot", "protein": "ca chien gion"}
+tim mon ca ro phi nau nhanh khoang tiet kiem	suggest_recipe	{"protein": "ca ro phi", "time": "nau nhanh", "price": "tiet kiem"}
+hom nay an suon non voi bi do cho dai gia dinh	suggest_recipe	{"protein": "suon non", "ingredient": "bi do", "servings": "dai gia dinh"}
+tu van thuc don it calo cho 2 vo chong	filter_diet	{"diet": "it calo", "servings": "2 vo chong"}
+co mon nao lam 5 phut xong khong	filter_time	{"time": "5 phut"}
+doi gio an trung vit lam goi kem canh rau cai thit bam duoc khong	suggest_recipe	{"protein": "trung vit", "tags": "lam goi", "ingredient": "canh rau cai thit bam"}
+mon nao tu muc xao chua ngot vua it tinh bot vua phu hop cho 3 nguoi	filter_diet	{"protein": "muc xao chua ngot", "diet": "it tinh bot", "servings": "cho 3 nguoi"}
+chi co 70.000d thi an mon gi	filter_price	{"price": "70.000d"}
+goi y mon ca hoi kho tieu cho ca nha	suggest_recipe	{"protein": "ca hoi", "tags": "kho tieu", "servings": "ca nha"}
+hom nay an ba roi voi canh cua rau day cho cho 2 nguoi	suggest_recipe	{"protein": "ba roi", "ingredient": "canh cua rau day", "servings": "cho 2 nguoi"}
+doi gio an ba roi quay xao toi kem khoai tay duoc khong	suggest_recipe	{"protein": "ba roi quay", "tags": "xao toi", "ingredient": "khoai tay"}
+doi mon thuc duong trong ngay ma van re nhu 1tr	filter_diet	{"diet": "thuc duong", "price": "1tr"}
+toi muon nau mon bap bo trong 5 phut gia 400k	suggest_recipe	{"protein": "bap bo", "time": "5 phut", "price": "400k"}
+chi co 50k thi an mon gi	filter_price	{"price": "50k"}
+com sinh vien gia 100 ngan	suggest_recipe	{"price": "100 ngan"}
+mon chao ga nao nau bang bep ga mat 2h	suggest_recipe	{"protein": "chao ga", "device": "bep ga", "time": "2h"}
+goi y mon trung chien nuong muoi ot thuc duong cho cho minh toi trong 90p	suggest_recipe	{"protein": "trung chien", "tags": "nuong muoi ot", "diet": "thuc duong", "servings": "cho minh toi", "time": "90p"}
+nau 7 phan an an mon trung kho thit het bao nhieu tien	suggest_recipe	{"protein": "trung kho thit", "servings": "7 phan an"}
+mon nao tu tom the vua keto vua phu hop 1 nguoi	filter_diet	{"protein": "tom the", "diet": "keto", "servings": "1 nguoi"}
+chi co an sang mot bua thi an mon gi	filter_price	{"price": "an sang mot bua"}
+doi gio an ba chi bo xao sa ot kem rau muong luoc duoc khong	suggest_recipe	{"protein": "ba chi bo", "tags": "xao sa ot", "ingredient": "rau muong luoc"}
+goi y mon lau hai san xao sa ot cho 4 phan	suggest_recipe	{"protein": "lau hai san", "tags": "xao sa ot", "servings": "4 phan"}
+doi mon low carb trong ngay ma van re nhu 100 nghin	filter_diet	{"diet": "low carb", "price": "100 nghin"}
+goi y mon bun rieu nau canh cho gia dinh 3 nguoi	suggest_recipe	{"protein": "bun rieu", "tags": "nau canh", "servings": "gia dinh 3 nguoi"}
+nau 5 phan an an mon ca hoi het bao nhieu tien	suggest_recipe	{"protein": "ca hoi", "servings": "5 phan an"}
+an kieu giam can thi nen an gi tu ca dieu hong	filter_diet	{"diet": "giam can", "protein": "ca dieu hong"}
+co mon nao lam 20p xong khong	filter_time	{"time": "20p"}
+mon thit rang chay canh nao nau bang bep dien mat 20p	suggest_recipe	{"protein": "thit rang chay canh", "device": "bep dien", "time": "20p"}
+an canh ga it tinh bot trong nau nhanh voi ngan sach 80k	suggest_recipe	{"protein": "canh ga", "diet": "it tinh bot", "time": "nau nhanh", "price": "80k"}
+mon ngon re tam 50.000d	suggest_recipe	{"price": "50.000d"}
+an gi duoi 50 nghin	filter_price	{"price": "50 nghin"}
+mon bo luc lac cho nguoi an it tinh bot	filter_diet	{"protein": "bo luc lac", "diet": "it tinh bot"}
+goi y mon ca hoi nau canh khong dau mo cho 3 suat trong 20p	suggest_recipe	{"protein": "ca hoi", "tags": "nau canh", "diet": "khong dau mo", "servings": "3 suat", "time": "20p"}
+com sinh vien gia 100 nghin	suggest_recipe	{"price": "100 nghin"}
+mon nao nau nhanh duoi 1h30p	filter_time	{"time": "1h30p"}
+goi y mon lau bo nhung dam xao cho gia dinh 4 nguoi	suggest_recipe	{"protein": "lau bo nhung dam", "tags": "xao", "servings": "gia dinh 4 nguoi"}
+goi y mon thit xay xao sa ot cho 1 suat	suggest_recipe	{"protein": "thit xay", "tags": "xao sa ot", "servings": "1 suat"}
+nau cho 2 be an mon heo het bao nhieu tien	suggest_recipe	{"protein": "heo", "servings": "cho 2 be"}
+goi y mon lau bo nhung dam xao sa ot chay cho 8 nguoi trong nau nhanh	suggest_recipe	{"protein": "lau bo nhung dam", "tags": "xao sa ot", "diet": "chay", "servings": "8 nguoi", "time": "nau nhanh"}
+an gi trong 1 tieng cho kip gio di lam	filter_time	{"time": "1 tieng"}
+neu co chao tom va bap cai thit thi nau mon gi ngon	suggest_recipe	{"protein": "chao tom", "ingredient": "bap cai thit"}
+mon ngon re tam 120k	suggest_recipe	{"price": "120k"}
+mon ca dieu hong cho nguoi an giam can	filter_diet	{"protein": "ca dieu hong", "diet": "giam can"}
+goi y mon muc hap hap cho 2 nguoi	suggest_recipe	{"protein": "muc hap", "tags": "hap", "servings": "2 nguoi"}
+an sang mot bua gia 300.000 dong thi nen an gi	filter_price	{"price": "300.000 dong"}
+hom nay an ba roi quay voi khoai tay cho cho be	suggest_recipe	{"protein": "ba roi quay", "ingredient": "khoai tay", "servings": "cho be"}
+tim mon muc ong 5p khoang 250k	suggest_recipe	{"protein": "muc ong", "time": "5p", "price": "250k"}
+toi muon nau mon ga luoc trong 60 phut gia 80k	suggest_recipe	{"protein": "ga luoc", "time": "60 phut", "price": "80k"}
+an gi duoi 200.000 dong	filter_price	{"price": "200.000 dong"}
+mon nao tu ba roi quay vua it tinh bot vua phu hop 3 thanh vien	filter_diet	{"protein": "ba roi quay", "diet": "it tinh bot", "servings": "3 thanh vien"}
+doi gio an ga nuong luoc kem muop dang xao trung duoc khong	suggest_recipe	{"protein": "ga nuong", "tags": "luoc", "ingredient": "muop dang xao trung"}
+mon nao tu thit ga vua it calo vua phu hop 1 nguoi	filter_diet	{"protein": "thit ga", "diet": "it calo", "servings": "1 nguoi"}
+an gi trong 40 phut cho kip gio di lam	filter_time	{"time": "40 phut"}
+an kieu it tinh bot thi nen an gi tu suon non	filter_diet	{"diet": "it tinh bot", "protein": "suon non"}
+mon nao tu canh ga chien nuoc mam vua nhieu rau vua phu hop 8 nguoi	filter_diet	{"protein": "canh ga chien nuoc mam", "diet": "nhieu rau", "servings": "8 nguoi"}
+an ga luoc it tinh bot trong an lien voi ngan sach re	suggest_recipe	{"protein": "ga luoc", "diet": "it tinh bot", "time": "an lien", "price": "re"}
+nau 6 nguoi an mon ga nuong het bao nhieu tien	suggest_recipe	{"protein": "ga nuong", "servings": "6 nguoi"}
+toi muon nau mon tom rim man ngot trong 15 phut gia sinh vien	suggest_recipe	{"protein": "tom rim man ngot", "time": "15 phut", "price": "sinh vien"}
+bua toi muon nau gi trong vong 15p	filter_time	{"time": "15p"}
+mon pho bo cho nguoi an it tinh bot	filter_diet	{"protein": "pho bo", "diet": "it tinh bot"}
+mon nao tu thit xay vua chay vua phu hop 10 phan an	filter_diet	{"protein": "thit xay", "diet": "chay", "servings": "10 phan an"}
+bua toi muon nau gi trong vong 25p	filter_time	{"time": "25p"}
+com sinh vien gia 50.000d	suggest_recipe	{"price": "50.000d"}
+mon nao tu bach tuoc vua it dau mo vua phu hop 1 suat	filter_diet	{"protein": "bach tuoc", "diet": "it dau mo", "servings": "1 suat"}
+co mon nao lam 60 phut xong khong	filter_time	{"time": "60 phut"}
+nau 2 vo chong an mon bap bo het bao nhieu tien	suggest_recipe	{"protein": "bap bo", "servings": "2 vo chong"}
+chi co ba tram nghin thi an mon gi	filter_price	{"price": "ba tram nghin"}
+toi chi co 45p de nau an thoi	filter_time	{"time": "45p"}
+mon mien tom nao nau bang lo vi song mat 2h	suggest_recipe	{"protein": "mien tom", "device": "lo vi song", "time": "2h"}
+nau 4 phan an mon tom nuong het bao nhieu tien	suggest_recipe	{"protein": "tom nuong", "servings": "4 phan"}
+mon ngon re tam 100.000vnd	suggest_recipe	{"price": "100.000vnd"}
+co mon nao lam cap toc xong khong	filter_time	{"time": "cap toc"}
+mon ngon re tam 500k	suggest_recipe	{"price": "500k"}
+toi chi co 5 phut de nau an thoi	filter_time	{"time": "5 phut"}
+goi y mon ca dieu hong nau canh cho 1 suat	suggest_recipe	{"protein": "ca dieu hong", "tags": "nau canh", "servings": "1 suat"}
+toi muon nau mon bo ham rau cu trong khong mat nhieu thoi gian gia 800k	suggest_recipe	{"protein": "bo ham rau cu", "time": "khong mat nhieu thoi gian", "price": "800k"}
+tu van thuc don eat clean cho 3 to	filter_diet	{"diet": "eat clean", "servings": "3 to"}
+hom nay an com tam voi mang tay cho anh em trong phong tro	suggest_recipe	{"protein": "com tam", "ingredient": "mang tay", "servings": "anh em trong phong tro"}
+goi y mon thit ga xao toi cho cho tre nho	suggest_recipe	{"protein": "thit ga", "tags": "xao toi", "servings": "cho tre nho"}
+hom nay an bo luc lac voi canh rau cai thit bam cho cho be	suggest_recipe	{"protein": "bo luc lac", "ingredient": "canh rau cai thit bam", "servings": "cho be"}
+doi mon chay trong ngay ma van re nhu 50.000d	filter_diet	{"diet": "chay", "price": "50.000d"}
+hom nay an pho bo voi canh cua rau day cho cho minh toi	suggest_recipe	{"protein": "pho bo", "ingredient": "canh cua rau day", "servings": "cho minh toi"}
+doi mon nhieu rau trong ngay ma van re nhu 100 ngan	filter_diet	{"diet": "nhieu rau", "price": "100 ngan"}
+mon thit rang chay canh cho nguoi an giam can	filter_diet	{"protein": "thit rang chay canh", "diet": "giam can"}
+an gi trong 30 phut cho kip gio di lam	filter_time	{"time": "30 phut"}
+mon mien ga cho nguoi an it dau mo	filter_diet	{"protein": "mien ga", "diet": "it dau mo"}
+toi chi co chuan bi toi qua de nau an thoi	filter_time	{"time": "chuan bi toi qua"}
+mon lau ga cho nguoi an chay	filter_diet	{"protein": "lau ga", "diet": "chay"}
+doi mon giam can trong ngay ma van re nhu binh dan	filter_diet	{"diet": "giam can", "price": "binh dan"}
+co mon nao lam danh cho bua sang voi xong khong	filter_time	{"time": "danh cho bua sang voi"}
+chi co 30 nghin thi an mon gi	filter_price	{"price": "30 nghin"}
+toi chi co 1 tieng de nau an thoi	filter_time	{"time": "1 tieng"}
+chao buoi toi	smalltalk_greeting	{}
+hey	smalltalk_greeting	{}
+bye bye	smalltalk_greeting	{}
+hi bee	smalltalk_greeting	{}
+ban khoe khong	smalltalk_greeting	{}
+yo yo	smalltalk_greeting	{}
+bee oi	smalltalk_greeting	{}
+chau ban	smalltalk_greeting	{}
+bua toi muon nau gi trong vong 15 phut	filter_time	{"time": "15 phut"}
+an kieu thuc duong thi nen an gi tu com suon	filter_diet	{"diet": "thuc duong", "protein": "com suon"}

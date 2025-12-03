@@ -225,12 +225,12 @@ def main():
     
     print(f"Dang sinh {NUM_TRAIN} mau train mo rong...")
     train_data = generate_samples(NUM_TRAIN)
-    with open(f"{base_dir}/train1.tsv", "w", encoding="utf-8") as f:
+    with open(f"{base_dir}/train.tsv", "w", encoding="utf-8") as f:
         f.write("\n".join(train_data))
         
     print(f"Dang sinh {NUM_VALID} mau valid mo rong...")
     valid_data = generate_samples(NUM_VALID)
-    with open(f"{base_dir}/valid1.tsv", "w", encoding="utf-8") as f:
+    with open(f"{base_dir}/valid.tsv", "w", encoding="utf-8") as f:
         f.write("\n".join(valid_data))
         
     print(f"Xong! Da tao file train.tsv va valid.tsv moi tai {base_dir}")
