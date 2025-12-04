@@ -24,20 +24,21 @@ async def startup_event():
         
         print("[INFO] Connecting to MongoDB...")
         db_conn = ProductDatabase(mongo_uri, db_name)
+        
+        # Lấy cả 2 dữ liệu
         live_catalog = db_conn.get_product_catalog()
-        print(f"[INFO] Loaded {len(live_catalog)} products from DB.")
+        live_mapping = db_conn.get_full_mapping_logic() # Hàm này lấy mapping + aliases
         
-        # --- BƯỚC 2: TRUYỀN CATALOG VÀO PIPELINE (DEPENDENCY INJECTION) ---
-        PIPELINE = Pipeline("serverAI/config/app.yaml", product_catalog=live_catalog)
+        print(f"[INIT] Catalog size: {len(live_catalog)}, Mapping size: {len(live_mapping)}")
         
+        # TRUYỀN CẢ 2 VÀO PIPELINE (Quan trọng)
+        PIPELINE = Pipeline(
+            "serverAI/config/app.yaml", 
+            product_catalog=live_catalog, 
+            ingredient_map=live_mapping
+        )
     except Exception as e:
-        print("[WARN] Pipeline init failed:", e)
-        PIPELINE = None
-    try:
-        PIPELINE = Pipeline("serverAI/config/app.yaml")
-    except Exception as e:
-        print("[WARN] Pipeline init failed:", e)
-        PIPELINE = None
+        print("[ERROR] Init failed:", e)
 
 class QueryReq(BaseModel):
     text: str

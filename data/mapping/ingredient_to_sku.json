@@ -1,93 +1,570 @@
 {
   "thit heo ba roi": [
-    { "sku": "heo-ba-roi-500g", "name": "Thit heo ba roi 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 150, "unit": "g"}, "aliases": ["heo ba roi", "ba roi heo"] }
+    {
+      "sku": "ba-roi-heo-1kg",
+      "name": "Thit heo ba roi 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" },
+      "aliases": ["heo ba roi", "ba roi heo", "ba roi"]
+    }
   ],
+
   "suon non": [
-    { "sku": "suon-non-500g", "name": "Suon non 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 180, "unit": "g"} }
+    {
+      "sku": "suon-non-heo",
+      "name": "Suon non heo 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 180, "unit": "g" }
+    },
+    {
+      "sku": "suon-non-heo-gia-tot",
+      "name": "Suon non heo gia tot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 180, "unit": "g" }
+    }
   ],
+
   "thit heo xay": [
-    { "sku": "heo-xay-500g", "name": "Thit heo xay 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 150, "unit": "g"} }
+    {
+      "sku": "thit-heo-xay",
+      "name": "Thit heo xay 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" },
+      "aliases": ["heo xay", "thit xay heo"]
+    },
+    {
+      "sku": "thit-heo-xay-cp-100g",
+      "name": "Thit heo xay CP 100g",
+      "unitSize": { "qty": 100, "unit": "g" },
+      "ratio_per_serving": { "qty": 100, "unit": "g" }
+    }
   ],
+
+  "thit dui heo": [
+    {
+      "sku": "thit-dui-heo",
+      "name": "Thit dui heo 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" },
+      "aliases": ["dui heo"]
+    }
+  ],
+
   "thit ga": [
-    { "sku": "uc-ga-phile-500g", "name": "Uc ga phi le 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 180, "unit": "g"}, "aliases": ["ga", "uc ga", "thit ga phile"] },
-    { "sku": "canh-ga-500g", "name": "Canh ga 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 200, "unit": "g"}, "aliases": ["canh ga"] }
+    {
+      "sku": "uc-ga-phi-le-co-da-500g",
+      "name": "Uc ga phi le co da 500g",
+      "unitSize": { "qty": 500, "unit": "g" },
+      "ratio_per_serving": { "qty": 180, "unit": "g" },
+      "aliases": ["ga", "uc ga", "thit ga phile", "uc ga phi le"]
+    },
+    {
+      "sku": "thit-uc-ga-phi-le",
+      "name": "Thit uc ga phi le tui 500g",
+      "unitSize": { "qty": 500, "unit": "g" },
+      "ratio_per_serving": { "qty": 180, "unit": "g" }
+    },
+    {
+      "sku": "canh-ga-500g",
+      "name": "Canh ga 500g",
+      "unitSize": { "qty": 500, "unit": "g" },
+      "ratio_per_serving": { "qty": 200, "unit": "g" },
+      "aliases": ["canh ga"]
+    }
   ],
+
   "canh ga": [
-    { "sku": "canh-ga-500g", "name": "Canh ga 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 200, "unit": "g"} }
+    {
+      "sku": "canh-ga-500g",
+      "name": "Canh ga 500g",
+      "unitSize": { "qty": 500, "unit": "g" },
+      "ratio_per_serving": { "qty": 200, "unit": "g" }
+    }
   ],
+
   "chan ga": [
-    { "sku": "chan-ga-500g", "name": "Chan ga 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 200, "unit": "g"} }
+    {
+      "sku": "chan-ga-600g",
+      "name": "Chan ga 600g",
+      "unitSize": { "qty": 600, "unit": "g" },
+      "ratio_per_serving": { "qty": 200, "unit": "g" }
+    }
   ],
+
+  "long ga": [
+    {
+      "sku": "long-ga-250g",
+      "name": "Long ga 250g",
+      "unitSize": { "qty": 250, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" },
+      "aliases": ["long ga cp"]
+    },
+    {
+      "sku": "tim-ga-250g",
+      "name": "Tim ga 250g",
+      "unitSize": { "qty": 250, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
   "thit bo": [
-    { "sku": "dui-bo-500g", "name": "Dui bo 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 180, "unit": "g"}, "aliases": ["bo", "thit dui bo"] },
-    { "sku": "ba-chi-bo-500g", "name": "Ba chi bo 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 180, "unit": "g"} }
+    {
+      "sku": "dui-bo-250g",
+      "name": "Dui bo 200g",
+      "unitSize": { "qty": 200, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" },
+      "aliases": ["dui bo", "thit dui bo"]
+    },
+    {
+      "sku": "ba-chi-bo",
+      "name": "Ba chi bo 200g",
+      "unitSize": { "qty": 200, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" }
+    }
   ],
-  "ca basa phi le": [
-    { "sku": "basa-fillet-500g", "name": "Ca basa phi le 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 180, "unit": "g"}, "aliases": ["ca basa", "phi le basa"] }
+
+  "ca basa": [
+    {
+      "sku": "ca-basa-cat-khuc",
+      "name": "Ca basa cat khuc 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 180, "unit": "g" },
+      "aliases": ["ca basa", "basa"]
+    }
   ],
+
   "ca dieu hong": [
-    { "sku": "ca-dieu-hong-1kg", "name": "Ca dieu hong ~1kg", "unitSize": {"qty": 1000, "unit": "g"}, "ratio_per_serving": {"qty": 200, "unit": "g"} }
+    {
+      "sku": "ca-dieu-hong-lam-sach",
+      "name": "Ca dieu hong lam sach 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 200, "unit": "g" }
+    }
   ],
+
+  "ca nuc": [
+    {
+      "sku": "ca-nuc-lam-sach",
+      "name": "Ca nuc lam sach 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 200, "unit": "g" }
+    }
+  ],
+
   "tom": [
-    { "sku": "tom-300g", "name": "Tom 300g", "unitSize": {"qty": 300, "unit": "g"}, "ratio_per_serving": {"qty": 120, "unit": "g"} }
+    {
+      "sku": "tom-the",
+      "name": "Tom the 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 120, "unit": "g" }
+    }
   ],
+
   "muc": [
-    { "sku": "muc-300g", "name": "Muc 300g", "unitSize": {"qty": 300, "unit": "g"}, "ratio_per_serving": {"qty": 120, "unit": "g"} }
+    {
+      "sku": "muc-nut-lam-sach",
+      "name": "Muc nut lam sach 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 120, "unit": "g" }
+    },
+    {
+      "sku": "rau-muc",
+      "name": "Rau muc 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 120, "unit": "g" }
+    },
+    {
+      "sku": "duoi-muc",
+      "name": "Duoi muc 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 120, "unit": "g" }
+    }
   ],
 
   "trung ga": [
-    { "sku": "trung-ga-10", "name": "Trung ga 10 qua", "unitSize": {"qty": 10, "unit": "cai"}, "ratio_per_serving": {"qty": 1, "unit": "cai"} }
+    {
+      "sku": "trung-ga",
+      "name": "Trung ga 10 trai",
+      "unitSize": { "qty": 10, "unit": "cai" },
+      "ratio_per_serving": { "qty": 1, "unit": "cai" }
+    }
   ],
+
   "trung vit": [
-    { "sku": "trung-vit-10", "name": "Trung vit 10 qua", "unitSize": {"qty": 10, "unit": "cai"}, "ratio_per_serving": {"qty": 1, "unit": "cai"} }
+    {
+      "sku": "trung-vit",
+      "name": "Trung vit 10 trai",
+      "unitSize": { "qty": 10, "unit": "cai" },
+      "ratio_per_serving": { "qty": 1, "unit": "cai" }
+    }
+  ],
+
+  "xoai": [
+    {
+      "sku": "xoai-tu-quy",
+      "name": "Xoai tu quy 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" },
+      "aliases": ["xoai tu quy", "xoai"]
+    }
+  ],
+
+  "chuoi": [
+    {
+      "sku": "chuoi-gia-nam-mi",
+      "name": "Chuoi gia Nam My 1 nai",
+      "unitSize": { "qty": 1, "unit": "nai" },
+      "ratio_per_serving": { "qty": 1, "unit": "cai" },
+      "aliases": ["chuoi gia", "chuoi nam my"]
+    }
+  ],
+
+  "rau mong toi": [
+    {
+      "sku": "rau-mong-toi",
+      "name": "Rau mong toi 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "cai ngot": [
+    {
+      "sku": "cai-ngot",
+      "name": "Cai ngot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "rau den": [
+    {
+      "sku": "rau-den",
+      "name": "Rau den 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "rau lang": [
+    {
+      "sku": "rau-lang",
+      "name": "Rau lang 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "xa lach": [
+    {
+      "sku": "xa-lach-bup-mo",
+      "name": "Xa lach bup mo 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 60, "unit": "g" },
+      "aliases": ["xa lach", "xa lach bap", "xa lach bop mo"]
+    }
+  ],
+
+  "rau ngot": [
+    {
+      "sku": "rau-ngot",
+      "name": "Rau ngot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 60, "unit": "g" }
+    }
+  ],
+
+  "rau diep ca": [
+    {
+      "sku": "rau-diep-ca",
+      "name": "Rau diep ca 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 30, "unit": "g" }
+    }
+  ],
+
+  "muop huong": [
+    {
+      "sku": "muop-huong",
+      "name": "Muop huong 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 100, "unit": "g" }
+    }
+  ],
+
+  "dua leo": [
+    {
+      "sku": "dua-leo",
+      "name": "Dua leo 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "thom": [
+    {
+      "sku": "thom-nguyen-trai",
+      "name": "Thom nguyen trai 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 100, "unit": "g" },
+      "aliases": ["dua", "dua hau", "thom"]
+    }
+  ],
+
+  "ot chuong": [
+    {
+      "sku": "ot-chuong",
+      "name": "Ot chuong 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 50, "unit": "g" }
+    }
+  ],
+
+  "dau bap": [
+    {
+      "sku": "dau-bap",
+      "name": "Dau bap 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 60, "unit": "g" }
+    }
+  ],
+
+  "ca tim": [
+    {
+      "sku": "ca-tim",
+      "name": "Ca tim 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
+  ],
+
+  "ot hiem": [
+    {
+      "sku": "ot-hiem",
+      "name": "Ot hiem 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 5, "unit": "g" }
+    }
+  ],
+
+  "tieu xanh": [
+    {
+      "sku": "tieu-xanh",
+      "name": "Tieu xanh 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 3, "unit": "g" }
+    }
+  ],
+
+  "hanh ngo": [
+    {
+      "sku": "hanh-ngo",
+      "name": "Hanh ngo 100g",
+      "unitSize": { "qty": 100, "unit": "g" },
+      "ratio_per_serving": { "qty": 10, "unit": "g" },
+      "aliases": ["hanh la", "ngo", "ngo rai"]
+    }
   ],
 
   "bap cai trang": [
-    { "sku": "bap-cai-trang-1kg", "name": "Bap cai trang 1kg", "unitSize": {"qty": 1000, "unit": "g"}, "ratio_per_serving": {"qty": 120, "unit": "g"} }
+    {
+      "sku": "bap-cai-trang",
+      "name": "Bap cai trang 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 120, "unit": "g" }
+    }
   ],
+
   "bi xanh": [
-    { "sku": "bi-xanh-1kg", "name": "Bi xanh 1kg", "unitSize": {"qty": 1000, "unit": "g"}, "ratio_per_serving": {"qty": 150, "unit": "g"} }
+    {
+      "sku": "bi-xanh",
+      "name": "Bi xanh 1 trai",
+      "unitSize": { "qty": 1, "unit": "trai" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" }
+    }
   ],
+
   "ca chua": [
-    { "sku": "ca-chua-500g", "name": "Ca chua 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 80, "unit": "g"} }
+    {
+      "sku": "ca-chua",
+      "name": "Ca chua 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
   ],
+
   "ca rot": [
-    { "sku": "ca-rot-500g", "name": "Ca rot 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 60, "unit": "g"} }
+    {
+      "sku": "ca-rot",
+      "name": "Ca rot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 60, "unit": "g" }
+    }
   ],
+
   "hanh tay": [
-    { "sku": "hanh-tay-500g", "name": "Hanh tay 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 20, "unit": "g"} }
+    {
+      "sku": "hanh-tay",
+      "name": "Hanh tay 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 20, "unit": "g" }
+    }
   ],
+
   "khoai tay": [
-    { "sku": "khoai-tay-1kg", "name": "Khoai tay 1kg", "unitSize": {"qty": 1000, "unit": "g"}, "ratio_per_serving": {"qty": 150, "unit": "g"} }
+    {
+      "sku": "khoai-tay",
+      "name": "Khoai tay 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 150, "unit": "g" }
+    }
   ],
+
   "rau muong": [
-    { "sku": "rau-muong-300g", "name": "Rau muong 300g", "unitSize": {"qty": 300, "unit": "g"}, "ratio_per_serving": {"qty": 80, "unit": "g"} }
+    {
+      "sku": "rau-muong",
+      "name": "Rau muong 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 80, "unit": "g" }
+    }
   ],
 
   "nuoc mam": [
-    { "sku": "nuoc-mam-chinsu-720ml", "name": "Nuoc mam chinsu", "unitSize": {"qty": 720, "unit": "ml"}, "ratio_per_serving": {"qty": 10, "unit": "ml"} }
+    {
+      "sku": "nuoc-mam-chinsu-720ml",
+      "name": "Nuoc mam ca com Chinsu 720ml",
+      "unitSize": { "qty": 720, "unit": "ml" },
+      "ratio_per_serving": { "qty": 10, "unit": "ml" }
+    }
   ],
+
   "muoi": [
-    { "sku": "muoi-500g", "name": "Muoi 500g", "unitSize": {"qty": 500, "unit": "g"}, "ratio_per_serving": {"qty": 2, "unit": "g"} }
+    {
+      "sku": "muoi-iot",
+      "name": "Muoi iot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 2, "unit": "g" }
+    }
   ],
+
   "duong cat": [
-    { "sku": "duong-1kg", "name": "Duong 1kg", "unitSize": {"qty": 1000, "unit": "g"}, "ratio_per_serving": {"qty": 5, "unit": "g"}, "aliases": ["duong"] }
+    {
+      "sku": "duong-tinh-luyen",
+      "name": "Duong tinh luyen 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 5, "unit": "g" },
+      "aliases": ["duong"]
+    }
   ],
+
   "ot": [
-    { "sku": "ot-100g", "name": "Ot tuoi 100g", "unitSize": {"qty": 100, "unit": "g"}, "ratio_per_serving": {"qty": 5, "unit": "g"} }
+    {
+      "sku": "ot-hiem",
+      "name": "Ot tuoi hiem 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 5, "unit": "g" }
+    },
+    {
+      "sku": "ot-say",
+      "name": "Ot say 1 chai",
+      "unitSize": { "qty": 50, "unit": "g" },
+      "ratio_per_serving": { "qty": 2, "unit": "g" }
+    }
   ],
+
   "tieu den": [
-    { "sku": "tieu-den-50g", "name": "Tieu den xay 50g", "unitSize": {"qty": 50, "unit": "g"}, "ratio_per_serving": {"qty": 1, "unit": "g"}, "aliases": ["tieu"] }
+    {
+      "sku": "tieu-den",
+      "name": "Tieu den xay 50g",
+      "unitSize": { "qty": 50, "unit": "g" },
+      "ratio_per_serving": { "qty": 1, "unit": "g" },
+      "aliases": ["tieu"]
+    }
   ],
+
+  "bot nghe": [
+    {
+      "sku": "bot-nghe",
+      "name": "Bot nghe 32g",
+      "unitSize": { "qty": 32, "unit": "g" },
+      "ratio_per_serving": { "qty": 2, "unit": "g" }
+    }
+  ],
+
+  "bot ngot": [
+    {
+      "sku": "bot-ngot",
+      "name": "Bot ngot 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 2, "unit": "g" }
+    }
+  ],
+
   "hat nem": [
-    { "sku": "hat-nem-400g", "name": "Hat nem 400g", "unitSize": {"qty": 400, "unit": "g"}, "ratio_per_serving": {"qty": 3, "unit": "g"} }
+    {
+      "sku": "hat-nem-knor",
+      "name": "Hat nem Knor 200g",
+      "unitSize": { "qty": 200, "unit": "g" },
+      "ratio_per_serving": { "qty": 3, "unit": "g" }
+    }
   ],
+
   "dau an": [
-    { "sku": "dau-an-simply-1l", "name": "Dau an 1L", "unitSize": {"qty": 1000, "unit": "ml"}, "ratio_per_serving": {"qty": 10, "unit": "ml"} },
-    { "sku": "dau-an-neptune-1l", "name": "Dau an 1L", "unitSize": {"qty": 1000, "unit": "ml"}, "ratio_per_serving": {"qty": 10, "unit": "ml"} },
-    { "sku": "dau-an-janbee-1l", "name": "Dau an 1L", "unitSize": {"qty": 1000, "unit": "ml"}, "ratio_per_serving": {"qty": 10, "unit": "ml"} }
+    {
+      "sku": "dau-an-simply-1lit",
+      "name": "Dau an Simply 1L",
+      "unitSize": { "qty": 1000, "unit": "ml" },
+      "ratio_per_serving": { "qty": 10, "unit": "ml" }
+    },
+    {
+      "sku": "dau-an-neptune-1l",
+      "name": "Dau an Neptune 1L",
+      "unitSize": { "qty": 1000, "unit": "ml" },
+      "ratio_per_serving": { "qty": 10, "unit": "ml" }
+    },
+    {
+      "sku": "dau-an-janbee-1l",
+      "name": "Dau an Janbee 1L",
+      "unitSize": { "qty": 1000, "unit": "ml" },
+      "ratio_per_serving": { "qty": 10, "unit": "ml" }
+    }
   ],
+
+  "sa te": [
+    {
+      "sku": "sa-te",
+      "name": "Sa te 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 5, "unit": "g" }
+    }
+  ],
+
+  "chanh": [
+    {
+      "sku": "chanh-khong-hat",
+      "name": "Chanh khong hat 1kg",
+      "unitSize": { "qty": 1000, "unit": "g" },
+      "ratio_per_serving": { "qty": 15, "unit": "g" },
+      "aliases": ["chanh tuoi"]
+    }
+  ],
+
   "mi": [
-    { "sku": "mi-kangshifu-ga-nam", "name": "Mì ăn liền Kang Shi Fu gà nấm hương", "unitSize": {"qty": 400, "unit": "gói"}, "ratio_per_serving": {"qty": 3, "unit": "gói"} }
+    {
+      "sku": "mi-an-lien-kangshifu-6goi",
+      "name": "Mi an lien Kang Shi Fu ga nam huong",
+      "unitSize": { "qty": 5, "unit": "goi" },
+      "ratio_per_serving": { "qty": 1, "unit": "goi" },
+      "aliases": ["mi goi", "mi kangshifu"]
+    }
+  ],
+
+  "bun gio heo": [
+    {
+      "sku": "bun-gio-heo-hang-nga-75g",
+      "name": "Bun gio heo Hang Nga loc 5 goi",
+      "unitSize": { "qty": 5, "unit": "goi" },
+      "ratio_per_serving": { "qty": 1, "unit": "goi" }
+    }
   ]
 }

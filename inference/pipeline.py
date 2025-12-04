@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# File: inference/pipeline.py
 """End-to-end inference pipeline: NLU → Retrieval → Ranking (rule) → SKU mapping → Cart suggestion."""
 
 import os, json, pickle, spacy, re 
@@ -357,30 +357,45 @@ class CartMapper:
         
         for ing in recipe.get("ingredients", []):
             name = ing.get("name")
-            mappings = self.map.get(name, [])
+            
+            # Lấy thông tin mapping (có thể là Dict từ DB hoặc List từ JSON cũ)
+            mapping_data = self.map.get(name)
             
             selected_product = None
             
-            # 1. Tìm trong Catalog (Live DB)
-            if self.catalog:
-                for m in mappings:
+            # --- CASE 1: Dữ liệu từ DB (Dạng Dictionary) ---
+            if isinstance(mapping_data, dict) and "sku" in mapping_data:
+                # Code mới xử lý logic từ DB
+                target_sku = mapping_data["sku"]
+                # Lấy thêm thông tin giá/tồn kho từ Catalog
+                product_info = self.catalog.get(target_sku)
+                
+                if product_info and product_info.get("stock", 0) > 0:
+                    selected_product = {
+                        **product_info,
+                        # Ưu tiên lấy ratio từ DB mapping, nếu không có thì fallback
+                        "ratio_per_serving": mapping_data.get("ratio_per_serving", {"qty": 100, "unit": "g"})
+                    }
+
+            # --- CASE 2: Dữ liệu từ JSON cũ (Dạng List) ---
+            elif isinstance(mapping_data, list):
+                # Code cũ xử lý logic fallback
+                for m in mapping_data:
                     sku = m.get("sku")
                     # Tìm sản phẩm trong catalog
                     info = self.catalog.get(sku)
                     if info and info.get("stock", 0) > 0:
                         selected_product = {**m, **info}
                         break
-            
-            # 2. Fallback về dữ liệu tĩnh nếu không tìm thấy trong DB
-            if not selected_product and mappings:
-                selected_product = mappings[0]
+                # Fallback nếu không có trong DB nhưng có trong file JSON (để tránh crash)
+                if not selected_product and mapping_data:
+                     selected_product = mapping_data[0]
 
             if not selected_product:
                 items.append({"ingredient": name, "sku": None, "note": "Chưa có sản phẩm"})
                 continue
 
-            # --- LOGIC MỚI: Xử lý Unit và Price ---
-            
+           
             # 1. Lấy đơn vị tính (gói/hộp/chai)
             # Ưu tiên lấy từ DB ('unit'), nếu không có hoặc là đơn vị đo lường (g/ml) thì gán mặc định 'gói'
             pack_unit = selected_product.get("unit")
@@ -479,20 +494,28 @@ def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Di
 
 
 class Pipeline:
-    def __init__(self, cfg_path: str = "serverAI/config/app.yaml", product_catalog: Dict[str, Any] = None):
+    # 1. Thêm tham số ingredient_map vào __init__
+    def __init__(self, cfg_path: str = "serverAI/config/app.yaml", product_catalog: Dict[str, Any] = None, ingredient_map: Dict[str, Any] = None):
         with open(cfg_path, 'r', encoding='utf-8') as f:
             self.cfg = yaml.safe_load(f)
         paths = self.cfg["paths"]
         
         self.catalog = product_catalog or {}
 
-        # modules
+        # 2. Ưu tiên dùng Map từ DB truyền vào. Nếu không có mới load file JSON (fallback)
+        if ingredient_map:
+            print(f"[INFO] Pipeline: Using Dynamic Ingredient Map from DB ({len(ingredient_map)} keys)")
+            self.map_data = ingredient_map
+        else:
+            print("[WARN] Pipeline: Fallback to Static JSON Map")
+            self.map_data = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+
         gaz_dir = "serverAI/data/nlu/gazetteer"
-        ingredient_map = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
         self.nlu = NLU(self.cfg["paths"]["nlu_model_dir"], gaz_dir)
         
-        self.retriever = Retriever(self.cfg, ingredient_map=ingredient_map, product_catalog=self.catalog)
-        self.mapper = CartMapper(self.cfg, ingredient_map=ingredient_map, product_catalog=self.catalog)
+        # 3. Truyền self.map_data đã chọn vào các module con
+        self.retriever = Retriever(self.cfg, ingredient_map=self.map_data, product_catalog=self.catalog)
+        self.mapper = CartMapper(self.cfg, ingredient_map=self.map_data, product_catalog=self.catalog)
         
         # optional ranker
         self.ranker = None
