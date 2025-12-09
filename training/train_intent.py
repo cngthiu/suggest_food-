@@ -1,104 +1,118 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""Train a lightweight intent classifier (TF-IDF + LogisticRegression).
-Input: train.tsv, valid.tsv with format: text \t intent \t slots_json
-Output: models/nlu_intent/{vectorizer.pkl, classifier.pkl, label_map.json}
-"""
-
-import os, json, argparse, sys, re
-from pathlib import Path
-import unicodedata
-
-import numpy as np
+import os
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import classification_report, f1_score
-import joblib
+import numpy as np
+import torch
+from pathlib import Path
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+from transformers import (
+    AutoTokenizer, 
+    AutoModelForSequenceClassification, 
+    TrainingArguments, 
+    Trainer,
+    DataCollatorWithPadding
+)
+import json
 
-
-def strip_diacritics(s: str) -> str:
-    s = unicodedata.normalize("NFD", s)
-    return "".join(c for c in s if unicodedata.category(c) != "Mn")
-
-
-def load_tsv(path: str):
-    rows = []
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line: continue
-            parts = line.split("\t")
-            if len(parts) < 2:
-                parts = re.split(r"\s{2,}", line)
-            if len(parts) < 2:
-                continue
-            text = parts[0]
-            intent = parts[1]
-            rows.append((text, intent))
-    df = pd.DataFrame(rows, columns=["text", "intent"])
+def load_data(path):
+    df = pd.read_csv(path, sep='\t', names=['text', 'intent'])
+    # Xử lý nếu file tsv có header hoặc format lạ
+    if len(df.columns) < 2:
+        # Fallback đọc thủ công nếu pandas lỗi format
+        rows = []
+        with open(path, 'r', encoding='utf-8') as f:
+            for line in f:
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    rows.append(parts[:2])
+        df = pd.DataFrame(rows, columns=['text', 'intent'])
     return df
 
-
-def preprocess_text(s: str, lowercase=True, remove_diacritics=True):
-    s = s.strip()
-    if lowercase:
-        s = s.lower()
-    if remove_diacritics:
-        s = strip_diacritics(s)
-    return s
-
+def compute_metrics(eval_pred):
+    logits, labels = eval_pred
+    predictions = np.argmax(logits, axis=-1)
+    acc = accuracy_score(labels, predictions)
+    return {"accuracy": acc}
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--train", required=True)
-    ap.add_argument("--valid", required=True)
-    ap.add_argument("--out", required=True)
-    ap.add_argument("--ngram_max", type=int, default=2)
-    args = ap.parse_args()
+    # Cấu hình
+    DATA_DIR = "serverAI/data/nlu"
+    OUT_DIR = "serverAI/models/intent_phobert"
+    MODEL_NAME = "vinai/phobert-base-v2"
+    
+    # 1. Chuẩn bị dữ liệu
+    print("[INFO] Loading data...")
+    df_train = load_data(os.path.join(DATA_DIR, "train.tsv"))
+    df_valid = load_data(os.path.join(DATA_DIR, "valid.tsv"))
+    
+    # Tạo label map
+    labels = sorted(list(set(df_train['intent'].unique()) | set(df_valid['intent'].unique())))
+    label2id = {l: i for i, l in enumerate(labels)}
+    id2label = {i: l for i, l in enumerate(labels)}
+    
+    print(f"[INFO] Labels: {labels}")
+    
+    # Lưu label map để dùng lúc inference
+    Path(OUT_DIR).mkdir(parents=True, exist_ok=True)
+    with open(os.path.join(OUT_DIR, "label_map.json"), "w", encoding="utf-8") as f:
+        json.dump({"labels": labels}, f, ensure_ascii=False)
 
-    out_dir = Path(args.out); out_dir.mkdir(parents=True, exist_ok=True)
+    # 2. Tokenizer & Dataset
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    
+    def preprocess_function(examples):
+        return tokenizer(examples["text"], truncation=True, max_length=64)
 
-    df_train = load_tsv(args.train)
-    df_valid = load_tsv(args.valid)
+    # Convert pandas -> HuggingFace Dataset
+    from datasets import Dataset
+    train_ds = Dataset.from_pandas(df_train)
+    valid_ds = Dataset.from_pandas(df_valid)
+    
+    # Map label
+    train_ds = train_ds.map(lambda x: {"label": label2id[x["intent"]]})
+    valid_ds = valid_ds.map(lambda x: {"label": label2id[x["intent"]]})
+    
+    # Tokenize
+    tokenized_train = train_ds.map(preprocess_function, batched=True)
+    tokenized_valid = valid_ds.map(preprocess_function, batched=True)
 
-    df_train["text"] = df_train["text"].apply(preprocess_text)
-    df_valid["text"] = df_valid["text"].apply(preprocess_text)
+    # 3. Model
+    model = AutoModelForSequenceClassification.from_pretrained(
+        MODEL_NAME, 
+        num_labels=len(labels),
+        id2label=id2label,
+        label2id=label2id
+    )
 
-    labels = sorted(df_train["intent"].unique().tolist())
-    label_to_id = {l:i for i,l in enumerate(labels)}
-    id_to_label = {i:l for l,i in label_to_id.items()}
+    # 4. Train
+    training_args = TrainingArguments(
+        output_dir=OUT_DIR,
+        learning_rate=2e-5,
+        per_device_train_batch_size=16,
+        num_train_epochs=5,
+        weight_decay=0.01,
+        evaluation_strategy="epoch",
+        save_strategy="epoch",
+        save_total_limit=1,
+        load_best_model_at_end=True,
+    )
 
-    y_train = df_train["intent"].map(label_to_id).values
-    y_valid = df_valid["intent"].map(label_to_id).fillna(-1).astype(int).values
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        train_dataset=tokenized_train,
+        eval_dataset=tokenized_valid,
+        tokenizer=tokenizer,
+        data_collator=DataCollatorWithPadding(tokenizer=tokenizer),
+        compute_metrics=compute_metrics,
+    )
 
-    vectorizer = TfidfVectorizer(max_features=50000, ngram_range=(1, args.ngram_max), analyzer="char_wb")
-    # char_wb n-grams hoạt động tốt cho tiếng Việt không dấu + biến thể chính tả ngắn.
-    clf = LogisticRegression(max_iter=200, C=4.0, class_weight="balanced")
-
-    pipe = Pipeline([
-        ("tfidf", vectorizer),
-        ("clf", clf)
-    ])
-
-    pipe.fit(df_train["text"].values, y_train)
-
-    y_pred = pipe.predict(df_valid["text"].values)
-    macro_f1 = f1_score(y_valid, y_pred, average="macro")
-    print("Macro-F1:", macro_f1)
-    try:
-        print(classification_report(y_valid, y_pred, target_names=labels))
-    except Exception:
-        pass
-
-    # Save artifacts
-    joblib.dump(pipe.named_steps["tfidf"], out_dir/"vectorizer.pkl")
-    joblib.dump(pipe.named_steps["clf"], out_dir/"classifier.pkl")
-    with open(out_dir/"label_map.json", "w", encoding="utf-8") as f:
-        json.dump({"labels": labels}, f, ensure_ascii=False, indent=2)
-
-    print("Saved to", out_dir)
+    print("[INFO] Training Intent Model...")
+    trainer.train()
+    
+    print(f"[INFO] Saving model to {OUT_DIR}...")
+    trainer.save_model(OUT_DIR)
+    tokenizer.save_pretrained(OUT_DIR)
 
 if __name__ == "__main__":
     main()

@@ -5,8 +5,8 @@ import os, json, pickle, spacy, re
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
-
-from .utils import norm_text, load_json
+from .nlu_engine import NLU
+from .utils import norm_text, load_json, tokenize_vi
 from transformers import pipeline as hf_pipeline
 
 try:
@@ -14,16 +14,12 @@ try:
 except Exception as e:
     raise
 
-# Optional Underthesea
-try:
-    from underthesea import word_tokenize
-    def vi_tokenize(s: str):
-        return word_tokenize(s, format='text').split()
-except Exception:
-    import re
-    def vi_tokenize(s: str):
-        return re.findall(r"[a-z0-9]+", s.lower())
+from underthesea import word_tokenize
 
+def vi_tokenize(s: str) -> List[str]:
+    if not s: return []
+    # format='text' giúp giữ lại các từ ghép có gạch dưới (ví_dụ)
+    return word_tokenize(norm_text(s), format='text').split()
 
 def resolve_encoder_device() -> str:
     """Decide whether SentenceTransformer should run on CPU or GPU."""
@@ -62,124 +58,6 @@ def recipe_matches_protein(recipe: Dict[str, Any], protein: str) -> bool:
                 return True
     return False
 
-
-class NLU:
-    def __init__(self, model_dir: str, gazetteer_dir: str):
-        import joblib
-        self.model_dir = model_dir
-        self.gaz = self._load_gazetteer(gazetteer_dir)
-        self.vectorizer = joblib.load(Path(model_dir)/"vectorizer.pkl")
-        self.clf = joblib.load(Path(model_dir)/"classifier.pkl")
-        with open(Path(model_dir)/"label_map.json", "r", encoding="utf-8") as f:
-            self.labels = json.load(f)["labels"]
-        
-        # --- UPDATE: Load PhoBERT NER ---
-        self.ner_path = "serverAI/models/phobert_ner" 
-        self.ner_pipe = None
-        try:
-            if os.path.exists(self.ner_path):
-                print(f"[INFO] NLU: Đang load PhoBERT từ {self.ner_path}...")
-                self.ner_pipe = hf_pipeline(
-                    "token-classification", 
-                    model=self.ner_path, 
-                    tokenizer=self.ner_path,
-                    aggregation_strategy="simple",
-                    device=-1 
-                )
-                print("[INFO] NLU: Load PhoBERT thành công.")
-            else:
-                print(f"[WARN] NLU: Không tìm thấy PhoBERT model. Chạy ở chế độ Regex.")
-        except Exception as e:
-            print(f"[WARN] NLU: Lỗi khi load PhoBERT ({e}). Chạy ở chế độ Regex.")
-
-    def _load_gazetteer(self, root: str) -> Dict[str, List[str]]:
-        gaz = {}
-        if not root or not os.path.isdir(root):
-            return gaz
-        for name in ["protein", "diet", "device", "allergy", "region"]:
-            p = Path(root)/f"{name}.txt"
-            if p.exists():
-                with open(p, 'r', encoding='utf-8') as f:
-                    gaz[name] = [line.strip() for line in f if line.strip()]
-        return gaz
-
-    def predict_intent(self, text: str) -> Dict[str, Any]:
-        import unicodedata
-        s = norm_text(text, lowercase=True, strip_dia=True)
-        X = self.vectorizer.transform([s])
-        prob = self.clf.predict_proba(X)[0]
-        idx = int(np.argmax(prob))
-        return {"name": self.labels[idx], "score": float(prob[idx])}
-
-    def extract_slots(self, text: str) -> Dict[str, Any]:
-        """Trích xuất thông tin dùng PhoBERT (ưu tiên) + Regex/Dictionary (bổ trợ)."""
-        s = norm_text(text, lowercase=True, strip_dia=True)
-        
-        slots: Dict[str, Any] = {
-            "servings": None, "time": None, "price": None, 
-            "diet": None, "protein": None, "device": None, "allergy": []
-        }
-
-        # --- GIAI ĐOẠN 1: Dùng PhoBERT NER ---
-        if self.ner_pipe:
-            entities = self.ner_pipe(s)
-            found_foods = []
-            
-            for ent in entities:
-                label = ent['entity_group']
-                val = ent['word']
-                
-                if label == "FOOD":
-                    found_foods.append(val)
-                elif label == "QUANTITY":
-                    m = re.search(r"\d+", val)
-                    if m: slots["servings"] = int(m.group(0))
-                elif label == "TIME":
-                    m = re.search(r"\d+", val)
-                    if m: slots["time"] = f"<= {m.group(0)}"
-                elif label == "PRICE":
-                    m = re.search(r"(\d+)(.*)", val)
-                    if m:
-                        num = int(m.group(1))
-                        unit = m.group(2).strip()
-                        if 'k' in unit or 'nghin' in unit or 'ngan' in unit:
-                            num *= 1000
-                        elif 'tr' in unit or 'trieu' in unit:
-                            num *= 1000000
-                        slots["price"] = num
-            
-            if found_foods:
-                slots["protein"] = " ".join(dict.fromkeys(found_foods))
-
-        # --- GIAI ĐOẠN 2: Fallback (Regex/Dictionary) ---
-        if not slots["protein"]:
-            for p in self.gaz.get("protein", []):
-                if p in s: slots["protein"] = p; break
-        
-        if not slots["servings"]:
-            m = re.search(r"(\d+)\s*(nguoi|suat|phan|bat|to)", s)
-            if m: slots["servings"] = int(m.group(1))
-
-        if not slots["time"]:
-            m = re.search(r"(<=|<|duoi|trong|khoang|mat)\s*(\d{1,3})\s*(phut|p|h|tieng)?", s)
-            if m: 
-                val_time = int(m.group(2))
-                unit = m.group(3) if m.group(3) else ""
-                if unit in ["h", "tieng"]:
-                    val_time *= 60
-                slots["time"] = f"<= {val_time}"
-
-        # Các trường PhoBERT chưa học
-        for d in self.gaz.get("diet", []):
-            if d in s: slots["diet"] = d; break
-        for d in self.gaz.get("device", []):
-            if d in s: slots["device"] = d; break
-        for a in self.gaz.get("allergy", []):
-            if a in s: slots["allergy"].append(a)
-
-        return slots
-
-
 class Retriever:
     def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None, product_catalog: Dict[str, Any] = None):
         self.cfg = cfg
@@ -212,6 +90,9 @@ class Retriever:
         self.embedder = SentenceTransformer(self.ret_cfg["embedder_model"], device=device_hint)
         self.encoder_device = device_hint
 
+    def _tokenize(self, s: str) -List(str):
+        return vi_tokenize(s)
+        
     def _load_recipes(self, recipes_dir: str) -> Dict[str, Any]:
         import glob
         result = {}
@@ -220,20 +101,6 @@ class Retriever:
                 obj = json.load(f)
                 result[obj["id"]] = obj
         return result
-
-    def _tokenize(self, s: str) -> List[str]:
-        mode = self.idx_cfg.get("use_vietnamese_tokenizer", "auto")
-        if mode == "none":
-            import re
-            return re.findall(r"[a-z0-9]+", s.lower())
-        try:
-            from underthesea import word_tokenize
-            if mode == "underthesea" or mode == "auto":
-                return word_tokenize(s, format='text').split()
-        except Exception:
-            pass
-        import re
-        return re.findall(r"[a-z0-9]+", s.lower())
 
     def retrieve(self, query: str) -> List[Dict[str, Any]]:
         s = norm_text(query, lowercase=True, strip_dia=True)
