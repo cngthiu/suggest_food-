@@ -2,8 +2,6 @@ gợi ý món gì ngon rẻ đi	suggest_food
 hôm nay ăn món gì nhỉ	suggest_food
 tìm món làm từ thịt gà	suggest_food_by_ingredient
 món nào nấu nhanh dưới 15 phút	suggest_food_by_time
-thêm cho mình 2 suất gà kho	add_to_cart
 món này giá bao nhiêu tiền	ask_price
-xóa giỏ hàng giúp tôi	clear_cart
 chào bạn	greeting
 tạm biệt nhé	goodbye

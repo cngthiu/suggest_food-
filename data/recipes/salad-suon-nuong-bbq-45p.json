@@ -1,0 +1,23 @@
+{
+  "id": "salad-suon-nuong-bbq-45p",
+  "title": "Salad sườn nướng BBQ",
+  "summary": "Món ăn kiểu Âu với sườn nướng đậm đà ăn kèm salad trộn dầu giấm chua ngọt.",
+  "ingredients": [
+    { "name": "sườn non", "qty": 600, "unit": "g", "type": "main" },
+    { "name": "xà lách", "qty": 300, "unit": "g", "type": "vegetable" },
+    { "name": "dầu ăn", "qty": 20, "unit": "ml", "type": "spice" },
+    { "name": "sốt BBQ", "qty": 50, "unit": "g", "type": "spice" }
+  ],
+  "steps": [
+    "Ướp sườn với sốt BBQ và một chút dầu ăn trong 30 phút.",
+    "Nướng sườn ở nhiệt độ 200 độ C trong 20 phút đến khi cháy cạnh.",
+    "Xà lách rửa sạch, cắt khúc, trộn với dầu giấm.",
+    "Xếp sườn lên trên đĩa salad và thưởng thức."
+  ],
+  "cook_time": 45,
+  "servings": 3,
+  "tags": ["món nướng", "kiểu âu", "cuối tuần"],
+  "diet": ["high-protein"],
+  "image": "https://cdn.tgdd.vn/2020/09/CookRecipe/Avatar/suon-nuong-bbq-thumbnail.jpg",
+  "search_keywords": ["sườn nướng", "salad thịt", "bbq"]
+}

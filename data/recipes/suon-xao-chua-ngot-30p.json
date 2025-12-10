@@ -1,0 +1,49 @@
+{
+  "id": "suon-xao-chua-ngot-30p",
+  "title": "Sườn xào chua ngọt",
+  "summary": "Món sườn heo chua ngọt đậm đà, thịt mềm, đưa cơm cho cả gia đình.",
+  "ingredients": [
+    {
+      "name": "sườn non",
+      "qty": 500,
+      "unit": "g",
+      "type": "main"
+    },
+    {
+      "name": "dầu ăn",
+      "qty": 30,
+      "unit": "ml",
+      "type": "spice"
+    },
+    {
+      "name": "đường",
+      "qty": 20,
+      "unit": "g",
+      "type": "spice"
+    },
+    {
+      "name": "nước mắm",
+      "qty": 15,
+      "unit": "ml",
+      "type": "spice"
+    },
+    {
+      "name": "giấm",
+      "qty": 10,
+      "unit": "ml",
+      "type": "spice"
+    }
+  ],
+  "steps": [
+    "Sườn rửa sạch, chặt miếng vừa ăn, luộc sơ để khử mùi.",
+    "Chiên sườn vàng đều các mặt với dầu ăn.",
+    "Pha nước sốt chua ngọt từ mắm, đường, giấm.",
+    "Đảo sườn với nước sốt đến khi sệt lại là hoàn thành."
+  ],
+  "cook_time": 30,
+  "servings": 3,
+  "tags": ["món mặn", "đưa cơm", "thịt heo"],
+  "diet": ["normal"],
+  "image": "https://cdn.tgdd.vn/2020/07/CookRecipe/Avatar/suon-xao-chua-ngot-thumbnail.jpg",
+  "search_keywords": ["sườn chua ngọt", "suon xao"]
+}

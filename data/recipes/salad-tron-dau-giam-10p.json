@@ -1,62 +1,42 @@
 {
   "id": "salad-tron-dau-giam-10p",
-  "title": "Salad tron dau giam 10 phut",
-  "summary": "Salad rau cu tuoi mat, sot dau giam chua ngot.",
+  "title": "Salad xà lách trộn dầu giấm",
+  "summary": "Món khai vị thanh mát, giải ngấy với xà lách thủy tinh tươi ngon.",
   "ingredients": [
     {
-      "name": "xa lach bup mo",
-      "qty": 200,
-      "unit": "g"
+      "name": "xà lách",
+      "qty": 300,
+      "unit": "g",
+      "type": "vegetable"
     },
     {
-      "name": "ca chua",
-      "qty": 2,
-      "unit": "qua"
+      "name": "dầu ăn",
+      "qty": 10,
+      "unit": "ml",
+      "type": "spice"
     },
     {
-      "name": "dua leo",
+      "name": "giấm",
+      "qty": 5,
+      "unit": "ml",
+      "type": "spice"
+    },
+    {
+      "name": "cà chua",
       "qty": 1,
-      "unit": "trai"
-    },
-    {
-      "name": "dau an",
-      "qty": 20,
-      "unit": "ml"
-    },
-    {
-      "name": "chanh khong hat",
-      "qty": 1,
-      "unit": "qua"
-    },
-    {
-      "name": "duong",
-      "qty": 15,
-      "unit": "g"
+      "unit": "quả",
+      "type": "vegetable"
     }
   ],
   "steps": [
-    "Rau cu rua sach, cat mieng.",
-    "Pha sot: dau an, nuoc cot chanh, duong, muoi.",
-    "Tron deu truoc khi an."
+    "Xà lách rửa sạch, để ráo nước, cắt khúc vừa ăn.",
+    "Pha sốt dầu giấm: Dầu ăn, giấm, một chút đường và muối tiêu.",
+    "Rưới sốt lên rau ngay trước khi ăn và trộn đều."
   ],
   "cook_time": 10,
   "servings": 2,
-  "tags": [
-    "tron",
-    "healthy",
-    "giam can"
-  ],
-  "diet": [
-    "chay",
-    "diet",
-    "eat clean"
-  ],
-  "device": [
-    "bat"
-  ],
-  "image": "salad-dau-giam.jpg",
-  "region": "quoc_te",
-  "nutrition": {
-    "kcal": 150
-  }
+  "tags": ["khai vị", "nhanh", "rau củ"],
+  "diet": ["healthy", "low-carb"],
+  "image": "https://cdn.tgdd.vn/2021/11/CookProduct/Salad-dau-giam-thumb.jpg",
+  "search_keywords": ["sa lát", "rau trộn"]
 }

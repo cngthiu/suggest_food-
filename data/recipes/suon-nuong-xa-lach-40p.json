@@ -1,0 +1,49 @@
+{
+  "id": "suon-nuong-xa-lach-40p",
+  "title": "Sườn nướng ăn kèm xà lách",
+  "summary": "Sườn nướng cháy cạnh thơm lừng, ăn kèm xà lách tươi mát giải ngấy.",
+  "ingredients": [
+    {
+      "name": "sườn non",
+      "qty": 600,
+      "unit": "g",
+      "type": "main"
+    },
+    {
+      "name": "xà lách",
+      "qty": 200,
+      "unit": "g",
+      "type": "vegetable"
+    },
+    {
+      "name": "dầu ăn",
+      "qty": 10,
+      "unit": "ml",
+      "type": "spice"
+    },
+    {
+      "name": "mật ong",
+      "qty": 20,
+      "unit": "ml",
+      "type": "spice"
+    },
+    {
+      "name": "tỏi",
+      "qty": 3,
+      "unit": "tép",
+      "type": "spice"
+    }
+  ],
+  "steps": [
+    "Sườn chặt miếng dài, ướp với tỏi băm, mật ong, dầu ăn và gia vị nướng trong 20 phút.",
+    "Nướng sườn trên bếp than hoặc nồi chiên không dầu ở 180 độ C trong 15-20 phút mỗi mặt.",
+    "Xà lách rửa sạch, ngâm nước muối loãng, để ráo.",
+    "Xếp xà lách ra đĩa, đặt sườn nướng lên trên và thưởng thức."
+  ],
+  "cook_time": 40,
+  "servings": 3,
+  "tags": ["món nướng", "cuối tuần", "healthy"],
+  "diet": ["normal", "low-carb"],
+  "image": "https://cdn.tgdd.vn/2020/08/CookRecipe/Avatar/suon-nuong-mat-ong-thumbnail.jpg",
+  "search_keywords": ["sườn nướng", "thịt nướng", "bbq"]
+}

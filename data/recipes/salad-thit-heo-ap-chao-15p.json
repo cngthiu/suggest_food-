@@ -1,0 +1,23 @@
+{
+  "id": "salad-thit-heo-ap-chao-15p",
+  "title": "Xà lách trộn thịt heo áp chảo",
+  "summary": "Bữa ăn nhẹ nhàng (Light meal) với rau xanh và thịt heo áp chảo thơm lừng.",
+  "ingredients": [
+    { "name": "xà lách", "qty": 300, "unit": "g", "type": "vegetable" },
+    { "name": "sườn non", "qty": 300, "unit": "g", "type": "main" },
+    { "name": "dầu ăn", "qty": 15, "unit": "ml", "type": "spice" },
+    { "name": "muối tiêu", "qty": 5, "unit": "g", "type": "spice" }
+  ],
+  "steps": [
+    "Sườn lọc lấy phần thịt mềm hoặc để nguyên miếng, dần mềm.",
+    "Áp chảo thịt với chút dầu ăn và muối tiêu cho chín vàng.",
+    "Thái thịt thành lát mỏng vừa ăn.",
+    "Trộn xà lách với sốt yêu thích, đặt thịt lên trên."
+  ],
+  "cook_time": 15,
+  "servings": 2,
+  "tags": ["giảm cân", "nhanh", "bữa sáng"],
+  "diet": ["healthy", "keto"],
+  "image": "https://cdn.tgdd.vn/2021/11/CookProduct/salad-thit-heo-thumb.jpg",
+  "search_keywords": ["salad thịt", "rau trộn", "áp chảo"]
+}

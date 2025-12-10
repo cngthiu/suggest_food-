@@ -1,0 +1,198 @@
+[
+  {
+    "ingredient_key": "sườn non",
+    "sku_ref": "suon-non-heo-1kg",
+    "status": "active",
+    "aliases": ["sườn heo", "sườn lợn", "sườn non heo"],
+    "logic": {
+      "ratio_per_serving": 0.2,
+      "ratio_unit": "kg",
+      "note": "1 người ăn khoảng 200g sườn"
+    }
+  },
+  {
+    "ingredient_key": "xà lách",
+    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
+    "status": "active",
+    "aliases": ["rau xà lách", "xà lách thủy tinh"],
+    "logic": {
+      "ratio_per_serving": 0.1,
+      "ratio_unit": "kg",
+      "note": "1 người ăn khoảng 100g rau"
+    }
+  },
+  {
+    "ingredient_key": "dầu ăn",
+    "sku_ref": "dau-an-neptune-1l",
+    "status": "active",
+    "aliases": ["dầu thực vật", "dầu chiên"],
+    "logic": {
+      "ratio_per_serving": 0.02,
+      "ratio_unit": "l",
+      "note": "Ước lượng 20ml dầu mỗi người/bữa"
+    }
+  },
+  {
+    "ingredient_key": "sườn non",
+    "sku_ref": "suon-non-heo-1kg",
+    "status": "active",
+    "aliases": ["sườn heo", "sườn lợn", "sườn non heo", "dẻ sườn", "sườn cây"],
+    "logic": {
+      "ratio_per_serving": 0.2,
+      "ratio_unit": "kg",
+      "note": "1 người ăn khoảng 200g sườn"
+    }
+  },
+  {
+    "ingredient_key": "xà lách",
+    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
+    "status": "active",
+    "aliases": ["rau xà lách", "xà lách thủy tinh", "rau sống", "xà lách mỡ"],
+    "logic": {
+      "ratio_per_serving": 0.08,
+      "ratio_unit": "kg",
+      "note": "Ăn kèm thì chỉ cần khoảng 80g/người"
+    }
+  },
+  {
+    "ingredient_key": "dầu ăn",
+    "sku_ref": "dau-an-neptune-1l",
+    "status": "active",
+    "aliases": ["dầu thực vật", "dầu chiên", "dầu neptune"],
+    "logic": {
+      "ratio_per_serving": 0.015,
+      "ratio_unit": "l",
+      "note": "Trung bình 15ml/người"
+    }
+  },
+  {
+    "ingredient_key": "sườn non",
+    "sku_ref": "suon-non-heo-1kg",
+    "status": "active",
+    "aliases": [
+      "sườn heo",
+      "sườn lợn",
+      "sườn non heo",
+      "dẻ sườn",
+      "sườn cây",
+      "thịt sườn"
+    ],
+    "logic": {
+      "ratio_per_serving": 0.2,
+      "ratio_unit": "kg",
+      "note": "Trung bình 200g sườn/người"
+    }
+  },
+  {
+    "ingredient_key": "xà lách",
+    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
+    "status": "active",
+    "aliases": [
+      "rau xà lách",
+      "xà lách thủy tinh",
+      "rau sống",
+      "xà lách mỡ",
+      "rau salad"
+    ],
+    "logic": {
+      "ratio_per_serving": 0.1,
+      "ratio_unit": "kg",
+      "note": "Khoảng 100g rau/người cho món salad"
+    }
+  },
+  {
+    "ingredient_key": "dầu ăn",
+    "sku_ref": "dau-an-neptune-1l",
+    "status": "active",
+    "aliases": ["dầu thực vật", "dầu chiên", "dầu neptune", "dầu"],
+    "logic": {
+      "ratio_per_serving": 0.02,
+      "ratio_unit": "l",
+      "note": "Khoảng 20ml dầu cho các món chiên/xào"
+    }
+  },
+  {
+    "ingredient_key": "thịt heo xay",
+    "sku_ref": "thit-heo-xay-cp-100g",
+    "status": "active",
+    "aliases": ["thịt băm", "heo xay", "thịt lợn xay"],
+    "logic": { "ratio_per_serving": 0.05, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "bí đỏ",
+    "sku_ref": "bi-do-tron-500g",
+    "status": "active",
+    "aliases": ["bí ngô", "trái bí đỏ"],
+    "logic": { "ratio_per_serving": 0.1, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "má đùi gà",
+    "sku_ref": "ma-dui-ga-cat-san-1kg",
+    "status": "active",
+    "aliases": ["thịt gà", "đùi gà", "gà góc tư"],
+    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "cải thìa",
+    "sku_ref": "cai-thia-da-lat-1kg",
+    "status": "active",
+    "aliases": ["cải chíp", "rau cải thìa"],
+    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "cá lóc",
+    "sku_ref": "ca-loc-song-tui-500g",
+    "status": "active",
+    "aliases": ["cá quả", "cá chuối"],
+    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "khoai tây",
+    "sku_ref": "khoai-tay-500g",
+    "status": "active",
+    "aliases": ["củ khoai tây"],
+    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "hạt nêm",
+    "sku_ref": "hat-nem-knor",
+    "status": "active",
+    "aliases": ["bột nêm"],
+    "logic": { "ratio_per_serving": 0.005, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "đường",
+    "sku_ref": "duong-tinh-luyen",
+    "status": "active",
+    "aliases": ["đường cát"],
+    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "nước mắm",
+    "sku_ref": "nuoc-mam-chinsu-720ml",
+    "status": "active",
+    "aliases": ["mắm"],
+    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "l" }
+  },
+   {
+    "ingredient_key": "hành ngò",
+    "sku_ref": "hanh-ngo",
+    "status": "active",
+    "aliases": ["rau mùi", "hành lá"],
+    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "tiêu đen",
+    "sku_ref": "tieu-den",
+    "status": "active",
+    "aliases": ["hạt tiêu"],
+    "logic": { "ratio_per_serving": 0.002, "ratio_unit": "kg" }
+  },
+  {
+    "ingredient_key": "ớt hiểm",
+    "sku_ref": "ot-hiem",
+    "status": "active",
+    "aliases": ["ớt cay"],
+    "logic": { "ratio_per_serving": 0.002, "ratio_unit": "kg" }
+  }
+]

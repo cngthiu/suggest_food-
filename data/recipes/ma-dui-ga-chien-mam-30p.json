@@ -1,0 +1,24 @@
+{
+  "id": "ma-dui-ga-chien-mam-30p",
+  "title": "Má đùi gà chiên nước mắm",
+  "summary": "Má đùi gà da giòn thịt mềm thấm sốt mắm tỏi ớt đậm đà.",
+  "ingredients": [
+    { "name": "má đùi gà", "qty": 500, "unit": "g", "type": "main" },
+    { "name": "dầu ăn", "qty": 50, "unit": "ml", "type": "spice" },
+    { "name": "nước mắm", "qty": 30, "unit": "ml", "type": "spice" },
+    { "name": "đường", "qty": 20, "unit": "g", "type": "spice" },
+    { "name": "tỏi", "qty": 1, "unit": "củ", "type": "spice" }
+  ],
+  "steps": [
+    "Má đùi gà rửa sạch, để ráo, khứa nhẹ vài đường để thấm gia vị.",
+    "Chiên gà ngập dầu với lửa vừa đến khi vàng giòn, vớt ra.",
+    "Phi thơm tỏi, cho nước mắm và đường vào nấu sệt.",
+    "Cho gà vào đảo đều nhanh tay để sốt bám đều."
+  ],
+  "cook_time": 30,
+  "servings": 3,
+  "tags": ["món chiên", "thịt gà", "hao cơm"],
+  "diet": ["high-protein"],
+  "image": "https://cdn.tgdd.vn/2021/01/CookProduct/dui-ga-chien-nuoc-mam-thumb.jpg",
+  "search_keywords": ["gà chiên mắm", "đùi gà chiên"]
+}

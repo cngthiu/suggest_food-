@@ -1,0 +1,22 @@
+{
+  "id": "cai-thia-xao-nam-15p",
+  "title": "Cải thìa xào dầu hào",
+  "summary": "Cải thìa giòn ngọt xào nhanh với dầu hào, món rau không thể thiếu trong bữa cơm.",
+  "ingredients": [
+    { "name": "cải thìa", "qty": 500, "unit": "g", "type": "vegetable" },
+    { "name": "dầu ăn", "qty": 15, "unit": "ml", "type": "spice" },
+    { "name": "tỏi", "qty": 3, "unit": "tép", "type": "spice" },
+    { "name": "dầu hào", "qty": 10, "unit": "ml", "type": "spice" }
+  ],
+  "steps": [
+    "Cải thìa rửa sạch, chẻ đôi hoặc để nguyên cây.",
+    "Chần sơ cải qua nước sôi có pha chút muối để giữ màu xanh.",
+    "Phi thơm tỏi, cho cải vào xào lửa lớn, nêm dầu hào vừa ăn rồi tắt bếp."
+  ],
+  "cook_time": 15,
+  "servings": 3,
+  "tags": ["món xào", "rau xanh", "nhanh"],
+  "diet": ["vegetarian", "healthy"],
+  "image": "https://cdn.tgdd.vn/2021/05/CookProduct/cai-thia-xao-dau-hao-thumb.jpg",
+  "search_keywords": ["cải xào", "rau xào"]
+}
