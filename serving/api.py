@@ -19,8 +19,8 @@ async def startup_event():
     global PIPELINE
     try:
         # --- BƯỚC 1: KẾT NỐI DB & LẤY CATALOG TẠI ĐÂY ---
-        mongo_uri ="mongodb+srv://thieulk23:thieulk23@cluster0.es7pd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-        db_name = "test"
+        mongo_uri : str= os.getenv("MONGO_URI", "mongodb+srv://thieulk23:thieulk23@cluster0.es7pd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        db_name : str = os.getenv("DBNAME", "test")
         
         print("[INFO] Connecting to MongoDB...")
         db_conn = ProductDatabase(mongo_uri, db_name)

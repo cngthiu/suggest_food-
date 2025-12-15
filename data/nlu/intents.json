@@ -1,10 +1,11 @@
 {
   "intents": [
-    "suggest_recipe",
-    "filter_time",
+    "suggest_food",
+    "suggest_food_by_ingredient",
+    "suggest_food_by_time",
+    "ask_price",
     "filter_diet",
-    "meal_plan",
     "greeting",
-    "allergy_notice"
+    "goodbye"
   ]
 }

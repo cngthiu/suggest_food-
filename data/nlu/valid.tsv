@@ -1,0 +1,20 @@
+nghĩ món gì cho bữa tối đi	suggest_food
+tư vấn món ngon cuối tuần	suggest_food
+hôm nay chưa biết nấu gì	suggest_food
+có món nào hấp dẫn không	suggest_food
+món ăn vặt ngon	suggest_food
+nấu món gì với cà chua	suggest_food_by_ingredient
+trong tủ lạnh còn cá lóc	suggest_food_by_ingredient
+gợi ý các món từ trứng gà	suggest_food_by_ingredient
+thịt vịt làm món gì ngon	suggest_food_by_ingredient
+cách nấu sườn chua ngọt	suggest_food_by_ingredient
+tôi đang vội nấu món gì nhanh	suggest_food_by_time
+món ăn làm trong 5 phút	suggest_food_by_time
+bữa trưa văn phòng nhanh gọn	suggest_food_by_time
+món này tốn kém không	ask_price
+giá một phần ăn là bao nhiêu	ask_price
+tôi ăn chay trường	filter_diet
+món nào ít béo	filter_diet
+thực đơn eat clean	filter_diet
+chào ad	greeting
+tạm biệt trợ lý	goodbye

@@ -68,7 +68,7 @@ class NLU:
             "diet": None, "protein": None, "device": None, "allergy": []
         }
         
-        if not self.ort_session:
+        if not self.sess_ner:
             return slots
 
         # 1. Pre-process

@@ -135,29 +135,20 @@ def main():
 
     model_checkpoint = "vinai/phobert-base-v2"
     print(f"Loading {model_checkpoint}...")
-    
-    # --- PHẦN SỬA LỖI QUAN TRỌNG ---
-    # PhoBERT/RoBERTa bắt buộc cần add_prefix_space=True khi dùng pre-tokenized inputs
+    # -------------------------------    
+    # Sử dụng trực tiếp AutoTokenizer với cấu hình chuẩn cho PhoBERT
     try:
-        # Thử load AutoTokenizer Fast với tham số bắt buộc
-        tokenizer = AutoTokenizer.from_pretrained(model_checkpoint, use_fast=True, add_prefix_space=True)
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_checkpoint, 
+            use_fast=True, 
+            add_prefix_space=True  # Bắt buộc cho tác vụ Token Classification
+        )
     except Exception as e:
-        print(f"[WARN] Không thể load AutoTokenizer Fast: {e}")
-        tokenizer = None
+        print(f"[ERROR] Không thể load Tokenizer: {e}")
+        sys.exit(1)
 
-    # Nếu AutoTokenizer không trả về Fast tokenizer, ép dùng RobertaTokenizerFast
-    if tokenizer is None or not tokenizer.is_fast:
-        print("[INFO] Đang chuyển sang dùng RobertaTokenizerFast trực tiếp...")
-        try:
-            from transformers import RobertaTokenizerFast
-            tokenizer = RobertaTokenizerFast.from_pretrained(model_checkpoint, add_prefix_space=True)
-        except Exception as e:
-            print(f"[ERROR] Không thể load Tokenizer: {e}")
-            print("Gợi ý: pip install transformers tokenizers sentencepiece")
-            sys.exit(1)
-            
     if not tokenizer.is_fast:
-        print("[ERROR] Tokenizer hiện tại không phải Fast version. Code cần hàm word_ids() để chạy.")
+        print("[ERROR] Tokenizer không hỗ trợ Fast mode. Hãy cài đặt: pip install transformers[sentencepiece]")
         sys.exit(1)
     # -------------------------------
 

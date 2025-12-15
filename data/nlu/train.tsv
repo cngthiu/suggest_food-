@@ -1,7 +1,80 @@
+# --- Gợi ý chung (suggest_food) ---
 gợi ý món gì ngon rẻ đi	suggest_food
 hôm nay ăn món gì nhỉ	suggest_food
+đói quá không biết ăn gì	suggest_food
+tư vấn thực đơn tối nay	suggest_food
+trưa nay nấu món gì ngon	suggest_food
+bạn có món gì mới lạ không	suggest_food
+gợi ý món ăn cho gia đình	suggest_food
+nghĩ giúp mình món khai vị	suggest_food
+cuối tuần này làm món gì đãi tiệc	suggest_food
+món nào dễ làm cho người lười	suggest_food
+đề xuất món ăn việt nam	suggest_food
+có món nào thanh mát không	suggest_food
+món nhậu ngon	suggest_food
+tìm công thức nấu ăn ngon	suggest_food
+gợi ý món ăn miền tây	suggest_food
+
+# --- Gợi ý theo nguyên liệu (suggest_food_by_ingredient) ---
 tìm món làm từ thịt gà	suggest_food_by_ingredient
+nhà còn thịt bò nấu món gì ngon	suggest_food_by_ingredient
+cách chế biến sườn non	suggest_food_by_ingredient
+món ngon từ cá hồi	suggest_food_by_ingredient
+tôi muốn ăn các món về tôm	suggest_food_by_ingredient
+nấu canh với bí đỏ	suggest_food_by_ingredient
+làm gì với mớ rau muống này	suggest_food_by_ingredient
+món kho từ thịt heo	suggest_food_by_ingredient
+công thức gà chiên	suggest_food_by_ingredient
+đậu hũ làm món gì ngon	suggest_food_by_ingredient
+có món nào dùng trứng vịt không	suggest_food_by_ingredient
+chế biến mực tươi sao cho ngon	suggest_food_by_ingredient
+các món xào với nấm	suggest_food_by_ingredient
+thịt ba chỉ làm món gì	suggest_food_by_ingredient
+cá diêu hồng nấu gì	suggest_food_by_ingredient
+
+# --- Gợi ý theo thời gian/nhanh gọn (suggest_food_by_time) ---
 món nào nấu nhanh dưới 15 phút	suggest_food_by_time
+có món nào làm nhanh gọn không	suggest_food_by_time
+tôi chỉ có 20 phút để nấu ăn	suggest_food_by_time
+bữa sáng nhanh gọn lẹ	suggest_food_by_time
+món ăn chế biến trong 10 phút	suggest_food_by_time
+cần tìm món nấu siêu tốc	suggest_food_by_time
+gợi ý thực đơn cho người bận rộn	suggest_food_by_time
+món xào nhanh	suggest_food_by_time
+nấu gì đơn giản không tốn thời gian	suggest_food_by_time
+công thức nấu ăn dưới 30p	suggest_food_by_time
+
+# --- Hỏi giá/Chi phí (ask_price) ---
 món này giá bao nhiêu tiền	ask_price
+chi phí nấu món này hết bao nhiêu	ask_price
+nguyên liệu món này có đắt không	ask_price
+tổng tiền cho bữa ăn này	ask_price
+món này tốn khoảng bao nhiêu	ask_price
+giá thịt gà hôm nay	ask_price
+cần bao nhiêu tiền để mua nguyên liệu	ask_price
+
+# --- Chế độ ăn/Dinh dưỡng (filter_diet) - Bổ sung mới ---
+tôi đang ăn kiêng	filter_diet
+có món nào ít calo không	filter_diet
+tìm các món chay	filter_diet
+món ăn cho người tiểu đường	filter_diet
+thực đơn low carb	filter_diet
+món nào nhiều protein cho người tập gym	filter_diet
+gợi ý món thanh đạm không dầu mỡ	filter_diet
+đang giảm cân nên ăn gì	filter_diet
+món ăn keto	filter_diet
+tôi bị dị ứng hải sản	filter_diet
+
+# --- Chào hỏi/Tạm biệt (greeting/goodbye) ---
 chào bạn	greeting
+hello shop	greeting
+xin chào trợ lý ảo	greeting
+hi	greeting
+có ai ở đó không	greeting
+bắt đầu nào	greeting
 tạm biệt nhé	goodbye
+bye bye	goodbye
+hẹn gặp lại	goodbye
+kết thúc	goodbye
+thôi mình đi đây	goodbye
+cảm ơn nhé bye	goodbye

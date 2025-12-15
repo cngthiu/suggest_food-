@@ -224,44 +224,25 @@ class CartMapper:
         
         for ing in recipe.get("ingredients", []):
             name = ing.get("name")
-            
-            # Lấy thông tin mapping (có thể là Dict từ DB hoặc List từ JSON cũ)
             mapping_data = self.map.get(name)
-            
             selected_product = None
             
-            # --- CASE 1: Dữ liệu từ DB (Dạng Dictionary) ---
+            # CHỈ XỬ LÝ DỮ LIỆU CHUẨN (DICT)
             if isinstance(mapping_data, dict) and "sku" in mapping_data:
-                # Code mới xử lý logic từ DB
                 target_sku = mapping_data["sku"]
-                # Lấy thêm thông tin giá/tồn kho từ Catalog
                 product_info = self.catalog.get(target_sku)
                 
+                # Chỉ lấy sản phẩm còn hàng (stock > 0)
                 if product_info and product_info.get("stock", 0) > 0:
                     selected_product = {
                         **product_info,
-                        # Ưu tiên lấy ratio từ DB mapping, nếu không có thì fallback
                         "ratio_per_serving": mapping_data.get("ratio_per_serving", {"qty": 100, "unit": "g"})
                     }
 
-            # --- CASE 2: Dữ liệu từ JSON cũ (Dạng List) ---
-            elif isinstance(mapping_data, list):
-                # Code cũ xử lý logic fallback
-                for m in mapping_data:
-                    sku = m.get("sku")
-                    # Tìm sản phẩm trong catalog
-                    info = self.catalog.get(sku)
-                    if info and info.get("stock", 0) > 0:
-                        selected_product = {**m, **info}
-                        break
-                # Fallback nếu không có trong DB nhưng có trong file JSON (để tránh crash)
-                if not selected_product and mapping_data:
-                     selected_product = mapping_data[0]
-
             if not selected_product:
-                items.append({"ingredient": name, "sku": None, "note": "Chưa có sản phẩm"})
+                # Logic cũ: items.append({"ingredient": name, "sku": None, "note": "Chưa có sản phẩm"})
+                # Tùy chọn: Có thể bỏ qua hoặc log lại để bổ sung data sau
                 continue
-
            
             # 1. Lấy đơn vị tính (gói/hộp/chai)
             # Ưu tiên lấy từ DB ('unit'), nếu không có hoặc là đơn vị đo lường (g/ml) thì gán mặc định 'gói'
