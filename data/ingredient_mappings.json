@@ -1,198 +1,178 @@
 [
   {
-    "ingredient_key": "sườn non",
-    "sku_ref": "suon-non-heo-1kg",
-    "status": "active",
-    "aliases": ["sườn heo", "sườn lợn", "sườn non heo"],
-    "logic": {
-      "ratio_per_serving": 0.2,
-      "ratio_unit": "kg",
-      "note": "1 người ăn khoảng 200g sườn"
-    }
-  },
-  {
-    "ingredient_key": "xà lách",
-    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
-    "status": "active",
-    "aliases": ["rau xà lách", "xà lách thủy tinh"],
-    "logic": {
-      "ratio_per_serving": 0.1,
-      "ratio_unit": "kg",
-      "note": "1 người ăn khoảng 100g rau"
-    }
-  },
-  {
-    "ingredient_key": "dầu ăn",
-    "sku_ref": "dau-an-neptune-1l",
-    "status": "active",
-    "aliases": ["dầu thực vật", "dầu chiên"],
-    "logic": {
-      "ratio_per_serving": 0.02,
-      "ratio_unit": "l",
-      "note": "Ước lượng 20ml dầu mỗi người/bữa"
-    }
-  },
-  {
-    "ingredient_key": "sườn non",
-    "sku_ref": "suon-non-heo-1kg",
-    "status": "active",
-    "aliases": ["sườn heo", "sườn lợn", "sườn non heo", "dẻ sườn", "sườn cây"],
-    "logic": {
-      "ratio_per_serving": 0.2,
-      "ratio_unit": "kg",
-      "note": "1 người ăn khoảng 200g sườn"
-    }
-  },
-  {
-    "ingredient_key": "xà lách",
-    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
-    "status": "active",
-    "aliases": ["rau xà lách", "xà lách thủy tinh", "rau sống", "xà lách mỡ"],
-    "logic": {
-      "ratio_per_serving": 0.08,
-      "ratio_unit": "kg",
-      "note": "Ăn kèm thì chỉ cần khoảng 80g/người"
-    }
-  },
-  {
-    "ingredient_key": "dầu ăn",
-    "sku_ref": "dau-an-neptune-1l",
-    "status": "active",
-    "aliases": ["dầu thực vật", "dầu chiên", "dầu neptune"],
-    "logic": {
-      "ratio_per_serving": 0.015,
-      "ratio_unit": "l",
-      "note": "Trung bình 15ml/người"
-    }
-  },
-  {
-    "ingredient_key": "sườn non",
-    "sku_ref": "suon-non-heo-1kg",
-    "status": "active",
-    "aliases": [
-      "sườn heo",
-      "sườn lợn",
-      "sườn non heo",
-      "dẻ sườn",
-      "sườn cây",
-      "thịt sườn"
-    ],
-    "logic": {
-      "ratio_per_serving": 0.2,
-      "ratio_unit": "kg",
-      "note": "Trung bình 200g sườn/người"
-    }
-  },
-  {
-    "ingredient_key": "xà lách",
-    "sku_ref": "xa-lach-thuy-tinh-thuy-canh-cay-tu-230g",
-    "status": "active",
-    "aliases": [
-      "rau xà lách",
-      "xà lách thủy tinh",
-      "rau sống",
-      "xà lách mỡ",
-      "rau salad"
-    ],
-    "logic": {
-      "ratio_per_serving": 0.1,
-      "ratio_unit": "kg",
-      "note": "Khoảng 100g rau/người cho món salad"
-    }
-  },
-  {
-    "ingredient_key": "dầu ăn",
-    "sku_ref": "dau-an-neptune-1l",
-    "status": "active",
-    "aliases": ["dầu thực vật", "dầu chiên", "dầu neptune", "dầu"],
-    "logic": {
-      "ratio_per_serving": 0.02,
-      "ratio_unit": "l",
-      "note": "Khoảng 20ml dầu cho các món chiên/xào"
-    }
+    "ingredient_key": "sườn non heo",
+    "aliases": ["sườn non", "sườn heo non"],
+    "priority_skus": ["suon-non-heo-1kg"],
+    "is_staple": false
   },
   {
     "ingredient_key": "thịt heo xay",
-    "sku_ref": "thit-heo-xay-cp-100g",
-    "status": "active",
-    "aliases": ["thịt băm", "heo xay", "thịt lợn xay"],
-    "logic": { "ratio_per_serving": 0.05, "ratio_unit": "kg" }
+    "aliases": ["heo xay", "thịt xay"],
+    "priority_skus": ["thit-heo-xay-cp-100g"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "bí đỏ",
-    "sku_ref": "bi-do-tron-500g",
-    "status": "active",
-    "aliases": ["bí ngô", "trái bí đỏ"],
-    "logic": { "ratio_per_serving": 0.1, "ratio_unit": "kg" }
+    "ingredient_key": "ba rọi heo",
+    "aliases": ["ba chỉ", "thịt ba rọi"],
+    "priority_skus": ["ba-roi-heo"],
+    "is_staple": true
+  },
+  {
+    "ingredient_key": "chân giò heo",
+    "aliases": ["giò heo", "móng giò"],
+    "priority_skus": ["chan-gio-heo-cp-300g"],
+    "is_staple": false
   },
   {
     "ingredient_key": "má đùi gà",
-    "sku_ref": "ma-dui-ga-cat-san-1kg",
-    "status": "active",
-    "aliases": ["thịt gà", "đùi gà", "gà góc tư"],
-    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+    "aliases": ["đùi gà", "gà đùi"],
+    "priority_skus": [
+      "ma-dui-ga-cat-san-1kg",
+      "ma-dui-ga-cat-san-tui-500g"
+    ],
+    "is_staple": true
   },
   {
-    "ingredient_key": "cải thìa",
-    "sku_ref": "cai-thia-da-lat-1kg",
-    "status": "active",
-    "aliases": ["cải chíp", "rau cải thìa"],
-    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+    "ingredient_key": "ức gà",
+    "aliases": ["ức gà phi lê", "thịt ức gà"],
+    "priority_skus": ["uc-ga-phi-le-co-da-tui-1kg"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "cá lóc",
-    "sku_ref": "ca-loc-song-tui-500g",
-    "status": "active",
-    "aliases": ["cá quả", "cá chuối"],
-    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+    "ingredient_key": "trứng gà",
+    "aliases": ["trứng gà ta", "trứng gà tươi"],
+    "priority_skus": [
+      "trung-ga-ta-hop-6-qua",
+      "hop-10-trung-ga-tuoi-tfood"
+    ],
+    "is_staple": true
+  },
+  {
+    "ingredient_key": "trứng vịt",
+    "aliases": ["trứng vịt tươi"],
+    "priority_skus": ["2-hop-trung-vit-hop-10-qua-tu-600g-700g-giao-ngau-nhien-thuong-hieu"],
+    "is_staple": false
+  },
+  {
+    "ingredient_key": "cá nục",
+    "aliases": ["nục", "cá nục tươi"],
+    "priority_skus": ["ca-nuc-lam-sach-500g"],
+    "is_staple": false
+  },
+  {
+    "ingredient_key": "cá diêu hồng",
+    "aliases": ["diêu hồng", "cá rô phi đỏ"],
+    "priority_skus": ["ca-dieu-hong-lam-sach-nguyen-con"],
+    "is_staple": false
+  },
+  {
+    "ingredient_key": "cá hồi",
+    "aliases": ["đầu cá hồi"],
+    "priority_skus": ["dau-ca-hoi-tuoi-khay-1kg-300g-500g-cai"],
+    "is_staple": false
   },
   {
     "ingredient_key": "khoai tây",
-    "sku_ref": "khoai-tay-500g",
-    "status": "active",
-    "aliases": ["củ khoai tây"],
-    "logic": { "ratio_per_serving": 0.15, "ratio_unit": "kg" }
+    "aliases": ["khoai tây Đà Lạt"],
+    "priority_skus": ["khoai-tay-500g"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "hạt nêm",
-    "sku_ref": "hat-nem-knor",
-    "status": "active",
-    "aliases": ["bột nêm"],
-    "logic": { "ratio_per_serving": 0.005, "ratio_unit": "kg" }
+    "ingredient_key": "cà chua",
+    "aliases": ["cà chua đỏ"],
+    "priority_skus": ["ca-chua-1kg"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "đường",
-    "sku_ref": "duong-tinh-luyen",
-    "status": "active",
-    "aliases": ["đường cát"],
-    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "kg" }
+    "ingredient_key": "cà rốt",
+    "aliases": ["carrot"],
+    "priority_skus": ["ca-rot-1kg"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "nước mắm",
-    "sku_ref": "nuoc-mam-chinsu-720ml",
-    "status": "active",
-    "aliases": ["mắm"],
-    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "l" }
-  },
-   {
-    "ingredient_key": "hành ngò",
-    "sku_ref": "hanh-ngo",
-    "status": "active",
-    "aliases": ["rau mùi", "hành lá"],
-    "logic": { "ratio_per_serving": 0.01, "ratio_unit": "kg" }
+    "ingredient_key": "bí đỏ",
+    "aliases": ["bí ngô"],
+    "priority_skus": [
+      "bi-do-tron-500g",
+      "bi-do-tron-cat-san-1kg"
+    ],
+    "is_staple": true
   },
   {
-    "ingredient_key": "tiêu đen",
-    "sku_ref": "tieu-den",
-    "status": "active",
-    "aliases": ["hạt tiêu"],
-    "logic": { "ratio_per_serving": 0.002, "ratio_unit": "kg" }
+    "ingredient_key": "rau muống",
+    "aliases": ["rau muống nước"],
+    "priority_skus": ["rau-muong-nuoc-400gr"],
+    "is_staple": true
   },
   {
-    "ingredient_key": "ớt hiểm",
-    "sku_ref": "ot-hiem",
-    "status": "active",
-    "aliases": ["ớt cay"],
-    "logic": { "ratio_per_serving": 0.002, "ratio_unit": "kg" }
-  }
+    "ingredient_key": "rau dền",
+    "aliases": ["rau dền đỏ", "rau dền xanh"],
+    "priority_skus": [
+      "rau-den-baby-goi-300g",
+      "rau-den-goi-500g"
+    ],
+    "is_staple": false
+  },
+  {
+    "ingredient_key": "xà lách",
+    "aliases": ["xà lách thủy tinh"],
+    "priority_skus": ["xa-lach-thuy-tinh-thuy-canh-cay-tu-230g"],
+    "is_staple": false
+  },
+{"ingredient_key":"10 trứng gà","aliases":["10 trung ga","hộp 10 trứng gà tươi"],"priority_skus":["hop-10-trung-ga-tuoi-tfood"],"is_staple":true},
+{"ingredient_key":"2 trứng gà","aliases":["2 trung ga","combo 2 hộp trứng gà hộp"],"priority_skus":["2-hop-trung-ga-hop-10-qua-giao-ngau-nhien-thuong-hieu"],"is_staple":true},
+{"ingredient_key":"24 khoáng la vie","aliases":["24 khoang la vie","thùng 24 chai nước khoáng la vie"],"priority_skus":["thung-24-chai-nuoc-khoang-la-vie-500ml"],"is_staple":false},
+{"ingredient_key":"24 mì hảo hảo tôm chua cay","aliases":["24 mi hao hao tom chua cay","24 ly mì hảo hảo tôm chua cay"],"priority_skus":["mi-ly-hao-hao-tom-chua-cay-67g-thung-24"],"is_staple":true},
+{"ingredient_key":"24 mì khoai tây cung đình tôm","aliases":["24 mi khoai tay cung dinh tom","24 mì khoai tây cung đình tôm"],"priority_skus":["mi-ly-cung-dinh-lau-tom-chua-cay-65g-thung-24-ly"],"is_staple":true},
+{"ingredient_key":"30 gói mì omachi lẩu tôm càng","aliases":["30 goi mi omachi lau tom cang","thùng 30 gói mì omachi lẩu tôm càng"],"priority_skus":["thung-30-goi-mi-khoai-tay-omachi-tom-chua-cay-thai-80g"],"is_staple":true},
+{"ingredient_key":"30 gói mì sợi phở gấu đỏ","aliases":["30 goi mi soi pho gau do","thùng 30 gói mì sợi phở gấu đỏ"],"priority_skus":["mi-gau-do-vi-ga-soi-pho-goi-64g-thung-30-goi"],"is_staple":true},
+{"ingredient_key":"3 cô gái cá mòi","aliases":["3 co gai ca moi","cá mòi xốt cà đậm đà 3 cô gái"],"priority_skus":["ca-hop-ba-co-gai-nap-giut-155g"],"is_staple":false},
+{"ingredient_key":"bắp mỹ","aliases":["bap my","bắp mỹ giòn ngọt"],"priority_skus":["bap-my-1-trai","bap-my-trai-tu-300g-tro-len-3-trai"],"is_staple":false},
+{"ingredient_key":"ba rọi heo","aliases":["ba roi heo"],"priority_skus":["ba-roi-heo"],"is_staple":true},
+{"ingredient_key":"bánh tráng","aliases":["banh trang"],"priority_skus":["banh-trang-me-den-170g"],"is_staple":false},
+{"ingredient_key":"bí đỏ","aliases":["bi do","bí đỏ tròn"],"priority_skus":["bi-do-tron-500g","bi-do-tron-cat-san-1kg"],"is_staple":true},
+{"ingredient_key":"bò bít tết","aliases":["bo bit tet","bò bít tết úc mrt"],"priority_skus":["bo-bit-tet-uc-mrt-khay-200g"],"is_staple":true},
+{"ingredient_key":"bơ booth","aliases":["bo booth"],"priority_skus":["bo-booth-1kg"],"is_staple":false},
+{"ingredient_key":"bơ sáp 034","aliases":["bo sap 034"],"priority_skus":["bo-sap-034-1kg"],"is_staple":false},
+{"ingredient_key":"bưởi da xanh","aliases":["buoi da xanh"],"priority_skus":["buoi-da-xanh-loai-2-1kg"],"is_staple":false},
+{"ingredient_key":"cá diêu hồng","aliases":["ca dieu hong","cá diêu hồng làm sạch"],"priority_skus":["ca-dieu-hong-lam-sach-nguyen-con"],"is_staple":false},
+{"ingredient_key":"cá hồi","aliases":["ca hoi","đầu cá hồi salar làm sạch"],"priority_skus":["dau-ca-hoi-tuoi-khay-1kg-300g-500g-cai"],"is_staple":false},
+{"ingredient_key":"cá mòi","aliases":["ca moi"],"priority_skus":["ca-hop-ba-co-gai-nap-giut-155g"],"is_staple":false},
+{"ingredient_key":"cá ngừ","aliases":["ca ngu"],"priority_skus":["ca-ngu-ngam-dau-tuna-viet-nam-lon-140g","ca-ngu-xot-ca-chua-tuna-viet-nam-lon-140g","ca-ngu-xot-tuong-tuna-viet-nam-hop-155g"],"is_staple":true},
+{"ingredient_key":"cá nục","aliases":["ca nuc","cá nục làm sạch"],"priority_skus":["ca-nuc-lam-sach-500g","ca-nuc-sot-ca-155gam","ca-nuc-sot-ot-chua-ngot-sea-crown-hop-155g","ca-nuc-xot-ca-thai-ship-155g"],"is_staple":false},
+{"ingredient_key":"cá trích","aliases":["ca trich","cá trích sốt cà"],"priority_skus":["ca-trich-sot-ca-lilly-hop-155g"],"is_staple":false},
+{"ingredient_key":"cải bẹ xanh","aliases":["cai be xanh"],"priority_skus":["cai-be-xanh-goi-400g"],"is_staple":true},
+{"ingredient_key":"cải thìa","aliases":["cai thia","cải thìa đà lạt"],"priority_skus":["cai-thia-da-lat-1kg"],"is_staple":true},
+{"ingredient_key":"cam sành","aliases":["cam sanh"],"priority_skus":["cam-sanh"],"is_staple":false},
+{"ingredient_key":"canh củ thập cẩm tôm","aliases":["canh cu thap cam tom"],"priority_skus":["canh-cu-thap-cam-tom-khay-350g"],"is_staple":false},
+{"ingredient_key":"cà chua","aliases":["ca chua"],"priority_skus":["ca-chua-1kg"],"is_staple":true},
+{"ingredient_key":"cà rốt","aliases":["ca rot"],"priority_skus":["ca-rot-1kg"],"is_staple":true},
+{"ingredient_key":"chân gà","aliases":["chan ga"],"priority_skus":["chan-ga-1kg"],"is_staple":true},
+{"ingredient_key":"chân giò heo","aliases":["chan gio heo"],"priority_skus":["chan-gio-heo-cp-300g"],"is_staple":false},
+{"ingredient_key":"dưa hấu","aliases":["dua hau","dưa hấu đỏ"],"priority_skus":["dua-hau-do-trai-25-27kg-1-trai"],"is_staple":false},
+{"ingredient_key":"dưa lưới","aliases":["dua luoi","dưa lưới tròn ruột cam"],"priority_skus":["dua-luoi-tron-ruot-cam-1kg"],"is_staple":false},
+{"ingredient_key":"đùi bò","aliases":["dui bo","đùi bò việt nam"],"priority_skus":["dui-bo-150g","dui-bo-viet-nam-tui-1kg"],"is_staple":true},
+{"ingredient_key":"gà mía","aliases":["ga mia","gà mía nguyên con"],"priority_skus":["ga-dai-nhap-khau-tui-500g"],"is_staple":true},
+{"ingredient_key":"hộp 6 trứng gà ta","aliases":["hop 6 trung ga ta","trứng gà ta hộp 6 quả"],"priority_skus":["trung-ga-ta-hop-6-qua"],"is_staple":true},
+{"ingredient_key":"khoai tây","aliases":["khoai tay"],"priority_skus":["khoai-tay-500g"],"is_staple":true},
+{"ingredient_key":"lê đường","aliases":["le duong"],"priority_skus":["le-duong-noi-dia-trung-tui-3-trai"],"is_staple":false},
+{"ingredient_key":"mì cay nissin","aliases":["mi cay nissin","mì cay nissin vị thái tôm yum"],"priority_skus":["mi-cay-nissin-vi-thai-tom-yum-70g"],"is_staple":true},
+{"ingredient_key":"mì jomo","aliases":["mi jomo","mì jomo vị tôm chua cay"],"priority_skus":["mi-jomo-vi-tom-chua-cay-goi-80g"],"is_staple":true},
+{"ingredient_key":"mì mama","aliases":["mi mama","mì mama tôm sốt kem tom yum"],"priority_skus":["mi-mama-sot-kem-tomyum-goi-55g-30"],"is_staple":true},
+{"ingredient_key":"mì mini handy","aliases":["mi mini handy","mì mini handy hảo hảo"],"priority_skus":["mi-an-lien-mini-handy-hao-hao-vi-tom-chua-cay-ly"],"is_staple":true},
+{"ingredient_key":"nho mẫu đơn","aliases":["nho mau don"],"priority_skus":["nho-mau-don-noi-dia-trung-500g"],"is_staple":false},
+{"ingredient_key":"quýt mini","aliases":["quyt mini"],"priority_skus":["quyt-mini-tui-500g"],"is_staple":false},
+{"ingredient_key":"rau dền","aliases":["rau den","rau dền baby"],"priority_skus":["rau-den-baby-goi-300g","rau-den-goi-500g"],"is_staple":true},
+{"ingredient_key":"rau mồng tơi","aliases":["rau mong toi"],"priority_skus":["rau-mong-toi-goi-300g"],"is_staple":true},
+{"ingredient_key":"rau muống","aliases":["rau muong","rau muống nước"],"priority_skus":["rau-muong-nuoc-400gr"],"is_staple":true},
+{"ingredient_key":"sườn cốt lết","aliases":["suon cot let","sườn cốt lết cp"],"priority_skus":["suon-cot-let-1kg","suon-cot-let-tui-500g"],"is_staple":true},
+{"ingredient_key":"sườn non heo","aliases":["suon non heo","sườn non heo giá tốt"],"priority_skus":["suon-non-heo-1kg"],"is_staple":true},
+{"ingredient_key":"thịt heo xay","aliases":["thit heo xay","thịt heo xay cp"],"priority_skus":["thit-heo-xay-cp-100g"],"is_staple":true},
+{"ingredient_key":"trứng cút","aliases":["trung cut","trứng cút hộp"],"priority_skus":["2-hop-trung-cut-hop-30-qua-tu-300g-360g-giao-ngau-nhien-thuong-hieu","trung-cut-hop-30"],"is_staple":true},
+{"ingredient_key":"trứng vịt","aliases":["trung vit","trứng vịt hộp"],"priority_skus":["2-hop-trung-vit-hop-10-qua-tu-600g-700g-giao-ngau-nhien-thuong-hieu"],"is_staple":false},
+{"ingredient_key":"ức gà","aliases":["uc ga","ức gà phi lê có da"],"priority_skus":["uc-ga-phi-le-co-da-tui-1kg"],"is_staple":true},
+{"ingredient_key":"xà lách","aliases":["xa lach","xà lách thủy tinh thủy canh"],"priority_skus":["xa-lach-thuy-tinh-thuy-canh-cay-tu-230g"],"is_staple":true},
+{"ingredient_key":"xoài keo","aliases":["xoai keo","xoài keo giòn"],"priority_skus":["xoai-keo-1kg","xoai-keo-tui-1kg"],"is_staple":false},
+{"ingredient_key":"xoài tứ quý","aliases":["xoai tu quy"],"priority_skus":["xoai-tu-quy1kg"],"is_staple":false},
+{"ingredient_key":"xương que heo","aliases":["xuong que heo","xương que nhập khẩu đông lạnh"],"priority_skus":["xuong-que-heo-nhap-khau-dong-lanh-tui-500g"],"is_staple":true}
 ]
