@@ -210,13 +210,35 @@ class Retriever:
         return score / total_weight if total_weight > 0 else 0.0
 
 
+def normalize_to_base_unit(qty: float, unit: str) -> tuple[float, str]:
+    """
+    Chuyển đổi mọi đơn vị về hệ cơ sở: g, ml, quả.
+    """
+    unit = unit.lower().strip()
+    
+    # Nhóm khối lượng -> g
+    if unit in ["kg", "kilogram", "kilo"]:
+        return qty * 1000.0, "g"
+    if unit in ["g", "gr", "gram", "gam"]:
+        return qty, "g"
+        
+    # Nhóm thể tích -> ml
+    if unit in ["l", "lit", "lít", "liter"]:
+        return qty * 1000.0, "ml"
+    if unit in ["ml", "mililit"]:
+        return qty, "ml"
+    
+    # Nhóm đếm được -> quả (hoặc giữ nguyên nếu không biết)
+    if unit in ["quả", "trái", "trứng", "cái"]:
+        return qty, "quả"
+        
+    return qty, unit
+
 class CartMapper:
     def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None, product_catalog: Dict[str, Any] = None):
         self.cfg = cfg
         paths = cfg["paths"]
-        self.map = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
-        subs_path = os.path.join(paths["mapping_dir"], "substitutions.json")
-        self.subs = load_json(subs_path) if os.path.exists(subs_path) else {}
+        self.map = ingredient_map or {} # Fallback trống nếu không load được file
         self.catalog = product_catalog or {}
 
     def suggest_cart(self, recipe: Dict[str, Any], servings: int) -> Dict[str, Any]:
@@ -224,61 +246,65 @@ class CartMapper:
         total = 0
         notes = []
         
+        # Hệ số nhân theo khẩu phần (Recipe thường cho X người, user muốn Y người)
+        # Giả sử recipe.servings mặc định là 4 (hoặc lấy từ data), nếu không có coi như 1
+        recipe_servings = float(recipe.get("servings", 1)) or 1.0
+        scale_factor = float(servings) / recipe_servings
+        
         for ing in recipe.get("ingredients", []):
             name = ing.get("name")
+            
+            # 1. Xác định nhu cầu (Demand) đã chuẩn hóa
+            raw_qty = float(ing.get("qty", 0)) * scale_factor
+            raw_unit = ing.get("unit", "")
+            need_qty, need_unit = normalize_to_base_unit(raw_qty, raw_unit)
+            
+            # 2. Tìm sản phẩm trong Catalog
             mapping_data = self.map.get(name)
             selected_product = None
             
-            # CHỈ XỬ LÝ DỮ LIỆU CHUẨN (DICT)
             if isinstance(mapping_data, dict) and "sku" in mapping_data:
                 target_sku = mapping_data["sku"]
                 product_info = self.catalog.get(target_sku)
                 
-                # Chỉ lấy sản phẩm còn hàng (stock > 0)
+                # Check tồn kho
                 if product_info and product_info.get("stock", 0) > 0:
-                    selected_product = {
-                        **product_info,
-                        "ratio_per_serving": mapping_data.get("ratio_per_serving", {"qty": 100, "unit": "g"})
-                    }
+                    selected_product = product_info
 
+            # Xử lý trường hợp không tìm thấy sản phẩm
             if not selected_product:
-                # Thay vì continue, hãy báo cho user biết là thiếu
                 items.append({
                     "ingredient": name,
                     "sku": None,
-                    "name": f"{name} (Chưa tìm thấy sản phẩm)",
+                    "name": f"{name} (Chưa tìm thấy SP)",
                     "pack_unit": "",
-                    "unit_weight": 0,
+                    "quantity_needed": f"{need_qty:.1f} {need_unit}",
                     "packages": 0,
                     "price": 0,
                     "subtotal": 0,
-                    "stock_ok": False,
-                    "is_missing": True, # Flag để FE hiển thị cảnh báo
-                    "note": "Không tìm thấy sản phẩm phù hợp hoặc hết hàng"
+                    "is_missing": True
                 })
                 continue
            
-            # 1. Lấy đơn vị tính (gói/hộp/chai)
-            # Ưu tiên lấy từ DB ('unit'), nếu không có hoặc là đơn vị đo lường (g/ml) thì gán mặc định 'gói'
-            pack_unit = selected_product.get("unit")
-            if not pack_unit or pack_unit in ["g", "ml", "kg", "l", "gram", "liter"]:
-                pack_unit = "gói"
-
-            # 2. Lấy trọng lượng tịnh (để tính số lượng cần mua)
-            unit_val = selected_product.get("unitSize", 1)
-            if isinstance(unit_val, dict):
-                unit_qty = float(unit_val.get("qty", 1))
+            # 3. Tính toán số lượng gói cần mua
+            # Lấy thông tin sản phẩm từ DB Connector mới
+            prod_weight = float(selected_product.get("unitSize", 1)) # VD: 500
+            prod_measure = selected_product.get("measureUnit", "g")  # VD: g
+            
+            # Kiểm tra khớp đơn vị (VD: Cần ml mà SP là g -> Cảnh báo hoặc chấp nhận)
+            # Ở đây ta giả định mapping đã đúng loại (thịt -> thịt, nước -> nước)
+            
+            # Nếu recipe cần 0 (gia vị nêm nếm tùy ý), mặc định mua 1 gói
+            if need_qty <= 0:
+                packages = 1
             else:
-                unit_qty = float(unit_val)
+                # Nếu đơn vị khác hệ (vd cần g mà SP là ml), ta cứ chia số học nhưng có thể sai logic vật lý
+                # Tốt nhất là in warning
+                if need_unit != prod_measure and need_qty > 0:
+                    print(f"[WARN] Unit mismatch for {name}: Need {need_unit} but Product is {prod_measure}")
+                
+                packages = int(np.ceil(need_qty / prod_weight))
 
-            # 3. Tính toán
-            ratio = selected_product.get("ratio_per_serving", {"qty": 1})
-            ratio_qty = float(ratio.get("qty", 1))
-            
-            need_qty = ratio_qty * float(servings)
-            packages = int(np.ceil(need_qty / unit_qty))
-            
-            # Giá tiền: Chuyển về float
             price = float(selected_product.get("price", 0))
             subtotal = packages * price
             total += subtotal
@@ -287,13 +313,14 @@ class CartMapper:
                 "ingredient": name,
                 "sku": selected_product.get("sku"),
                 "name": selected_product.get("name"),
-                "pack_unit": pack_unit,   # <--- Trường quan trọng cho hiển thị
-                "unit_weight": unit_qty,
+                "pack_unit": selected_product.get("unit"),   # VD: Túi, Khay
+                "unit_detail": f"{prod_weight:g}{prod_measure}", # VD: 500g
+                "quantity_needed_est": f"{need_qty:.1f} {need_unit}", # Debug info
                 "packages": packages,
                 "price": price,
                 "subtotal": subtotal,
-                "stock_ok": selected_product.get("stock", 1) > 0,
-                "alt": []
+                "stock_ok": True,
+                "image": selected_product.get("image", [])
             })
             
         return {"items": items, "estimated": total, "currency": "VND", "notes": notes}

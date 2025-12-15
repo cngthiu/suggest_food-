@@ -1,6 +1,5 @@
 # File: serverAI/serving/db_connector.py
 import pymongo
-import re
 from typing import Dict, Any
 
 class ProductDatabase:
@@ -9,31 +8,9 @@ class ProductDatabase:
         self.db = self.client[db_name]
         self.collection = self.db["products"] 
 
-    def _parse_unit_size(self, name: str, unit: str) -> float:
-        """Hàm phụ trợ: Tự đoán trọng lượng nếu DB thiếu trường unitSize"""
-        # Ưu tiên tìm trong tên (VD: ... 500g)
-        text = (name + " " + unit).lower()
-        
-        # Tìm kg
-        m_kg = re.search(r"(\d+(\.\d+)?)(\s?)kg", text)
-        if m_kg: return float(m_kg.group(1))
-        
-        # Tìm g (gam)
-        m_g = re.search(r"(\d+)(\s?)g", text)
-        if m_g: return float(m_g.group(1)) / 1000.0
-        
-        # Tìm ml/lít
-        m_l = re.search(r"(\d+(\.\d+)?)(\s?)l", text)
-        if m_l: return float(m_l.group(1))
-        m_ml = re.search(r"(\d+)(\s?)ml", text)
-        if m_ml: return float(m_ml.group(1)) / 1000.0
-        
-        return 1.0 # Mặc định 1 đơn vị
-
     def get_full_mapping_logic(self):
         """Lấy logic mapping từ DB"""
         mapping = {}
-        # Nếu chưa có collection ingredient_mappings, trả về rỗng để code không crash
         if "ingredient_mappings" not in self.db.list_collection_names():
             return {}
 
@@ -45,46 +22,52 @@ class ProductDatabase:
             logic = doc.get("logic", {})
             data = {
                 "sku": doc.get("sku_ref"),
+                # Mặc định mapping trả về theo chuẩn g/ml/quả
                 "ratio_per_serving": {"qty": logic.get("ratio_per_serving", 100), "unit": logic.get("ratio_unit", "g")},
             }
             mapping[main_key] = data
-            # Map alias
             for alias in doc.get("aliases", []):
                 mapping[alias] = data
         return mapping
 
     def get_product_catalog(self) -> Dict[str, Any]:
         """
-        Load sản phẩm khớp với cấu trúc thực tế:
-        - id: dùng field 'sku'
-        - price: dùng field 'price' (int)
+        Load sản phẩm với cấu trúc chuẩn: g, ml, quả.
+        Sử dụng field 'net_weight' và 'measure_unit' từ DB.
         """
         catalog = {}
         try:
             cursor = self.collection.find({})
             for doc in cursor:
-                # 1. CẤU TRÚC THỰC TẾ: Lấy 'sku' làm khóa chính
-                sku = doc.get("sku")
-                if not sku:
-                    # Fallback phòng hờ dữ liệu cũ
-                    sku = doc.get("reference_id") 
+                sku = doc.get("sku") or doc.get("reference_id")
                 
                 if sku:
-                    # 2. Xử lý Unit Size (Quan trọng để tính số lượng)
-                    u_size = doc.get("unitSize")
-                    if not u_size:
-                        u_size = self._parse_unit_size(doc.get("name", ""), doc.get("unit", ""))
-
+                    # Lấy trực tiếp trọng lượng tịnh và đơn vị đo từ DB
+                    # Nếu thiếu, fallback về 1 đơn vị
+                    net_weight = float(doc.get("net_weight", 1))
+                    measure_unit = doc.get("measure_unit", "g").lower() # Chuẩn hóa về chữ thường
+                    
+                    # Logic chuẩn hóa đơn vị (nếu dữ liệu bẩn lọt vào)
+                    if measure_unit in ["gram", "grams"]: measure_unit = "g"
+                    if measure_unit in ["lit", "lít", "liter"]: 
+                        # Nếu lỡ có lít, convert về ml ngay tại đây
+                        measure_unit = "ml" 
+                        net_weight *= 1000
+                    
                     catalog[sku] = {
                         "sku": sku,
                         "name": doc.get("name", ""),
-                        "price": float(doc.get("price", 0)), # Lấy đúng trường price
+                        "price": float(doc.get("price", 0)),
                         "stock": int(doc.get("stock", 0)),
-                        "unit": doc.get("unit", "gói"),
-                        "unitSize": u_size, 
+                        "unit": doc.get("unit", "gói"), # Đơn vị đóng gói (Hộp, Túi, Khay)
+                        
+                        # Hai trường quan trọng nhất để tính toán
+                        "unitSize": net_weight, 
+                        "measureUnit": measure_unit, 
+                        
                         "image": doc.get("image", [])
                     }
-            print(f"[DB] Loaded {len(catalog)} products from MongoDB.")
+            print(f"[DB] Loaded {len(catalog)} products. Standardized to g/ml/qua.")
             return catalog
         except Exception as e:
             print(f"[DB] Error loading catalog: {e}")
