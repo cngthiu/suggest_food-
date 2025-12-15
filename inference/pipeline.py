@@ -1,7 +1,7 @@
 # File: inference/pipeline.py
 """End-to-end inference pipeline: NLU → Retrieval → Ranking (rule) → SKU mapping → Cart suggestion."""
 
-import os, json, pickle, spacy, re 
+import os, json, pickle, spacy
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 import numpy as np
@@ -90,7 +90,7 @@ class Retriever:
         self.embedder = SentenceTransformer(self.ret_cfg["embedder_model"], device=device_hint)
         self.encoder_device = device_hint
 
-    def _tokenize(self, s: str) -List(str):
+    def _tokenize(self, s: str) ->List(str):
         return vi_tokenize(s)
         
     def _load_recipes(self, recipes_dir: str) -> Dict[str, Any]:
