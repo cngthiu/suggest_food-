@@ -178,34 +178,36 @@ class Retriever:
         return out
 
     def _availability_ratio(self, recipe: Dict[str, Any]) -> float:
-        # CẬP NHẬT: Check tồn kho thực tế trong catalog
         need = recipe.get("ingredients", [])
-        if not need:
-            return 0.0
-        
-        ok = 0
+        if not need: return 0.0
+
+        total_weight = 0
+        score = 0
+
         for ing in need:
+            # Nguyên liệu chính (thịt, cá, rau) quan trọng gấp 3 lần gia vị
+            weight = 3.0 if ing.get("type") == "main" else 1.0
+            total_weight += weight
+
             name = ing.get("name", "").strip()
             mappings = self.mapping.get(name, [])
-            
+
+            # Check tồn kho
             is_in_stock = False
-            # Nếu có catalog, check stock trong catalog
             if self.catalog:
                 for m in mappings:
                     sku = m.get("sku")
-                    prod_info = self.catalog.get(sku)
-                    if prod_info and prod_info.get("stock", 0) > 0:
+                    prod = self.catalog.get(sku)
+                    if prod and prod.get("stock", 0) > 0:
                         is_in_stock = True
                         break
-            else:
-                # Fallback: Chỉ check xem có mapping hay không
-                if mappings:
-                    is_in_stock = True
+            elif mappings: # Fallback nếu không có catalog
+                is_in_stock = True
 
             if is_in_stock:
-                ok += 1
-                
-        return ok / len(need)
+                score += weight
+
+        return score / total_weight if total_weight > 0 else 0.0
 
 
 class CartMapper:
@@ -240,8 +242,20 @@ class CartMapper:
                     }
 
             if not selected_product:
-                # Logic cũ: items.append({"ingredient": name, "sku": None, "note": "Chưa có sản phẩm"})
-                # Tùy chọn: Có thể bỏ qua hoặc log lại để bổ sung data sau
+                # Thay vì continue, hãy báo cho user biết là thiếu
+                items.append({
+                    "ingredient": name,
+                    "sku": None,
+                    "name": f"{name} (Chưa tìm thấy sản phẩm)",
+                    "pack_unit": "",
+                    "unit_weight": 0,
+                    "packages": 0,
+                    "price": 0,
+                    "subtotal": 0,
+                    "stock_ok": False,
+                    "is_missing": True, # Flag để FE hiển thị cảnh báo
+                    "note": "Không tìm thấy sản phẩm phù hợp hoặc hết hàng"
+                })
                 continue
            
             # 1. Lấy đơn vị tính (gói/hộp/chai)

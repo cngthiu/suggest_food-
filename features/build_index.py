@@ -5,15 +5,7 @@ from pathlib import Path
 from typing import List, Dict, Any
 import numpy as np
 import yaml
-
-# Import từ utils đã chuẩn hóa ở Bước 1
-# Lưu ý: Đảm bảo bạn chạy script từ thư mục gốc (serverAI)
-try:
-    from serverAI.inference.utils import norm_text, tokenize_vi
-except ImportError:
-    # Fallback import nếu chạy trực tiếp trong folder features
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from inference.utils import norm_text, tokenize_vi
+from serverAI.inference.utils import norm_text, tokenize_vi
 
 # ---- BM25 ----
 def build_bm25(tokenized_corpus: List[List[str]]):
