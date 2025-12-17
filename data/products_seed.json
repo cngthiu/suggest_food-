@@ -165,7 +165,7 @@
     "net_weight": 155,
     "measure_unit": "g",
     "stock": 3,
-    "price": null,
+    "price": 90500,
     "discount": 10,
     "description": "Mô tả sản phẩm của hệ thông bán hàng."
   },
@@ -330,7 +330,7 @@
     "net_weight": 155,
     "measure_unit": "g",
     "stock": 21,
-    "price": null,
+    "price": 56000,
     "discount": 10,
     "description": "Mô tả sản phẩm của hệ thông bán hàng."
   },
@@ -1425,7 +1425,7 @@
     "net_weight": 150,
     "measure_unit": "g",
     "stock": 25,
-    "price": null,
+    "price": 45000,
     "discount": 0,
     "description": "Mô tả sản phẩm của hệ thông bán hàng."
   },
@@ -1619,7 +1619,7 @@
     "net_weight": 104,
     "measure_unit": "g",
     "stock": 22,
-    "price": null,
+    "price": 15000,
     "discount": 0,
     "description": "Mô tả sản phẩm của hệ thông bán hàng.",
     "subcategory": [{ "$oid": "6908d8bcce3345081ade43d3" }]
@@ -1814,7 +1814,7 @@
     "net_weight": 85,
     "measure_unit": "g",
     "stock": 5,
-    "price": null,
+    "price": 10000,
     "discount": 5,
     "description": "Mô tả sản phẩm của hệ thông bán hàng.",
     "subcategory": [{ "$oid": "6908d8bcce3345081ade43d3" }]

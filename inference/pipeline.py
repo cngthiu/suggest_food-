@@ -55,7 +55,7 @@ class Retriever:
         self.emb = np.load(paths["embed_matrix"], mmap_mode="r")
         with open(paths["ids_path"], 'r', encoding='utf-8') as f: self.recipe_ids = json.load(f)["recipe_ids"]
         self.recipes = self._load_recipes(paths["recipes_dir"])
-        self.mapping = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+        self.mapping = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_mappings.json"))
         self.catalog = product_catalog or {}
         self.idx_cfg = cfg["indexing"]
         self.ret_cfg = cfg["retrieval"]
@@ -215,7 +215,7 @@ class Pipeline:
             self.map_data = ingredient_map
         else:
             print("[WARN] Pipeline: Fallback to Static JSON Map")
-            self.map_data = load_json(os.path.join(paths["mapping_dir"], "ingredient_to_sku.json"))
+            self.map_data = load_json(os.path.join(paths["mapping_dir"], "ingredient_mappings.json"))
 
         gaz_dir = "serverAI/data/nlu/gazetteer"
         self.nlu = NLU(self.cfg["paths"]["nlu_model_dir"], gaz_dir)

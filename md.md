@@ -1,7 +1,7 @@
-python3 serverAI/training/train_intent.py \
+<!-- python3 serverAI/training/train_intent.py \
  --train serverAI/data/nlu/train1.tsv \
  --valid serverAI/data/nlu/valid1.tsv \
- --out serverAI/models/nlu_intent
+ --out serverAI/models/nlu_intent -->
 
 python3 serverAI/training/train_ner.py \
 --data serverAI/data/nlu/ner_train.json \

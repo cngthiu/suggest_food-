@@ -17,7 +17,7 @@ class NLU:
         print("[INFO] NLU: Loading Intent Model (ONNX)...")
         try:
             # Load Tokenizer
-            self.tokenizer = AutoTokenizer.from_pretrained("serverAI/models/intent_phobert") 
+            self.tokenizer = AutoTokenizer.from_pretrained("serverAI/models/phobert_intent") 
             
             intent_path = self.model_dir / "intent_model.quant.onnx"
             if not intent_path.exists(): intent_path = self.model_dir / "intent_model.onnx"

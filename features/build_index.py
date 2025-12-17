@@ -39,16 +39,45 @@ def build_faiss_index(emb: np.ndarray, metric: str = "ip"):
     except ImportError:
         print("Please `pip install faiss-cpu`", file=sys.stderr); raise
 
-def load_recipes(recipes_dir: str) -> List[Dict[str, Any]]:
-    files = sorted(glob.glob(os.path.join(recipes_dir, "*.json")))
-    items = []
-    for f in files:
-        with open(f, "r", encoding="utf-8") as fh:
-            try:
-                items.append(json.load(fh))
-            except Exception as e:
-                print(f"[WARN] Skip {f}: {e}", file=sys.stderr)
-    return items
+def load_recipes(recipes_path: str) -> List[Dict[str, Any]]:
+    p = Path(recipes_path)
+
+    # Nếu đưa vào là folder -> tự tìm file json bên trong
+    if p.is_dir():
+        candidates = [
+            p / "recipies.json",
+            p / "recipes.json",
+            p / "recipe.json",
+        ]
+        found = next((c for c in candidates if c.exists() and c.is_file()), None)
+        if found is None:
+            # fallback: tìm file .json đầu tiên trong folder
+            js = sorted(p.glob("*.json"))
+            if not js:
+                raise FileNotFoundError(f"No .json file found in directory: {p}")
+            found = js[0]
+        p = found
+
+    if not p.exists():
+        raise FileNotFoundError(f"Recipes path not found: {p}")
+
+    with open(p, "r", encoding="utf-8") as fh:
+        data = json.load(fh)
+
+    # Hỗ trợ nhiều format
+    if isinstance(data, list):
+        return data
+
+    if isinstance(data, dict):
+        if isinstance(data.get("recipes"), list):
+            return data["recipes"]
+        if isinstance(data.get("items"), list):
+            return data["items"]
+        if all(isinstance(v, dict) for v in data.values()):
+            return list(data.values())
+
+    raise ValueError(f"Unsupported recipies.json format: root type={type(data)} at {p}")
+
 
 def recipe_to_index_text(r: Dict[str, Any], fields: List[str]) -> str:
     parts = []
