@@ -1,13 +1,13 @@
 # File: inference/pipeline.py
 """End-to-end inference pipeline: NLU → Context DST → Retrieval → Ranking → Response."""
 
-import os, json, pickle, spacy
+import os, json, pickle
 from pathlib import Path
-from typing import List, Dict, Any, Tuple, Optional
+from typing import List, Dict, Any, Optional, Callable
 import numpy as np
 import yaml
 from .nlu_engine import NLU
-from .utils import norm_text, load_json, tokenize_vi
+from .utils import norm_text, load_json, load_recipes_any, recipes_to_dict, normalize_ingredient_mappings
 from underthesea import word_tokenize
 
 # --- Helper Functions (Giữ nguyên) ---
@@ -39,41 +39,82 @@ def recipe_matches_protein(recipe: Dict[str, Any], protein: str) -> bool:
             if target in norm_text(name, lowercase=True, strip_dia=True): return True
     return False
 
+def _load_mapping_fallback(mapping_dir: str) -> Any:
+    for fn in ["ingredient_mappings.json", "ingredient_mapping.json"]:
+        fp = os.path.join(mapping_dir, fn)
+        if Path(fp).exists():
+            return load_json(fp)
+    raise FileNotFoundError(f"No ingredient mapping file found in `{mapping_dir}`")
+
 # --- Classes (Retriever, CartMapper, utils) giữ nguyên logic cũ ---
 # (Để tiết kiệm không gian, tôi chỉ viết lại class Pipeline và các hàm cần thiết, 
 # các class Retriever, CartMapper bạn giữ nguyên như file gốc).
 
 class Retriever:
-    # ... (Giữ nguyên code class Retriever từ file gốc) ...
-    def __init__(self, cfg: Dict[str, Any], ingredient_map: Optional[Dict[str, Any]] = None, product_catalog: Dict[str, Any] = None):
+    def __init__(
+        self,
+        cfg: Dict[str, Any],
+        ingredient_map: Optional[Dict[str, Any]] = None,
+        product_catalog: Optional[Dict[str, Any]] = None,
+        recipes: Optional[Dict[str, Any]] = None,
+        recipe_fetcher: Optional[Callable[[List[str]], Dict[str, Any]]] = None,
+    ):
         self.cfg = cfg
         paths = cfg["paths"]
-        with open(paths["bm25_path"], 'rb') as f: self.bm25 = pickle.load(f)
-        with open(paths["corpus_path"], 'rb') as f: self.corpus_tokens = pickle.load(f)
-        import faiss
-        self.faiss = faiss.read_index(paths["faiss_index"])
-        self.emb = np.load(paths["embed_matrix"], mmap_mode="r")
-        with open(paths["ids_path"], 'r', encoding='utf-8') as f: self.recipe_ids = json.load(f)["recipe_ids"]
-        self.recipes = self._load_recipes(paths["recipes_dir"])
-        self.mapping = ingredient_map or load_json(os.path.join(paths["mapping_dir"], "ingredient_mappings.json"))
+        for key in ["bm25_path", "corpus_path", "ids_path"]:
+            if not Path(paths[key]).exists():
+                raise FileNotFoundError(
+                    f"Missing artifact `{key}` at `{paths[key]}`. "
+                    "Bạn cần chạy `python -m serverAI.features.build_index --config serverAI/config/app.yaml` để build cache."
+                )
+
+        with open(paths["bm25_path"], "rb") as f:
+            self.bm25 = pickle.load(f)
+        with open(paths["corpus_path"], "rb") as f:
+            self.corpus_tokens = pickle.load(f)
+        with open(paths["ids_path"], "r", encoding="utf-8") as f:
+            self.recipe_ids = json.load(f)["recipe_ids"]
+
+        self.semantic_enabled = False
+        self.faiss = None
+        self.emb = None
+        self.embedder = None
+
+        if recipes is not None:
+            self.recipes = recipes
+        elif recipe_fetcher is not None:
+            self.recipes = recipe_fetcher([str(rid) for rid in self.recipe_ids])
+        else:
+            self.recipes = self._load_recipes(paths["recipes_dir"])
+
+        raw_mapping = ingredient_map
+        if not raw_mapping:
+            raw_mapping = _load_mapping_fallback(paths["mapping_dir"])
+        self.mapping = normalize_ingredient_mappings(raw_mapping)
+
         self.catalog = product_catalog or {}
         self.idx_cfg = cfg["indexing"]
         self.ret_cfg = cfg["retrieval"]
         self.hy_cfg = cfg["hybrid"]
-        from sentence_transformers import SentenceTransformer
-        device_hint = resolve_encoder_device()
-        self.embedder = SentenceTransformer(self.ret_cfg["embedder_model"], device=device_hint)
-        self.encoder_device = device_hint
+        self.encoder_device = resolve_encoder_device()
+
+        embedder_model = (self.ret_cfg.get("embedder_model") or "").strip()
+        if embedder_model and Path(paths.get("faiss_index", "")).exists() and Path(paths.get("embed_matrix", "")).exists():
+            try:
+                import faiss
+                from sentence_transformers import SentenceTransformer
+
+                self.faiss = faiss.read_index(paths["faiss_index"])
+                self.emb = np.load(paths["embed_matrix"], mmap_mode="r")
+                self.embedder = SentenceTransformer(embedder_model, device=self.encoder_device)
+                self.semantic_enabled = True
+            except Exception as e:
+                print(f"[WARN] Semantic retrieval disabled: {e}")
 
     def _tokenize(self, s: str) -> List[str]: return vi_tokenize(s)
     def _load_recipes(self, recipes_dir: str) -> Dict[str, Any]:
-        import glob
-        result = {}
-        for fp in glob.glob(os.path.join(recipes_dir, "*.json")):
-            with open(fp, 'r', encoding='utf-8') as f:
-                obj = json.load(f)
-                result[obj["id"]] = obj
-        return result
+        recipes = load_recipes_any(recipes_dir)
+        return recipes_to_dict(recipes)
     def retrieve(self, query: str) -> List[Dict[str, Any]]:
         # ... (Giữ nguyên logic retrieve cũ) ...
         s = norm_text(query, lowercase=True, strip_dia=True)
@@ -81,9 +122,14 @@ class Retriever:
         bm25_scores = self.bm25.get_scores(toks)
         k_bm25 = self.hy_cfg["k_bm25"]
         top_bm25_idx = np.argsort(bm25_scores)[::-1][:k_bm25]
-        q_emb = self.embedder.encode([s], normalize_embeddings=self.ret_cfg.get("normalize_embeddings", True))
-        D, I = self.faiss.search(np.array(q_emb, dtype=np.float32), self.hy_cfg["k_emb"])
-        I = I[0]; D = D[0]
+
+        q_emb = None
+        I = np.array([], dtype=np.int64)
+        if self.semantic_enabled and self.embedder is not None and self.faiss is not None:
+            q_emb = self.embedder.encode([s], normalize_embeddings=self.ret_cfg.get("normalize_embeddings", True))
+            _, I = self.faiss.search(np.array(q_emb, dtype=np.float32), self.hy_cfg["k_emb"])
+            I = I[0]
+
         candidate_indices: List[int] = []
         seen = set()
         cap = int(self.hy_cfg.get("k_total", 0))
@@ -94,11 +140,25 @@ class Retriever:
                 seen.add(int(idx))
                 if cap and len(candidate_indices) >= cap: return True
             return False
-        if not add_indices(top_bm25_idx.tolist()): add_indices(I.tolist())
+        if not add_indices(top_bm25_idx.tolist()):
+            add_indices(I.tolist())
         cand = []
         for idx in candidate_indices:
             rid = self.recipe_ids[idx]
-            cand.append({"id": rid, "bm25": float(bm25_scores[idx]), "semantic": float(np.dot(q_emb[0], self.emb[idx])), "recipe": self.recipes[rid]})
+            recipe = self.recipes.get(str(rid))
+            if not recipe:
+                continue
+            semantic = 0.0
+            if self.semantic_enabled and q_emb is not None and self.emb is not None:
+                semantic = float(np.dot(q_emb[0], self.emb[idx]))
+            cand.append(
+                {
+                    "id": rid,
+                    "bm25": float(bm25_scores[idx]),
+                    "semantic": semantic,
+                    "recipe": recipe,
+                }
+            )
         if not cand: return []
         bm_vals = np.array([c["bm25"] for c in cand])
         sem_vals = np.array([c["semantic"] for c in cand])
@@ -147,7 +207,7 @@ class CartMapper:
     # ... (Giữ nguyên code class CartMapper từ file gốc) ...
     def __init__(self, cfg, ingredient_map=None, product_catalog=None):
         self.cfg = cfg
-        self.map = ingredient_map or {}
+        self.map = normalize_ingredient_mappings(ingredient_map or {})
         self.catalog = product_catalog or {}
     def suggest_cart(self, recipe, servings):
         # ... (Giữ nguyên logic cũ) ...
@@ -155,16 +215,45 @@ class CartMapper:
         scale = float(servings) / (float(recipe.get("servings", 1)) or 1.0)
         for ing in recipe.get("ingredients", []):
             name = ing.get("name")
-            qty, unit = normalize_to_base_unit(float(ing.get("qty", 0))*scale, ing.get("unit", ""))
-            mapping = self.map.get(name)
+            qty_raw = float(ing.get("qty", 0) or 0) * scale
+            unit_raw = ing.get("unit", "")
+            qty, unit = normalize_to_base_unit(qty_raw, unit_raw)
+
+            mapping_entries = self.map.get(name) or []
             prod = None
-            if isinstance(mapping, dict):
-                prod = self.catalog.get(mapping.get("sku"))
-                if prod and prod.get("stock", 0) <= 0: prod = None
+            chosen_mapping = None
+            for m in mapping_entries:
+                p = self.catalog.get(m.get("sku"))
+                if not p:
+                    continue
+                if p.get("stock", 0) <= 0:
+                    continue
+                prod = p
+                chosen_mapping = m
+                break
+
+            if (qty <= 0) and chosen_mapping:
+                ratio = (chosen_mapping.get("ratio_per_serving") or {})
+                try:
+                    ratio_qty = float(ratio.get("qty", 0) or 0) * float(servings)
+                    ratio_unit = ratio.get("unit") or unit
+                    if ratio_qty > 0:
+                        qty, unit = normalize_to_base_unit(ratio_qty, ratio_unit)
+                except Exception:
+                    pass
             if not prod:
                 items.append({"ingredient": name, "sku": None, "name": f"{name} (N/A)", "price": 0, "subtotal": 0, "is_missing": True})
                 continue
-            pkgs = 1 if qty <=0 else int(np.ceil(qty/float(prod.get("unitSize", 1))))
+
+            prod_unit = (prod.get("measureUnit") or "").lower().strip()
+            unit_size = float(prod.get("unitSize", 1) or 1)
+            if qty <= 0 or unit_size <= 0:
+                pkgs = 1
+            elif prod_unit and (prod_unit == unit):
+                pkgs = int(np.ceil(qty / unit_size))
+            else:
+                pkgs = 1
+
             subtotal = pkgs * float(prod.get("price", 0))
             total += subtotal
             items.append({"ingredient": name, "sku": prod.get("sku"), "name": prod.get("name"), "packages": pkgs, "price": prod.get("price"), "subtotal": subtotal, "stock_ok": True})
@@ -204,7 +293,14 @@ def score_candidates(cand: List[Dict[str, Any]], cfg: Dict[str, Any]) -> List[Di
 
 # --- UPDATED PIPELINE CLASS STARTS HERE ---
 class Pipeline:
-    def __init__(self, cfg_path: str = "serverAI/config/app.yaml", product_catalog: Dict[str, Any] = None, ingredient_map: Dict[str, Any] = None):
+    def __init__(
+        self,
+        cfg_path: str = "serverAI/config/app.yaml",
+        product_catalog: Optional[Dict[str, Any]] = None,
+        ingredient_map: Optional[Dict[str, Any]] = None,
+        recipes: Optional[Dict[str, Any]] = None,
+        recipe_fetcher: Optional[Callable[[List[str]], Dict[str, Any]]] = None,
+    ):
         with open(cfg_path, 'r', encoding='utf-8') as f:
             self.cfg = yaml.safe_load(f)
         paths = self.cfg["paths"]
@@ -212,14 +308,21 @@ class Pipeline:
         
         if ingredient_map:
             print(f"[INFO] Pipeline: Using Dynamic Map ({len(ingredient_map)} keys)")
-            self.map_data = ingredient_map
+            raw_map = ingredient_map
         else:
             print("[WARN] Pipeline: Fallback to Static JSON Map")
-            self.map_data = load_json(os.path.join(paths["mapping_dir"], "ingredient_mappings.json"))
+            raw_map = _load_mapping_fallback(paths["mapping_dir"])
+        self.map_data = normalize_ingredient_mappings(raw_map)
 
         gaz_dir = "serverAI/data/nlu/gazetteer"
         self.nlu = NLU(self.cfg["paths"]["nlu_model_dir"], gaz_dir)
-        self.retriever = Retriever(self.cfg, ingredient_map=self.map_data, product_catalog=self.catalog)
+        self.retriever = Retriever(
+            self.cfg,
+            ingredient_map=self.map_data,
+            product_catalog=self.catalog,
+            recipes=recipes,
+            recipe_fetcher=recipe_fetcher,
+        )
         self.mapper = CartMapper(self.cfg, ingredient_map=self.map_data, product_catalog=self.catalog)
         self.ranker = None
         self.rank_features: List[str] = []
@@ -250,7 +353,7 @@ class Pipeline:
                 "candidates": [],
                 "explanations": ["Xin chào! Mình là trợ lý ẩm thực thông minh. Bạn muốn tìm món ăn gì hôm nay?"]
             }
-            
+
         if intent["name"] in ["goodbye"]:
             # Có thể clear context ở đây nếu muốn session kết thúc
             return {

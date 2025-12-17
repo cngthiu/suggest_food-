@@ -107,6 +107,12 @@ def main():
     paths = cfg["paths"]
     idx_cfg = cfg["indexing"]
     ret_cfg = cfg["retrieval"]
+    if not (ret_cfg.get("embedder_model") or "").strip():
+        raise ValueError(
+            "Config `retrieval.embedder_model` đang rỗng. "
+            "Hãy set model name hoặc path local (ví dụ: `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`) "
+            "trước khi chạy build_index."
+        )
 
     print("[INFO] Loading recipes...")
     recipes = load_recipes(paths["recipes_dir"])

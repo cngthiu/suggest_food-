@@ -21,20 +21,24 @@ async def startup_event():
     try:
         mongo_uri = os.getenv("MONGO_URI", "mongodb+srv://thieulk23:thieulk23@cluster0.es7pd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
         db_name = os.getenv("DBNAME", "test")
+        products_col = os.getenv("PRODUCTS_COLLECTION", "products")
+        recipes_col = os.getenv("RECIPES_COLLECTION")
         
         print("[INFO] Connecting to MongoDB...")
-        db_conn = ProductDatabase(mongo_uri, db_name)
+        db_conn = ProductDatabase(mongo_uri, db_name, products_collection=products_col)
         
         # Load real-time data
         live_catalog = db_conn.get_product_catalog()
         live_mapping = db_conn.get_full_mapping_logic()
+        live_recipes = db_conn.get_recipes_dict(collection_name=recipes_col)
         
-        print(f"[INIT] Catalog size: {len(live_catalog)}, Mapping size: {len(live_mapping)}")
+        print(f"[INIT] Catalog size: {len(live_catalog)}, Mapping size: {len(live_mapping)}, Recipes size: {len(live_recipes)}")
         
         PIPELINE = Pipeline(
-            "serverAI/config/app.yaml", 
-            product_catalog=live_catalog, 
-            ingredient_map=live_mapping
+            "serverAI/config/app.yaml",
+            product_catalog=live_catalog,
+            ingredient_map=live_mapping,
+            recipes=(live_recipes or None),
         )
         print("[INIT] Pipeline Ready!")
     except Exception as e:

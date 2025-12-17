@@ -8,7 +8,7 @@ paths:
   embed_matrix: "serverAI/.cache/recipe_embeds.npy"
   faiss_index: "serverAI/.cache/faiss.index"
   mapping_dir: "serverAI/data/mapping"
-  nlu_model_dir: "serverAI/models/nlu_intent"
+  nlu_model_dir: "serverAI/models"
   ranker_dir: "serverAI/models/ranker"
 
 indexing:
@@ -18,7 +18,7 @@ indexing:
   use_vietnamese_tokenizer: "auto"
 
 retrieval:
-  embedder_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  embedder_model: ""
   embed_batch_size: 32
   normalize_embeddings: true
   faiss_metric: "ip"
