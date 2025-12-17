@@ -1,11 +1,10 @@
 {
   "intents": [
-    "suggest_food",
-    "suggest_food_by_ingredient",
-    "suggest_food_by_time",
-    "ask_price",
-    "filter_diet",
-    "greeting",
-    "goodbye"
+    "search_recipe",
+    "ask_recipe_detail",
+    "refine_search",
+    "add_ingredients_to_cart",
+    "ask_price_estimate",
+    "fallback"
   ]
 }

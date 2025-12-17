@@ -1,80 +1,178 @@
-# --- Gợi ý chung (suggest_food) ---
-gợi ý món gì ngon rẻ đi	suggest_food
-hôm nay ăn món gì nhỉ	suggest_food
-đói quá không biết ăn gì	suggest_food
-tư vấn thực đơn tối nay	suggest_food
-trưa nay nấu món gì ngon	suggest_food
-bạn có món gì mới lạ không	suggest_food
-gợi ý món ăn cho gia đình	suggest_food
-nghĩ giúp mình món khai vị	suggest_food
-cuối tuần này làm món gì đãi tiệc	suggest_food
-món nào dễ làm cho người lười	suggest_food
-đề xuất món ăn việt nam	suggest_food
-có món nào thanh mát không	suggest_food
-món nhậu ngon	suggest_food
-tìm công thức nấu ăn ngon	suggest_food
-gợi ý món ăn miền tây	suggest_food
-
-# --- Gợi ý theo nguyên liệu (suggest_food_by_ingredient) ---
-tìm món làm từ thịt gà	suggest_food_by_ingredient
-nhà còn thịt bò nấu món gì ngon	suggest_food_by_ingredient
-cách chế biến sườn non	suggest_food_by_ingredient
-món ngon từ cá hồi	suggest_food_by_ingredient
-tôi muốn ăn các món về tôm	suggest_food_by_ingredient
-nấu canh với bí đỏ	suggest_food_by_ingredient
-làm gì với mớ rau muống này	suggest_food_by_ingredient
-món kho từ thịt heo	suggest_food_by_ingredient
-công thức gà chiên	suggest_food_by_ingredient
-đậu hũ làm món gì ngon	suggest_food_by_ingredient
-có món nào dùng trứng vịt không	suggest_food_by_ingredient
-chế biến mực tươi sao cho ngon	suggest_food_by_ingredient
-các món xào với nấm	suggest_food_by_ingredient
-thịt ba chỉ làm món gì	suggest_food_by_ingredient
-cá diêu hồng nấu gì	suggest_food_by_ingredient
-
-# --- Gợi ý theo thời gian/nhanh gọn (suggest_food_by_time) ---
-món nào nấu nhanh dưới 15 phút	suggest_food_by_time
-có món nào làm nhanh gọn không	suggest_food_by_time
-tôi chỉ có 20 phút để nấu ăn	suggest_food_by_time
-bữa sáng nhanh gọn lẹ	suggest_food_by_time
-món ăn chế biến trong 10 phút	suggest_food_by_time
-cần tìm món nấu siêu tốc	suggest_food_by_time
-gợi ý thực đơn cho người bận rộn	suggest_food_by_time
-món xào nhanh	suggest_food_by_time
-nấu gì đơn giản không tốn thời gian	suggest_food_by_time
-công thức nấu ăn dưới 30p	suggest_food_by_time
-
-# --- Hỏi giá/Chi phí (ask_price) ---
-món này giá bao nhiêu tiền	ask_price
-chi phí nấu món này hết bao nhiêu	ask_price
-nguyên liệu món này có đắt không	ask_price
-tổng tiền cho bữa ăn này	ask_price
-món này tốn khoảng bao nhiêu	ask_price
-giá thịt gà hôm nay	ask_price
-cần bao nhiêu tiền để mua nguyên liệu	ask_price
-
-# --- Chế độ ăn/Dinh dưỡng (filter_diet) - Bổ sung mới ---
-tôi đang ăn kiêng	filter_diet
-có món nào ít calo không	filter_diet
-tìm các món chay	filter_diet
-món ăn cho người tiểu đường	filter_diet
-thực đơn low carb	filter_diet
-món nào nhiều protein cho người tập gym	filter_diet
-gợi ý món thanh đạm không dầu mỡ	filter_diet
-đang giảm cân nên ăn gì	filter_diet
-món ăn keto	filter_diet
-tôi bị dị ứng hải sản	filter_diet
-
-# --- Chào hỏi/Tạm biệt (greeting/goodbye) ---
-chào bạn	greeting
-hello shop	greeting
-xin chào trợ lý ảo	greeting
-hi	greeting
-có ai ở đó không	greeting
-bắt đầu nào	greeting
-tạm biệt nhé	goodbye
-bye bye	goodbye
-hẹn gặp lại	goodbye
-kết thúc	goodbye
-thôi mình đi đây	goodbye
-cảm ơn nhé bye	goodbye
+món này có đáng tiền không	ask_price_estimate
+tìm món phù hợp cho ngày mưa, nóng hổi	search_recipe
+món này khoảng bao nhiêu tiền một bữa	ask_price_estimate
+mình muốn xem ảnh minh họa món này	ask_recipe_detail
+add vào cart nguyên liệu món vừa xem	add_ingredients_to_cart
+tổng chi phí dự kiến cho món này thế nào	ask_price_estimate
+giải bài toán này giúp mình 2+2=?	fallback
+đổi sang món không cay, mình ăn không được cay	refine_search
+thời gian nấu món thịt kho trứng cút là bao lâu	ask_recipe_detail
+món này giá mềm không	ask_price_estimate
+tìm món cho 2 người, nguyên liệu đơn giản	search_recipe
+random text 1234	fallback
+mình muốn biết cách làm nhanh hơn có được không	ask_recipe_detail
+tìm món có trứng cút, làm kiểu cơm nhà	search_recipe
+mình bị lỗi mạng, giúp mình sửa wifi	fallback
+bạn có thể hack wifi không	fallback
+mình cần món nhanh gọn, ít bước, dễ dọn	search_recipe
+đang đói, chọn giúp 1 món dễ ăn	search_recipe
+thêm nguyên liệu món này, chọn loại thịt nạc	add_ingredients_to_cart
+tổng tiền cho set 3 món bạn gợi ý là bao nhiêu	ask_price_estimate
+bỏ mực ra, mình không ăn mực	refine_search
+món này thuộc diet gì	ask_recipe_detail
+cho mình món đơn giản hơn, ít bước hơn	refine_search
+thay vì gà, đổi sang cá được không	refine_search
+gợi ý món để đãi bạn, không quá khó	search_recipe
+thêm vào giỏ các nguyên liệu còn thiếu	add_ingredients_to_cart
+mình có thịt heo và nấm, tìm món phù hợp	search_recipe
+tính thử tiền nguyên liệu món kho này	ask_price_estimate
+bạn có biết chơi game không	fallback
+thêm nguyên liệu món kho, bỏ dầu màu điều được không	add_ingredients_to_cart
+công thức này có ngon không nhỉ	fallback
+tôi muốn tìm món từ gà cho 3 người, nấu khoảng 30 phút	search_recipe
+cho mình link facebook của bạn	fallback
+thêm toàn bộ nguyên liệu món này vào giỏ	add_ingredients_to_cart
+ăn kèm salad rau củ thì nên chọn món chính nào	search_recipe
+tôi muốn xem bóng đá	fallback
+chào bot, bạn khoẻ không	fallback
+kể chuyện vui đi	fallback
+cho mình công thức món thịt kho trứng cút	ask_recipe_detail
+tính tổng tiền nếu chọn sản phẩm rẻ nhất	ask_price_estimate
+tôi không hiểu bạn nói gì	fallback
+mình muốn biết giá của giỏ nguyên liệu món này	ask_price_estimate
+món này có tốn kém không, ước chừng thôi	ask_price_estimate
+món này hết khoảng bao nhiêu tiền	ask_price_estimate
+mình muốn món trong 20-25 phút là xong	search_recipe
+muốn ăn healthy một chút, gợi ý món có rau	search_recipe
+asdfghjkl	fallback
+tôi muốn mua laptop mới	fallback
+món thịt đùi heo kho trứng cút làm như thế nào	ask_recipe_detail
+mình muốn xem cook_time của món này	ask_recipe_detail
+lọc món phù hợp cho người tập gym nhẹ	refine_search
+tôi cần hướng dẫn từng bước thật rõ	ask_recipe_detail
+mình chỉ ghé qua thôi	fallback
+thêm nguyên liệu và gợi ý size phù hợp cho 3 người	add_ingredients_to_cart
+mình muốn biết giá từng nguyên liệu chính	ask_price_estimate
+đề xuất món ăn dùng được với nồi chiên không dầu	search_recipe
+tìm giúp món từ cá, ít tanh, làm đơn giản	search_recipe
+bạn gợi ý lại nhưng chỉ lấy món cơm nhà	refine_search
+loại các món có trứng đi	refine_search
+search_keywords của món này gồm những gì	ask_recipe_detail
+mình muốn món có nước, lọc ra các món canh/refine	refine_search
+thêm đồ để nấu món gà + salad vào giỏ	add_ingredients_to_cart
+chi phí cho set gà + salad khoảng bao nhiêu	ask_price_estimate
+hôm nay cho mình 3 món để chọn, ưu tiên dễ nấu	search_recipe
+món này có cần dầu màu điều không	ask_recipe_detail
+mua giúp mình nguyên liệu cho món thịt kho trứng cút	add_ingredients_to_cart
+có gà và khoai tây, chọn giúp món hợp bữa trưa	search_recipe
+món này cần những nguyên liệu gì	ask_recipe_detail
+chọn món rẻ hơn trong các món vừa đưa	refine_search
+cho mình biết phần summary của món này	ask_recipe_detail
+tăng lên 6 người rồi thêm vào giỏ	add_ingredients_to_cart
+món này có hợp cho 4 người không	ask_recipe_detail
+ok chốt set 1, thêm vào giỏ hết đi	add_ingredients_to_cart
+mua nguyên liệu món này có hao ví không	ask_price_estimate
+tại sao kho xong nước phải sệt lại	ask_recipe_detail
+tôi muốn bữa tối nhẹ nhàng nhưng vẫn no	search_recipe
+mua đủ đồ nấu món này cho gia đình	add_ingredients_to_cart
+thêm nguyên liệu nhưng bỏ tiêu đen	add_ingredients_to_cart
+có trứng và cà chua, đề xuất món nào dễ làm	search_recipe
+giữ nguyên nguyên liệu nhưng đổi cách chế biến	refine_search
+cho vào giỏ các thứ cần để nấu món này	add_ingredients_to_cart
+món này có bao nhiêu quả trứng cút	ask_recipe_detail
+tôi muốn món ăn kèm cơm nóng, càng đưa cơm càng tốt	search_recipe
+ước lượng tiền mua nguyên liệu cho 3 người	ask_price_estimate
+cho mình xem phần steps của công thức này	ask_recipe_detail
+bỏ gia vị khỏi giỏ, chỉ thêm nguyên liệu chính	add_ingredients_to_cart
+mình muốn xem định lượng nước mắm và đường	ask_recipe_detail
+đổi sang món cho 2 người thay vì 4	refine_search
+mở nhạc cho mình nghe	fallback
+tóm tắt cách làm món này giúp mình	ask_recipe_detail
+chọn món đậm đà hơn trong các kết quả	refine_search
+mình đã có nước mắm rồi, đừng thêm nước mắm	add_ingredients_to_cart
+mình muốn món không cay, hợp cho trẻ con	search_recipe
+tính giúp tổng tiền trước khi mình đặt	ask_price_estimate
+ngân sách 150k thì gợi ý món nào cho 3 người	search_recipe
+mình muốn món ít mùi tanh, lọc lại các món cá	refine_search
+thêm các loại rau salad cần thiết vào giỏ	add_ingredients_to_cart
+ước tính chi phí trong trường hợp đã có nước mắm	ask_price_estimate
+thêm nguyên liệu và gợi ý combo tiết kiệm	add_ingredients_to_cart
+tìm giúp món có đậu hũ, ăn thanh đạm	search_recipe
+bạn là ai vậy	fallback
+tạm biệt nha	fallback
+món này có đắt không	ask_price_estimate
+thêm vào giỏ và ưu tiên sản phẩm rẻ nhất	add_ingredients_to_cart
+món vừa gợi ý có món nào ít dầu mỡ hơn không	refine_search
+đổi sang món khác tương tự nhưng ít ngọt hơn	refine_search
+trời ơi sao đói quá	fallback
+mình muốn đặt mua nguyên liệu món này	add_ingredients_to_cart
+thêm nguyên liệu nhưng thay trứng cút bằng trứng gà	add_ingredients_to_cart
+thêm thịt đùi heo và trứng cút vào giỏ	add_ingredients_to_cart
+dịch câu này sang tiếng anh: hôm nay ăn gì	fallback
+chi phí món này cao hay thấp	ask_price_estimate
+cho mình thêm tất cả vào giỏ hàng	add_ingredients_to_cart
+ước tính chi phí nếu tăng khẩu phần lên 6 người	ask_price_estimate
+món này phục vụ mấy người ăn	ask_recipe_detail
+cho mình món kiểu kho hoặc rim, đậm đà	search_recipe
+cho mình hướng dẫn nấu món này theo dạng checklist	ask_recipe_detail
+ước tính chi phí nấu món này cho 4 người	ask_price_estimate
+lọc giúp mình các món dưới 25 phút	refine_search
+ước lượng chi phí nếu thay thịt đùi bằng ba chỉ	ask_price_estimate
+nấu thịt kho trứng cút tốn bao nhiêu	ask_price_estimate
+bạn có người yêu chưa	fallback
+tôi có cá hồi, muốn làm món đơn giản, không cầu kỳ	search_recipe
+tổng tiền nguyên liệu món vừa chọn là bao nhiêu	ask_price_estimate
+chỉ lấy món có cook_time <= 30	refine_search
+có mực và hành tây, gợi ý món ngon	search_recipe
+mình muốn mua nhanh nguyên liệu món này	add_ingredients_to_cart
+cho mình danh sách món kho thay vì món xào	refine_search
+cho mình vài món nấu nhanh để kịp giờ học	search_recipe
+công thức này có thể thay thịt đùi bằng thịt khác không	ask_recipe_detail
+mình muốn món phù hợp bữa trưa, không quá nặng	refine_search
+thêm điều kiện ăn kèm salad rau củ	refine_search
+mình muốn món ăn kèm cơm trắng, lọc lại	refine_search
+hôm nay thời tiết thế nào	fallback
+nói tiếng hàn đi	fallback
+thêm điều kiện ngân sách khoảng 120k	refine_search
+món này cost tầm bao nhiêu vậy	ask_price_estimate
+ưu tiên món có rau nhiều hơn, lọc lại giúp	refine_search
+đọc thơ đi	fallback
+tính giúp mình giá nguyên liệu nếu mua hết	ask_price_estimate
+tôi muốn tìm quán ăn gần đây	fallback
+mua nguyên liệu theo công thức này	add_ingredients_to_cart
+món này ăn kèm gì ngon	ask_recipe_detail
+thêm nguyên liệu và chia định lượng theo 2 người	add_ingredients_to_cart
+cho mình add hết nguyên liệu, mình sẽ nấu tối nay	add_ingredients_to_cart
+mua giúp mình nguyên liệu món này, ưu tiên hàng đang có	add_ingredients_to_cart
+ngân sách 200k có đủ nấu món này không	ask_price_estimate
+đặt vé xem phim tối nay	fallback
+tối nay ăn gì cho đỡ ngán, ưu tiên món cơm nhà	search_recipe
+help me!!!	fallback
+thêm nguyên liệu đủ cho 4 người ăn	add_ingredients_to_cart
+mình muốn món có rau nhiều, nhưng vẫn có thịt	search_recipe
+món này có vượt ngân sách 150k không	ask_price_estimate
+món này nhìn đẹp quá haha	fallback
+món này kho lửa nhỏ trong bao lâu	ask_recipe_detail
+thịt cắt miếng cỡ nào là vừa	ask_recipe_detail
+gợi ý món từ bò nhưng không cần hầm lâu	search_recipe
+mai bạn rảnh không	fallback
+bước nấu món này gồm mấy bước	ask_recipe_detail
+đổi sang món hấp/luộc thay vì chiên	refine_search
+ướp thịt với gì để đậm đà hơn	ask_recipe_detail
+mình muốn món không cần ướp lâu	refine_search
+giảm thời gian xuống còn 15 phút thôi	refine_search
+công thức này có phù hợp cơm nhà không	ask_recipe_detail
+muốn món kiểu xào nhanh, ít nguyên liệu	search_recipe
+bỏ nguyên liệu hành tây đi, gợi ý lại	refine_search
+giá nguyên liệu chính khoảng bao nhiêu	ask_price_estimate
+tính tiền nguyên liệu cho 2 người ăn thôi	ask_price_estimate
+mình muốn mua trọn bộ nguyên liệu món vừa chọn	add_ingredients_to_cart
+mình muốn tăng khẩu phần lên 5 người	refine_search
+lọc các món có tag món kho	refine_search
+cho mình danh sách nguyên liệu và số lượng	ask_recipe_detail
+mình muốn ước tính tiền rau salad kèm theo	ask_price_estimate
+hôm nay gợi ý giúp mình món ăn cho bữa trưa	search_recipe
+đổi sang món có nấm nhiều hơn	refine_search
+món này có tags gì vậy	ask_recipe_detail
+trứng cút cho vào lúc nào khi kho	ask_recipe_detail
+tôi muốn học java collections	fallback

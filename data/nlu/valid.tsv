@@ -1,20 +1,61 @@
-nghĩ món gì cho bữa tối đi	suggest_food
-tư vấn món ngon cuối tuần	suggest_food
-hôm nay chưa biết nấu gì	suggest_food
-có món nào hấp dẫn không	suggest_food
-món ăn vặt ngon	suggest_food
-nấu món gì với cà chua	suggest_food_by_ingredient
-trong tủ lạnh còn cá lóc	suggest_food_by_ingredient
-gợi ý các món từ trứng gà	suggest_food_by_ingredient
-thịt vịt làm món gì ngon	suggest_food_by_ingredient
-cách nấu sườn chua ngọt	suggest_food_by_ingredient
-tôi đang vội nấu món gì nhanh	suggest_food_by_time
-món ăn làm trong 5 phút	suggest_food_by_time
-bữa trưa văn phòng nhanh gọn	suggest_food_by_time
-món này tốn kém không	ask_price
-giá một phần ăn là bao nhiêu	ask_price
-tôi ăn chay trường	filter_diet
-món nào ít béo	filter_diet
-thực đơn eat clean	filter_diet
-chào ad	greeting
-tạm biệt trợ lý	goodbye
+gợi ý món bữa trưa từ gà, làm nhanh khoảng nửa tiếng	search_recipe
+tìm món phù hợp cho 3 người, ưu tiên dễ nấu	search_recipe
+có tôm và rau, đề xuất món nào cho bữa tối	search_recipe
+mình muốn món đậm đà kiểu cơm nhà	search_recipe
+gợi ý món ăn kèm salad rau củ	search_recipe
+mình muốn món không quá nhiều gia vị, dễ ăn	search_recipe
+đề xuất món trong 20 phút là xong	search_recipe
+tìm món dùng thịt heo nhưng không chiên nhiều	search_recipe
+cho mình 2-3 món để chọn, hợp ăn với cơm	search_recipe
+ngân sách 120k thì nên nấu món gì cho 2 người	search_recipe
+cho mình xem nguyên liệu món thịt đùi heo kho trứng cút	ask_recipe_detail
+món này cần bao nhiêu gram thịt	ask_recipe_detail
+hướng dẫn bước 2 của công thức là gì	ask_recipe_detail
+món này có cook_time bao nhiêu phút	ask_recipe_detail
+món này khẩu phần mấy người	ask_recipe_detail
+món này có tag món kho không	ask_recipe_detail
+cho mình cách ướp thịt chuẩn hơn	ask_recipe_detail
+mình muốn xem toàn bộ steps	ask_recipe_detail
+trứng cút luộc rồi cho vào lúc nào	ask_recipe_detail
+cho mình phần tóm tắt món này	ask_recipe_detail
+lọc lại giúp mình các món <= 25 phút	refine_search
+đổi sang món ít ngọt hơn	refine_search
+bỏ điều kiện salad đi, chỉ cần món chính	refine_search
+đổi sang món cho 2 người	refine_search
+mình muốn món rẻ hơn, refine lại	refine_search
+ưu tiên món có rau nhiều hơn	refine_search
+đổi sang món kho thay vì xào	refine_search
+mình không ăn được mực, lọc lại	refine_search
+thêm điều kiện “không cay”	refine_search
+chỉ lấy món có tag cơm nhà	refine_search
+thêm nguyên liệu món này vào giỏ cho 3 người	add_ingredients_to_cart
+mua trọn bộ nguyên liệu công thức này	add_ingredients_to_cart
+cho vào giỏ nhưng bỏ tiêu đen	add_ingredients_to_cart
+thêm nguyên liệu còn thiếu để nấu món này	add_ingredients_to_cart
+thêm nguyên liệu và ưu tiên hàng đang có	add_ingredients_to_cart
+thêm vào giỏ phần nguyên liệu chính thôi	add_ingredients_to_cart
+add nguyên liệu cho set món chính + salad	add_ingredients_to_cart
+thêm vào giỏ, scale khẩu phần lên 5 người	add_ingredients_to_cart
+mình đã có đường rồi, đừng thêm đường	add_ingredients_to_cart
+thêm hết vào giỏ hàng giúp mình	add_ingredients_to_cart
+ước tính chi phí món này cho 3 người	ask_price_estimate
+món này khoảng bao nhiêu tiền	ask_price_estimate
+tính tiền nguyên liệu nếu mua full	ask_price_estimate
+món này có vượt 150k không	ask_price_estimate
+giỏ nguyên liệu hiện tại giá bao nhiêu	ask_price_estimate
+tổng chi phí set bạn gợi ý là bao nhiêu	ask_price_estimate
+món này đắt hay rẻ vậy	ask_price_estimate
+cost dự kiến cho món này thế nào	ask_price_estimate
+ước tính chi phí nếu thay trứng cút bằng trứng gà	ask_price_estimate
+tính giúp tổng tiền trước khi đặt	ask_price_estimate
+bạn có thể kể chuyện không	fallback
+mở youtube cho mình	fallback
+mai trời mưa không	fallback
+tôi muốn học spark sql	fallback
+hi bot	fallback
+giúp mình dịch tiếng anh	fallback
+làm sao cài ubuntu	fallback
+bạn biết nấu ăn không	fallback
+abcdef 999	fallback
+ok cảm ơn	fallback
+

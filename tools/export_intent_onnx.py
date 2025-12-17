@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from pathlib import Path
 import os
 
-MODEL_DIR = "serverAI/models/intent_phobert"
+MODEL_DIR = "serverAI/models/phobert_intent"
 OUTPUT_ONNX_PATH = "serverAI/models/nlu_onnx/intent_model.onnx"
 OUTPUT_QUANT_PATH = "serverAI/models/nlu_onnx/intent_model.quant.onnx"
 

@@ -1,0 +1,60 @@
+lên thực đơn bữa trưa: gà, 30 phút, 3 người, kèm salad rau củ	search_recipe
+mình muốn 1 set món chính + món phụ rau, làm gọn trong nửa tiếng	search_recipe
+còn ức gà và rau xà lách, gợi ý món phù hợp	search_recipe
+đề xuất món ăn nhanh, ít dọn dẹp, hợp giờ đi làm	search_recipe
+tìm món kiểu kho/rim cho bữa tối gia đình	search_recipe
+mình muốn món không cay, dễ ăn cho người lớn tuổi	search_recipe
+gợi ý món có trứng cút, kiểu cơm nhà	search_recipe
+ngân sách tầm 100k thì gợi ý món nào cho 2 người	search_recipe
+tôi cần món ăn “chắc bụng” nhưng không nặng quá	search_recipe
+cho mình 3 lựa chọn món ăn để chốt ngay	search_recipe
+món “Thịt đùi heo kho trứng cút” nấu ra sao	ask_recipe_detail
+món này gồm những nguyên liệu nào và định lượng	ask_recipe_detail
+mình muốn xem từng bước nấu chi tiết	ask_recipe_detail
+món này mất bao lâu để kho cho mềm	ask_recipe_detail
+cho mình biết tags và diet của món này	ask_recipe_detail
+bước nào cho trứng cút vào để thấm	ask_recipe_detail
+món này dùng phần thịt nào là chuẩn	ask_recipe_detail
+cho mình xem phần mô tả ngắn của món	ask_recipe_detail
+món này có thể giảm đường được không (theo công thức)	ask_recipe_detail
+mình muốn kiểm tra cook_time/servings của món này	ask_recipe_detail
+đổi sang món nhanh hơn nhưng vẫn dùng gà	refine_search
+lọc các món có salad/rau kèm theo	refine_search
+mình muốn set rẻ hơn trong danh sách vừa đưa	refine_search
+giảm khẩu phần xuống 1-2 người	refine_search
+bỏ trứng khỏi món, gợi ý lại	refine_search
+mình muốn món ít ngọt, refine lại giúp	refine_search
+đổi sang món hấp/luộc thay vì kho	refine_search
+chỉ giữ món có cook_time dưới 20	refine_search
+thêm điều kiện “đậm đà” và “cơm nhà”	refine_search
+loại món có tiêu đen đi	refine_search
+chốt món này, thêm nguyên liệu đủ cho 4 người vào giỏ	add_ingredients_to_cart
+mình muốn mua hết nguyên liệu để nấu ngay	add_ingredients_to_cart
+cho vào cart nhưng bỏ gia vị, mình có sẵn	add_ingredients_to_cart
+thêm vào giỏ và chọn size phù hợp 3 người	add_ingredients_to_cart
+thêm nguyên liệu, thay thịt đùi bằng thịt nạc	add_ingredients_to_cart
+mình đã có nước mắm, đừng add nước mắm	add_ingredients_to_cart
+thêm nguyên liệu món chính và rau salad kèm	add_ingredients_to_cart
+mua nguyên liệu món này, ưu tiên giá rẻ	add_ingredients_to_cart
+add vào giỏ những thứ còn thiếu thôi	add_ingredients_to_cart
+thêm toàn bộ ingredient list vào giỏ hàng	add_ingredients_to_cart
+ước chừng tổng tiền cho món này là bao nhiêu	ask_price_estimate
+tính xem ngân sách 120k có đủ không	ask_price_estimate
+món này “hao tiền” không	ask_price_estimate
+giá giỏ nguyên liệu sau khi scale 5 người là bao nhiêu	ask_price_estimate
+cost món này nếu mua loại rẻ nhất	ask_price_estimate
+món này đắt không, cho mình con số ước lượng	ask_price_estimate
+ước tính tiền phần salad rau củ kèm theo	ask_price_estimate
+tổng chi phí nếu mình đã có đường và nước mắm	ask_price_estimate
+tính tổng tiền trước khi mình đặt hàng	ask_price_estimate
+món này đáng tiền không, khoảng bao nhiêu	ask_price_estimate
+bạn biết làm powerpoint không	fallback
+tôi muốn tìm nhà hàng gần đây	fallback
+hôm nay tỷ giá usd bao nhiêu	fallback
+giúp mình debug lỗi java	fallback
+kể một câu đố đi	fallback
+mở nhạc chill cho mình	fallback
+mình muốn mua điện thoại	fallback
+trời nóng quá	fallback
+what can you do	fallback
+xyzxyzxyz	fallback
