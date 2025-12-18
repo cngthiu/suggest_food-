@@ -1,0 +1,2000 @@
+không thích món này	refine_search
+hướng dẫn chi tiết món này nha	ask_recipe_detail
+lên thực đơn tiệc: ba chỉ, đi làm về muộn, 2 người đi	search_recipe
+đặt mua đồ về nấu	add_ingredients_to_cart
+chi phí cho phần lớn người	ask_price_estimate
+gợi ý nêm nếm gia vị ra sao nha	ask_recipe_detail
+gợi ý xin chào với	fallback
+lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+tìm giúp thời tiết thế nào nhé	fallback
+mình muốn đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+hướng dẫn chi tiết món này nào ngon	ask_recipe_detail
+ăn gì bữa sáng vừa ít béo vừa sang trọng	search_recipe
+đang ở đâu	fallback
+ê đổi sang món canh chua được không	refine_search
+có món nào không có hành ngò không	refine_search
+món nhậu từ lẩu kho	search_recipe
+gợi ý có món nào không có khoai tây không gấp	refine_search
+gợi ý xin chào gấp	fallback
+gợi ý món cơm gà rim với	search_recipe
+hướng dẫn chi tiết món này	ask_recipe_detail
+ăn gì bữa tối vừa chay vừa 200k	search_recipe
+hôm nay ăn gì nhé	search_recipe
+món ba chỉ rim nha	search_recipe
+lấy đủ nguyên liệu cho món này nhé	add_ingredients_to_cart
+mấy giờ rồi	fallback
+món trứng rim với	search_recipe
+tìm giúp làm sao cho sườn giòn nào ngon	ask_recipe_detail
+món này hết bao nhiêu tiền nha	ask_price_estimate
+đang cần hôm nay ăn gì nào ngon	search_recipe
+tổng thiệt hại là bao nhiêu nhé	ask_price_estimate
+gợi ý ngân sách sang trọng đủ nấu không	ask_price_estimate
+hát đi với	fallback
+đang cần cho hết vào giỏ hàng đi	add_ingredients_to_cart
+đang cần đặt mua đồ về nấu	add_ingredients_to_cart
+gợi ý đang ở đâu	fallback
+đang cần cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+nhà còn biết ông a không	fallback
+bí quyết nấu ngon nhé	ask_recipe_detail
+ê lấy đủ nguyên liệu cho món này đi	add_ingredients_to_cart
+nấu gì với bí xanh	search_recipe
+đang cần tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+thời tiết thế nào	fallback
+gợi ý món này hết bao nhiêu tiền	ask_price_estimate
+tìm giúp mấy giờ rồi nha	fallback
+ngu quá nhé	fallback
+ê chi phí cho 2 người người	ask_price_estimate
+nhà còn bạn tên gì đi	fallback
+bạn ơi bước 1 là gì	ask_recipe_detail
+bạn ơi ăn gì bữa trưa vừa healthy vừa tiết kiệm	search_recipe
+hôm nay ăn gì cho hợp lý	search_recipe
+nhà còn xin chào với	fallback
+tìm giúp cần mua những gì thì thêm vào giỏ giúp gấp	add_ingredients_to_cart
+gợi ý thời tiết thế nào	fallback
+đề xuất món hấp, nguyên liệu có sẵn, hợp bữa trưa nào ngon	search_recipe
+nêm nếm gia vị ra sao	ask_recipe_detail
+xin chào	fallback
+tìm giúp hôm nay ăn gì	search_recipe
+đề xuất món cơm gà kho	search_recipe
+hát đi	fallback
+tìm giúp chỉ mình cách nấu đi gấp	ask_recipe_detail
+tìm giúp ngu quá	fallback
+gợi ý mình muốn 1 set trứng + dưa leo nào ngon	search_recipe
+ê hát đi nhé	fallback
+gợi ý đề xuất món xào, ít dọn dẹp, hợp bữa tối với	search_recipe
+đề xuất món nướng, lười nấu, hợp cơm văn phòng với	search_recipe
+mình muốn đổi món hấp hơn	refine_search
+ê tư vấn thực đơn chay có cá gấp	search_recipe
+nhà còn combo tôm và ớt cho gia đình	search_recipe
+có món nào không tốn thời gian mà ngon không	search_recipe
+món bắp bò hấp nào ngon	search_recipe
+tìm giúp lấy đủ nguyên liệu cho món này đi	add_ingredients_to_cart
+hôm nay ăn gì nha	search_recipe
+mình muốn cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+mấy giờ rồi đi	fallback
+đang ở đâu cho hợp lý	fallback
+tổng thiệt hại là bao nhiêu nha	ask_price_estimate
+tìm giúp món này hết bao nhiêu tiền	ask_price_estimate
+bạn ơi ăn thế này có đắt không	ask_price_estimate
+lên thực đơn bữa tối: cơm gà, 30 phút, 2 người	search_recipe
+tìm giúp đổi món xào hơn	refine_search
+đang cần tìm món bắp bò hấp ăn cơm hộp	search_recipe
+có món nào không có rau xà lách không nha	refine_search
+bạn ơi nêm nếm gia vị ra sao nhé	ask_recipe_detail
+đề xuất thời tiết thế nào với	fallback
+món nhậu từ mực chiên	search_recipe
+đề xuất chỉ mình cách nấu đi đi	ask_recipe_detail
+mình muốn mua giúp mình nguyên liệu	add_ingredients_to_cart
+tìm món khác đi với	refine_search
+món này hết bao nhiêu tiền nào ngon	ask_price_estimate
+ê ngân sách không quan trọng tiền đủ nấu không gấp	ask_price_estimate
+tư vấn thực đơn giảm cân có cơm gà với	search_recipe
+ngân sách tiết kiệm đủ nấu không	ask_price_estimate
+gợi ý cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+gợi ý tìm món phở luộc ăn bữa tối đi	search_recipe
+mình muốn 1 set cá + ớt	search_recipe
+tìm giúp mấy giờ rồi với	fallback
+thời tiết thế nào nhé	fallback
+đề xuất bước 1 là gì với	ask_recipe_detail
+cho hết vào giỏ hàng đi nào ngon	add_ingredients_to_cart
+bí quyết nấu ngon	ask_recipe_detail
+tìm món khác đi cho hợp lý	refine_search
+ê cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+mình muốn không thích món này nào ngon	refine_search
+bạn ơi ăn gì cơm văn phòng vừa giảm cân vừa 200k	search_recipe
+đề xuất đang ở đâu với	fallback
+đang cần đổi món luộc hơn	refine_search
+đang cần đổi sang món bắp bò được không nhé	refine_search
+mình muốn làm sao cho món cuốn giòn nha	ask_recipe_detail
+đề xuất món xào, muốn đổi gió, hợp cơm văn phòng với	search_recipe
+mấy giờ rồi nào ngon	fallback
+đang cần chi phí cho nhóm bạn người với	ask_price_estimate
+tìm giúp làm sao cho món cuốn giòn nha	ask_recipe_detail
+nhà còn thời tiết thế nào	fallback
+thực đơn ít người người, giá tiết kiệm với	search_recipe
+bí quyết nấu ngon với	ask_recipe_detail
+thực đơn gia đình người, giá tiết kiệm	search_recipe
+biết ông a không nha	fallback
+đề xuất bước 1 là gì nha	ask_recipe_detail
+ê biết ông a không	fallback
+đề xuất có món nào không có hành tây không	refine_search
+gợi ý ăn gì cơm văn phòng vừa healthy vừa bình dân cho hợp lý	search_recipe
+mình muốn cần mua những gì thì thêm vào giỏ giúp nha	add_ingredients_to_cart
+đề xuất tìm món tôm chiên ăn tiệc	search_recipe
+thời tiết thế nào đi	fallback
+món nhậu từ cá lóc đậm đà nào ngon	search_recipe
+tìm giúp món nhậu từ phở chiên đi	search_recipe
+nấu gì với tỏi gấp	search_recipe
+hôm nay ăn gì	search_recipe
+nhà còn đề xuất món rim, muốn đổi gió, hợp bữa tối đi	search_recipe
+bạn ơi bước 1 là gì với	ask_recipe_detail
+hôm nay ăn gì đi	search_recipe
+gợi ý tổng thiệt hại là bao nhiêu	ask_price_estimate
+bước 1 là gì	ask_recipe_detail
+ê đề xuất món hấp, mới đi chợ về, hợp cơm văn phòng nha	search_recipe
+chi phí cho suất đôi người	ask_price_estimate
+xin chào gấp	fallback
+bạn ơi hướng dẫn chi tiết món này nào ngon	ask_recipe_detail
+nhà còn ăn gì tiệc vừa nhiều rau vừa sang trọng nào ngon	search_recipe
+nhà còn hôm nay ăn gì	search_recipe
+gợi ý lên thực đơn bữa xế: cá, 15 phút, phần lớn đi	search_recipe
+nhà còn tìm món khác đi	refine_search
+đề xuất đề xuất món rim, nguyên liệu có sẵn, hợp tiệc	search_recipe
+món nhậu từ bò chiên giòn	search_recipe
+tư vấn thực đơn giảm cân có cá	search_recipe
+bạn ơi nêm nếm gia vị ra sao với	ask_recipe_detail
+đề xuất hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+tìm giúp thực đơn phần lớn người, giá 50k	search_recipe
+đổi sang món cơm gà được không	refine_search
+bạn ơi có món nào đi làm về muộn mà ngon không	search_recipe
+biết ông a không nhé	fallback
+ê chi phí cho suất đôi người nào ngon	ask_price_estimate
+thực đơn cả nhà người, giá 50k	search_recipe
+món nhậu từ trứng chua ngọt với	search_recipe
+nấu gì với rau muống đi	search_recipe
+bạn ơi mấy giờ rồi	fallback
+bạn tên gì nha	fallback
+tìm món kiểu đậm đà cho cơm hộp phần lớn	search_recipe
+mình muốn thực đơn gia đình người, giá sang trọng nào ngon	search_recipe
+đổi món luộc hơn	refine_search
+tìm giúp tìm món heo chiên ăn bữa trưa	search_recipe
+tổng thiệt hại là bao nhiêu cho hợp lý	ask_price_estimate
+tìm giúp bạn tên gì nhé	fallback
+đang cần cho hết vào giỏ hàng đi đi	add_ingredients_to_cart
+đang cần tìm món khác đi	refine_search
+nhà còn món này hết bao nhiêu tiền	ask_price_estimate
+bạn ơi tổng thiệt hại là bao nhiêu	ask_price_estimate
+làm sao cho cơm gà giòn	ask_recipe_detail
+bạn ơi tổng thiệt hại là bao nhiêu với	ask_price_estimate
+chi phí cho 1 người người nha	ask_price_estimate
+nhà còn đề xuất món chiên, ít dọn dẹp, hợp bữa tối đi	search_recipe
+nhà còn ăn thế này có đắt không	ask_price_estimate
+đề xuất lên thực đơn cơm hộp: salad, cấp tốc, ít người gấp	search_recipe
+đang cần chi phí cho phần lớn người nha	ask_price_estimate
+gợi ý tư vấn thực đơn ít béo có ba chỉ đi	search_recipe
+làm sao cho bún giòn nào ngon	ask_recipe_detail
+ê hướng dẫn chi tiết món này với	ask_recipe_detail
+chỉ mình cách nấu đi	ask_recipe_detail
+món nhậu từ cá hồi kho cho hợp lý	search_recipe
+mình muốn mình muốn 1 set cá hồi + hành tây	search_recipe
+combo ba chỉ và sả cho cả nhà	search_recipe
+nhà còn chỉ mình cách nấu đi cho hợp lý	ask_recipe_detail
+đổi sang món sườn được không cho hợp lý	refine_search
+làm sao cho trứng giòn	ask_recipe_detail
+đang cần hôm nay ăn gì	search_recipe
+đề xuất lấy đủ nguyên liệu cho món này với	add_ingredients_to_cart
+hát đi nha	fallback
+mình muốn đổi sang món cá lóc được không	refine_search
+tổng thiệt hại là bao nhiêu nào ngon	ask_price_estimate
+bạn ơi món nhậu từ bắp bò hấp đi	search_recipe
+ngân sách bình dân đủ nấu không	ask_price_estimate
+tìm món kiểu kho cho bữa tối ít người	search_recipe
+nhà còn bạn tên gì	fallback
+ê tìm cái gì lạ miệng hơn nhé	refine_search
+mình muốn 1 set bắp bò + sả nhé	search_recipe
+tìm giúp ngân sách 200k đủ nấu không cho hợp lý	ask_price_estimate
+nhà còn cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+lấy đủ nguyên liệu cho món này gấp	add_ingredients_to_cart
+cho hết vào giỏ hàng đi	add_ingredients_to_cart
+món ba chỉ rim đi	search_recipe
+nhà còn ngu quá đi	fallback
+mình muốn tổng thiệt hại là bao nhiêu với	ask_price_estimate
+ê nấu gì với nấm đi	search_recipe
+ê mình muốn 1 set bắp bò + rau xà lách	search_recipe
+ê chỉ mình cách nấu đi	ask_recipe_detail
+ê cho hết vào giỏ hàng đi	add_ingredients_to_cart
+mình muốn có món nào không tốn thời gian mà ngon không đi	search_recipe
+tìm món khác đi	refine_search
+đề xuất có món nào không tốn thời gian mà ngon không	search_recipe
+ê hát đi cho hợp lý	fallback
+đề xuất hôm nay ăn gì cho hợp lý	search_recipe
+chi phí cho cả nhà người với	ask_price_estimate
+nấu gì với rau xà lách nha	search_recipe
+gợi ý mình muốn 1 set heo + nấm	search_recipe
+đề xuất món luộc, nguyên liệu có sẵn, hợp cơm hộp	search_recipe
+đề xuất món xào, đang vội, hợp tiệc	search_recipe
+tìm giúp tìm món kiểu thanh đạm cho tiệc cả nhà	search_recipe
+ê combo trứng và sả cho nhóm bạn	search_recipe
+bạn ơi không thích món này	refine_search
+đề xuất mua giúp mình nguyên liệu nha	add_ingredients_to_cart
+ăn gì cơm văn phòng vừa chay vừa sinh viên	search_recipe
+đề xuất món thanh đạm, nguyên liệu có sẵn, hợp cơm văn phòng	search_recipe
+đổi sang món mực được không	refine_search
+bạn tên gì	fallback
+thực đơn nhóm bạn người, giá bình dân nhé	search_recipe
+xin chào nhé	fallback
+mình muốn tìm món khác đi	refine_search
+mình muốn tìm món bò đậm đà ăn tiệc	search_recipe
+hướng dẫn chi tiết món này đi	ask_recipe_detail
+tìm giúp thời tiết thế nào gấp	fallback
+gợi ý tư vấn thực đơn tăng cơ có ức gà	search_recipe
+nhà còn mấy giờ rồi nhé	fallback
+mình muốn bước 1 là gì	ask_recipe_detail
+bạn ơi biết ông a không với	fallback
+nhà còn mấy giờ rồi cho hợp lý	fallback
+tư vấn thực đơn chay có thịt bò	search_recipe
+bạn ơi tư vấn thực đơn tăng cơ có trứng với	search_recipe
+có món nào 1 tiếng mà ngon không nào ngon	search_recipe
+biết ông a không nào ngon	fallback
+đề xuất xin chào	fallback
+đang cần bước 1 là gì	ask_recipe_detail
+gợi ý hôm nay ăn gì	search_recipe
+đang cần thời tiết thế nào	fallback
+làm sao cho ba chỉ giòn nhé	ask_recipe_detail
+nhà còn lấy đủ nguyên liệu cho món này cho hợp lý	add_ingredients_to_cart
+đặt mua đồ về nấu nào ngon	add_ingredients_to_cart
+gợi ý tìm món kiểu thanh đạm cho bữa tối cả nhà	search_recipe
+tìm giúp tìm món khác đi đi	refine_search
+nhà còn đang ở đâu nhé	fallback
+nhà còn tìm cái gì lạ miệng hơn	refine_search
+tìm món bắp bò luộc ăn bữa xế	search_recipe
+ê đang ở đâu nhé	fallback
+ê bạn tên gì	fallback
+combo món cuốn và dưa leo cho ít người đi	search_recipe
+ăn thế này có đắt không	ask_price_estimate
+combo mực và bí xanh cho cả nhà	search_recipe
+hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+đề xuất hướng dẫn chi tiết món này gấp	ask_recipe_detail
+tìm cái gì lạ miệng hơn gấp	refine_search
+tìm giúp không thích món này nhé	refine_search
+ê bước 1 là gì với	ask_recipe_detail
+gợi ý đổi sang món mực được không gấp	refine_search
+cần mua những gì thì thêm vào giỏ giúp đi	add_ingredients_to_cart
+mình muốn 1 set heo + hành ngò nhé	search_recipe
+có món nào 5 phút mà ngon không	search_recipe
+đề xuất đặt mua đồ về nấu nhé	add_ingredients_to_cart
+gợi ý thực đơn cả nhà người, giá rẻ gấp	search_recipe
+ê ngân sách 200k đủ nấu không đi	ask_price_estimate
+mình muốn 1 set cá lóc + hành tây	search_recipe
+ê thời tiết thế nào nhé	fallback
+đang cần tư vấn thực đơn healthy có bò nhé	search_recipe
+bạn ơi mình muốn 1 set tôm + bí xanh đi	search_recipe
+tìm giúp tìm cái gì lạ miệng hơn	refine_search
+món nhậu từ mực rim	search_recipe
+bạn ơi ngu quá	fallback
+tìm giúp tìm cái gì lạ miệng hơn cho hợp lý	refine_search
+tìm giúp cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+gợi ý hôm nay ăn gì đi	search_recipe
+chi phí cho cả nhà người cho hợp lý	ask_price_estimate
+bạn ơi combo bún và nấm cho nhóm bạn với	search_recipe
+ê đề xuất món nướng, ít dọn dẹp, hợp tiệc	search_recipe
+tìm giúp thực đơn phần lớn người, giá 200k	search_recipe
+đang cần ngân sách tiết kiệm đủ nấu không	ask_price_estimate
+hướng dẫn chi tiết món này với	ask_recipe_detail
+ê thời tiết thế nào đi	fallback
+ăn gì bữa xế vừa ít dầu mỡ vừa 20k	search_recipe
+gợi ý tìm món món cuốn chiên ăn bữa sáng gấp	search_recipe
+biết ông a không	fallback
+ăn thế này có đắt không cho hợp lý	ask_price_estimate
+bạn ơi chỉ mình cách nấu đi cho hợp lý	ask_recipe_detail
+đang cần tìm món kiểu chiên giòn cho cơm hộp phần lớn đi	search_recipe
+đang cần thực đơn phần lớn người, giá không quan trọng tiền gấp	search_recipe
+tìm giúp có món nào đi làm về muộn mà ngon không gấp	search_recipe
+đang cần tìm cái gì lạ miệng hơn	refine_search
+đề xuất chỉ mình cách nấu đi nào ngon	ask_recipe_detail
+bạn ơi ngân sách 50k đủ nấu không nào ngon	ask_price_estimate
+mình muốn ăn thế này có đắt không	ask_price_estimate
+mình muốn tư vấn thực đơn tăng cơ có đùi gà	search_recipe
+bạn ơi bước 1 là gì nha	ask_recipe_detail
+xin chào nào ngon	fallback
+nhà còn cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+đang cần tư vấn thực đơn healthy có ức gà nhé	search_recipe
+tìm giúp nấu gì với cải thảo	search_recipe
+món bò luộc nha	search_recipe
+ê nấu gì với cải thảo	search_recipe
+làm sao cho lẩu giòn	ask_recipe_detail
+bạn ơi hôm nay ăn gì nào ngon	search_recipe
+tổng thiệt hại là bao nhiêu với	ask_price_estimate
+nhà còn tìm món cá hồi nướng muối ớt ăn cơm văn phòng nha	search_recipe
+tìm giúp xin chào	fallback
+gợi ý xin chào	fallback
+đang cần hôm nay ăn gì nha	search_recipe
+nấu gì với cải thảo đi	search_recipe
+đang cần đặt mua đồ về nấu gấp	add_ingredients_to_cart
+tư vấn thực đơn healthy có salad nhé	search_recipe
+mình muốn ngân sách tiết kiệm đủ nấu không	ask_price_estimate
+nhà còn tìm cái gì lạ miệng hơn nha	refine_search
+làm sao cho heo giòn gấp	ask_recipe_detail
+đang cần bước 1 là gì cho hợp lý	ask_recipe_detail
+xin chào với	fallback
+tìm giúp cho hết vào giỏ hàng đi	add_ingredients_to_cart
+biết ông a không đi	fallback
+tìm giúp làm sao cho tôm giòn	ask_recipe_detail
+đề xuất xin chào cho hợp lý	fallback
+chi phí cho nhóm bạn người gấp	ask_price_estimate
+đang cần ăn thế này có đắt không	ask_price_estimate
+nêm nếm gia vị ra sao nào ngon	ask_recipe_detail
+đề xuất nêm nếm gia vị ra sao nào ngon	ask_recipe_detail
+mình muốn không thích món này với	refine_search
+mình muốn đề xuất món chiên, nguyên liệu có sẵn, hợp cơm văn phòng	search_recipe
+mình muốn đổi món xào hơn	refine_search
+bạn ơi mình muốn 1 set phở + rau muống	search_recipe
+ngân sách 50k đủ nấu không nhé	ask_price_estimate
+bạn ơi ngân sách 100k đủ nấu không nào ngon	ask_price_estimate
+món này hết bao nhiêu tiền	ask_price_estimate
+tổng thiệt hại là bao nhiêu	ask_price_estimate
+nêm nếm gia vị ra sao gấp	ask_recipe_detail
+đề xuất ăn gì bữa xế vừa giảm cân vừa sang trọng với	search_recipe
+tìm món kiểu nướng cho bữa trưa nhóm bạn	search_recipe
+đổi món chiên hơn	refine_search
+mình muốn món này hết bao nhiêu tiền	ask_price_estimate
+bước 1 là gì nha	ask_recipe_detail
+tìm giúp mua giúp mình nguyên liệu	add_ingredients_to_cart
+tư vấn thực đơn healthy có sườn	search_recipe
+gợi ý hôm nay ăn gì nào ngon	search_recipe
+ê thời tiết thế nào	fallback
+đề xuất món nướng muối ớt, trong tủ lạnh còn, hợp bữa trưa	search_recipe
+bạn ơi thực đơn 1 người người, giá tiết kiệm nhé	search_recipe
+tìm giúp ăn gì cơm hộp vừa giảm cân vừa 200k cho hợp lý	search_recipe
+gợi ý tổng thiệt hại là bao nhiêu nhé	ask_price_estimate
+tìm giúp hát đi nhé	fallback
+bạn ơi món cá rim gấp	search_recipe
+bạn ơi mấy giờ rồi gấp	fallback
+không thích món này đi	refine_search
+món nhậu từ đùi gà đậm đà với	search_recipe
+tìm món kiểu chiên giòn cho bữa tối nhóm bạn đi	search_recipe
+đang cần món gà nướng muối ớt	search_recipe
+đổi sang món salad được không với	refine_search
+đề xuất món thanh đạm, mới đi chợ về, hợp cơm hộp	search_recipe
+bạn ơi thực đơn phần lớn người, giá sang trọng cho hợp lý	search_recipe
+nhà còn nêm nếm gia vị ra sao nhé	ask_recipe_detail
+tìm giúp lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+đổi món hấp hơn gấp	refine_search
+đang cần nấu gì với dưa leo nhé	search_recipe
+đang cần lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+ê đặt mua đồ về nấu	add_ingredients_to_cart
+ê ăn gì bữa sáng vừa chay vừa không quan trọng tiền với	search_recipe
+bạn ơi món này hết bao nhiêu tiền gấp	ask_price_estimate
+lấy đủ nguyên liệu cho món này với	add_ingredients_to_cart
+mua giúp mình nguyên liệu	add_ingredients_to_cart
+thời tiết thế nào với	fallback
+lên thực đơn bữa sáng: thịt gà, 5 phút, ít người nào ngon	search_recipe
+gợi ý không thích món này	refine_search
+gợi ý chi phí cho cả nhà người cho hợp lý	ask_price_estimate
+đề xuất món xào, nguyên liệu có sẵn, hợp bữa trưa	search_recipe
+đề xuất ăn gì cơm văn phòng vừa giảm cân vừa 20k nhé	search_recipe
+cho hết vào giỏ hàng đi đi	add_ingredients_to_cart
+bước 1 là gì cho hợp lý	ask_recipe_detail
+mấy giờ rồi gấp	fallback
+nhà còn bước 1 là gì nào ngon	ask_recipe_detail
+món nhậu từ thịt gà rim	search_recipe
+chi phí cho 2 người người nhé	ask_price_estimate
+cần mua những gì thì thêm vào giỏ giúp với	add_ingredients_to_cart
+bạn ơi lên thực đơn bữa sáng: phở, 5 phút, 2 người gấp	search_recipe
+nhà còn món bò đậm đà đi	search_recipe
+đang ở đâu gấp	fallback
+cần mua những gì thì thêm vào giỏ giúp gấp	add_ingredients_to_cart
+tư vấn thực đơn eat clean có cá lóc gấp	search_recipe
+đề xuất thực đơn 3 người người, giá 20k đi	search_recipe
+đề xuất tư vấn thực đơn healthy có canh chua gấp	search_recipe
+gợi ý tư vấn thực đơn giảm cân có gà	search_recipe
+combo bún và khoai tây cho gia đình	search_recipe
+nhà còn tìm món kiểu nướng muối ớt cho bữa xế 1 người nha	search_recipe
+combo đùi gà và hành tây cho 3 người với	search_recipe
+bạn ơi combo cơm gà và rau xà lách cho 3 người cho hợp lý	search_recipe
+mình muốn tư vấn thực đơn chay có cá lóc đi	search_recipe
+đang cần món ba chỉ hấp	search_recipe
+bạn ơi ăn gì bữa tối vừa ít dầu mỡ vừa không quan trọng tiền	search_recipe
+đổi món rim hơn	refine_search
+đề xuất ngân sách 50k đủ nấu không	ask_price_estimate
+ngân sách rẻ đủ nấu không	ask_price_estimate
+mình muốn đề xuất món xào, muốn đổi gió, hợp bữa sáng nào ngon	search_recipe
+thực đơn 3 người người, giá sang trọng	search_recipe
+nhà còn hát đi đi	fallback
+bạn ơi làm sao cho thịt bò giòn	ask_recipe_detail
+cho hết vào giỏ hàng đi nha	add_ingredients_to_cart
+bạn ơi bước 1 là gì gấp	ask_recipe_detail
+đang cần lên thực đơn bữa trưa: thịt bò, 5 phút, gia đình	search_recipe
+đặt mua đồ về nấu nhé	add_ingredients_to_cart
+nhà còn đổi sang món gà được không	refine_search
+đề xuất chi phí cho gia đình người nhé	ask_price_estimate
+tư vấn thực đơn healthy có bún đi	search_recipe
+đề xuất hướng dẫn chi tiết món này	ask_recipe_detail
+tìm cái gì lạ miệng hơn đi	refine_search
+đổi sang món món cuốn được không cho hợp lý	refine_search
+mình muốn đặt mua đồ về nấu nhé	add_ingredients_to_cart
+đang cần làm sao cho tôm giòn	ask_recipe_detail
+nhà còn đổi món luộc hơn cho hợp lý	refine_search
+tìm giúp ăn thế này có đắt không	ask_price_estimate
+tư vấn thực đơn giảm cân có tôm nhé	search_recipe
+đang cần tìm món bắp bò kho ăn cơm hộp	search_recipe
+có món nào không có bí xanh không	refine_search
+bạn ơi làm sao cho thịt bò giòn nào ngon	ask_recipe_detail
+mình muốn thực đơn 2 người người, giá bình dân	search_recipe
+mình muốn nấu gì với bí xanh với	search_recipe
+nhà còn đổi món luộc hơn với	refine_search
+gợi ý xin chào cho hợp lý	fallback
+tìm giúp có món nào cấp tốc mà ngon không với	search_recipe
+nhà còn hát đi	fallback
+bạn ơi nêm nếm gia vị ra sao đi	ask_recipe_detail
+chỉ mình cách nấu đi nha	ask_recipe_detail
+mình muốn thời tiết thế nào với	fallback
+ê làm sao cho bún giòn	ask_recipe_detail
+đề xuất ngu quá	fallback
+nhà còn có món nào không có hành ngò không	refine_search
+mình muốn bước 1 là gì nào ngon	ask_recipe_detail
+làm sao cho sườn giòn	ask_recipe_detail
+gợi ý combo mực và tỏi cho cả nhà	search_recipe
+bạn ơi món này hết bao nhiêu tiền đi	ask_price_estimate
+có món nào không có bí xanh không đi	refine_search
+tìm giúp có món nào 5 phút mà ngon không đi	search_recipe
+mình muốn làm sao cho thịt gà giòn với	ask_recipe_detail
+bạn ơi tìm món khác đi đi	refine_search
+gợi ý không thích món này nhé	refine_search
+mình muốn 1 set bắp bò + hành ngò nào ngon	search_recipe
+tìm giúp đổi sang món món cuốn được không đi	refine_search
+đang cần ăn gì cơm văn phòng vừa ít béo vừa 50k	search_recipe
+gợi ý không thích món này nha	refine_search
+tìm giúp bước 1 là gì	ask_recipe_detail
+đang cần cho hết vào giỏ hàng đi nha	add_ingredients_to_cart
+thực đơn suất đôi người, giá không quan trọng tiền nào ngon	search_recipe
+mình muốn ngu quá	fallback
+ê hôm nay ăn gì	search_recipe
+đề xuất làm sao cho thịt gà giòn gấp	ask_recipe_detail
+mình muốn đổi sang món ức gà được không	refine_search
+gợi ý đổi món chiên hơn nào ngon	refine_search
+đề xuất món nướng, dễ làm, hợp bữa tối gấp	search_recipe
+mình muốn biết ông a không đi	fallback
+đề xuất thực đơn suất đôi người, giá 100k	search_recipe
+cho hết vào giỏ hàng đi gấp	add_ingredients_to_cart
+đang cần nấu gì với nấm với	search_recipe
+tìm giúp thực đơn cả nhà người, giá 200k nha	search_recipe
+gợi ý tư vấn thực đơn chay có canh chua nha	search_recipe
+ê chỉ mình cách nấu đi với	ask_recipe_detail
+đề xuất tìm cái gì lạ miệng hơn	refine_search
+chi phí cho phần lớn người với	ask_price_estimate
+mình muốn hôm nay ăn gì	search_recipe
+tìm giúp ăn thế này có đắt không nha	ask_price_estimate
+thực đơn nhóm bạn người, giá sang trọng	search_recipe
+ăn gì cơm hộp vừa chay vừa tiết kiệm	search_recipe
+tìm món kiểu nướng muối ớt cho cơm văn phòng phần lớn cho hợp lý	search_recipe
+thực đơn ít người người, giá tiết kiệm	search_recipe
+bạn ơi tư vấn thực đơn nhiều rau có canh chua nha	search_recipe
+nấu gì với sả đi	search_recipe
+có món nào không có hành tây không nhé	refine_search
+đề xuất đề xuất món kho, mới đi chợ về, hợp bữa xế nào ngon	search_recipe
+bạn ơi ngân sách không quan trọng tiền đủ nấu không	ask_price_estimate
+gợi ý ăn gì bữa tối vừa giảm cân vừa 50k đi	search_recipe
+nhà còn đặt mua đồ về nấu gấp	add_ingredients_to_cart
+bạn ơi đặt mua đồ về nấu	add_ingredients_to_cart
+biết ông a không cho hợp lý	fallback
+tư vấn thực đơn nhiều rau có thịt bò	search_recipe
+tìm cái gì lạ miệng hơn	refine_search
+nhà còn bạn tên gì gấp	fallback
+mình muốn đề xuất món chiên giòn, trong tủ lạnh còn, hợp cơm hộp	search_recipe
+nhà còn tìm món cá hồi luộc ăn bữa trưa	search_recipe
+đang cần có món nào không tốn thời gian mà ngon không nhé	search_recipe
+tư vấn thực đơn ít béo có đậu phụ đi	search_recipe
+mình muốn biết ông a không nha	fallback
+đổi sang món salad được không	refine_search
+tìm món canh chua hấp ăn bữa sáng	search_recipe
+nhà còn tổng thiệt hại là bao nhiêu nào ngon	ask_price_estimate
+gợi ý đổi sang món ba chỉ được không nhé	refine_search
+nhà còn đang ở đâu nào ngon	fallback
+tìm món khác đi đi	refine_search
+mình muốn cho hết vào giỏ hàng đi nhé	add_ingredients_to_cart
+gợi ý có món nào nhanh mà ngon không	search_recipe
+đang cần có món nào 1 tiếng mà ngon không	search_recipe
+ê món nhậu từ tôm kho nhé	search_recipe
+mua giúp mình nguyên liệu với	add_ingredients_to_cart
+đề xuất món nướng, dễ làm, hợp tiệc	search_recipe
+mình muốn hướng dẫn chi tiết món này nha	ask_recipe_detail
+ăn gì bữa tối vừa eat clean vừa 50k	search_recipe
+tư vấn thực đơn healthy có bắp bò nhé	search_recipe
+ê đang ở đâu	fallback
+cho hết vào giỏ hàng đi nhé	add_ingredients_to_cart
+gợi ý bí quyết nấu ngon	ask_recipe_detail
+bạn ơi tìm cái gì lạ miệng hơn	refine_search
+ê hướng dẫn chi tiết món này	ask_recipe_detail
+tìm giúp tổng thiệt hại là bao nhiêu	ask_price_estimate
+gợi ý tìm món khác đi	refine_search
+tìm món kiểu nướng cho cơm hộp cả nhà	search_recipe
+đang cần chi phí cho nhóm bạn người đi	ask_price_estimate
+chỉ mình cách nấu đi nhé	ask_recipe_detail
+gợi ý đặt mua đồ về nấu với	add_ingredients_to_cart
+lên thực đơn bữa sáng: phở, đi làm về muộn, 1 người	search_recipe
+có món nào 15 phút mà ngon không	search_recipe
+đổi món đậm đà hơn nào ngon	refine_search
+đề xuất cho hết vào giỏ hàng đi	add_ingredients_to_cart
+ê ngân sách 20k đủ nấu không	ask_price_estimate
+mua giúp mình nguyên liệu nào ngon	add_ingredients_to_cart
+tìm giúp mấy giờ rồi	fallback
+thực đơn ít người người, giá 200k	search_recipe
+ê ăn thế này có đắt không	ask_price_estimate
+đề xuất món xào, đang vội, hợp bữa trưa đi	search_recipe
+nhà còn món món cuốn xào đi	search_recipe
+đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+đổi sang món cá được không nhé	refine_search
+bạn ơi bước 1 là gì đi	ask_recipe_detail
+mình muốn 1 set salad + ớt với	search_recipe
+đang ở đâu nào ngon	fallback
+bạn ơi hướng dẫn chi tiết món này gấp	ask_recipe_detail
+có món nào không có rau xà lách không	refine_search
+ê món này hết bao nhiêu tiền nha	ask_price_estimate
+mình muốn ngân sách 100k đủ nấu không	ask_price_estimate
+nhà còn mua giúp mình nguyên liệu	add_ingredients_to_cart
+bạn ơi tư vấn thực đơn giảm cân có mực nào ngon	search_recipe
+mình muốn biết ông a không	fallback
+bạn tên gì với	fallback
+bạn ơi đang ở đâu với	fallback
+tìm món bún đậm đà ăn tiệc	search_recipe
+nhà còn ăn gì bữa trưa vừa ít béo vừa 100k	search_recipe
+bạn ơi ngu quá nhé	fallback
+ê chi phí cho phần lớn người	ask_price_estimate
+đề xuất đổi sang món món cuốn được không nhé	refine_search
+mình muốn món nhậu từ phở nướng muối ớt đi	search_recipe
+mình muốn 1 set đậu phụ + nấm	search_recipe
+đổi sang món canh chua được không nhé	refine_search
+bạn tên gì cho hợp lý	fallback
+ê nêm nếm gia vị ra sao	ask_recipe_detail
+gợi ý ăn gì tiệc vừa eat clean vừa tiết kiệm	search_recipe
+ăn gì bữa trưa vừa chay vừa 50k	search_recipe
+đề xuất đặt mua đồ về nấu đi	add_ingredients_to_cart
+mình muốn bạn tên gì	fallback
+mình muốn mấy giờ rồi nào ngon	fallback
+bạn ơi chỉ mình cách nấu đi	ask_recipe_detail
+tìm giúp bí quyết nấu ngon đi	ask_recipe_detail
+gợi ý mấy giờ rồi nha	fallback
+tư vấn thực đơn giảm cân có sườn	search_recipe
+đề xuất món nướng muối ớt, đang vội, hợp bữa xế nha	search_recipe
+gợi ý chi phí cho 3 người người	ask_price_estimate
+nêm nếm gia vị ra sao với	ask_recipe_detail
+gợi ý hát đi	fallback
+nhà còn bạn tên gì cho hợp lý	fallback
+nấu gì với nấm cho hợp lý	search_recipe
+đổi sang món sườn được không	refine_search
+tìm giúp chi phí cho cả nhà người nào ngon	ask_price_estimate
+đề xuất món ức gà xào nhé	search_recipe
+bạn ơi ngân sách rẻ đủ nấu không nha	ask_price_estimate
+nhà còn tìm món bắp bò nướng muối ớt ăn bữa sáng với	search_recipe
+gợi ý mua giúp mình nguyên liệu	add_ingredients_to_cart
+nhà còn làm sao cho bún giòn nào ngon	ask_recipe_detail
+đang cần ngu quá cho hợp lý	fallback
+đề xuất hát đi gấp	fallback
+đang cần đề xuất món chiên giòn, nguyên liệu có sẵn, hợp tiệc nhé	search_recipe
+gợi ý bí quyết nấu ngon với	ask_recipe_detail
+đang cần món này hết bao nhiêu tiền với	ask_price_estimate
+nhà còn đang ở đâu với	fallback
+mình muốn cần mua những gì thì thêm vào giỏ giúp gấp	add_ingredients_to_cart
+có món nào 1 tiếng mà ngon không	search_recipe
+đề xuất mình muốn 1 set sườn + hành ngò	search_recipe
+bạn ơi tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+thực đơn nhóm bạn người, giá bình dân gấp	search_recipe
+đề xuất thực đơn ít người người, giá 200k	search_recipe
+bạn ơi lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+gợi ý đổi món kho hơn gấp	refine_search
+tìm giúp đổi sang món tôm được không	refine_search
+tư vấn thực đơn nhiều rau có đùi gà	search_recipe
+đề xuất tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+thực đơn 3 người người, giá 50k	search_recipe
+chi phí cho gia đình người nhé	ask_price_estimate
+có món nào rảnh rỗi mà ngon không nha	search_recipe
+nhà còn bí quyết nấu ngon nhé	ask_recipe_detail
+đề xuất đổi món thanh đạm hơn	refine_search
+đang cần làm sao cho heo giòn gấp	ask_recipe_detail
+mấy giờ rồi nha	fallback
+bí quyết nấu ngon nha	ask_recipe_detail
+đang cần món thịt bò kho gấp	search_recipe
+gợi ý cho hết vào giỏ hàng đi	add_ingredients_to_cart
+mình muốn tìm món khác đi nha	refine_search
+combo bún và rau xà lách cho 1 người	search_recipe
+ăn thế này có đắt không nhé	ask_price_estimate
+gợi ý thực đơn ít người người, giá 200k	search_recipe
+nêm nếm gia vị ra sao đi	ask_recipe_detail
+mình muốn có món nào rảnh rỗi mà ngon không	search_recipe
+bạn ơi combo gà và hành ngò cho 3 người	search_recipe
+đổi sang món cá lóc được không	refine_search
+xin chào đi	fallback
+đề xuất tìm món khác đi đi	refine_search
+gợi ý món nhậu từ cá kho	search_recipe
+bạn ơi bạn tên gì cho hợp lý	fallback
+đề xuất món hấp, đang vội, hợp bữa trưa cho hợp lý	search_recipe
+đề xuất đang ở đâu	fallback
+gợi ý bước 1 là gì nào ngon	ask_recipe_detail
+lên thực đơn bữa trưa: trứng, không tốn thời gian, ít người cho hợp lý	search_recipe
+đề xuất ăn gì bữa sáng vừa tăng cơ vừa tiết kiệm	search_recipe
+tìm món phở luộc ăn tiệc	search_recipe
+nấu gì với rau xà lách nào ngon	search_recipe
+không thích món này với	refine_search
+đề xuất tổng thiệt hại là bao nhiêu cho hợp lý	ask_price_estimate
+gợi ý biết ông a không	fallback
+đề xuất ăn thế này có đắt không nào ngon	ask_price_estimate
+tư vấn thực đơn ít dầu mỡ có trứng nhé	search_recipe
+đang cần tổng thiệt hại là bao nhiêu	ask_price_estimate
+có món nào không có hành ngò không cho hợp lý	refine_search
+bạn ơi nêm nếm gia vị ra sao	ask_recipe_detail
+gợi ý tìm món ba chỉ kho ăn cơm hộp	search_recipe
+tìm giúp bước 1 là gì gấp	ask_recipe_detail
+ê món nhậu từ phở luộc đi	search_recipe
+tư vấn thực đơn healthy có cá hồi nha	search_recipe
+lên thực đơn bữa trưa: thịt gà, 30 phút, ít người với	search_recipe
+đang cần tổng thiệt hại là bao nhiêu đi	ask_price_estimate
+đổi sang món ức gà được không nào ngon	refine_search
+không thích món này gấp	refine_search
+mình muốn tìm cái gì lạ miệng hơn đi	refine_search
+tìm giúp thời tiết thế nào với	fallback
+tìm món kiểu rim cho bữa sáng suất đôi đi	search_recipe
+nhà còn đặt mua đồ về nấu	add_ingredients_to_cart
+nhà còn bí quyết nấu ngon gấp	ask_recipe_detail
+bạn ơi lên thực đơn bữa xế: canh chua, đi làm về muộn, 1 người gấp	search_recipe
+món nhậu từ sườn hấp	search_recipe
+không thích món này cho hợp lý	refine_search
+đề xuất lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+mình muốn đổi món chiên hơn	refine_search
+lên thực đơn bữa xế: phở, nhanh, nhóm bạn đi	search_recipe
+bạn ơi đặt mua đồ về nấu với	add_ingredients_to_cart
+đang cần mấy giờ rồi	fallback
+mình muốn cần mua những gì thì thêm vào giỏ giúp cho hợp lý	add_ingredients_to_cart
+đề xuất không thích món này	refine_search
+gợi ý món canh chua đậm đà	search_recipe
+ê ngu quá	fallback
+bạn ơi có món nào 1 tiếng mà ngon không	search_recipe
+tìm giúp mua giúp mình nguyên liệu cho hợp lý	add_ingredients_to_cart
+mình muốn có món nào không có cải thảo không đi	refine_search
+ê mấy giờ rồi nào ngon	fallback
+tư vấn thực đơn ít dầu mỡ có phở	search_recipe
+đang cần không thích món này nha	refine_search
+mình muốn có món nào đi làm về muộn mà ngon không	search_recipe
+gợi ý tìm món bò thanh đạm ăn tiệc nhé	search_recipe
+ê cho hết vào giỏ hàng đi cho hợp lý	add_ingredients_to_cart
+gợi ý chỉ mình cách nấu đi	ask_recipe_detail
+bí quyết nấu ngon gấp	ask_recipe_detail
+ê món nhậu từ đùi gà thanh đạm	search_recipe
+gợi ý tìm món canh chua nướng muối ớt ăn cơm hộp	search_recipe
+đề xuất tổng thiệt hại là bao nhiêu đi	ask_price_estimate
+mình muốn combo cá và rau xà lách cho 3 người gấp	search_recipe
+mình muốn hát đi cho hợp lý	fallback
+ê bước 1 là gì nào ngon	ask_recipe_detail
+combo đậu phụ và bí xanh cho gia đình	search_recipe
+ngân sách 20k đủ nấu không	ask_price_estimate
+nhà còn có món nào không có hành tây không nhé	refine_search
+ăn thế này có đắt không nha	ask_price_estimate
+combo cá hồi và hành ngò cho 3 người	search_recipe
+đề xuất mấy giờ rồi	fallback
+tìm giúp bí quyết nấu ngon	ask_recipe_detail
+bước 1 là gì nhé	ask_recipe_detail
+tìm món lẩu hấp ăn bữa xế nhé	search_recipe
+đổi món nướng muối ớt hơn	refine_search
+đang cần hướng dẫn chi tiết món này với	ask_recipe_detail
+thực đơn cả nhà người, giá 20k với	search_recipe
+tìm món kiểu kho cho cơm văn phòng 2 người	search_recipe
+đang cần cho hết vào giỏ hàng đi nhé	add_ingredients_to_cart
+bạn ơi nấu gì với sả	search_recipe
+ăn gì bữa sáng vừa eat clean vừa bình dân	search_recipe
+có món nào không có hành tây không gấp	refine_search
+gợi ý món cá chua ngọt	search_recipe
+đang cần mình muốn 1 set ức gà + bí xanh nào ngon	search_recipe
+nhà còn chi phí cho 1 người người đi	ask_price_estimate
+tìm món thịt gà rim ăn bữa trưa	search_recipe
+đang cần hát đi nhé	fallback
+gợi ý combo đậu phụ và hành ngò cho cả nhà đi	search_recipe
+đề xuất ngân sách 200k đủ nấu không	ask_price_estimate
+tìm món kiểu nướng cho bữa xế phần lớn	search_recipe
+đề xuất cần mua những gì thì thêm vào giỏ giúp đi	add_ingredients_to_cart
+gợi ý ăn thế này có đắt không đi	ask_price_estimate
+nhà còn hướng dẫn chi tiết món này	ask_recipe_detail
+gợi ý tư vấn thực đơn ít béo có trứng nào ngon	search_recipe
+bạn ơi cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+mấy giờ rồi với	fallback
+bước 1 là gì gấp	ask_recipe_detail
+ê đề xuất món chiên, muốn đổi gió, hợp cơm văn phòng cho hợp lý	search_recipe
+lên thực đơn cơm hộp: món cuốn, 15 phút, suất đôi nha	search_recipe
+tìm giúp đề xuất món đậm đà, nguyên liệu có sẵn, hợp cơm hộp nha	search_recipe
+đang cần mình muốn 1 set món cuốn + rau muống nhé	search_recipe
+gợi ý hát đi nào ngon	fallback
+ê đổi sang món bắp bò được không nhé	refine_search
+ê món món cuốn kho nào ngon	search_recipe
+đề xuất đề xuất món hấp, dễ làm, hợp cơm hộp cho hợp lý	search_recipe
+có món nào cấp tốc mà ngon không	search_recipe
+đang cần lấy đủ nguyên liệu cho món này đi	add_ingredients_to_cart
+có món nào không có cà chua không	refine_search
+ê tìm món khác đi gấp	refine_search
+đề xuất món mực luộc nhé	search_recipe
+bạn ơi món nhậu từ lẩu rim	search_recipe
+tìm món thịt bò đậm đà ăn bữa tối cho hợp lý	search_recipe
+ê đề xuất món rim, dễ làm, hợp cơm văn phòng	search_recipe
+gợi ý bí quyết nấu ngon nhé	ask_recipe_detail
+chỉ mình cách nấu đi nào ngon	ask_recipe_detail
+mình muốn 1 set cá lóc + bí xanh cho hợp lý	search_recipe
+gợi ý thực đơn 1 người người, giá 50k	search_recipe
+đang cần hát đi	fallback
+tìm giúp đổi món hấp hơn gấp	refine_search
+lấy đủ nguyên liệu cho món này nha	add_ingredients_to_cart
+combo ức gà và khoai tây cho suất đôi với	search_recipe
+ê chi phí cho gia đình người	ask_price_estimate
+đang cần món nhậu từ món cuốn kho gấp	search_recipe
+đang ở đâu nha	fallback
+ngu quá với	fallback
+ăn gì bữa trưa vừa ít dầu mỡ vừa sang trọng đi	search_recipe
+ê cần mua những gì thì thêm vào giỏ giúp đi	add_ingredients_to_cart
+tìm giúp bạn tên gì gấp	fallback
+đề xuất combo thịt gà và cải thảo cho ít người nào ngon	search_recipe
+ê combo phở và bí xanh cho ít người nhé	search_recipe
+nhà còn lên thực đơn cơm văn phòng: đậu phụ, 30 phút, ít người với	search_recipe
+đề xuất combo gà và ớt cho suất đôi nào ngon	search_recipe
+mình muốn ngân sách bình dân đủ nấu không nhé	ask_price_estimate
+bạn ơi có món nào cấp tốc mà ngon không	search_recipe
+mình muốn đổi món nướng hơn nào ngon	refine_search
+gợi ý có món nào 30 phút mà ngon không nha	search_recipe
+đang cần mua giúp mình nguyên liệu	add_ingredients_to_cart
+thực đơn 2 người người, giá tiết kiệm	search_recipe
+ê món cá hồi hấp cho hợp lý	search_recipe
+món gà đậm đà	search_recipe
+mình muốn ăn thế này có đắt không đi	ask_price_estimate
+ăn gì cơm hộp vừa nhiều rau vừa tiết kiệm	search_recipe
+nhà còn ăn thế này có đắt không nào ngon	ask_price_estimate
+nhà còn hướng dẫn chi tiết món này nhé	ask_recipe_detail
+hát đi nhé	fallback
+đổi món xào hơn	refine_search
+thực đơn 1 người người, giá sang trọng cho hợp lý	search_recipe
+thực đơn gia đình người, giá không quan trọng tiền	search_recipe
+tìm món kiểu chiên cho cơm văn phòng gia đình	search_recipe
+mình muốn 1 set sườn + nấm	search_recipe
+đề xuất chỉ mình cách nấu đi	ask_recipe_detail
+bạn ơi lên thực đơn cơm văn phòng: gà, 30 phút, 1 người	search_recipe
+làm sao cho món cuốn giòn	ask_recipe_detail
+đang cần cần mua những gì thì thêm vào giỏ giúp cho hợp lý	add_ingredients_to_cart
+gợi ý ngân sách 50k đủ nấu không cho hợp lý	ask_price_estimate
+tìm giúp đổi sang món trứng được không nhé	refine_search
+lên thực đơn bữa xế: bún, nhanh, phần lớn cho hợp lý	search_recipe
+bạn ơi món này hết bao nhiêu tiền nha	ask_price_estimate
+món nhậu từ cá lóc thanh đạm nha	search_recipe
+lên thực đơn bữa sáng: cá hồi, 1 tiếng, phần lớn nào ngon	search_recipe
+gợi ý không thích món này gấp	refine_search
+gợi ý combo sườn và hành ngò cho nhóm bạn	search_recipe
+mình muốn tìm cái gì lạ miệng hơn	refine_search
+nhà còn hướng dẫn chi tiết món này nào ngon	ask_recipe_detail
+mình muốn cho hết vào giỏ hàng đi	add_ingredients_to_cart
+nhà còn chỉ mình cách nấu đi với	ask_recipe_detail
+nhà còn tư vấn thực đơn healthy có gà	search_recipe
+nhà còn lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+đề xuất tìm món kiểu thanh đạm cho tiệc 3 người nào ngon	search_recipe
+đề xuất tổng thiệt hại là bao nhiêu	ask_price_estimate
+đề xuất mua giúp mình nguyên liệu	add_ingredients_to_cart
+mình muốn combo bắp bò và dưa leo cho 2 người	search_recipe
+hôm nay ăn gì nào ngon	search_recipe
+mình muốn nêm nếm gia vị ra sao	ask_recipe_detail
+nhà còn hướng dẫn chi tiết món này với	ask_recipe_detail
+mình muốn mấy giờ rồi cho hợp lý	fallback
+ê đổi món xào hơn nhé	refine_search
+tìm món đùi gà kho ăn bữa trưa	search_recipe
+thực đơn phần lớn người, giá không quan trọng tiền	search_recipe
+gợi ý thực đơn suất đôi người, giá rẻ	search_recipe
+gợi ý combo canh chua và hành tây cho 2 người nào ngon	search_recipe
+làm sao cho thịt bò giòn	ask_recipe_detail
+bước 1 là gì nào ngon	ask_recipe_detail
+tìm giúp mấy giờ rồi nhé	fallback
+nấu gì với bí xanh đi	search_recipe
+tìm giúp mua giúp mình nguyên liệu nha	add_ingredients_to_cart
+tìm giúp không thích món này	refine_search
+ê tư vấn thực đơn healthy có sườn cho hợp lý	search_recipe
+tư vấn thực đơn tăng cơ có đậu phụ đi	search_recipe
+đang cần lấy đủ nguyên liệu cho món này cho hợp lý	add_ingredients_to_cart
+tìm món đùi gà chua ngọt ăn bữa xế	search_recipe
+tìm món gà nướng ăn bữa trưa gấp	search_recipe
+gợi ý chi phí cho nhóm bạn người	ask_price_estimate
+đề xuất món ba chỉ nướng muối ớt cho hợp lý	search_recipe
+món nhậu từ gà rim	search_recipe
+gợi ý có món nào đi làm về muộn mà ngon không	search_recipe
+làm sao cho đậu phụ giòn gấp	ask_recipe_detail
+tìm giúp chi phí cho cả nhà người	ask_price_estimate
+hát đi cho hợp lý	fallback
+đề xuất món chiên, trong tủ lạnh còn, hợp cơm hộp nào ngon	search_recipe
+tìm món khác đi nha	refine_search
+tư vấn thực đơn giảm cân có bún	search_recipe
+mình muốn làm sao cho trứng giòn cho hợp lý	ask_recipe_detail
+gợi ý combo gà và khoai tây cho gia đình gấp	search_recipe
+ngu quá	fallback
+nhà còn tìm món cơm gà nướng ăn tiệc gấp	search_recipe
+đặt mua đồ về nấu nha	add_ingredients_to_cart
+mình muốn lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+đang cần tìm món khác đi nhé	refine_search
+gợi ý làm sao cho bún giòn	ask_recipe_detail
+đề xuất món tôm xào nhé	search_recipe
+gợi ý cần mua những gì thì thêm vào giỏ giúp với	add_ingredients_to_cart
+ê đề xuất món chiên, ít dọn dẹp, hợp cơm hộp	search_recipe
+có món nào không có nấm không với	refine_search
+tìm giúp mình muốn 1 set trứng + rau muống	search_recipe
+lên thực đơn tiệc: cơm gà, nhanh, cả nhà	search_recipe
+gợi ý nêm nếm gia vị ra sao	ask_recipe_detail
+tìm giúp ăn gì cơm văn phòng vừa tăng cơ vừa 20k nhé	search_recipe
+mình muốn tổng thiệt hại là bao nhiêu	ask_price_estimate
+đề xuất bí quyết nấu ngon cho hợp lý	ask_recipe_detail
+bạn ơi có món nào đi làm về muộn mà ngon không nhé	search_recipe
+đề xuất tìm món kiểu thanh đạm cho bữa sáng 3 người	search_recipe
+tìm món thịt bò đậm đà ăn tiệc	search_recipe
+tìm giúp ngân sách sinh viên đủ nấu không	ask_price_estimate
+gợi ý đề xuất món rim, dễ làm, hợp bữa sáng nha	search_recipe
+tư vấn thực đơn eat clean có mực	search_recipe
+cần mua những gì thì thêm vào giỏ giúp cho hợp lý	add_ingredients_to_cart
+nhà còn chỉ mình cách nấu đi nha	ask_recipe_detail
+mình muốn đang ở đâu	fallback
+tìm giúp có món nào không có rau xà lách không với	refine_search
+đề xuất tìm món kiểu kho cho bữa trưa 2 người nào ngon	search_recipe
+lấy đủ nguyên liệu cho món này nào ngon	add_ingredients_to_cart
+đang cần đặt mua đồ về nấu nha	add_ingredients_to_cart
+món nhậu từ canh chua nướng gấp	search_recipe
+gợi ý mình muốn 1 set gà + hành tây với	search_recipe
+ê làm sao cho thịt bò giòn	ask_recipe_detail
+bạn ơi không thích món này gấp	refine_search
+ê món thịt gà chua ngọt nhé	search_recipe
+món nhậu từ lẩu nướng muối ớt đi	search_recipe
+bạn ơi lấy đủ nguyên liệu cho món này gấp	add_ingredients_to_cart
+tìm giúp lên thực đơn bữa tối: cá lóc, 15 phút, 2 người cho hợp lý	search_recipe
+mình muốn đổi món đậm đà hơn gấp	refine_search
+có món nào không có dưa leo không	refine_search
+món lẩu luộc	search_recipe
+mình muốn món này hết bao nhiêu tiền nào ngon	ask_price_estimate
+có món nào không có khoai tây không	refine_search
+đang cần cho hết vào giỏ hàng đi với	add_ingredients_to_cart
+đang cần ngân sách 20k đủ nấu không với	ask_price_estimate
+mình muốn ăn gì cơm văn phòng vừa ít dầu mỡ vừa sinh viên	search_recipe
+bí quyết nấu ngon đi	ask_recipe_detail
+cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+bạn tên gì nào ngon	fallback
+ê làm sao cho đậu phụ giòn	ask_recipe_detail
+bạn ơi cần mua những gì thì thêm vào giỏ giúp nha	add_ingredients_to_cart
+đề xuất có món nào không có dưa leo không nhé	refine_search
+đang cần làm sao cho canh chua giòn	ask_recipe_detail
+bạn ơi combo trứng và dưa leo cho 1 người đi	search_recipe
+tìm món kiểu thanh đạm cho cơm văn phòng 2 người	search_recipe
+gợi ý lên thực đơn tiệc: ba chỉ, 15 phút, suất đôi đi	search_recipe
+thực đơn 1 người người, giá tiết kiệm nha	search_recipe
+đề xuất có món nào không có cà chua không nha	refine_search
+mình muốn nêm nếm gia vị ra sao nào ngon	ask_recipe_detail
+bạn ơi mình muốn 1 set tôm + hành ngò	search_recipe
+đang cần bí quyết nấu ngon cho hợp lý	ask_recipe_detail
+mình muốn combo canh chua và rau xà lách cho 1 người cho hợp lý	search_recipe
+nhà còn nêm nếm gia vị ra sao cho hợp lý	ask_recipe_detail
+nhà còn lấy đủ nguyên liệu cho món này với	add_ingredients_to_cart
+bạn ơi món nhậu từ gà kho nào ngon	search_recipe
+nhà còn tìm món kiểu nướng cho tiệc 1 người	search_recipe
+tìm giúp có món nào không có khoai tây không	refine_search
+bạn ơi món ức gà đậm đà	search_recipe
+nhà còn đổi sang món tôm được không	refine_search
+tìm giúp hôm nay ăn gì cho hợp lý	search_recipe
+ê tìm món khác đi	refine_search
+bạn ơi ngân sách không quan trọng tiền đủ nấu không đi	ask_price_estimate
+gợi ý hướng dẫn chi tiết món này nha	ask_recipe_detail
+ê món này hết bao nhiêu tiền	ask_price_estimate
+đổi món chiên giòn hơn	refine_search
+bạn ơi ngân sách 100k đủ nấu không	ask_price_estimate
+nhà còn tìm cái gì lạ miệng hơn nào ngon	refine_search
+làm sao cho thịt bò giòn đi	ask_recipe_detail
+mình muốn chỉ mình cách nấu đi	ask_recipe_detail
+nhà còn nêm nếm gia vị ra sao đi	ask_recipe_detail
+nhà còn tìm món khác đi đi	refine_search
+đề xuất đề xuất món luộc, nguyên liệu có sẵn, hợp tiệc	search_recipe
+bạn ơi lên thực đơn cơm hộp: salad, 30 phút, cả nhà đi	search_recipe
+ê combo đậu phụ và tỏi cho cả nhà nhé	search_recipe
+nhà còn ăn gì cơm văn phòng vừa eat clean vừa 100k cho hợp lý	search_recipe
+bạn ơi đề xuất món xào, nguyên liệu có sẵn, hợp bữa trưa	search_recipe
+mình muốn món thịt gà chiên giòn	search_recipe
+đang cần tư vấn thực đơn ít dầu mỡ có đùi gà	search_recipe
+gợi ý thời tiết thế nào nha	fallback
+tìm giúp tìm món kiểu thanh đạm cho bữa sáng suất đôi nhé	search_recipe
+có món nào không có rau muống không cho hợp lý	refine_search
+bạn ơi tìm món khác đi	refine_search
+ngu quá cho hợp lý	fallback
+mình muốn 1 set ức gà + hành ngò đi	search_recipe
+bạn ơi tìm món salad nướng ăn bữa trưa đi	search_recipe
+món thịt bò luộc nha	search_recipe
+gợi ý bước 1 là gì	ask_recipe_detail
+mình muốn ngân sách 100k đủ nấu không nào ngon	ask_price_estimate
+đang cần ăn gì tiệc vừa healthy vừa sinh viên với	search_recipe
+biết ông a không gấp	fallback
+đề xuất đổi sang món phở được không	refine_search
+đang cần bước 1 là gì nhé	ask_recipe_detail
+chi phí cho 2 người người	ask_price_estimate
+gợi ý bí quyết nấu ngon nha	ask_recipe_detail
+đổi sang món đậu phụ được không	refine_search
+gợi ý ăn thế này có đắt không	ask_price_estimate
+đề xuất món hấp, đang vội, hợp cơm văn phòng với	search_recipe
+đang cần bí quyết nấu ngon	ask_recipe_detail
+tổng thiệt hại là bao nhiêu đi	ask_price_estimate
+ê món này hết bao nhiêu tiền gấp	ask_price_estimate
+chi phí cho suất đôi người nào ngon	ask_price_estimate
+ngân sách 200k đủ nấu không	ask_price_estimate
+ê cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+gợi ý làm sao cho salad giòn	ask_recipe_detail
+bước 1 là gì đi	ask_recipe_detail
+đang cần có món nào không có tỏi không cho hợp lý	refine_search
+gợi ý xin chào nào ngon	fallback
+đề xuất món này hết bao nhiêu tiền nào ngon	ask_price_estimate
+mình muốn 1 set heo + khoai tây nha	search_recipe
+lên thực đơn bữa sáng: cá, 15 phút, cả nhà	search_recipe
+đổi sang món cá lóc được không cho hợp lý	refine_search
+tìm giúp mua giúp mình nguyên liệu đi	add_ingredients_to_cart
+bí quyết nấu ngon nào ngon	ask_recipe_detail
+tư vấn thực đơn ít dầu mỡ có đậu phụ	search_recipe
+đề xuất ăn thế này có đắt không	ask_price_estimate
+gợi ý mình muốn 1 set sườn + ớt nhé	search_recipe
+đang cần chỉ mình cách nấu đi	ask_recipe_detail
+hôm nay ăn gì gấp	search_recipe
+mình muốn tìm món kiểu hấp cho bữa trưa phần lớn	search_recipe
+đổi sang món gà được không đi	refine_search
+đang cần hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+gợi ý có món nào không tốn thời gian mà ngon không gấp	search_recipe
+đang cần ngân sách 50k đủ nấu không với	ask_price_estimate
+đề xuất bí quyết nấu ngon	ask_recipe_detail
+nhà còn làm sao cho phở giòn nha	ask_recipe_detail
+mình muốn có món nào 15 phút mà ngon không cho hợp lý	search_recipe
+tìm giúp mua giúp mình nguyên liệu nào ngon	add_ingredients_to_cart
+đổi sang món ba chỉ được không nhé	refine_search
+tìm giúp hôm nay ăn gì đi	search_recipe
+món bò nướng	search_recipe
+đề xuất món hấp, muốn đổi gió, hợp cơm văn phòng gấp	search_recipe
+có món nào cấp tốc mà ngon không với	search_recipe
+mình muốn món này hết bao nhiêu tiền nha	ask_price_estimate
+đề xuất tìm món kiểu kho cho bữa trưa phần lớn cho hợp lý	search_recipe
+gợi ý mấy giờ rồi nào ngon	fallback
+đang cần có món nào không có hành ngò không cho hợp lý	refine_search
+ê bước 1 là gì	ask_recipe_detail
+nhà còn món nhậu từ sườn nướng	search_recipe
+món nhậu từ ức gà xào nào ngon	search_recipe
+mình muốn nêm nếm gia vị ra sao nha	ask_recipe_detail
+ê không thích món này với	refine_search
+gợi ý món ức gà chua ngọt	search_recipe
+bạn ơi bạn tên gì	fallback
+mình muốn tìm món gà nướng ăn cơm văn phòng nào ngon	search_recipe
+bạn ơi tìm món bún hấp ăn bữa trưa cho hợp lý	search_recipe
+đang cần lên thực đơn bữa xế: lẩu, không tốn thời gian, gia đình	search_recipe
+đề xuất làm sao cho cá hồi giòn với	ask_recipe_detail
+ê ngu quá đi	fallback
+nhà còn không thích món này nha	refine_search
+đề xuất đang ở đâu nhé	fallback
+ê chi phí cho cả nhà người	ask_price_estimate
+nhà còn combo món cuốn và dưa leo cho ít người gấp	search_recipe
+mình muốn biết ông a không nhé	fallback
+đề xuất tìm món kiểu kho cho cơm hộp 3 người cho hợp lý	search_recipe
+nấu gì với bí xanh gấp	search_recipe
+đặt mua đồ về nấu với	add_ingredients_to_cart
+nhà còn xin chào nào ngon	fallback
+thực đơn phần lớn người, giá rẻ với	search_recipe
+tư vấn thực đơn healthy có đậu phụ	search_recipe
+đang cần mua giúp mình nguyên liệu với	add_ingredients_to_cart
+có món nào 1 tiếng mà ngon không nha	search_recipe
+mình muốn có món nào không có rau xà lách không nào ngon	refine_search
+tìm giúp đề xuất món nướng muối ớt, nguyên liệu có sẵn, hợp cơm hộp	search_recipe
+đang cần xin chào	fallback
+bạn ơi đề xuất món hấp, lười nấu, hợp bữa sáng với	search_recipe
+đang cần hát đi cho hợp lý	fallback
+mình muốn mua giúp mình nguyên liệu nào ngon	add_ingredients_to_cart
+đổi món thanh đạm hơn nhé	refine_search
+đề xuất món đậm đà, mới đi chợ về, hợp bữa trưa	search_recipe
+bạn ơi tìm món kiểu xào cho bữa sáng nhóm bạn	search_recipe
+đang cần không thích món này	refine_search
+mình muốn mấy giờ rồi đi	fallback
+ê tổng thiệt hại là bao nhiêu với	ask_price_estimate
+bạn ơi món nhậu từ gà luộc gấp	search_recipe
+tìm giúp có món nào không có hành tây không nha	refine_search
+đề xuất đặt mua đồ về nấu gấp	add_ingredients_to_cart
+ê nêm nếm gia vị ra sao nha	ask_recipe_detail
+đề xuất bước 1 là gì cho hợp lý	ask_recipe_detail
+nhà còn không thích món này	refine_search
+gợi ý bạn tên gì	fallback
+đổi sang món canh chua được không	refine_search
+đề xuất tìm món trứng kho ăn tiệc đi	search_recipe
+đang cần xin chào nào ngon	fallback
+đang cần hôm nay ăn gì cho hợp lý	search_recipe
+đang cần thực đơn phần lớn người, giá sinh viên	search_recipe
+tìm giúp tìm món khác đi	refine_search
+mình muốn 1 set gà + cải thảo gấp	search_recipe
+ê tư vấn thực đơn ít béo có sườn	search_recipe
+có món nào không tốn thời gian mà ngon không nha	search_recipe
+nhà còn hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+món này hết bao nhiêu tiền nhé	ask_price_estimate
+tìm món món cuốn chiên ăn tiệc	search_recipe
+đề xuất món thanh đạm, mới đi chợ về, hợp tiệc nha	search_recipe
+ngân sách 200k đủ nấu không đi	ask_price_estimate
+ăn thế này có đắt không đi	ask_price_estimate
+nhà còn tìm cái gì lạ miệng hơn nhé	refine_search
+combo cá hồi và cải thảo cho ít người nha	search_recipe
+nhà còn nêm nếm gia vị ra sao	ask_recipe_detail
+ngu quá nào ngon	fallback
+bạn ơi thời tiết thế nào đi	fallback
+bạn ơi món món cuốn nướng cho hợp lý	search_recipe
+gợi ý tư vấn thực đơn chay có canh chua	search_recipe
+món cơm gà nướng muối ớt với	search_recipe
+thời tiết thế nào gấp	fallback
+tìm giúp ăn gì cơm hộp vừa healthy vừa tiết kiệm	search_recipe
+ăn gì tiệc vừa ít béo vừa rẻ	search_recipe
+ê ngân sách 50k đủ nấu không cho hợp lý	ask_price_estimate
+gợi ý combo cá hồi và nấm cho ít người	search_recipe
+hôm nay ăn gì với	search_recipe
+bạn ơi mua giúp mình nguyên liệu nào ngon	add_ingredients_to_cart
+đề xuất món salad thanh đạm nhé	search_recipe
+đang cần đang ở đâu nha	fallback
+tìm giúp hướng dẫn chi tiết món này	ask_recipe_detail
+nhà còn hát đi với	fallback
+làm sao cho bún giòn với	ask_recipe_detail
+tìm giúp tìm cái gì lạ miệng hơn đi	refine_search
+combo đậu phụ và cải thảo cho ít người	search_recipe
+lên thực đơn cơm hộp: cá hồi, nhanh, 1 người nha	search_recipe
+ê lên thực đơn cơm văn phòng: bò, đi làm về muộn, phần lớn	search_recipe
+ê lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+bạn ơi mình muốn 1 set cá lóc + hành ngò	search_recipe
+chỉ mình cách nấu đi với	ask_recipe_detail
+bạn ơi đổi món rim hơn	refine_search
+đề xuất không thích món này cho hợp lý	refine_search
+đang cần biết ông a không	fallback
+đang cần đổi sang món bắp bò được không	refine_search
+ê nấu gì với rau xà lách với	search_recipe
+bạn ơi tìm món kiểu chiên giòn cho tiệc gia đình nha	search_recipe
+bước 1 là gì với	ask_recipe_detail
+lên thực đơn cơm hộp: canh chua, 15 phút, cả nhà nào ngon	search_recipe
+đề xuất chỉ mình cách nấu đi nha	ask_recipe_detail
+chỉ mình cách nấu đi gấp	ask_recipe_detail
+bạn ơi chỉ mình cách nấu đi với	ask_recipe_detail
+ê đổi món chiên hơn nào ngon	refine_search
+bạn ơi ăn gì cơm hộp vừa ít béo vừa rẻ	search_recipe
+món sườn luộc	search_recipe
+tìm món mực nướng muối ớt ăn tiệc	search_recipe
+lấy đủ nguyên liệu cho món này đi	add_ingredients_to_cart
+bạn ơi mua giúp mình nguyên liệu cho hợp lý	add_ingredients_to_cart
+đang cần tư vấn thực đơn tăng cơ có món cuốn cho hợp lý	search_recipe
+ê đề xuất món thanh đạm, muốn đổi gió, hợp tiệc	search_recipe
+đề xuất làm sao cho sườn giòn	ask_recipe_detail
+đang ở đâu đi	fallback
+đang cần ăn gì bữa sáng vừa tăng cơ vừa 200k nhé	search_recipe
+có món nào nhanh mà ngon không gấp	search_recipe
+gợi ý ăn thế này có đắt không cho hợp lý	ask_price_estimate
+có món nào nhanh mà ngon không nhé	search_recipe
+mình muốn 1 set đùi gà + sả nào ngon	search_recipe
+nhà còn cho hết vào giỏ hàng đi	add_ingredients_to_cart
+nhà còn lên thực đơn tiệc: mực, cấp tốc, ít người	search_recipe
+nhà còn tư vấn thực đơn nhiều rau có cá gấp	search_recipe
+bạn ơi tư vấn thực đơn ít béo có heo đi	search_recipe
+gợi ý ăn gì cơm hộp vừa ít dầu mỡ vừa sinh viên	search_recipe
+đề xuất chỉ mình cách nấu đi nhé	ask_recipe_detail
+gợi ý tìm món cá hồi luộc ăn bữa xế nha	search_recipe
+gợi ý hôm nay ăn gì với	search_recipe
+bạn ơi xin chào	fallback
+đổi sang món lẩu được không gấp	refine_search
+mình muốn tư vấn thực đơn chay có salad	search_recipe
+đề xuất cho hết vào giỏ hàng đi với	add_ingredients_to_cart
+tìm món khác đi nhé	refine_search
+lên thực đơn tiệc: gà, rảnh rỗi, cả nhà	search_recipe
+bạn ơi món nhậu từ canh chua kho gấp	search_recipe
+đề xuất đổi món luộc hơn	refine_search
+tìm giúp đang ở đâu	fallback
+không thích món này nào ngon	refine_search
+tư vấn thực đơn healthy có đùi gà	search_recipe
+ngân sách 100k đủ nấu không cho hợp lý	ask_price_estimate
+gợi ý bước 1 là gì với	ask_recipe_detail
+tìm giúp đổi món chua ngọt hơn	refine_search
+mình muốn thời tiết thế nào nhé	fallback
+đề xuất mua giúp mình nguyên liệu đi	add_ingredients_to_cart
+mình muốn thời tiết thế nào	fallback
+ê đề xuất món chua ngọt, trong tủ lạnh còn, hợp cơm văn phòng đi	search_recipe
+ê có món nào không có cải thảo không đi	refine_search
+nhà còn có món nào không có rau xà lách không đi	refine_search
+gợi ý cần mua những gì thì thêm vào giỏ giúp đi	add_ingredients_to_cart
+ê nấu gì với hành tây	search_recipe
+đổi món thanh đạm hơn đi	refine_search
+tìm giúp đề xuất món rim, dễ làm, hợp bữa xế gấp	search_recipe
+mình muốn chi phí cho nhóm bạn người	ask_price_estimate
+mình muốn có món nào cấp tốc mà ngon không	search_recipe
+nhà còn thực đơn cả nhà người, giá không quan trọng tiền cho hợp lý	search_recipe
+combo phở và rau xà lách cho 1 người gấp	search_recipe
+đổi sang món phở được không	refine_search
+có món nào không có rau muống không	refine_search
+nhà còn ăn thế này có đắt không với	ask_price_estimate
+nhà còn mấy giờ rồi	fallback
+có món nào đi làm về muộn mà ngon không	search_recipe
+đặt mua đồ về nấu gấp	add_ingredients_to_cart
+tìm giúp hướng dẫn chi tiết món này nhé	ask_recipe_detail
+làm sao cho thịt gà giòn cho hợp lý	ask_recipe_detail
+tìm món cơm gà xào ăn bữa tối	search_recipe
+món nhậu từ cá thanh đạm nha	search_recipe
+đang cần bước 1 là gì gấp	ask_recipe_detail
+ê mình muốn 1 set salad + bí xanh nha	search_recipe
+món nhậu từ phở chiên giòn đi	search_recipe
+mình muốn hát đi	fallback
+đang cần nấu gì với khoai tây đi	search_recipe
+mình muốn tư vấn thực đơn ít dầu mỡ có cá hồi nào ngon	search_recipe
+đang cần combo cá lóc và rau muống cho 2 người đi	search_recipe
+đề xuất cần mua những gì thì thêm vào giỏ giúp	add_ingredients_to_cart
+tư vấn thực đơn healthy có lẩu	search_recipe
+bạn ơi món này hết bao nhiêu tiền	ask_price_estimate
+đang cần tư vấn thực đơn giảm cân có gà	search_recipe
+gợi ý đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+ê hôm nay ăn gì với	search_recipe
+mình muốn tìm món kiểu rim cho tiệc phần lớn nha	search_recipe
+bạn ơi đề xuất món nướng muối ớt, dễ làm, hợp bữa trưa nào ngon	search_recipe
+đang cần tư vấn thực đơn ít béo có bún nào ngon	search_recipe
+mình muốn đổi sang món mực được không nha	refine_search
+lên thực đơn cơm văn phòng: cá, rảnh rỗi, cả nhà với	search_recipe
+cần mua những gì thì thêm vào giỏ giúp nhé	add_ingredients_to_cart
+thực đơn phần lớn người, giá 200k	search_recipe
+đề xuất combo cá và khoai tây cho gia đình với	search_recipe
+đề xuất biết ông a không	fallback
+tìm món bún nướng ăn bữa sáng	search_recipe
+gợi ý món nhậu từ bún kho nhé	search_recipe
+nhà còn món đậu phụ nướng muối ớt cho hợp lý	search_recipe
+ê tổng thiệt hại là bao nhiêu nha	ask_price_estimate
+ê đổi món chua ngọt hơn	refine_search
+gợi ý thực đơn cả nhà người, giá bình dân với	search_recipe
+ê đang ở đâu cho hợp lý	fallback
+mình muốn tìm món khác đi nhé	refine_search
+bạn ơi chi phí cho gia đình người	ask_price_estimate
+đang cần đổi món rim hơn gấp	refine_search
+tìm giúp có món nào không có dưa leo không đi	refine_search
+ngân sách sang trọng đủ nấu không	ask_price_estimate
+mình muốn combo thịt gà và bí xanh cho 3 người cho hợp lý	search_recipe
+nấu gì với hành tây gấp	search_recipe
+mình muốn nấu gì với bí xanh	search_recipe
+tìm món cá thanh đạm ăn bữa xế cho hợp lý	search_recipe
+ê nấu gì với ớt	search_recipe
+hướng dẫn chi tiết món này gấp	ask_recipe_detail
+tìm món kiểu luộc cho bữa xế 1 người	search_recipe
+đang cần đang ở đâu	fallback
+tìm món cá hồi luộc ăn bữa tối	search_recipe
+tìm giúp có món nào không có nấm không nào ngon	refine_search
+mình muốn đề xuất món thanh đạm, đang vội, hợp bữa tối	search_recipe
+mình muốn hướng dẫn chi tiết món này	ask_recipe_detail
+gợi ý thực đơn phần lớn người, giá sinh viên	search_recipe
+làm sao cho ba chỉ giòn	ask_recipe_detail
+tìm món ức gà đậm đà ăn cơm văn phòng nào ngon	search_recipe
+nhà còn món nhậu từ trứng kho	search_recipe
+bạn ơi đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+gợi ý đặt mua đồ về nấu	add_ingredients_to_cart
+ê làm sao cho heo giòn cho hợp lý	ask_recipe_detail
+tìm giúp nêm nếm gia vị ra sao nhé	ask_recipe_detail
+đề xuất đổi sang món thịt bò được không	refine_search
+ê món bò thanh đạm với	search_recipe
+đề xuất bước 1 là gì	ask_recipe_detail
+combo ức gà và hành ngò cho ít người với	search_recipe
+đề xuất lên thực đơn cơm hộp: đùi gà, không tốn thời gian, phần lớn nào ngon	search_recipe
+nhà còn bí quyết nấu ngon cho hợp lý	ask_recipe_detail
+món nhậu từ cá lóc chiên giòn	search_recipe
+ê đổi sang món trứng được không nha	refine_search
+đang cần bí quyết nấu ngon nhé	ask_recipe_detail
+mình muốn ăn gì bữa trưa vừa giảm cân vừa 20k	search_recipe
+nhà còn đang ở đâu	fallback
+thực đơn suất đôi người, giá 100k nhé	search_recipe
+tìm món cơm gà kho ăn cơm hộp nha	search_recipe
+nấu gì với ớt	search_recipe
+lên thực đơn tiệc: heo, 15 phút, 1 người	search_recipe
+đề xuất hát đi	fallback
+đề xuất món nhậu từ heo chiên giòn cho hợp lý	search_recipe
+nhà còn thực đơn 3 người người, giá bình dân nhé	search_recipe
+nấu gì với rau muống cho hợp lý	search_recipe
+mình muốn tìm món mực kho ăn cơm văn phòng với	search_recipe
+đề xuất tìm món cá lóc thanh đạm ăn bữa xế đi	search_recipe
+ê đặt mua đồ về nấu đi	add_ingredients_to_cart
+ê làm sao cho gà giòn	ask_recipe_detail
+mình muốn 1 set canh chua + khoai tây với	search_recipe
+mình muốn 1 set phở + cà chua đi	search_recipe
+nhà còn tìm món khác đi gấp	refine_search
+gợi ý biết ông a không nhé	fallback
+xin chào nha	fallback
+gợi ý bạn tên gì với	fallback
+mình muốn tư vấn thực đơn ít béo có món cuốn	search_recipe
+mình muốn mình muốn 1 set lẩu + tỏi cho hợp lý	search_recipe
+món này hết bao nhiêu tiền cho hợp lý	ask_price_estimate
+tư vấn thực đơn tăng cơ có đậu phụ nào ngon	search_recipe
+tìm giúp đổi món đậm đà hơn	refine_search
+ê lên thực đơn cơm hộp: cá hồi, 5 phút, 1 người	search_recipe
+đang cần món ức gà nướng muối ớt nhé	search_recipe
+tìm món khác đi gấp	refine_search
+ê ngu quá nhé	fallback
+tìm giúp tìm cái gì lạ miệng hơn nhé	refine_search
+mình muốn có món nào 5 phút mà ngon không	search_recipe
+tìm món khác đi nào ngon	refine_search
+ê bước 1 là gì nhé	ask_recipe_detail
+đề xuất đổi sang món ba chỉ được không cho hợp lý	refine_search
+ê mua giúp mình nguyên liệu	add_ingredients_to_cart
+tìm giúp đổi sang món salad được không với	refine_search
+mình muốn món salad thanh đạm nào ngon	search_recipe
+đề xuất combo cá lóc và ớt cho phần lớn	search_recipe
+nhà còn món mực xào	search_recipe
+mình muốn mua giúp mình nguyên liệu nhé	add_ingredients_to_cart
+mình muốn tổng thiệt hại là bao nhiêu nhé	ask_price_estimate
+đề xuất món nhậu từ cơm gà luộc cho hợp lý	search_recipe
+tìm giúp tìm món kiểu kho cho tiệc ít người	search_recipe
+đề xuất món chiên, mới đi chợ về, hợp cơm hộp với	search_recipe
+tìm giúp biết ông a không	fallback
+bạn ơi tìm món đùi gà kho ăn bữa xế	search_recipe
+ăn thế này có đắt không nào ngon	ask_price_estimate
+mình muốn hôm nay ăn gì gấp	search_recipe
+cho hết vào giỏ hàng đi với	add_ingredients_to_cart
+ê nấu gì với khoai tây	search_recipe
+đề xuất món xào, đang vội, hợp cơm hộp gấp	search_recipe
+bạn ơi tìm món kiểu rim cho bữa sáng gia đình	search_recipe
+đổi món chiên giòn hơn nào ngon	refine_search
+thời tiết thế nào cho hợp lý	fallback
+bạn ơi combo sườn và khoai tây cho 2 người	search_recipe
+món nhậu từ trứng nướng	search_recipe
+mình muốn mình muốn 1 set tôm + hành ngò	search_recipe
+mua giúp mình nguyên liệu cho hợp lý	add_ingredients_to_cart
+nhà còn đề xuất món thanh đạm, mới đi chợ về, hợp bữa trưa	search_recipe
+mình muốn hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+đề xuất đề xuất món chiên giòn, nguyên liệu có sẵn, hợp cơm văn phòng với	search_recipe
+lấy đủ nguyên liệu cho món này cho hợp lý	add_ingredients_to_cart
+mình muốn có món nào không có cà chua không	refine_search
+ngu quá gấp	fallback
+đổi sang món sườn được không nhé	refine_search
+tìm giúp làm sao cho lẩu giòn với	ask_recipe_detail
+đang cần thời tiết thế nào với	fallback
+nhà còn đang ở đâu cho hợp lý	fallback
+có món nào đi làm về muộn mà ngon không với	search_recipe
+đề xuất ăn gì bữa tối vừa ít béo vừa 100k cho hợp lý	search_recipe
+đổi sang món thịt gà được không nha	refine_search
+gợi ý cần mua những gì thì thêm vào giỏ giúp nha	add_ingredients_to_cart
+chi phí cho 3 người người với	ask_price_estimate
+đề xuất nêm nếm gia vị ra sao	ask_recipe_detail
+mình muốn tìm món cơm gà chiên ăn bữa sáng nào ngon	search_recipe
+bạn ơi mua giúp mình nguyên liệu gấp	add_ingredients_to_cart
+tìm giúp món nhậu từ cá chua ngọt	search_recipe
+mình muốn ngân sách 50k đủ nấu không	ask_price_estimate
+lên thực đơn tiệc: heo, 5 phút, cả nhà	search_recipe
+bạn ơi thực đơn suất đôi người, giá bình dân đi	search_recipe
+bạn ơi có món nào không có rau xà lách không	refine_search
+đề xuất cho hết vào giỏ hàng đi nhé	add_ingredients_to_cart
+mua giúp mình nguyên liệu gấp	add_ingredients_to_cart
+ê tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+không thích món này nha	refine_search
+mình muốn combo cơm gà và tỏi cho 1 người cho hợp lý	search_recipe
+combo cá hồi và khoai tây cho phần lớn đi	search_recipe
+nhà còn không thích món này cho hợp lý	refine_search
+nhà còn món canh chua chua ngọt với	search_recipe
+đề xuất lên thực đơn tiệc: canh chua, 1 tiếng, suất đôi gấp	search_recipe
+món bắp bò chua ngọt nào ngon	search_recipe
+ăn gì cơm văn phòng vừa chay vừa 20k cho hợp lý	search_recipe
+đề xuất mấy giờ rồi đi	fallback
+gợi ý chi phí cho 2 người người nào ngon	ask_price_estimate
+mình muốn hôm nay ăn gì đi	search_recipe
+ê hướng dẫn chi tiết món này đi	ask_recipe_detail
+chỉ mình cách nấu đi đi	ask_recipe_detail
+gợi ý tư vấn thực đơn healthy có đùi gà cho hợp lý	search_recipe
+tìm giúp ăn thế này có đắt không gấp	ask_price_estimate
+bạn ơi mấy giờ rồi nào ngon	fallback
+đang cần ngu quá	fallback
+gợi ý lên thực đơn bữa xế: phở, 30 phút, 1 người gấp	search_recipe
+món nhậu từ thịt gà hấp nha	search_recipe
+đang cần lấy đủ nguyên liệu cho món này nào ngon	add_ingredients_to_cart
+bạn ơi bí quyết nấu ngon nhé	ask_recipe_detail
+đang cần nấu gì với rau xà lách	search_recipe
+đề xuất thực đơn ít người người, giá rẻ nha	search_recipe
+gợi ý mấy giờ rồi	fallback
+đề xuất món chiên giòn, muốn đổi gió, hợp bữa tối đi	search_recipe
+ê ngân sách sinh viên đủ nấu không nào ngon	ask_price_estimate
+nhà còn mua giúp mình nguyên liệu cho hợp lý	add_ingredients_to_cart
+nấu gì với khoai tây nào ngon	search_recipe
+nhà còn tư vấn thực đơn ít dầu mỡ có món cuốn với	search_recipe
+món này hết bao nhiêu tiền gấp	ask_price_estimate
+món đùi gà hấp	search_recipe
+thực đơn nhóm bạn người, giá tiết kiệm gấp	search_recipe
+ê món sườn hấp	search_recipe
+tư vấn thực đơn ít béo có sườn	search_recipe
+lên thực đơn tiệc: cá hồi, 5 phút, ít người đi	search_recipe
+đề xuất tìm món kiểu nướng cho tiệc 2 người	search_recipe
+đề xuất tìm món cá hồi chua ngọt ăn bữa trưa cho hợp lý	search_recipe
+nhà còn cho hết vào giỏ hàng đi với	add_ingredients_to_cart
+lên thực đơn bữa xế: mực, 1 tiếng, nhóm bạn nhé	search_recipe
+tìm món kiểu đậm đà cho bữa trưa 3 người nhé	search_recipe
+đề xuất ngu quá với	fallback
+lên thực đơn cơm văn phòng: mực, 15 phút, ít người	search_recipe
+đề xuất thời tiết thế nào gấp	fallback
+ngân sách 100k đủ nấu không	ask_price_estimate
+gợi ý món này hết bao nhiêu tiền đi	ask_price_estimate
+gợi ý đổi sang món lẩu được không	refine_search
+nấu gì với khoai tây	search_recipe
+bạn ơi tìm món khác đi với	refine_search
+gợi ý chi phí cho 2 người người	ask_price_estimate
+mua giúp mình nguyên liệu đi	add_ingredients_to_cart
+bạn ơi đề xuất món đậm đà, ít dọn dẹp, hợp tiệc	search_recipe
+tìm món kiểu chua ngọt cho cơm hộp nhóm bạn	search_recipe
+bạn ơi thời tiết thế nào nào ngon	fallback
+đang cần tìm cái gì lạ miệng hơn đi	refine_search
+mình muốn xin chào	fallback
+mình muốn tư vấn thực đơn ít dầu mỡ có cá	search_recipe
+lên thực đơn bữa xế: thịt bò, không tốn thời gian, cả nhà	search_recipe
+đề xuất ăn thế này có đắt không với	ask_price_estimate
+đổi món kho hơn với	refine_search
+cần mua những gì thì thêm vào giỏ giúp nha	add_ingredients_to_cart
+mình muốn 1 set thịt gà + rau xà lách nhé	search_recipe
+gợi ý món ức gà chua ngọt cho hợp lý	search_recipe
+gợi ý cần mua những gì thì thêm vào giỏ giúp nhé	add_ingredients_to_cart
+mình muốn đặt mua đồ về nấu nha	add_ingredients_to_cart
+tư vấn thực đơn giảm cân có ba chỉ	search_recipe
+ê bạn tên gì đi	fallback
+combo đùi gà và cà chua cho suất đôi	search_recipe
+tìm món kiểu luộc cho bữa trưa cả nhà đi	search_recipe
+thời tiết thế nào nào ngon	fallback
+tư vấn thực đơn chay có ức gà	search_recipe
+món cá chiên	search_recipe
+món nhậu từ cá lóc hấp	search_recipe
+tìm giúp có món nào không có nấm không với	refine_search
+đề xuất tìm món khác đi nào ngon	refine_search
+đổi sang món bún được không nào ngon	refine_search
+đang cần có món nào rảnh rỗi mà ngon không	search_recipe
+tìm món ba chỉ chua ngọt ăn bữa trưa	search_recipe
+tư vấn thực đơn eat clean có đùi gà với	search_recipe
+đang cần món lẩu nướng muối ớt nào ngon	search_recipe
+thực đơn 3 người người, giá 200k cho hợp lý	search_recipe
+mình muốn tư vấn thực đơn giảm cân có thịt bò	search_recipe
+gợi ý mình muốn 1 set lẩu + rau xà lách	search_recipe
+mình muốn đổi sang món ba chỉ được không	refine_search
+bạn ơi cho hết vào giỏ hàng đi	add_ingredients_to_cart
+ê có món nào không có bí xanh không	refine_search
+tìm giúp chi phí cho ít người người	ask_price_estimate
+đang cần bí quyết nấu ngon nha	ask_recipe_detail
+bạn ơi tìm món kiểu chiên giòn cho cơm hộp cả nhà	search_recipe
+đang cần đổi sang món canh chua được không	refine_search
+combo món cuốn và ớt cho 1 người	search_recipe
+đang cần mấy giờ rồi cho hợp lý	fallback
+món này hết bao nhiêu tiền đi	ask_price_estimate
+đang cần bạn tên gì	fallback
+gợi ý thời tiết thế nào đi	fallback
+đề xuất làm sao cho mực giòn	ask_recipe_detail
+đề xuất tìm món bắp bò thanh đạm ăn tiệc	search_recipe
+tìm giúp mình muốn 1 set cá lóc + ớt	search_recipe
+mình muốn đổi món thanh đạm hơn nào ngon	refine_search
+nấu gì với hành tây cho hợp lý	search_recipe
+gợi ý có món nào 5 phút mà ngon không	search_recipe
+tìm giúp chỉ mình cách nấu đi nhé	ask_recipe_detail
+mình muốn tìm món cá xào ăn bữa tối với	search_recipe
+đề xuất món nướng, trong tủ lạnh còn, hợp cơm văn phòng nào ngon	search_recipe
+tìm giúp đặt mua đồ về nấu đi	add_ingredients_to_cart
+gợi ý tìm món thịt bò chiên giòn ăn tiệc	search_recipe
+tìm giúp biết ông a không đi	fallback
+gợi ý ngu quá	fallback
+gợi ý đổi sang món bún được không	refine_search
+gợi ý biết ông a không nha	fallback
+mình muốn mình muốn 1 set thịt gà + nấm	search_recipe
+mình muốn cho hết vào giỏ hàng đi nào ngon	add_ingredients_to_cart
+đề xuất đề xuất món chiên giòn, nguyên liệu có sẵn, hợp cơm hộp nhé	search_recipe
+có món nào 5 phút mà ngon không nhé	search_recipe
+tìm món kiểu đậm đà cho bữa sáng 2 người	search_recipe
+bạn ơi tìm cái gì lạ miệng hơn với	refine_search
+mình muốn món cơm gà thanh đạm	search_recipe
+đang cần chỉ mình cách nấu đi gấp	ask_recipe_detail
+món nhậu từ đùi gà chiên giòn gấp	search_recipe
+tìm giúp đề xuất món nướng muối ớt, nguyên liệu có sẵn, hợp cơm văn phòng	search_recipe
+tìm giúp bước 1 là gì đi	ask_recipe_detail
+tìm giúp đề xuất món hấp, mới đi chợ về, hợp cơm văn phòng gấp	search_recipe
+đề xuất món nướng muối ớt, muốn đổi gió, hợp bữa sáng	search_recipe
+đề xuất bí quyết nấu ngon nhé	ask_recipe_detail
+bạn ơi đề xuất món rim, ít dọn dẹp, hợp bữa tối	search_recipe
+bạn ơi đổi sang món ức gà được không nhé	refine_search
+ê ăn gì bữa sáng vừa chay vừa tiết kiệm	search_recipe
+ê ngân sách sinh viên đủ nấu không cho hợp lý	ask_price_estimate
+mình muốn món nhậu từ lẩu xào	search_recipe
+bạn ơi món nhậu từ bún chiên	search_recipe
+mình muốn có món nào không có ớt không nào ngon	refine_search
+ê bước 1 là gì nha	ask_recipe_detail
+mình muốn cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+ngân sách không quan trọng tiền đủ nấu không	ask_price_estimate
+tìm giúp tìm món kiểu nướng muối ớt cho bữa trưa 1 người cho hợp lý	search_recipe
+đang cần tìm cái gì lạ miệng hơn nào ngon	refine_search
+bạn tên gì gấp	fallback
+ê tìm món đùi gà chiên giòn ăn cơm văn phòng	search_recipe
+mình muốn tìm cái gì lạ miệng hơn nha	refine_search
+nhà còn xin chào	fallback
+mình muốn tìm món kiểu thanh đạm cho cơm văn phòng gia đình nào ngon	search_recipe
+bạn ơi đổi sang món gà được không nhé	refine_search
+bạn ơi tư vấn thực đơn tăng cơ có canh chua với	search_recipe
+tìm món kiểu nướng cho cơm văn phòng 1 người nha	search_recipe
+tìm giúp làm sao cho bắp bò giòn gấp	ask_recipe_detail
+đang cần đặt mua đồ về nấu nào ngon	add_ingredients_to_cart
+có món nào không tốn thời gian mà ngon không với	search_recipe
+đề xuất làm sao cho lẩu giòn	ask_recipe_detail
+đổi sang món phở được không đi	refine_search
+đề xuất món thanh đạm, đang vội, hợp bữa tối nha	search_recipe
+món tôm chiên giòn	search_recipe
+đề xuất có món nào 15 phút mà ngon không nào ngon	search_recipe
+đề xuất món thịt bò chiên nha	search_recipe
+ăn gì cơm hộp vừa eat clean vừa sang trọng	search_recipe
+đang cần tổng thiệt hại là bao nhiêu cho hợp lý	ask_price_estimate
+combo ức gà và ớt cho 1 người	search_recipe
+gợi ý món sườn chua ngọt	search_recipe
+đang cần tư vấn thực đơn giảm cân có đậu phụ	search_recipe
+nêm nếm gia vị ra sao nhé	ask_recipe_detail
+tìm món kiểu hấp cho bữa trưa 3 người cho hợp lý	search_recipe
+gợi ý có món nào không có dưa leo không gấp	refine_search
+mấy giờ rồi nhé	fallback
+thực đơn ít người người, giá 200k gấp	search_recipe
+nhà còn đổi sang món mực được không nha	refine_search
+nhà còn tư vấn thực đơn eat clean có salad với	search_recipe
+đổi sang món sườn được không với	refine_search
+tìm giúp ăn gì bữa xế vừa ít dầu mỡ vừa bình dân	search_recipe
+đề xuất món rim, dễ làm, hợp bữa sáng	search_recipe
+gợi ý thực đơn ít người người, giá 200k đi	search_recipe
+đang cần lên thực đơn bữa xế: bún, 1 tiếng, 2 người đi	search_recipe
+thực đơn ít người người, giá sinh viên	search_recipe
+gợi ý hướng dẫn chi tiết món này với	ask_recipe_detail
+thực đơn 1 người người, giá 20k nào ngon	search_recipe
+tìm món gà chiên giòn ăn bữa tối gấp	search_recipe
+tìm giúp lên thực đơn bữa xế: salad, nhanh, 1 người	search_recipe
+bạn ơi đổi sang món đậu phụ được không cho hợp lý	refine_search
+gợi ý chỉ mình cách nấu đi gấp	ask_recipe_detail
+cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+nhà còn món nhậu từ sườn thanh đạm đi	search_recipe
+tìm giúp cần mua những gì thì thêm vào giỏ giúp nào ngon	add_ingredients_to_cart
+combo heo và hành ngò cho gia đình nào ngon	search_recipe
+tìm giúp lấy đủ nguyên liệu cho món này gấp	add_ingredients_to_cart
+mình muốn đề xuất món chiên, nguyên liệu có sẵn, hợp tiệc nhé	search_recipe
+tìm giúp có món nào 5 phút mà ngon không gấp	search_recipe
+nêm nếm gia vị ra sao cho hợp lý	ask_recipe_detail
+tìm giúp tư vấn thực đơn nhiều rau có trứng	search_recipe
+tìm món heo rim ăn bữa tối đi	search_recipe
+gợi ý làm sao cho ức gà giòn đi	ask_recipe_detail
+mình muốn thực đơn nhóm bạn người, giá sang trọng	search_recipe
+gợi ý chỉ mình cách nấu đi nào ngon	ask_recipe_detail
+tìm giúp chi phí cho 1 người người	ask_price_estimate
+đang cần bước 1 là gì với	ask_recipe_detail
+tìm món ức gà kho ăn tiệc	search_recipe
+đang cần nêm nếm gia vị ra sao cho hợp lý	ask_recipe_detail
+đổi sang món món cuốn được không đi	refine_search
+đang cần ăn gì bữa sáng vừa ít dầu mỡ vừa 200k với	search_recipe
+nhà còn món nhậu từ salad thanh đạm	search_recipe
+đề xuất món này hết bao nhiêu tiền nha	ask_price_estimate
+mình muốn chỉ mình cách nấu đi đi	ask_recipe_detail
+nhà còn ngu quá	fallback
+mình muốn đề xuất món nướng muối ớt, đang vội, hợp bữa trưa	search_recipe
+ngân sách 50k đủ nấu không nào ngon	ask_price_estimate
+gợi ý nêm nếm gia vị ra sao với	ask_recipe_detail
+mình muốn làm sao cho cá hồi giòn	ask_recipe_detail
+đề xuất đổi sang món mực được không với	refine_search
+đang cần tìm món kiểu đậm đà cho bữa tối 3 người	search_recipe
+thực đơn 1 người người, giá không quan trọng tiền gấp	search_recipe
+làm sao cho bún giòn	ask_recipe_detail
+nhà còn mấy giờ rồi nha	fallback
+có món nào không có rau muống không gấp	refine_search
+nấu gì với nấm	search_recipe
+ăn thế này có đắt không gấp	ask_price_estimate
+món nhậu từ cá lóc chiên	search_recipe
+đề xuất đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+đổi sang món thịt gà được không	refine_search
+nhà còn tìm món lẩu luộc ăn cơm hộp nhé	search_recipe
+combo đùi gà và bí xanh cho cả nhà nhé	search_recipe
+đề xuất bạn tên gì	fallback
+tìm giúp xin chào với	fallback
+nhà còn đổi sang món gà được không cho hợp lý	refine_search
+mình muốn đặt mua đồ về nấu với	add_ingredients_to_cart
+đang cần bạn tên gì đi	fallback
+đang cần thực đơn 3 người người, giá tiết kiệm	search_recipe
+đang cần món nhậu từ phở chua ngọt nha	search_recipe
+không thích món này nhé	refine_search
+ê xin chào nha	fallback
+đề xuất ăn gì cơm hộp vừa giảm cân vừa rẻ nhé	search_recipe
+đề xuất có món nào không có cà chua không	refine_search
+đang cần thời tiết thế nào nha	fallback
+tìm giúp đặt mua đồ về nấu	add_ingredients_to_cart
+mình muốn mấy giờ rồi	fallback
+đề xuất tìm món kiểu nướng muối ớt cho tiệc phần lớn	search_recipe
+ê mấy giờ rồi	fallback
+tìm món kiểu nướng cho bữa tối ít người	search_recipe
+tìm giúp đổi món đậm đà hơn gấp	refine_search
+nhà còn combo heo và bí xanh cho ít người	search_recipe
+ê thực đơn nhóm bạn người, giá rẻ nào ngon	search_recipe
+bạn ơi có món nào 5 phút mà ngon không với	search_recipe
+đổi món nướng muối ớt hơn nha	refine_search
+đang ở đâu với	fallback
+gợi ý món nhậu từ gà chua ngọt	search_recipe
+chi phí cho 3 người người	ask_price_estimate
+hát đi gấp	fallback
+nhà còn có món nào không có tỏi không	refine_search
+tìm giúp bí quyết nấu ngon nhé	ask_recipe_detail
+thời tiết thế nào nha	fallback
+gợi ý thời tiết thế nào gấp	fallback
+tìm giúp nêm nếm gia vị ra sao	ask_recipe_detail
+nhà còn đổi món nướng muối ớt hơn	refine_search
+đề xuất hôm nay ăn gì	search_recipe
+ê đề xuất món chua ngọt, lười nấu, hợp bữa tối nào ngon	search_recipe
+đang cần cần mua những gì thì thêm vào giỏ giúp nhé	add_ingredients_to_cart
+nấu gì với dưa leo nào ngon	search_recipe
+bạn ơi có món nào không có dưa leo không cho hợp lý	refine_search
+đề xuất đang ở đâu nào ngon	fallback
+đang cần tìm cái gì lạ miệng hơn gấp	refine_search
+nhà còn bước 1 là gì với	ask_recipe_detail
+tìm giúp làm sao cho gà giòn	ask_recipe_detail
+ê có món nào 5 phút mà ngon không nhé	search_recipe
+tư vấn thực đơn ít dầu mỡ có heo nhé	search_recipe
+món tôm nướng muối ớt	search_recipe
+mình muốn ngu quá với	fallback
+gợi ý chi phí cho cả nhà người gấp	ask_price_estimate
+đề xuất món rim, lười nấu, hợp bữa sáng	search_recipe
+món nhậu từ ức gà nướng	search_recipe
+đề xuất tìm món khác đi	refine_search
+xin chào cho hợp lý	fallback
+bạn ơi mình muốn 1 set tôm + sả đi	search_recipe
+combo cá và dưa leo cho 2 người	search_recipe
+bạn ơi đổi sang món cá hồi được không	refine_search
+nhà còn bạn tên gì nào ngon	fallback
+nhà còn chỉ mình cách nấu đi	ask_recipe_detail
+ăn gì cơm hộp vừa tăng cơ vừa 20k với	search_recipe
+tìm món kiểu xào cho tiệc nhóm bạn đi	search_recipe
+ê combo canh chua và hành ngò cho cả nhà	search_recipe
+tìm món kiểu nướng muối ớt cho bữa xế ít người đi	search_recipe
+gợi ý bạn tên gì nào ngon	fallback
+ê tư vấn thực đơn tăng cơ có thịt gà	search_recipe
+tìm giúp làm sao cho phở giòn	ask_recipe_detail
+tìm giúp cho hết vào giỏ hàng đi gấp	add_ingredients_to_cart
+đổi món xào hơn cho hợp lý	refine_search
+nhà còn ăn gì bữa trưa vừa nhiều rau vừa bình dân	search_recipe
+mình muốn 1 set thịt gà + bí xanh	search_recipe
+đổi sang món bắp bò được không nha	refine_search
+có món nào không có hành ngò không nha	refine_search
+ngân sách tiết kiệm đủ nấu không cho hợp lý	ask_price_estimate
+món lẩu kho với	search_recipe
+hướng dẫn chi tiết món này nhé	ask_recipe_detail
+tư vấn thực đơn nhiều rau có cơm gà đi	search_recipe
+đề xuất ngu quá nhé	fallback
+nhà còn đổi món rim hơn	refine_search
+đề xuất nêm nếm gia vị ra sao nha	ask_recipe_detail
+tìm món ba chỉ thanh đạm ăn bữa tối	search_recipe
+nhà còn combo heo và bí xanh cho 2 người	search_recipe
+nhà còn bước 1 là gì gấp	ask_recipe_detail
+ngân sách tiết kiệm đủ nấu không gấp	ask_price_estimate
+ê mình muốn 1 set bún + bí xanh gấp	search_recipe
+ê tìm món cá lóc nướng muối ớt ăn bữa trưa nhé	search_recipe
+nấu gì với ớt gấp	search_recipe
+tìm cái gì lạ miệng hơn cho hợp lý	refine_search
+nấu gì với sả cho hợp lý	search_recipe
+ê combo ba chỉ và cải thảo cho phần lớn	search_recipe
+đổi sang món gà được không	refine_search
+tìm món kiểu rim cho cơm văn phòng ít người	search_recipe
+bạn ơi thực đơn cả nhà người, giá sang trọng	search_recipe
+ê tổng thiệt hại là bao nhiêu nhé	ask_price_estimate
+bạn ơi chi phí cho gia đình người đi	ask_price_estimate
+đang cần đề xuất món hấp, trong tủ lạnh còn, hợp bữa sáng	search_recipe
+ăn gì bữa xế vừa ít béo vừa 50k nha	search_recipe
+gợi ý làm sao cho ba chỉ giòn nha	ask_recipe_detail
+nhà còn thực đơn 3 người người, giá rẻ	search_recipe
+tìm giúp lấy đủ nguyên liệu cho món này nha	add_ingredients_to_cart
+mình muốn 1 set thịt gà + cải thảo	search_recipe
+đang cần hát đi với	fallback
+mình muốn nấu gì với rau xà lách nha	search_recipe
+đổi sang món trứng được không	refine_search
+tìm giúp đổi món luộc hơn	refine_search
+tìm giúp cần mua những gì thì thêm vào giỏ giúp với	add_ingredients_to_cart
+nhà còn bí quyết nấu ngon	ask_recipe_detail
+đề xuất món này hết bao nhiêu tiền đi	ask_price_estimate
+đề xuất biết ông a không với	fallback
+đề xuất tìm món cá hồi nướng muối ớt ăn bữa tối	search_recipe
+nhà còn combo phở và khoai tây cho 1 người	search_recipe
+combo bò và khoai tây cho 3 người nhé	search_recipe
+chỉ mình cách nấu đi cho hợp lý	ask_recipe_detail
+gợi ý nêm nếm gia vị ra sao nào ngon	ask_recipe_detail
+nhà còn biết ông a không với	fallback
+mình muốn bước 1 là gì nha	ask_recipe_detail
+ê bí quyết nấu ngon	ask_recipe_detail
+món nhậu từ đậu phụ hấp gấp	search_recipe
+tìm giúp đổi sang món ức gà được không gấp	refine_search
+bạn ơi tư vấn thực đơn giảm cân có đậu phụ gấp	search_recipe
+món nhậu từ salad kho cho hợp lý	search_recipe
+ăn gì cơm hộp vừa giảm cân vừa 100k	search_recipe
+tìm món kiểu xào cho bữa trưa suất đôi nha	search_recipe
+đổi sang món gà được không cho hợp lý	refine_search
+gợi ý combo cá và dưa leo cho 2 người	search_recipe
+làm sao cho ức gà giòn	ask_recipe_detail
+tìm giúp hướng dẫn chi tiết món này nha	ask_recipe_detail
+đang cần đặt mua đồ về nấu nhé	add_ingredients_to_cart
+tìm giúp tìm món kiểu kho cho cơm hộp cả nhà nha	search_recipe
+đề xuất mình muốn 1 set tôm + tỏi gấp	search_recipe
+đề xuất bạn tên gì nhé	fallback
+đề xuất đề xuất món chiên, muốn đổi gió, hợp bữa sáng	search_recipe
+ngân sách 50k đủ nấu không với	ask_price_estimate
+gợi ý lấy đủ nguyên liệu cho món này	add_ingredients_to_cart
+bạn ơi tổng thiệt hại là bao nhiêu nào ngon	ask_price_estimate
+mình muốn tìm cái gì lạ miệng hơn với	refine_search
+đang cần combo phở và dưa leo cho ít người nha	search_recipe
+đề xuất thời tiết thế nào nha	fallback
+gợi ý món nhậu từ ức gà đậm đà cho hợp lý	search_recipe
+bạn ơi đổi sang món món cuốn được không đi	refine_search
+gợi ý hát đi cho hợp lý	fallback
+lên thực đơn cơm hộp: ức gà, nhanh, nhóm bạn với	search_recipe
+tư vấn thực đơn healthy có cá lóc	search_recipe
+làm sao cho cá lóc giòn	ask_recipe_detail
+làm sao cho cá hồi giòn nha	ask_recipe_detail
+mình muốn 1 set thịt bò + dưa leo đi	search_recipe
+đề xuất món này hết bao nhiêu tiền với	ask_price_estimate
+gợi ý combo bò và tỏi cho 1 người	search_recipe
+mình muốn tìm món sườn kho ăn bữa tối	search_recipe
+mình muốn đề xuất món nướng, muốn đổi gió, hợp bữa xế	search_recipe
+mình muốn hướng dẫn chi tiết món này với	ask_recipe_detail
+tìm giúp đổi món thanh đạm hơn nào ngon	refine_search
+nhà còn đổi sang món đùi gà được không cho hợp lý	refine_search
+tìm món bắp bò chiên ăn cơm văn phòng gấp	search_recipe
+nấu gì với rau xà lách	search_recipe
+tìm giúp ngân sách 100k đủ nấu không	ask_price_estimate
+mình muốn lên thực đơn cơm hộp: ba chỉ, 30 phút, cả nhà đi	search_recipe
+đề xuất nấu gì với nấm nha	search_recipe
+ê tìm cái gì lạ miệng hơn nào ngon	refine_search
+đang cần bí quyết nấu ngon với	ask_recipe_detail
+đề xuất đề xuất món rim, mới đi chợ về, hợp bữa xế nhé	search_recipe
+bạn ơi món nhậu từ cá luộc	search_recipe
+đề xuất đặt mua đồ về nấu	add_ingredients_to_cart
+đang cần combo bún và rau xà lách cho 2 người	search_recipe
+đang cần mấy giờ rồi gấp	fallback
+nhà còn tổng thiệt hại là bao nhiêu	ask_price_estimate
+tìm giúp cho hết vào giỏ hàng đi đi	add_ingredients_to_cart
+nhà còn mình muốn 1 set món cuốn + cải thảo	search_recipe
+nhà còn combo bắp bò và bí xanh cho 1 người gấp	search_recipe
+đề xuất không thích món này nhé	refine_search
+bạn ơi ăn thế này có đắt không nha	ask_price_estimate
+tìm món cơm gà thanh đạm ăn bữa sáng	search_recipe
+tìm cái gì lạ miệng hơn với	refine_search
+đề xuất thời tiết thế nào	fallback
+đề xuất món chiên, nguyên liệu có sẵn, hợp cơm hộp với	search_recipe
+hát đi đi	fallback
+ngân sách bình dân đủ nấu không nào ngon	ask_price_estimate
+ê đang ở đâu nha	fallback
+gợi ý ăn gì bữa trưa vừa ít béo vừa bình dân gấp	search_recipe
+bạn ơi có món nào 5 phút mà ngon không	search_recipe
+đang cần hướng dẫn chi tiết món này	ask_recipe_detail
+tìm giúp thực đơn ít người người, giá sinh viên	search_recipe
+đang cần thực đơn phần lớn người, giá 20k	search_recipe
+bạn ơi mua giúp mình nguyên liệu	add_ingredients_to_cart
+món nhậu từ ba chỉ nướng muối ớt	search_recipe
+bạn ơi xin chào gấp	fallback
+ê bạn tên gì với	fallback
+tìm giúp mua giúp mình nguyên liệu với	add_ingredients_to_cart
+đề xuất tìm món bắp bò kho ăn bữa trưa	search_recipe
+tìm món cá xào ăn bữa xế	search_recipe
+đang cần ngân sách 20k đủ nấu không nhé	ask_price_estimate
+đề xuất lên thực đơn cơm văn phòng: cá lóc, rảnh rỗi, ít người đi	search_recipe
+nhà còn tìm món ức gà đậm đà ăn cơm hộp nào ngon	search_recipe
+đề xuất món chiên, đang vội, hợp bữa trưa với	search_recipe
+tìm giúp chỉ mình cách nấu đi nào ngon	ask_recipe_detail
+bạn ơi ngu quá gấp	fallback
+ê combo món cuốn và tỏi cho suất đôi	search_recipe
+combo thịt bò và hành tây cho ít người đi	search_recipe
+chi phí cho 3 người người nha	ask_price_estimate
+mình muốn không thích món này	refine_search
+combo mực và dưa leo cho cả nhà gấp	search_recipe
+ngân sách 50k đủ nấu không	ask_price_estimate
+nhà còn có món nào không có rau muống không cho hợp lý	refine_search
+ê hát đi với	fallback
+tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+có món nào không có sả không nha	refine_search
+mình muốn tìm món kiểu chua ngọt cho bữa xế suất đôi đi	search_recipe
+nhà còn tìm món kiểu xào cho tiệc 3 người nào ngon	search_recipe
+đề xuất món nướng muối ớt, dễ làm, hợp cơm hộp đi	search_recipe
+ê mua giúp mình nguyên liệu đi	add_ingredients_to_cart
+mua giúp mình nguyên liệu nha	add_ingredients_to_cart
+ê đề xuất món hấp, dễ làm, hợp cơm hộp	search_recipe
+ê tư vấn thực đơn eat clean có bò	search_recipe
+bạn ơi biết ông a không nha	fallback
+ngân sách 200k đủ nấu không nhé	ask_price_estimate
+gợi ý ngân sách sang trọng đủ nấu không với	ask_price_estimate
+đề xuất tìm món khác đi nha	refine_search
+ê mấy giờ rồi nhé	fallback
+đang cần làm sao cho đậu phụ giòn	ask_recipe_detail
+ê món nhậu từ cá hồi chiên giòn	search_recipe
+mình muốn tìm món khác đi nào ngon	refine_search
+tìm giúp hôm nay ăn gì nha	search_recipe
+tìm giúp đề xuất món nướng, muốn đổi gió, hợp bữa tối nào ngon	search_recipe
+gợi ý hát đi gấp	fallback
+mình muốn ăn gì bữa tối vừa nhiều rau vừa bình dân cho hợp lý	search_recipe
+nhà còn nấu gì với bí xanh cho hợp lý	search_recipe
+tìm giúp mấy giờ rồi nào ngon	fallback
+nhà còn tìm món bò hấp ăn bữa tối	search_recipe
+lên thực đơn tiệc: gà, không tốn thời gian, phần lớn	search_recipe
+ê tổng thiệt hại là bao nhiêu	ask_price_estimate
+ăn gì bữa tối vừa tăng cơ vừa sang trọng nào ngon	search_recipe
+bạn ơi nấu gì với dưa leo nào ngon	search_recipe
+đang cần bước 1 là gì đi	ask_recipe_detail
+đang cần không thích món này cho hợp lý	refine_search
+combo ba chỉ và khoai tây cho cả nhà	search_recipe
+gợi ý chỉ mình cách nấu đi với	ask_recipe_detail
+ê làm sao cho cá hồi giòn	ask_recipe_detail
+mình muốn lên thực đơn cơm văn phòng: cá lóc, đi làm về muộn, 2 người	search_recipe
+gợi ý đề xuất món chiên, nguyên liệu có sẵn, hợp bữa xế	search_recipe
+gợi ý đề xuất món xào, nguyên liệu có sẵn, hợp cơm văn phòng	search_recipe
+tìm món kiểu đậm đà cho cơm văn phòng 2 người nhé	search_recipe
+tìm giúp chi phí cho gia đình người	ask_price_estimate
+nhà còn có món nào cấp tốc mà ngon không đi	search_recipe
+ê hát đi	fallback
+ê nêm nếm gia vị ra sao gấp	ask_recipe_detail
+tìm giúp có món nào không có cải thảo không cho hợp lý	refine_search
+nấu gì với nấm đi	search_recipe
+đang cần nêm nếm gia vị ra sao	ask_recipe_detail
+tìm cái gì lạ miệng hơn nhé	refine_search
+nhà còn tìm món kiểu đậm đà cho bữa sáng 2 người	search_recipe
+có món nào không có ớt không nhé	refine_search
+lên thực đơn cơm văn phòng: cơm gà, nhanh, phần lớn nha	search_recipe
+tìm món kiểu rim cho cơm hộp 1 người cho hợp lý	search_recipe
+lên thực đơn tiệc: món cuốn, 30 phút, 1 người	search_recipe
+gợi ý tư vấn thực đơn ít dầu mỡ có trứng với	search_recipe
+đề xuất nấu gì với rau muống cho hợp lý	search_recipe
+ê lấy đủ nguyên liệu cho món này nào ngon	add_ingredients_to_cart
+món nhậu từ heo đậm đà nhé	search_recipe
+ngân sách sang trọng đủ nấu không nhé	ask_price_estimate
+gợi ý tìm món khác đi gấp	refine_search
+làm sao cho đùi gà giòn nha	ask_recipe_detail
+nấu gì với ớt nhé	search_recipe
+nhà còn lên thực đơn bữa xế: ba chỉ, 30 phút, 3 người nào ngon	search_recipe
+nhà còn món nhậu từ trứng chua ngọt nhé	search_recipe
+đề xuất ngân sách tiết kiệm đủ nấu không gấp	ask_price_estimate
+ăn thế này có đắt không với	ask_price_estimate
+mình muốn không thích món này gấp	refine_search
+gợi ý đề xuất món đậm đà, lười nấu, hợp cơm văn phòng nhé	search_recipe
+gợi ý mình muốn 1 set thịt gà + sả đi	search_recipe
+gợi ý chi phí cho nhóm bạn người gấp	ask_price_estimate
+tìm giúp đổi món nướng hơn	refine_search
+mình muốn tư vấn thực đơn healthy có cá	search_recipe
+làm sao cho đùi gà giòn	ask_recipe_detail
+tìm giúp thực đơn ít người người, giá 100k	search_recipe
+món nhậu từ ức gà nướng nào ngon	search_recipe
+gợi ý tìm món canh chua rim ăn bữa xế đi	search_recipe
+đang cần ăn gì cơm hộp vừa giảm cân vừa 200k với	search_recipe
+đang cần cần mua những gì thì thêm vào giỏ giúp với	add_ingredients_to_cart
+món nhậu từ cá hồi hấp nào ngon	search_recipe
+bạn ơi tư vấn thực đơn ít béo có gà	search_recipe
+đề xuất nấu gì với cải thảo	search_recipe
+chi phí cho phần lớn người cho hợp lý	ask_price_estimate
+nhà còn tìm món kiểu chiên cho bữa tối phần lớn nào ngon	search_recipe
+bí quyết nấu ngon cho hợp lý	ask_recipe_detail
+đề xuất thời tiết thế nào nhé	fallback
+mình muốn 1 set thịt gà + bí xanh nha	search_recipe
+ngân sách rẻ đủ nấu không nhé	ask_price_estimate
+mình muốn mình muốn 1 set đậu phụ + khoai tây với	search_recipe
+nhà còn đổi sang món cá hồi được không nhé	refine_search
+món nhậu từ cá hồi kho	search_recipe
+gợi ý hướng dẫn chi tiết món này cho hợp lý	ask_recipe_detail
+bạn ơi đặt mua đồ về nấu nhé	add_ingredients_to_cart
+bạn ơi món nhậu từ đậu phụ đậm đà nào ngon	search_recipe
+nhà còn biết ông a không nào ngon	fallback
+gợi ý chi phí cho cả nhà người với	ask_price_estimate
+ê món nhậu từ bắp bò hấp nha	search_recipe
+ê nấu gì với cà chua	search_recipe
+đề xuất tìm món kiểu chiên giòn cho bữa tối 2 người nha	search_recipe
+gợi ý thực đơn cả nhà người, giá 50k	search_recipe
+mình muốn tìm món kiểu nướng muối ớt cho cơm hộp suất đôi cho hợp lý	search_recipe
+bạn ơi món nhậu từ bắp bò xào nha	search_recipe
+ăn gì bữa trưa vừa ít béo vừa tiết kiệm	search_recipe
+nhà còn làm sao cho thịt gà giòn nhé	ask_recipe_detail
+gợi ý đổi món kho hơn đi	refine_search
+đang cần món này hết bao nhiêu tiền đi	ask_price_estimate
+nấu gì với tỏi	search_recipe
+đang cần đề xuất món chiên giòn, nguyên liệu có sẵn, hợp bữa trưa nào ngon	search_recipe
+tìm giúp hướng dẫn chi tiết món này gấp	ask_recipe_detail
+đề xuất tư vấn thực đơn eat clean có sườn cho hợp lý	search_recipe
+đang cần ăn thế này có đắt không cho hợp lý	ask_price_estimate
+bạn ơi làm sao cho thịt gà giòn nhé	ask_recipe_detail
+nhà còn hôm nay ăn gì với	search_recipe
+có món nào 1 tiếng mà ngon không gấp	search_recipe
+đang cần tư vấn thực đơn healthy có sườn nhé	search_recipe
+nấu gì với cải thảo gấp	search_recipe
+ê tư vấn thực đơn giảm cân có thịt bò	search_recipe
+đang cần combo món cuốn và dưa leo cho ít người cho hợp lý	search_recipe
+mình muốn đổi món nướng muối ớt hơn nha	refine_search
+mình muốn món cá xào	search_recipe
+thực đơn gia đình người, giá 200k nào ngon	search_recipe
+gợi ý món này hết bao nhiêu tiền nhé	ask_price_estimate
+món nhậu từ đậu phụ luộc	search_recipe
+đổi món đậm đà hơn đi	refine_search
+món nhậu từ sườn chiên giòn nhé	search_recipe
+tìm giúp đề xuất món rim, đang vội, hợp cơm văn phòng	search_recipe
+bạn ơi lên thực đơn tiệc: tôm, cấp tốc, gia đình gấp	search_recipe
+nhà còn bí quyết nấu ngon với	ask_recipe_detail
+bạn ơi tư vấn thực đơn giảm cân có phở nào ngon	search_recipe
+ê ngân sách tiết kiệm đủ nấu không	ask_price_estimate
+tìm món kiểu thanh đạm cho bữa sáng phần lớn cho hợp lý	search_recipe
+đề xuất món phở rim đi	search_recipe
+ê bí quyết nấu ngon nào ngon	ask_recipe_detail
+đề xuất món nướng muối ớt, dễ làm, hợp bữa trưa đi	search_recipe
+gợi ý tư vấn thực đơn tăng cơ có cá	search_recipe
+nhà còn mua giúp mình nguyên liệu với	add_ingredients_to_cart
+ê ăn gì cơm văn phòng vừa giảm cân vừa 20k	search_recipe
+nhà còn tìm món kiểu thanh đạm cho bữa xế suất đôi đi	search_recipe
+nhà còn đổi sang món cá được không nhé	refine_search
+đổi sang món thịt gà được không nào ngon	refine_search
+bạn ơi xin chào nha	fallback
+gợi ý tìm món kiểu luộc cho bữa tối gia đình nào ngon	search_recipe
+bạn ơi thời tiết thế nào với	fallback
+chi phí cho nhóm bạn người	ask_price_estimate
+đề xuất tìm món kiểu rim cho bữa tối nhóm bạn đi	search_recipe
+tìm món kiểu xào cho cơm văn phòng cả nhà	search_recipe
+cho hết vào giỏ hàng đi cho hợp lý	add_ingredients_to_cart
+ăn gì tiệc vừa healthy vừa 50k cho hợp lý	search_recipe
+mình muốn mấy giờ rồi gấp	fallback
+nhà còn có món nào không có hành ngò không nha	refine_search
+bạn ơi bạn tên gì nha	fallback
+bạn ơi tìm món kiểu xào cho bữa sáng 2 người cho hợp lý	search_recipe
+làm sao cho mực giòn nào ngon	ask_recipe_detail
+món phở đậm đà nhé	search_recipe
+mình muốn 1 set ức gà + bí xanh	search_recipe
+gợi ý có món nào không có nấm không	refine_search
+gợi ý ngân sách 20k đủ nấu không	ask_price_estimate
+ê tìm cái gì lạ miệng hơn	refine_search
+lên thực đơn bữa tối: lẩu, rảnh rỗi, nhóm bạn cho hợp lý	search_recipe
+lên thực đơn bữa sáng: đùi gà, rảnh rỗi, 3 người	search_recipe
+đang cần bước 1 là gì nào ngon	ask_recipe_detail
+combo cá lóc và bí xanh cho gia đình	search_recipe
+tìm giúp lên thực đơn bữa sáng: món cuốn, cấp tốc, gia đình nhé	search_recipe
+có món nào rảnh rỗi mà ngon không nhé	search_recipe
+chi phí cho 2 người người gấp	ask_price_estimate
+mình muốn đề xuất món đậm đà, dễ làm, hợp cơm văn phòng	search_recipe
+tìm giúp bạn tên gì	fallback
+đề xuất lấy đủ nguyên liệu cho món này cho hợp lý	add_ingredients_to_cart
+ê có món nào không có cà chua không	refine_search
+bạn ơi lấy đủ nguyên liệu cho món này nha	add_ingredients_to_cart
+đề xuất món nhậu từ cá hồi rim nhé	search_recipe
+gợi ý biết ông a không nào ngon	fallback
+tìm món kiểu hấp cho cơm văn phòng cả nhà nhé	search_recipe
+tìm giúp combo thịt gà và khoai tây cho cả nhà	search_recipe
+đang cần mình muốn 1 set đậu phụ + hành tây nha	search_recipe
+tìm giúp làm sao cho heo giòn	ask_recipe_detail
+tìm giúp xin chào cho hợp lý	fallback
+đề xuất tìm món khác đi nhé	refine_search
+mình muốn có món nào không có sả không gấp	refine_search
+thực đơn nhóm bạn người, giá bình dân	search_recipe
+mình muốn món này hết bao nhiêu tiền gấp	ask_price_estimate
+đề xuất tìm món kiểu hấp cho cơm hộp suất đôi	search_recipe
+ngân sách không quan trọng tiền đủ nấu không gấp	ask_price_estimate
+gợi ý tìm cái gì lạ miệng hơn	refine_search
+đề xuất món thịt gà kho	search_recipe
+gợi ý combo gà và tỏi cho 3 người đi	search_recipe
+bạn ơi cần mua những gì thì thêm vào giỏ giúp đi	add_ingredients_to_cart
+gợi ý đổi sang món salad được không nào ngon	refine_search
+chi phí cho ít người người	ask_price_estimate
+tìm giúp món ba chỉ luộc	search_recipe
+ê đổi sang món phở được không	refine_search
+tìm giúp lên thực đơn bữa tối: đùi gà, không tốn thời gian, ít người cho hợp lý	search_recipe
+đang cần đang ở đâu gấp	fallback
+ê đặt mua đồ về nấu cho hợp lý	add_ingredients_to_cart
+tìm món kiểu kho cho bữa tối gia đình cho hợp lý	search_recipe
+mình muốn lên thực đơn cơm văn phòng: gà, 30 phút, ít người	search_recipe
+đang cần thực đơn gia đình người, giá 200k	search_recipe
+đề xuất món rim, ít dọn dẹp, hợp tiệc với	search_recipe
+đề xuất món này hết bao nhiêu tiền	ask_price_estimate
+đang cần ăn gì bữa tối vừa eat clean vừa sinh viên	search_recipe
+tìm món bò kho ăn bữa tối	search_recipe
+mình muốn món này hết bao nhiêu tiền cho hợp lý	ask_price_estimate
+đề xuất đang ở đâu cho hợp lý	fallback
+ngân sách sang trọng đủ nấu không gấp	ask_price_estimate
+mình muốn chi phí cho 1 người người gấp	ask_price_estimate
+ê không thích món này nào ngon	refine_search
+làm sao cho tôm giòn nhé	ask_recipe_detail
+tìm món kiểu xào cho cơm văn phòng 3 người	search_recipe
+ê hôm nay ăn gì nhé	search_recipe
+gợi ý đang ở đâu nha	fallback
+bạn ơi tư vấn thực đơn nhiều rau có lẩu với	search_recipe
+combo món cuốn và rau xà lách cho 2 người cho hợp lý	search_recipe
+đang cần làm sao cho cá hồi giòn	ask_recipe_detail
+gợi ý nấu gì với cà chua	search_recipe
+gợi ý tư vấn thực đơn eat clean có đùi gà cho hợp lý	search_recipe
+đang cần tư vấn thực đơn tăng cơ có heo	search_recipe
+mình muốn biết ông a không cho hợp lý	fallback
+tìm giúp mình muốn 1 set cơm gà + ớt đi	search_recipe
+ê đặt mua đồ về nấu nào ngon	add_ingredients_to_cart
+ê đề xuất món chiên giòn, trong tủ lạnh còn, hợp bữa xế đi	search_recipe
+nhà còn đề xuất món kho, mới đi chợ về, hợp cơm văn phòng với	search_recipe
+đang cần combo cá hồi và rau xà lách cho gia đình gấp	search_recipe
+ê có món nào 5 phút mà ngon không	search_recipe
+bạn ơi combo bún và hành ngò cho 2 người	search_recipe
+bạn ơi mình muốn 1 set phở + ớt	search_recipe
+đang cần lên thực đơn tiệc: bò, cấp tốc, suất đôi gấp	search_recipe
+nấu gì với cà chua nào ngon	search_recipe
+gợi ý bí quyết nấu ngon đi	ask_recipe_detail
+nhà còn món nhậu từ cá xào nha	search_recipe
+đề xuất món chiên, mới đi chợ về, hợp bữa xế	search_recipe
+đang cần ngân sách sinh viên đủ nấu không với	ask_price_estimate
+hát đi nào ngon	fallback
+bạn ơi tìm món khác đi cho hợp lý	refine_search
+đề xuất đổi sang món cơm gà được không	refine_search
+đang cần tìm cái gì lạ miệng hơn nha	refine_search
+mình muốn ngu quá gấp	fallback
+mình muốn thực đơn ít người người, giá sinh viên	search_recipe
+mình muốn mình muốn 1 set cá hồi + hành ngò	search_recipe
+nhà còn có món nào 15 phút mà ngon không	search_recipe
+đang cần lên thực đơn bữa trưa: lẩu, không tốn thời gian, cả nhà gấp	search_recipe
+nhà còn có món nào không có ớt không nha	refine_search
+combo sườn và hành ngò cho suất đôi nào ngon	search_recipe
+mình muốn 1 set sườn + hành ngò	search_recipe
+mình muốn ngân sách 200k đủ nấu không cho hợp lý	ask_price_estimate
+bạn ơi thực đơn phần lớn người, giá 50k nào ngon	search_recipe
+món đùi gà chiên giòn gấp	search_recipe
+đề xuất ngu quá đi	fallback
+ê thời tiết thế nào cho hợp lý	fallback
+đề xuất đổi sang món ức gà được không nào ngon	refine_search
+đang cần món tôm rim	search_recipe
+mình muốn 1 set cá + ớt gấp	search_recipe
+bạn ơi đang ở đâu nhé	fallback
+tìm giúp nêm nếm gia vị ra sao đi	ask_recipe_detail
+đang cần nấu gì với hành ngò	search_recipe
+gợi ý tổng thiệt hại là bao nhiêu gấp	ask_price_estimate
+làm sao cho salad giòn nha	ask_recipe_detail
+gợi ý mình muốn 1 set heo + khoai tây với	search_recipe
+món ức gà chiên giòn cho hợp lý	search_recipe
+gợi ý combo bắp bò và cải thảo cho phần lớn	search_recipe
+tìm giúp nêm nếm gia vị ra sao nào ngon	ask_recipe_detail
+gợi ý đổi sang món cá hồi được không nào ngon	refine_search
+gợi ý mình muốn 1 set tôm + nấm	search_recipe
+thực đơn ít người người, giá sang trọng nha	search_recipe
+đang cần ăn thế này có đắt không đi	ask_price_estimate
+gợi ý đang ở đâu cho hợp lý	fallback
+thực đơn cả nhà người, giá sinh viên cho hợp lý	search_recipe
+tìm giúp lên thực đơn bữa trưa: bò, đi làm về muộn, 3 người	search_recipe
+thực đơn phần lớn người, giá bình dân nào ngon	search_recipe
+mình muốn 1 set bún + ớt	search_recipe
+ê mua giúp mình nguyên liệu nào ngon	add_ingredients_to_cart
+đang cần có món nào cấp tốc mà ngon không	search_recipe
+bạn ơi nấu gì với rau xà lách	search_recipe
+nhà còn làm sao cho trứng giòn	ask_recipe_detail
+bạn ơi đang ở đâu	fallback
+ê ăn gì bữa tối vừa healthy vừa tiết kiệm	search_recipe
+đang cần mua giúp mình nguyên liệu nha	add_ingredients_to_cart
+làm sao cho thịt bò giòn nào ngon	ask_recipe_detail
+đề xuất mình muốn 1 set salad + cà chua	search_recipe
+mình muốn thực đơn 2 người người, giá không quan trọng tiền	search_recipe
+nhà còn thực đơn gia đình người, giá bình dân	search_recipe
+có món nào đi làm về muộn mà ngon không nha	search_recipe
+nấu gì với ớt với	search_recipe
+bạn ơi ăn gì bữa trưa vừa ít béo vừa tiết kiệm nào ngon	search_recipe
+món nhậu từ tôm xào với	search_recipe
+đang cần có món nào không có tỏi không với	refine_search
+có món nào đi làm về muộn mà ngon không đi	search_recipe
+mình muốn đề xuất món nướng muối ớt, dễ làm, hợp bữa trưa gấp	search_recipe
+tìm giúp đổi sang món ba chỉ được không	refine_search
+tìm giúp tìm cái gì lạ miệng hơn nào ngon	refine_search
+bạn ơi ăn gì tiệc vừa giảm cân vừa sang trọng	search_recipe
+mình muốn 1 set tôm + khoai tây	search_recipe
+món nhậu từ gà hấp	search_recipe
+gợi ý mình muốn 1 set đậu phụ + khoai tây	search_recipe
+ê combo phở và hành ngò cho phần lớn	search_recipe
+ê không thích món này	refine_search
+nhà còn ngân sách 100k đủ nấu không nha	ask_price_estimate
+đề xuất thời tiết thế nào cho hợp lý	fallback
+món nhậu từ bò chua ngọt nào ngon	search_recipe
+thực đơn gia đình người, giá rẻ cho hợp lý	search_recipe
+bạn ơi lên thực đơn tiệc: tôm, 5 phút, gia đình nhé	search_recipe
+mình muốn nấu gì với ớt	search_recipe
+mình muốn bí quyết nấu ngon	ask_recipe_detail
+đang cần tư vấn thực đơn eat clean có bò cho hợp lý	search_recipe
+nhà còn mình muốn 1 set tôm + ớt với	search_recipe
+mình muốn 1 set phở + cải thảo	search_recipe
+đề xuất tìm món phở kho ăn tiệc	search_recipe
+đề xuất món luộc, đang vội, hợp tiệc	search_recipe
+làm sao cho cá giòn cho hợp lý	ask_recipe_detail
+đang cần tìm món cá hồi kho ăn cơm văn phòng cho hợp lý	search_recipe
+nhà còn tìm món kiểu xào cho bữa xế nhóm bạn	search_recipe
+nhà còn có món nào không có sả không	refine_search
+tư vấn thực đơn ít dầu mỡ có heo gấp	search_recipe
+lên thực đơn bữa trưa: ba chỉ, đi làm về muộn, 1 người nào ngon	search_recipe
+đang cần món này hết bao nhiêu tiền nào ngon	ask_price_estimate
+gợi ý bước 1 là gì nhé	ask_recipe_detail
+món này hết bao nhiêu tiền với	ask_price_estimate
+gợi ý chi phí cho phần lớn người gấp	ask_price_estimate
+bạn ơi đổi món thanh đạm hơn	refine_search
+đề xuất mình muốn 1 set đậu phụ + sả nào ngon	search_recipe
+đổi sang món heo được không với	refine_search
+tìm giúp đặt mua đồ về nấu nha	add_ingredients_to_cart
+tìm giúp combo thịt bò và bí xanh cho gia đình	search_recipe
+bạn ơi ăn gì bữa xế vừa tăng cơ vừa 20k nào ngon	search_recipe
+nhà còn món nhậu từ cá đậm đà	search_recipe
+mình muốn lên thực đơn bữa sáng: cá lóc, cấp tốc, 1 người	search_recipe
+nhà còn đổi món thanh đạm hơn	refine_search
+đang cần đề xuất món nướng muối ớt, ít dọn dẹp, hợp bữa xế	search_recipe
+đề xuất tư vấn thực đơn chay có tôm đi	search_recipe
+bạn ơi combo canh chua và rau xà lách cho 1 người nhé	search_recipe
+ê chi phí cho 2 người người với	ask_price_estimate
+gợi ý hướng dẫn chi tiết món này nhé	ask_recipe_detail
+mình muốn combo thịt gà và hành ngò cho 1 người đi	search_recipe
+tìm giúp bạn tên gì nha	fallback
+combo tôm và rau muống cho cả nhà với	search_recipe

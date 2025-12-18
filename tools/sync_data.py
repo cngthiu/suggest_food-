@@ -2,309 +2,221 @@ import random
 import json
 import os
 import re
+from collections import defaultdict
 
 # --- CẤU HÌNH ---
-NUM_TRAIN = 3000  # Số mẫu tập train
-NUM_VALID = 300   # Số mẫu tập valid
+NUM_TRAIN = 2000
+NUM_VALID = 250
 BASE_DIR = "serverAI/data/nlu"
 INTENT_FILE = f"{BASE_DIR}/intents.json"
 
-# --- KHO DỮ LIỆU PHONG PHÚ (Rich Data Pool) ---
+# --- 1. DATA POOL ---
 DATA_POOL = {
-    "protein": [
-        "gà", "thịt gà", "cánh gà", "ức gà", "đùi gà", "cánh gà chiên nước mắm",
-        "gà rang gừng", "gà kho gừng", "gà luộc", "gà nướng", "gà xào sả ớt",
-        "bò", "thịt bò", "bắp bò", "ba chỉ bò", "gân bò", "bò xào hành tây",
-        "bò lúc lắc", "bò nấu lagu", "bò hầm rau củ",
-        "heo", "thịt heo", "sườn", "sườn non", "ba rọi", "ba rọi quay",
-        "thịt xay", "chân giò", "thịt kho tàu", "thịt kho trứng", "thịt rang cháy cạnh",
-        "cá", "cá diêu hồng", "cá basa", "cá lóc", "cá hồi", "cá rô phi",
-        "cá kho tộ", "cá chiên giòn", "cá hấp xì dầu", "canh chua cá",
-        "tôm", "tôm sú", "tôm thẻ", "tôm hùm", "tôm rim mặn ngọt", "tôm nướng",
-        "mực", "mực ống", "mực hấp", "mực xào chua ngọt", "mực chiên giòn",
-        "bạch tuộc",
-        "trứng", "trứng gà", "trứng vịt", "trứng cút", "trứng chiên", "trứng hấp",
-        "trứng kho thịt",
-        "cơm gà", "cơm sườn", "cơm tấm", "cơm thịt kho",
-        "phở bò", "phở gà",
-        "bún bò", "bún riêu", "bún chả",
-        "miến gà", "miến tôm",
-        "cháo gà", "cháo tôm", "cháo thịt bằm",
-        "lẩu gà", "lẩu hải sản", "lẩu bò nhúng dấm"
+    "food": [
+        "gà", "thịt gà", "ức gà", "đùi gà", "bò", "thịt bò", "bắp bò", "heo", "sườn", "ba chỉ",
+        "cá", "cá lóc", "cá hồi", "tôm", "mực", "trứng", "đậu phụ", "cơm gà", "phở", "bún",
+        "lẩu", "món cuốn", "salad", "canh chua"
     ],
-
-    "vege": [
-        "rau muống", "cải thảo", "bắp cải", "bắp cải thịt", "bí xanh", "bí đỏ",
-        "khoai tây", "khoai lang", "cà rốt", "cà chua", "đậu bắp", "nấm rơm", "nấm hương",
-        "măng tây", "súp lơ", "rau cải", "rau muống xào tỏi", "rau muống luộc",
-        "canh bí xanh nấu tôm", "canh rau cải thịt bằm", "canh rau dền", "canh cua rau đay",
-        "mướp đắng", "mướp đắng xào trứng"
+    "ingredient": [
+        "rau muống", "cải thảo", "bí xanh", "khoai tây", "cà chua", "nấm", 
+        "hành tây", "tỏi", "ớt", "sả", "rau xà lách", "dưa leo", "hành ngò"
     ],
-
     "time": [
-        "5 phút", "10 phút", "15 phút", "20 phút", "25 phút", "30 phút",
-        "35 phút", "40 phút", "45 phút", "50 phút", "60 phút",
-        "5p", "10p", "15p", "20p", "25p", "30p", "45p", "60p", "90p",
-        "1 tiếng", "1 tiếng rưỡi", "2 tiếng", "hơn 1 tiếng",
-        "nửa tiếng", "1h", "1h30p", "2h",
-        "nấu nhanh", "siêu tốc", "cấp tốc", "ăn liền", "làm nhanh",
-        "không mất nhiều thời gian", "làm trong giờ nghỉ trưa",
-        "làm sau giờ làm", "dành cho bữa sáng vội", "chuẩn bị tối qua"
+        "5 phút", "15 phút", "30 phút", "1 tiếng", "nhanh", "cấp tốc", 
+        "không tốn thời gian", "rảnh rỗi", "đi làm về muộn"
     ],
-
     "quantity": [
-        "1 người", "2 người", "3 người", "4 người", "5 người", "6 người", "8 người", "10 người",
-        "cho 1 người", "cho 2 người", "cho 3 người", "cho 4 người",
-        "3 thành viên", "4 thành viên", "gia đình 3 người", "gia đình 4 người", "gia đình 5 người",
-        "2 người lớn 1 trẻ em",
-        "1 suất", "2 suất", "3 suất", "4 phần", "5 phần ăn", "6 phần ăn", "7 phần ăn", "10 phần ăn",
-        "2 bát", "3 bát", "2 tô", "3 tô",
-        "cả nhà", "2 vợ chồng", "cho bé", "cho 2 bé", "cho trẻ nhỏ",
-        "đại gia đình", "cho mình tôi", "anh em trong phòng trọ"
+        "1 người", "2 người", "3 người", "cả nhà", "gia đình", "nhóm bạn", 
+        "suất đôi", "phần lớn", "ít người"
     ],
-
     "price": [
-        "20k", "30k", "40k", "50k", "60k", "70k", "80k",
-        "100k", "120k", "150k", "180k", "200k", "250k", "300k", "400k", "500k", "800k", "1000k",
-        "30 nghìn", "40 nghìn", "50 nghìn", "70 nghìn", "100 nghìn", "150 nghìn",
-        "100 ngàn", "200 ngàn", "ba trăm nghìn",
-        "50.000đ", "70.000đ", "100.000vnd", "150.000 đồng", "200.000 đồng",
-        "300.000 đồng", "500.000 đồng", "1 triệu", "1tr", "1 triệu rưỡi", "nửa triệu",
-        "rẻ", "bình dân", "tiết kiệm", "sinh viên", "cao cấp", "sang chảnh",
-        "vừa túi tiền", "không quá đắt", "ăn sáng một bữa"
+        "20k", "50k", "100k", "200k", "rẻ", "tiết kiệm", "sinh viên", 
+        "bình dân", "sang trọng", "không quan trọng tiền"
     ],
-
-    "diet": [
-        "chay", "keto", "eat clean", "low carb", "không dầu mỡ",
-        "ít dầu mỡ", "thực dưỡng", "giảm cân", "ít calo", "nhiều rau",
-        "ít tinh bột"
-    ],
-
     "style": [
-        "xào", "kho", "luộc", "hấp", "chiên", "nướng", "rim", "nấu canh", "làm gỏi",
-        "xào tỏi", "xào sả ớt", "kho tiêu", "nướng muối ớt"
+        "kho", "luộc", "hấp", "chiên", "nướng", "rim", "xào", 
+        "chua ngọt", "chiên giòn", "nướng muối ớt", "thanh đạm", "đậm đà"
     ],
-
-    "device": [
-        "nồi chiên", "chảo", "nồi cơm điện", "lò vi sóng", "nồi áp suất", "máy xay",
-        "nồi chiên không dầu", "bếp điện", "bếp ga"
+    "diet": [
+        "chay", "eat clean", "giảm cân", "ít béo", "healthy", 
+        "ít dầu mỡ", "nhiều rau", "tăng cơ"
+    ],
+    "meal": [
+        "bữa trưa", "bữa tối", "bữa sáng", "bữa xế", "tiệc", "cơm văn phòng", "cơm hộp"
+    ],
+    "context": [
+        "ít dọn dẹp", "dễ làm", "nguyên liệu có sẵn", "trong tủ lạnh còn", 
+        "mới đi chợ về", "đang vội", "lười nấu", "muốn đổi gió"
     ]
 }
 
-# Mapping từ khóa trong DATA_POOL sang nhãn NER (Label)
-# Chỉ map những nhãn mà file training/train_phobert.py hỗ trợ (FOOD, TIME, QUANTITY, PRICE)
+# --- 2. NOISE ---
+PREFIXES = ["", "", "ê ", "bạn ơi ", "gợi ý ", "mình muốn ", "tìm giúp ", "đề xuất ", "nhà còn ", "đang cần "]
+SUFFIXES = ["", "", " đi", " nhé", " nha", " với", " gấp", " nào ngon", " cho hợp lý"]
+
+# --- 3. MAPPING SLOT ---
 SLOT_TO_NER_LABEL = {
-    "protein": "FOOD",
-    "vege": "FOOD",
-    "style": "FOOD",  # Cách chế biến cũng coi là 1 phần của món ăn
-    "time": "TIME",
-    "quantity": "QUANTITY",
-    "price": "PRICE",
-    # "diet": "DIET",   # Nếu model hỗ trợ thì bật, hiện tại train_phobert.py chưa có
-    # "device": "DEVICE"
+    "food": "FOOD", "ingredient": "INGREDIENT", "time": "TIME",
+    "quantity": "QUANTITY", "price": "PRICE", "style": "FOOD", "diet": "DIET",
+    "meal": "TIME", "context": "O" # Context không cần bắt slot, chỉ để đa dạng câu
 }
 
-# ========== TEMPLATE ==========
-TEMPLATES = [
-    # --- 1. SUGGEST_FOOD ---
-    ("gợi ý món {protein} {style} cho {quantity}", 
-     "suggest_food", {"protein": "protein", "style": "style", "quantity": "quantity"}),
+# --- 4. TEMPLATES NÂNG CAO (Mô phỏng Test Set) ---
+TEMPLATE_POOL = {
+    "search_recipe": [
+        # Cơ bản
+        "món {food} {style}",
+        "nấu gì với {ingredient}",
+        "hôm nay ăn gì",
+        
+        # Phức tạp (Giống Test set)
+        "lên thực đơn {meal}: {food}, {time}, {quantity}",
+        "mình muốn 1 set {food} + {ingredient}",
+        "còn {food} và {ingredient}, gợi ý món phù hợp",
+        "đề xuất món {style}, {context}, hợp {meal}",
+        "tìm món kiểu {style} cho {meal} {quantity}",
+        "nhà còn dư {ingredient} thì làm món gì {time}",
+        "tư vấn thực đơn {diet} có {food}",
+        "món nào làm từ {food} mà {context}",
+        "gợi ý món {food} ăn kèm {ingredient}",
+        "combo {food} và {ingredient} cho {quantity}",
+        "tìm món {food} {style} ăn {meal}",
+        "có món nào {time} mà ngon không",
+        "thực đơn {quantity} người, giá {price}",
+        "món nhậu từ {food} {style}",
+        "ăn gì {meal} vừa {diet} vừa {price}"
+    ],
+    "ask_recipe_detail": [
+        "hướng dẫn chi tiết món này",
+        "cách làm cụ thể ra sao",
+        "bước 1 là gì",
+        "sơ chế {ingredient} thế nào",
+        "nêm nếm gia vị ra sao",
+        "làm sao cho {food} giòn",
+        "bí quyết nấu ngon",
+        "chỉ mình cách nấu đi"
+    ],
+    "ask_price_estimate": [
+        "món này hết bao nhiêu tiền",
+        "nấu bữa này tốn kém không",
+        "giá nguyên liệu khoảng bao nhiêu",
+        "chi phí cho {quantity} người",
+        "ăn thế này có đắt không",
+        "tổng thiệt hại là bao nhiêu",
+        "ngân sách {price} đủ nấu không"
+    ],
+    "add_ingredients_to_cart": [
+        "mua giúp mình nguyên liệu",
+        "thêm {ingredient} vào giỏ",
+        "đặt mua đồ về nấu",
+        "order {quantity} {food} nhé",
+        "cho hết vào giỏ hàng đi",
+        "lấy đủ nguyên liệu cho món này",
+        "cần mua những gì thì thêm vào giỏ giúp"
+    ],
+    "refine_search": [
+        "tìm món khác đi",
+        "không thích món này",
+        "đổi món {style} hơn",
+        "có món nào không có {ingredient} không",
+        "món này ngán rồi",
+        "tìm cái gì lạ miệng hơn",
+        "đổi sang món {food} được không",
+        "gợi ý cái khác {time} hơn"
+    ],
+    "fallback": [
+        "xin chào", "hi bot", "bạn tên gì", "thời tiết thế nào", 
+        "hát đi", "ngu quá", "giỏi lắm", "biết ông a không",
+        "đang ở đâu", "mấy giờ rồi"
+    ]
+}
 
-    ("tôi muốn nấu món {protein} trong {time} giá {price}", 
-     "suggest_food", {"protein": "protein", "time": "time", "price": "price"}),
+def get_random_item(key):
+    return random.choice(DATA_POOL.get(key, [""]))
 
-    ("nấu {quantity} ăn món {protein} hết bao nhiêu tiền", 
-     "suggest_food", {"protein": "protein", "quantity": "quantity"}),
-
-    ("tìm món {protein} {time} khoảng {price}", 
-     "suggest_food", {"protein": "protein", "time": "time", "price": "price"}),
-
-    ("món {protein} nào nấu bằng {device} mất {time}", 
-     "suggest_food", {"protein": "protein", "device": "device", "time": "time"}),
-
-    ("hôm nay nên nấu gì từ {protein} cho {quantity}", 
-     "suggest_food", {"protein": "protein", "quantity": "quantity"}),
-     
-    ("món ngon rẻ tầm {price}", 
-     "suggest_food", {"price": "price"}),
-
-    ("cơm sinh viên giá {price}", 
-     "suggest_food", {"price": "price"}),
-
-    # --- 2. SUGGEST_FOOD_BY_INGREDIENT ---
-    ("hôm nay ăn {protein} với {vege} cho {quantity}", 
-     "suggest_food_by_ingredient", {"protein": "protein", "vege": "vege", "quantity": "quantity"}),
-
-    ("đổi gió ăn {protein} {style} kèm {vege} được không", 
-     "suggest_food_by_ingredient", {"protein": "protein", "style": "style", "vege": "vege"}),
-
-    ("nếu có {protein} và {vege} thì nấu món gì ngon", 
-     "suggest_food_by_ingredient", {"protein": "protein", "vege": "vege"}),
-     
-    ("nhà còn dư {vege} thì nấu gì", 
-     "suggest_food_by_ingredient", {"vege": "vege"}),
-
-    # --- 3. SUGGEST_FOOD_BY_TIME ---
-    ("món nào nấu nhanh dưới {time}", 
-     "suggest_food_by_time", {"time": "time"}),
-
-    ("tôi chỉ có {time} để nấu ăn thôi", 
-     "suggest_food_by_time", {"time": "time"}),
-
-    ("có món nào làm {time} xong không", 
-     "suggest_food_by_time", {"time": "time"}),
-
-    ("ăn gì trong {time} cho kịp giờ đi làm", 
-     "suggest_food_by_time", {"time": "time"}),
-
-    ("bữa tối muốn nấu gì trong vòng {time}", 
-     "suggest_food_by_time", {"time": "time"}),
-
-    # --- 4. ASK_PRICE ---
-    ("món {protein} này giá bao nhiêu", 
-     "ask_price", {"protein": "protein"}),
-     
-    ("chi phí để làm món {protein} {style}",
-     "ask_price", {"protein": "protein", "style": "style"}),
-
-    # --- 5. FILTER_DIET ---
-    ("tư vấn thực đơn {diet} cho {quantity}", 
-     "filter_diet", {"diet": "diet", "quantity": "quantity"}),
-
-    ("món {protein} cho người ăn {diet}", 
-     "filter_diet", {"protein": "protein", "diet": "diet"}),
-
-    ("ăn kiểu {diet} thì nên ăn gì từ {protein}", 
-     "filter_diet", {"diet": "diet", "protein": "protein"}),
-
-    ("đổi món {diet} trong ngày mà vẫn rẻ như {price}", 
-     "filter_diet", {"diet": "diet", "price": "price"}),
-     
-    ("món nào từ {protein} vừa {diet} vừa phù hợp {quantity}", 
-     "filter_diet", {"protein": "protein", "diet": "diet", "quantity": "quantity"}),
-     
-    ("an {protein} {diet} trong {time} với ngân sách {price}",
-     "suggest_food", {"protein": "protein", "diet": "diet", "time": "time", "price": "price"}),
-     
-    ("chỉ có {price} thì ăn món gì",
-     "suggest_food", {"price": "price"}),
-     
-    ("ăn gì dưới {price}",
-     "suggest_food", {"price": "price"})
-]
-
-def load_valid_intents():
-    if os.path.exists(INTENT_FILE):
-        with open(INTENT_FILE, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            return set(data.get("intents", []))
-    else:
-        print(f"CANH BAO: Khong tim thay {INTENT_FILE}. Su dung mac dinh.")
-        return set()
-
-def construct_sample(template, slot_map):
-    """
-    Hàm này thay thế các slot trong template bằng dữ liệu ngẫu nhiên,
-    đồng thời tính toán vị trí (start, end) của các thực thể NER.
-    """
+def construct_sample(template_str, intent):
+    # Random prefix để tăng tính tự nhiên
+    prefix = random.choice(PREFIXES) if random.random() > 0.3 else ""
+    suffix = random.choice(SUFFIXES) if random.random() > 0.3 else ""
     
-    # Tách template thành các phần dựa trên dấu ngoặc nhọn {}
-    # Ví dụ: "gợi ý món {protein} giá {price}" -> ['gợi ý món ', '{protein}', ' giá ', '{price}', '']
-    parts = re.split(r'({[^}]+})', template)
+    full_template = f"{prefix}{template_str}{suffix}".strip()
     
+    parts = re.split(r'({[^}]+})', full_template)
     final_text = ""
     entities = []
     
     for part in parts:
         if part.startswith('{') and part.endswith('}'):
-            # Đây là slot, ví dụ: "{protein}"
-            slot_name = part[1:-1] # protein
-            data_key = slot_map.get(slot_name) # Lấy key trong DATA_POOL
-            
-            if data_key and data_key in DATA_POOL:
-                value = random.choice(DATA_POOL[data_key])
+            slot_name = part[1:-1]
+            if slot_name in DATA_POOL:
+                value = get_random_item(slot_name)
+                label = SLOT_TO_NER_LABEL.get(slot_name)
                 
-                # Kiểm tra xem slot này có nhãn NER tương ứng không
-                label = SLOT_TO_NER_LABEL.get(data_key)
-                
-                if label:
+                # Chỉ gán nhãn nếu không phải là O
+                if label and label != "O":
                     start_idx = len(final_text)
                     end_idx = start_idx + len(value)
-                    # Thêm vào danh sách entity: [start, end, label]
                     entities.append([start_idx, end_idx, label])
                 
                 final_text += value
             else:
-                # Nếu không tìm thấy data (trường hợp hiếm), giữ nguyên
                 final_text += part
         else:
-            # Đây là text tĩnh
             final_text += part
             
-    return final_text, entities
-
-def generate_dataset(num_samples, valid_intents):
-    tsv_rows = []
-    ner_data = []
-    used_intents = set()
-
-    for _ in range(num_samples):
-        tmpl, intent, slot_map = random.choice(TEMPLATES)
-        
-        # Chỉ check intent nếu file config tồn tại
-        if valid_intents and intent not in valid_intents:
-            continue
-            
-        used_intents.add(intent)
-        
-        # Sinh text và entity
-        text, entities = construct_sample(tmpl, slot_map)
-        
-        # 1. Dữ liệu cho Intent Classification (TSV)
-        tsv_rows.append(f"{text}\t{intent}")
-        
-        # 2. Dữ liệu cho NER (JSON)
-        # Chỉ lưu nếu câu có entity
-        if entities:
-            ner_data.append({
-                "text": text,
-                "entities": entities
-            })
-            
-    return tsv_rows, ner_data, used_intents
+    # Xử lý khoảng trắng thừa
+    final_text = " ".join(final_text.split())
+    return final_text, intent, entities
 
 def main():
     os.makedirs(BASE_DIR, exist_ok=True)
     
-    # 1. Load intents
-    valid_intents = load_valid_intents()
-    print(f"Intents hop le: {valid_intents}")
+    # Chia Template Train/Valid
+    train_templates = []
+    valid_templates = []
     
-    # 2. Sinh Train Data
-    print(f"\nDang sinh {NUM_TRAIN} mau train...")
-    train_tsv, train_ner, train_intents = generate_dataset(NUM_TRAIN, valid_intents)
-    
-    # Ghi file train.tsv
-    with open(f"{BASE_DIR}/train.tsv", "w", encoding="utf-8") as f:
-        f.write("\n".join(train_tsv))
+    print("--- CHIA TEMPLATE (Đảm bảo Valid có mẫu lạ) ---")
+    for intent, tmpls in TEMPLATE_POOL.items():
+        random.shuffle(tmpls)
+        # 80% template quen thuộc cho train, 20% template lạ cho valid
+        split = int(len(tmpls) * 0.8)
+        if split == 0: split = 1
         
-    # Ghi file ner_train.json
-    with open(f"{BASE_DIR}/ner_train.json", "w", encoding="utf-8") as f:
-        json.dump(train_ner, f, ensure_ascii=False, indent=2)
+        train_templates.extend([(t, intent) for t in tmpls[:split]])
+        # Valid có thể dùng toàn bộ template để test độ phủ, 
+        # hoặc tách riêng nếu muốn test zero-shot generalization.
+        # Ở đây ta cho valid dùng toàn bộ nhưng ưu tiên mẫu khó.
+        valid_templates.extend([(t, intent) for t in tmpls]) 
         
-    print(f"-> Da tao train.tsv ({len(train_tsv)} mau)")
-    print(f"-> Da tao ner_train.json ({len(train_ner)} mau co thuc the)")
-    print(f"-> Intents used: {train_intents}")
+    def generate(templates, num):
+        ds = []
+        seen = set()
+        while len(ds) < num:
+            t, i = random.choice(templates)
+            txt, intent, ents = construct_sample(t, i)
+            if txt not in seen:
+                seen.add(txt)
+                ds.append({"text": txt, "intent": intent, "entities": ents})
+        return ds
 
-    # 3. Sinh Valid Data (Chỉ cần tsv cho intent, valid cho NER thường tách từ train lúc training)
-    print(f"\nDang sinh {NUM_VALID} mau valid...")
-    valid_tsv, _, _ = generate_dataset(NUM_VALID, valid_intents)
+    print(f"Sinh {NUM_TRAIN} Train...")
+    train_data = generate(train_templates, NUM_TRAIN)
     
-    with open(f"{BASE_DIR}/valid.tsv", "w", encoding="utf-8") as f:
-        f.write("\n".join(valid_tsv))
-    print(f"-> Da tao valid.tsv ({len(valid_tsv)} mau)")
-    
-    print("\nHOAN TAT! Da san sang huan luyen Intent & NER.")
+    print(f"Sinh {NUM_VALID} Valid...")
+    valid_data = generate(valid_templates, NUM_VALID) # Valid dùng mẫu rộng hơn để test
+
+    # Ghi file
+    with open(f"{BASE_DIR}/train1.tsv", "w", encoding="utf-8") as f:
+        for d in train_data: f.write(f"{d['text']}\t{d['intent']}\n")
+        
+    with open(f"{BASE_DIR}/valid1.tsv", "w", encoding="utf-8") as f:
+        for d in valid_data: f.write(f"{d['text']}\t{d['intent']}\n")
+        
+    ner_json = [{"text": d['text'], "entities": d['entities']} for d in train_data if d['entities']]
+    with open(f"{BASE_DIR}/ner_train1.json", "w", encoding="utf-8") as f:
+        json.dump(ner_json, f, ensure_ascii=False, indent=2)
+
+    print("DONE! Dữ liệu mới đã có các mẫu câu phức tạp giống Test Set.")
 
 if __name__ == "__main__":
     main()
