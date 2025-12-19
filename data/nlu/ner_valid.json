@@ -1,0 +1,5357 @@
+[
+  {
+    "text": "nấu gà rán cho cả nhà hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        10,
+        "FOOD"
+      ],
+      [
+        15,
+        21,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn atkins cho 2 người giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        15,
+        "DIET"
+      ],
+      [
+        20,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        44,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don vegetarian cho 2 nguoi gia vua tui tien",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        48,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món uc ga cho cả nhà",
+    "entities": [
+      [
+        12,
+        17,
+        "FOOD"
+      ],
+      [
+        22,
+        28,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn tang can cho cho 2 người giá 50k",
+    "entities": [
+      [
+        9,
+        17,
+        "DIET"
+      ],
+      [
+        22,
+        33,
+        "QUANTITY"
+      ],
+      [
+        38,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món nam bo nào làm bằng noi mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        13,
+        "FOOD"
+      ],
+      [
+        27,
+        30,
+        "DEVICE"
+      ],
+      [
+        35,
+        43,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don it dau mo cho gia dinh 4 nguoi gia 50k",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        39,
+        "QUANTITY"
+      ],
+      [
+        44,
+        47,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món cá diêu hồng nào làm bằng noi chien mất 30 phút không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        42,
+        "DEVICE"
+      ],
+      [
+        47,
+        54,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon toi nao lam bang noi chien khong dau mat 20 phut khong",
+    "entities": [
+      [
+        7,
+        10,
+        "FOOD"
+      ],
+      [
+        24,
+        43,
+        "DEVICE"
+      ],
+      [
+        48,
+        55,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an ca rot it calo tam tam 80k",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        22,
+        "DIET"
+      ],
+      [
+        27,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món sườn cốt lết nào làm bằng noi chien mất 15p không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        42,
+        "DEVICE"
+      ],
+      [
+        47,
+        50,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món súp rau củ cho cả nhà",
+    "entities": [
+      [
+        12,
+        22,
+        "FOOD"
+      ],
+      [
+        27,
+        33,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu muối cho gia đình 4 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        8,
+        "FOOD"
+      ],
+      [
+        13,
+        29,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tim cach nau ba chi kho nhanh",
+    "entities": [
+      [
+        13,
+        23,
+        "FOOD"
+      ],
+      [
+        24,
+        29,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "có món trung ga so nào làm bằng noi sup mất 10 phút không",
+    "entities": [
+      [
+        7,
+        18,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món bắp cải nào làm bằng chao chong dinh mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        43,
+        "DEVICE"
+      ],
+      [
+        48,
+        55,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn keto cho 1 suất giá sinh viên",
+    "entities": [
+      [
+        9,
+        13,
+        "DIET"
+      ],
+      [
+        18,
+        24,
+        "QUANTITY"
+      ],
+      [
+        29,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món dua hau làm trong 20 phút",
+    "entities": [
+      [
+        10,
+        17,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn an nhe cho cả nhà giá giá rẻ",
+    "entities": [
+      [
+        9,
+        15,
+        "DIET"
+      ],
+      [
+        20,
+        26,
+        "QUANTITY"
+      ],
+      [
+        31,
+        37,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon dua hau nao lam bang airfryer mat 30 phut khong",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        36,
+        "DEVICE"
+      ],
+      [
+        41,
+        48,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn an chay cho 1 suất giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        44,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món ba chi nào làm bằng noi sup mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        13,
+        "FOOD"
+      ],
+      [
+        27,
+        34,
+        "DEVICE"
+      ],
+      [
+        39,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an banh trang light tam tam 80k",
+    "entities": [
+      [
+        8,
+        18,
+        "FOOD"
+      ],
+      [
+        19,
+        24,
+        "DIET"
+      ],
+      [
+        29,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon bo bit tet nao lam bang chao chong dinh mat nhanh khong",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        46,
+        "DEVICE"
+      ],
+      [
+        51,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món canh bí đao nào làm bằng noi nau mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        18,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món sườn rim nào làm bằng chao mất 20 phút không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        33,
+        "DEVICE"
+      ],
+      [
+        38,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tim cach nau ca nuc dam da",
+    "entities": [
+      [
+        13,
+        19,
+        "FOOD"
+      ],
+      [
+        20,
+        26,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "nấu thịt đùi heo kho trứng cút cho cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        30,
+        "FOOD"
+      ],
+      [
+        35,
+        46,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món gà xào cà làm trong cấp tốc",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        37,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn light cho 3 thành viên giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        48,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món nho nào làm bằng chao chong dinh mất 30 phút không",
+    "entities": [
+      [
+        7,
+        10,
+        "FOOD"
+      ],
+      [
+        24,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món đầu cá hồi nào làm bằng airfryer mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món canh rau mồng tơi thịt băm làm trong 15p",
+    "entities": [
+      [
+        10,
+        36,
+        "FOOD"
+      ],
+      [
+        47,
+        50,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món cam sanh làm trong 10 phút",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn sườn non heo chay tầm giá rẻ",
+    "entities": [
+      [
+        8,
+        20,
+        "FOOD"
+      ],
+      [
+        21,
+        25,
+        "DIET"
+      ],
+      [
+        30,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm ca hop khoảng sinh viên",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        26,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don lat cho cho be gia vua tui tien",
+    "entities": [
+      [
+        9,
+        12,
+        "DIET"
+      ],
+      [
+        17,
+        23,
+        "QUANTITY"
+      ],
+      [
+        28,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nau mi tom trung cho 4 phan an het bao nhieu",
+    "entities": [
+      [
+        4,
+        16,
+        "FOOD"
+      ],
+      [
+        21,
+        30,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "muon an dau an normal tam vua tui tien",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don light cho cho be gia gia re",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        25,
+        "QUANTITY"
+      ],
+      [
+        30,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm suon cot let khoảng giá rẻ",
+    "entities": [
+      [
+        12,
+        24,
+        "FOOD"
+      ],
+      [
+        32,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn cá diêu hồng hấp gừng truyen thong tầm sinh viên",
+    "entities": [
+      [
+        8,
+        29,
+        "FOOD"
+      ],
+      [
+        30,
+        42,
+        "DIET"
+      ],
+      [
+        47,
+        56,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món gừng nào làm bằng chao mất 30 phút không",
+    "entities": [
+      [
+        7,
+        11,
+        "FOOD"
+      ],
+      [
+        25,
+        29,
+        "DEVICE"
+      ],
+      [
+        34,
+        41,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món ga dai làm trong 10 phút",
+    "entities": [
+      [
+        10,
+        16,
+        "FOOD"
+      ],
+      [
+        27,
+        34,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn truyen thong cho cho 2 người giá 200 nghìn",
+    "entities": [
+      [
+        9,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        37,
+        "QUANTITY"
+      ],
+      [
+        42,
+        51,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim cach nau ga light",
+    "entities": [
+      [
+        13,
+        15,
+        "FOOD"
+      ],
+      [
+        16,
+        21,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "tim lai mon rau lang cho cho 2 nguoi",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        25,
+        36,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn hai san cho 3 thành viên giá giá bình dân",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        33,
+        "QUANTITY"
+      ],
+      [
+        38,
+        50,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn xuong heo nhieu dam tầm 100.000đ",
+    "entities": [
+      [
+        8,
+        17,
+        "FOOD"
+      ],
+      [
+        18,
+        27,
+        "DIET"
+      ],
+      [
+        32,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món cá ngừ nào làm bằng noi sup mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        13,
+        "FOOD"
+      ],
+      [
+        27,
+        34,
+        "DEVICE"
+      ],
+      [
+        39,
+        46,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn ga dai keto tầm 50k",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        27,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món cot let cho gia đình 4 người",
+    "entities": [
+      [
+        12,
+        19,
+        "FOOD"
+      ],
+      [
+        24,
+        40,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn giam can cho gia đình 4 người giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        17,
+        "DIET"
+      ],
+      [
+        22,
+        38,
+        "QUANTITY"
+      ],
+      [
+        43,
+        55,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muon an dau ca hoi lowcarb tam 100.000d",
+    "entities": [
+      [
+        8,
+        18,
+        "FOOD"
+      ],
+      [
+        19,
+        26,
+        "DIET"
+      ],
+      [
+        31,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn dua com cho 4 phần ăn giá giá bình dân",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        47,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món xà lách nào làm bằng noi chien khong dau mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        47,
+        "DEVICE"
+      ],
+      [
+        52,
+        60,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn chan gio healthy tầm giá bình dân",
+    "entities": [
+      [
+        8,
+        16,
+        "FOOD"
+      ],
+      [
+        17,
+        24,
+        "DIET"
+      ],
+      [
+        29,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món mi jomo nào làm bằng noi sup mất 45 phút không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon rau muong xao bo nao lam bang noi sup mat 45 phut khong",
+    "entities": [
+      [
+        7,
+        23,
+        "FOOD"
+      ],
+      [
+        37,
+        44,
+        "DEVICE"
+      ],
+      [
+        49,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món bí xanh nào làm bằng noi mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        31,
+        "DEVICE"
+      ],
+      [
+        36,
+        43,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món mi jomo nào làm bằng chao mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        32,
+        "DEVICE"
+      ],
+      [
+        37,
+        44,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don nhanh cho 4 phan an gia tam 80k",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        28,
+        "QUANTITY"
+      ],
+      [
+        33,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn giai nhiet cho cả nhà giá tầm 80k",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        42,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon mon cuon lam trong 45 phut",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nấu thit dui heo cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        16,
+        "FOOD"
+      ],
+      [
+        21,
+        28,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon mi jomo lam trong 30 phut",
+    "entities": [
+      [
+        10,
+        17,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu trứng om bí đỏ nhieu dam",
+    "entities": [
+      [
+        13,
+        27,
+        "FOOD"
+      ],
+      [
+        28,
+        37,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món ca trich làm trong 10 phút",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon canh bi xanh xuong heo lam trong 30 phut",
+    "entities": [
+      [
+        10,
+        32,
+        "FOOD"
+      ],
+      [
+        43,
+        50,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món sườn kho cho 3 thành viên",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        25,
+        37,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn lat cho 1 suất giá 50k",
+    "entities": [
+      [
+        9,
+        12,
+        "DIET"
+      ],
+      [
+        17,
+        23,
+        "QUANTITY"
+      ],
+      [
+        28,
+        31,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món mi an lien nào làm bằng chao mất 45 phút không",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn thanh dam cho 4 phần ăn giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        32,
+        "QUANTITY"
+      ],
+      [
+        37,
+        49,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món rau dền cho gia đình 4 người",
+    "entities": [
+      [
+        12,
+        19,
+        "FOOD"
+      ],
+      [
+        24,
+        40,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu mì trứng diet",
+    "entities": [
+      [
+        13,
+        21,
+        "FOOD"
+      ],
+      [
+        22,
+        26,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món ga goc tu làm trong 15p",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        33,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an trung vit low-carb tam sinh vien",
+    "entities": [
+      [
+        8,
+        17,
+        "FOOD"
+      ],
+      [
+        18,
+        26,
+        "DIET"
+      ],
+      [
+        31,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phi lam canh rau den trung khoang 50k",
+    "entities": [
+      [
+        12,
+        30,
+        "FOOD"
+      ],
+      [
+        38,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu cu sen cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        10,
+        "FOOD"
+      ],
+      [
+        15,
+        22,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món cai be xanh nào làm bằng noi sup mất 15p không",
+    "entities": [
+      [
+        7,
+        18,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món salad xà lách trộn dầu giấm trứng cho 1 suất",
+    "entities": [
+      [
+        12,
+        45,
+        "FOOD"
+      ],
+      [
+        50,
+        56,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu trứng cút kho tỏi giau protein",
+    "entities": [
+      [
+        13,
+        30,
+        "FOOD"
+      ],
+      [
+        31,
+        43,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "nấu cai ngong cho cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        13,
+        "FOOD"
+      ],
+      [
+        18,
+        29,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu trung ga cho cho bé hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        12,
+        "FOOD"
+      ],
+      [
+        17,
+        23,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu rau muống xào trứng vegan",
+    "entities": [
+      [
+        13,
+        32,
+        "FOOD"
+      ],
+      [
+        33,
+        38,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "có món gà chiên nước mắm nào làm bằng noi chien mất 20 phút không",
+    "entities": [
+      [
+        7,
+        24,
+        "FOOD"
+      ],
+      [
+        38,
+        47,
+        "DEVICE"
+      ],
+      [
+        52,
+        59,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn gon nhe cho 1 suất giá 50k",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm bap cai khoảng vừa túi tiền",
+    "entities": [
+      [
+        12,
+        19,
+        "FOOD"
+      ],
+      [
+        27,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu cánh gà high protein",
+    "entities": [
+      [
+        13,
+        20,
+        "FOOD"
+      ],
+      [
+        21,
+        33,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm su su khoảng tầm 80k",
+    "entities": [
+      [
+        12,
+        17,
+        "FOOD"
+      ],
+      [
+        25,
+        32,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim lai mon ma dui ga cho cho 2 nguoi",
+    "entities": [
+      [
+        12,
+        21,
+        "FOOD"
+      ],
+      [
+        26,
+        37,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm ca hop khoảng 50k",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        26,
+        29,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don atkins cho cho 2 nguoi gia sinh vien",
+    "entities": [
+      [
+        9,
+        15,
+        "DIET"
+      ],
+      [
+        20,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        45,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món kho tiêu làm trong 30 phút",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon ca sot ca lam trong 1 tieng",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        37,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don man cho 3 thanh vien gia gia re",
+    "entities": [
+      [
+        9,
+        12,
+        "DIET"
+      ],
+      [
+        17,
+        29,
+        "QUANTITY"
+      ],
+      [
+        34,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muon an canh cai be xanh nau thit xay atkins tam sinh vien",
+    "entities": [
+      [
+        8,
+        37,
+        "FOOD"
+      ],
+      [
+        38,
+        44,
+        "DIET"
+      ],
+      [
+        49,
+        58,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món cá ngừ cho cho bé",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        23,
+        29,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don gon nhe cho gia dinh 4 nguoi gia gia re",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        37,
+        "QUANTITY"
+      ],
+      [
+        42,
+        48,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món bi do làm trong nhanh",
+    "entities": [
+      [
+        10,
+        15,
+        "FOOD"
+      ],
+      [
+        26,
+        31,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon ga kho gung lam trong 45 phut",
+    "entities": [
+      [
+        10,
+        21,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an suon non thuan chay tam 100.000d",
+    "entities": [
+      [
+        8,
+        16,
+        "FOOD"
+      ],
+      [
+        17,
+        27,
+        "DIET"
+      ],
+      [
+        32,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nau xuong que heo cho 1 suat het bao nhieu",
+    "entities": [
+      [
+        4,
+        17,
+        "FOOD"
+      ],
+      [
+        22,
+        28,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "co mon canh cu thap cam tom nao lam bang noi chien khong dau mat nhanh khong",
+    "entities": [
+      [
+        7,
+        27,
+        "FOOD"
+      ],
+      [
+        41,
+        60,
+        "DEVICE"
+      ],
+      [
+        65,
+        70,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món mì trứng làm trong 20 phút",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn gon nhe cho cho bé giá giá bình dân",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        44,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu thịt đùi cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        12,
+        "FOOD"
+      ],
+      [
+        17,
+        24,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món oi nào làm bằng chao chong dinh mất 15p không",
+    "entities": [
+      [
+        7,
+        9,
+        "FOOD"
+      ],
+      [
+        23,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        46,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nấu rau muống cho cả nhà hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        13,
+        "FOOD"
+      ],
+      [
+        18,
+        24,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu mì jomo cho gia đình 4 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        32,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món bí đao cho 1 suất",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        23,
+        29,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "co mon thit heo chien nao lam bang noi nau mat cap toc khong",
+    "entities": [
+      [
+        7,
+        21,
+        "FOOD"
+      ],
+      [
+        35,
+        42,
+        "DEVICE"
+      ],
+      [
+        47,
+        54,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn nhieu dam cho 3 thành viên giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        52,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu thịt viên áp chảo man",
+    "entities": [
+      [
+        13,
+        30,
+        "FOOD"
+      ],
+      [
+        31,
+        34,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn an chay cho cho 2 người giá giá bình dân",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        32,
+        "QUANTITY"
+      ],
+      [
+        37,
+        49,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn low-carb cho cả nhà giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        17,
+        "DIET"
+      ],
+      [
+        22,
+        28,
+        "QUANTITY"
+      ],
+      [
+        33,
+        45,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu thịt heo chiên nhieu dam",
+    "entities": [
+      [
+        13,
+        27,
+        "FOOD"
+      ],
+      [
+        28,
+        37,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "có món cá nục sốt cà nào làm bằng noi nau mất 30 phút không",
+    "entities": [
+      [
+        7,
+        20,
+        "FOOD"
+      ],
+      [
+        34,
+        41,
+        "DEVICE"
+      ],
+      [
+        46,
+        53,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món cam làm trong 45 phút",
+    "entities": [
+      [
+        10,
+        13,
+        "FOOD"
+      ],
+      [
+        24,
+        31,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm thịt bò xào khoảng giá rẻ",
+    "entities": [
+      [
+        12,
+        23,
+        "FOOD"
+      ],
+      [
+        31,
+        37,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn do hop normal tầm sinh viên",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn rau low-carb tầm giá rẻ",
+    "entities": [
+      [
+        8,
+        11,
+        "FOOD"
+      ],
+      [
+        12,
+        20,
+        "DIET"
+      ],
+      [
+        25,
+        31,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món thit bo nào làm bằng noi nau mất 20 phút không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an trai cay keto tam sinh vien",
+    "entities": [
+      [
+        8,
+        16,
+        "FOOD"
+      ],
+      [
+        17,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon rau muong xao trung nao lam bang chao chong dinh mat cap toc khong",
+    "entities": [
+      [
+        7,
+        26,
+        "FOOD"
+      ],
+      [
+        40,
+        55,
+        "DEVICE"
+      ],
+      [
+        60,
+        67,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don an sang cho cho 2 nguoi gia gia re",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        32,
+        "QUANTITY"
+      ],
+      [
+        37,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn che do an ca cho 4 phần ăn giá sinh viên",
+    "entities": [
+      [
+        9,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        49,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon ga goc tu lam trong sieu toc",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        38,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn cá nục light tầm 200 nghìn",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        20,
+        "DIET"
+      ],
+      [
+        25,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don an ca cho 3 thanh vien gia vua tui tien",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        48,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon tom hum nao lam bang airfryer mat cap toc khong",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        36,
+        "DEVICE"
+      ],
+      [
+        41,
+        48,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn dua com cho cho bé giá 100.000đ",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn thanh dam cho gia đình 4 người giá giá bình dân",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        39,
+        "QUANTITY"
+      ],
+      [
+        44,
+        56,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn truyen thong cho cho 2 người giá tầm 80k",
+    "entities": [
+      [
+        9,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        37,
+        "QUANTITY"
+      ],
+      [
+        42,
+        49,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn eat clean cho cho 2 người giá tầm 80k",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        34,
+        "QUANTITY"
+      ],
+      [
+        39,
+        46,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món muối làm trong 45 phút",
+    "entities": [
+      [
+        10,
+        14,
+        "FOOD"
+      ],
+      [
+        25,
+        32,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món thịt đùi heo nào làm bằng chao chong dinh mất 30 phút không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        48,
+        "DEVICE"
+      ],
+      [
+        53,
+        60,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món ca rot làm trong siêu tốc",
+    "entities": [
+      [
+        10,
+        16,
+        "FOOD"
+      ],
+      [
+        27,
+        35,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon bo nao lam bang noi chien mat nhanh khong",
+    "entities": [
+      [
+        7,
+        9,
+        "FOOD"
+      ],
+      [
+        23,
+        32,
+        "DEVICE"
+      ],
+      [
+        37,
+        42,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món salad trái cây nhiệt đới nào làm bằng noi chien mất nhanh không",
+    "entities": [
+      [
+        7,
+        31,
+        "FOOD"
+      ],
+      [
+        45,
+        54,
+        "DEVICE"
+      ],
+      [
+        59,
+        64,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn lowcarb cho 4 phần ăn giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        47,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn ca ro normal tầm sinh viên",
+    "entities": [
+      [
+        8,
+        13,
+        "FOOD"
+      ],
+      [
+        14,
+        20,
+        "DIET"
+      ],
+      [
+        25,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món dầu màu điều nào làm bằng chao chong dinh mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        48,
+        "DEVICE"
+      ],
+      [
+        53,
+        60,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon cot let nao lam bang chao mat nhanh khong",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        32,
+        "DEVICE"
+      ],
+      [
+        37,
+        42,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món bí đỏ thịt băm làm trong 10 phút",
+    "entities": [
+      [
+        10,
+        24,
+        "FOOD"
+      ],
+      [
+        35,
+        42,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nấu má đùi gà cho gia đình 4 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        13,
+        "FOOD"
+      ],
+      [
+        18,
+        34,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm gà kho gừng khoảng giá rẻ",
+    "entities": [
+      [
+        12,
+        23,
+        "FOOD"
+      ],
+      [
+        31,
+        37,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim cach nau trung chien thit bam it dau mo",
+    "entities": [
+      [
+        13,
+        33,
+        "FOOD"
+      ],
+      [
+        34,
+        43,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món ca dieu hong làm trong 30 phút",
+    "entities": [
+      [
+        10,
+        22,
+        "FOOD"
+      ],
+      [
+        33,
+        40,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món bắp cải trắng làm trong 45 phút",
+    "entities": [
+      [
+        10,
+        23,
+        "FOOD"
+      ],
+      [
+        34,
+        41,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don atkins cho 1 suat gia vua tui tien",
+    "entities": [
+      [
+        9,
+        15,
+        "DIET"
+      ],
+      [
+        20,
+        26,
+        "QUANTITY"
+      ],
+      [
+        31,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món bò bít tết khoai tây chiên nào làm bằng noi chien mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        33,
+        "FOOD"
+      ],
+      [
+        47,
+        56,
+        "DEVICE"
+      ],
+      [
+        61,
+        68,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món rau muống xào trứng cho gia đình 4 người",
+    "entities": [
+      [
+        12,
+        31,
+        "FOOD"
+      ],
+      [
+        36,
+        52,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món xoai cho 1 suất",
+    "entities": [
+      [
+        12,
+        16,
+        "FOOD"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món dưa leo nào làm bằng noi chien mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        37,
+        "DEVICE"
+      ],
+      [
+        42,
+        49,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon ba chi kho nao lam bang noi chien khong dau mat 10 phut khong",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        50,
+        "DEVICE"
+      ],
+      [
+        55,
+        62,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món mi hao hao nào làm bằng chao mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món thịt kho tiêu cho cả nhà",
+    "entities": [
+      [
+        12,
+        25,
+        "FOOD"
+      ],
+      [
+        30,
+        36,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món thit hop nào làm bằng noi chien khong dau mất 15p không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        48,
+        "DEVICE"
+      ],
+      [
+        53,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon ma dui ga lam trong 20 phut",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        37,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món dưa leo nào làm bằng noi sup mất 30 phút không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món nạm bò nấu sa tế cho cả nhà",
+    "entities": [
+      [
+        12,
+        28,
+        "FOOD"
+      ],
+      [
+        33,
+        39,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn giai nhiet cho 1 suất giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        47,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món xoai làm trong nhanh",
+    "entities": [
+      [
+        10,
+        14,
+        "FOOD"
+      ],
+      [
+        25,
+        30,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn it dau mo cho cả nhà giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        29,
+        "QUANTITY"
+      ],
+      [
+        34,
+        46,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món cải ngọt nào làm bằng chao mất nhanh không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        33,
+        "DEVICE"
+      ],
+      [
+        38,
+        43,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nấu thit hop cho cả nhà hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        12,
+        "FOOD"
+      ],
+      [
+        17,
+        23,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món khoai mo nào làm bằng noi chien mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nau cai be xanh cho gia dinh 4 nguoi het bao nhieu",
+    "entities": [
+      [
+        4,
+        15,
+        "FOOD"
+      ],
+      [
+        20,
+        36,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm kho tiêu khoảng vừa túi tiền",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        28,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don vegan cho 3 thanh vien gia 50k",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim cach nau bo xao hanh tay tang co",
+    "entities": [
+      [
+        13,
+        28,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don thuan chay cho cho 2 nguoi gia 50k",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu bo bit tet pescatarian",
+    "entities": [
+      [
+        13,
+        23,
+        "FOOD"
+      ],
+      [
+        24,
+        35,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "tim lai mon suon rim cho 2 nguoi",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        25,
+        32,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "chi phi lam chan gio heo khoang tam 80k",
+    "entities": [
+      [
+        12,
+        24,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món trung lon nào làm bằng chao chong dinh mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        16,
+        "FOOD"
+      ],
+      [
+        30,
+        45,
+        "DEVICE"
+      ],
+      [
+        50,
+        57,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món rau muống cho 3 thành viên",
+    "entities": [
+      [
+        12,
+        21,
+        "FOOD"
+      ],
+      [
+        26,
+        38,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm canh bí khoảng giá bình dân",
+    "entities": [
+      [
+        12,
+        19,
+        "FOOD"
+      ],
+      [
+        27,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muon an ca ngu thanh dam tam vua tui tien",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        24,
+        "DIET"
+      ],
+      [
+        29,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món trung ga cho cho bé",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        25,
+        31,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu thit bo cho 4 phần ăn hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        25,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn pescatarian cho cả nhà giá giá rẻ",
+    "entities": [
+      [
+        9,
+        20,
+        "DIET"
+      ],
+      [
+        25,
+        31,
+        "QUANTITY"
+      ],
+      [
+        36,
+        42,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon ca nuc chien lam trong nhanh",
+    "entities": [
+      [
+        10,
+        22,
+        "FOOD"
+      ],
+      [
+        33,
+        38,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon chien gion nao lam bang noi nau mat 20 phut khong",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        50,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món le duong nào làm bằng noi nau mất 20 phút không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "DEVICE"
+      ],
+      [
+        41,
+        48,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món pho cho 3 thành viên",
+    "entities": [
+      [
+        12,
+        15,
+        "FOOD"
+      ],
+      [
+        20,
+        32,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn an ca cho gia đình 4 người giá 50k",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món tom nào làm bằng noi chien mất 45 phút không",
+    "entities": [
+      [
+        7,
+        10,
+        "FOOD"
+      ],
+      [
+        24,
+        33,
+        "DEVICE"
+      ],
+      [
+        38,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an com chien ca ngu high protein tam 50k",
+    "entities": [
+      [
+        8,
+        24,
+        "FOOD"
+      ],
+      [
+        25,
+        37,
+        "DIET"
+      ],
+      [
+        42,
+        45,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu mi khoai tay cho cả nhà hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        16,
+        "FOOD"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon bi do thit bam lam trong sieu toc",
+    "entities": [
+      [
+        10,
+        24,
+        "FOOD"
+      ],
+      [
+        35,
+        43,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "co mon eat clean nao lam bang noi sup mat 20 phut khong",
+    "entities": [
+      [
+        7,
+        16,
+        "FOOD"
+      ],
+      [
+        30,
+        37,
+        "DEVICE"
+      ],
+      [
+        42,
+        49,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món canh khoai tây làm trong 1 tiếng",
+    "entities": [
+      [
+        10,
+        24,
+        "FOOD"
+      ],
+      [
+        35,
+        42,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn keto cho gia đình 4 người giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        13,
+        "DIET"
+      ],
+      [
+        18,
+        34,
+        "QUANTITY"
+      ],
+      [
+        39,
+        51,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món mì bò cho gia đình 4 người",
+    "entities": [
+      [
+        12,
+        17,
+        "FOOD"
+      ],
+      [
+        22,
+        38,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món cá basa kho tiêu cho cho bé",
+    "entities": [
+      [
+        12,
+        28,
+        "FOOD"
+      ],
+      [
+        33,
+        39,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món steak nào làm bằng noi chien mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        12,
+        "FOOD"
+      ],
+      [
+        26,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        48,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn xuong heo an nhe tầm 200 nghìn",
+    "entities": [
+      [
+        8,
+        17,
+        "FOOD"
+      ],
+      [
+        18,
+        24,
+        "DIET"
+      ],
+      [
+        29,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món đùi bò xào cà rốt nào làm bằng noi mất 30 phút không",
+    "entities": [
+      [
+        7,
+        24,
+        "FOOD"
+      ],
+      [
+        38,
+        41,
+        "DEVICE"
+      ],
+      [
+        46,
+        53,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món đầu cá hồi cho cả nhà",
+    "entities": [
+      [
+        12,
+        22,
+        "FOOD"
+      ],
+      [
+        27,
+        33,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn com nha cho 3 thành viên giá giá bình dân",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        33,
+        "QUANTITY"
+      ],
+      [
+        38,
+        50,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món sườn non heo cho cho bé",
+    "entities": [
+      [
+        12,
+        24,
+        "FOOD"
+      ],
+      [
+        29,
+        35,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món trung ga ta cho 2 người",
+    "entities": [
+      [
+        12,
+        23,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon hanh tay lam trong 10 phut",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon dau ca lam trong nhanh",
+    "entities": [
+      [
+        10,
+        16,
+        "FOOD"
+      ],
+      [
+        27,
+        32,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn nhieu dam cho 2 người giá 100.000đ",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món ma dui ga cho cho 2 người",
+    "entities": [
+      [
+        12,
+        21,
+        "FOOD"
+      ],
+      [
+        26,
+        37,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don com nha cho gia dinh 4 nguoi gia sinh vien",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        37,
+        "QUANTITY"
+      ],
+      [
+        42,
+        51,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món cà chua nào làm bằng chao chong dinh mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        43,
+        "DEVICE"
+      ],
+      [
+        48,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu xoai tu quy truyen thong",
+    "entities": [
+      [
+        13,
+        24,
+        "FOOD"
+      ],
+      [
+        25,
+        37,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "có món tom hum nào làm bằng chao chong dinh mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        43,
+        "DEVICE"
+      ],
+      [
+        48,
+        55,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nấu mì jomo cho cho bé hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        22,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don hai san cho 3 thanh vien gia 100.000d",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        33,
+        "QUANTITY"
+      ],
+      [
+        38,
+        46,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món khoai tây chiên nào làm bằng noi mất 30 phút không",
+    "entities": [
+      [
+        7,
+        22,
+        "FOOD"
+      ],
+      [
+        36,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don truyen thong cho ca nha gia vua tui tien",
+    "entities": [
+      [
+        9,
+        21,
+        "DIET"
+      ],
+      [
+        26,
+        32,
+        "QUANTITY"
+      ],
+      [
+        37,
+        49,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm tỏi khoảng 100.000đ",
+    "entities": [
+      [
+        12,
+        15,
+        "FOOD"
+      ],
+      [
+        23,
+        31,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm nước mắm khoảng giá rẻ",
+    "entities": [
+      [
+        12,
+        20,
+        "FOOD"
+      ],
+      [
+        28,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món rau xào nào làm bằng noi sup mất nhanh không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don lat cho 1 suat gia tam 80k",
+    "entities": [
+      [
+        9,
+        12,
+        "DIET"
+      ],
+      [
+        17,
+        23,
+        "QUANTITY"
+      ],
+      [
+        28,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon ca nuc kho ca chua nao lam bang chao mat cap toc khong",
+    "entities": [
+      [
+        7,
+        25,
+        "FOOD"
+      ],
+      [
+        39,
+        43,
+        "DEVICE"
+      ],
+      [
+        48,
+        55,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món cai be xanh nào làm bằng noi mất nhanh không",
+    "entities": [
+      [
+        7,
+        18,
+        "FOOD"
+      ],
+      [
+        32,
+        35,
+        "DEVICE"
+      ],
+      [
+        40,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món cá diêu hồng làm trong 1 tiếng",
+    "entities": [
+      [
+        10,
+        22,
+        "FOOD"
+      ],
+      [
+        33,
+        40,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu rau muống xào trứng an sang",
+    "entities": [
+      [
+        13,
+        32,
+        "FOOD"
+      ],
+      [
+        33,
+        40,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "nấu mì xào cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        10,
+        "FOOD"
+      ],
+      [
+        15,
+        22,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nau thit ga cho gia dinh 4 nguoi het bao nhieu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        32,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu mi kokomi cho cả nhà hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        13,
+        "FOOD"
+      ],
+      [
+        18,
+        24,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món bí đỏ thịt băm nào làm bằng noi chien mất 45 phút không",
+    "entities": [
+      [
+        7,
+        21,
+        "FOOD"
+      ],
+      [
+        35,
+        44,
+        "DEVICE"
+      ],
+      [
+        49,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món sườn non rim cà chua nào làm bằng noi mất 45 phút không",
+    "entities": [
+      [
+        7,
+        27,
+        "FOOD"
+      ],
+      [
+        41,
+        44,
+        "DEVICE"
+      ],
+      [
+        49,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món rau dền xào thịt băm nào làm bằng noi chien khong dau mất 20 phút không",
+    "entities": [
+      [
+        7,
+        27,
+        "FOOD"
+      ],
+      [
+        41,
+        60,
+        "DEVICE"
+      ],
+      [
+        65,
+        72,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món chan gio nào làm bằng noi chien khong dau mất 15p không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        48,
+        "DEVICE"
+      ],
+      [
+        53,
+        56,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món lap xuong làm trong cấp tốc",
+    "entities": [
+      [
+        10,
+        19,
+        "FOOD"
+      ],
+      [
+        30,
+        37,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món ức gà xào cà chua cho cho bé",
+    "entities": [
+      [
+        12,
+        29,
+        "FOOD"
+      ],
+      [
+        34,
+        40,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn com chay cho cho bé giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        17,
+        "DIET"
+      ],
+      [
+        22,
+        28,
+        "QUANTITY"
+      ],
+      [
+        33,
+        45,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món bò bít tết làm trong 10 phút",
+    "entities": [
+      [
+        10,
+        20,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu sườn rim cà chua chay",
+    "entities": [
+      [
+        13,
+        29,
+        "FOOD"
+      ],
+      [
+        30,
+        34,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "co mon xuong heo nao lam bang airfryer mat nhanh khong",
+    "entities": [
+      [
+        7,
+        16,
+        "FOOD"
+      ],
+      [
+        30,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        48,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món cá diêu hồng hấp gừng nào làm bằng chao mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        28,
+        "FOOD"
+      ],
+      [
+        42,
+        46,
+        "DEVICE"
+      ],
+      [
+        51,
+        58,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "nau ca basa kho tieu cho 3 thanh vien het bao nhieu",
+    "entities": [
+      [
+        4,
+        20,
+        "FOOD"
+      ],
+      [
+        25,
+        37,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn ca nuc nhe bung tầm 100.000đ",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        23,
+        "DIET"
+      ],
+      [
+        28,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món cá hấp làm trong 45 phút",
+    "entities": [
+      [
+        10,
+        16,
+        "FOOD"
+      ],
+      [
+        27,
+        34,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn dua com cho 2 người giá vừa túi tiền",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        28,
+        "QUANTITY"
+      ],
+      [
+        33,
+        45,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món salad trộn làm trong 20 phút",
+    "entities": [
+      [
+        10,
+        20,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn thịt đùi heo keto tầm vừa túi tiền",
+    "entities": [
+      [
+        8,
+        20,
+        "FOOD"
+      ],
+      [
+        21,
+        25,
+        "DIET"
+      ],
+      [
+        30,
+        42,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muon an ot hiem eat clean tam sinh vien",
+    "entities": [
+      [
+        8,
+        15,
+        "FOOD"
+      ],
+      [
+        16,
+        25,
+        "DIET"
+      ],
+      [
+        30,
+        39,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn thịt kho tàu gon nhe tầm sinh viên",
+    "entities": [
+      [
+        8,
+        20,
+        "FOOD"
+      ],
+      [
+        21,
+        28,
+        "DIET"
+      ],
+      [
+        33,
+        42,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món canh bí đỏ nào làm bằng noi sup mất 15p không",
+    "entities": [
+      [
+        7,
+        17,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        46,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an xoai nhieu dam tam 200 nghin",
+    "entities": [
+      [
+        8,
+        12,
+        "FOOD"
+      ],
+      [
+        13,
+        22,
+        "DIET"
+      ],
+      [
+        27,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món chân giò heo nào làm bằng noi chien khong dau mất nhanh không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        52,
+        "DEVICE"
+      ],
+      [
+        57,
+        62,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn it dau mo cho cả nhà giá giá rẻ",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        29,
+        "QUANTITY"
+      ],
+      [
+        34,
+        40,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn bắp cải trắng dua com tầm tầm 80k",
+    "entities": [
+      [
+        8,
+        21,
+        "FOOD"
+      ],
+      [
+        22,
+        29,
+        "DIET"
+      ],
+      [
+        34,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn light cho gia đình 4 người giá giá bình dân",
+    "entities": [
+      [
+        9,
+        14,
+        "DIET"
+      ],
+      [
+        19,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        52,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn com nha cho cho bé giá sinh viên",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món salad nào làm bằng noi nau mất 1 tiếng không",
+    "entities": [
+      [
+        7,
+        12,
+        "FOOD"
+      ],
+      [
+        26,
+        33,
+        "DEVICE"
+      ],
+      [
+        38,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món heo cho cho bé",
+    "entities": [
+      [
+        12,
+        15,
+        "FOOD"
+      ],
+      [
+        20,
+        26,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn thanh dam cho cho bé giá giá bình dân",
+    "entities": [
+      [
+        9,
+        18,
+        "DIET"
+      ],
+      [
+        23,
+        29,
+        "QUANTITY"
+      ],
+      [
+        34,
+        46,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim lai mon chan gio ham su su ca rot cho ca nha",
+    "entities": [
+      [
+        12,
+        37,
+        "FOOD"
+      ],
+      [
+        42,
+        48,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn nam bo thanh mat tầm 200 nghìn",
+    "entities": [
+      [
+        8,
+        14,
+        "FOOD"
+      ],
+      [
+        15,
+        24,
+        "DIET"
+      ],
+      [
+        29,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon nam bo lam trong nhanh",
+    "entities": [
+      [
+        10,
+        16,
+        "FOOD"
+      ],
+      [
+        27,
+        32,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "goi y mon rau tron lam trong 10 phut",
+    "entities": [
+      [
+        10,
+        18,
+        "FOOD"
+      ],
+      [
+        29,
+        36,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn tang co cho 1 suất giá 200 nghìn",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu thịt viên áp chảo it calo",
+    "entities": [
+      [
+        13,
+        30,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "muon an dau mau dieu gon nhe tam 100.000d",
+    "entities": [
+      [
+        8,
+        20,
+        "FOOD"
+      ],
+      [
+        21,
+        28,
+        "DIET"
+      ],
+      [
+        33,
+        41,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm lại món bo sap cho 2 người",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        23,
+        30,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món khoai tây chiên nào làm bằng noi mất 15p không",
+    "entities": [
+      [
+        7,
+        22,
+        "FOOD"
+      ],
+      [
+        36,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        47,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm tao khoảng vừa túi tiền",
+    "entities": [
+      [
+        12,
+        15,
+        "FOOD"
+      ],
+      [
+        23,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu than bo cho 4 phần ăn hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        25,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "có món mi goi nào làm bằng noi sup mất 10 phút không",
+    "entities": [
+      [
+        7,
+        13,
+        "FOOD"
+      ],
+      [
+        27,
+        34,
+        "DEVICE"
+      ],
+      [
+        39,
+        46,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don thuan chay cho ca nha gia 50k",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        30,
+        "QUANTITY"
+      ],
+      [
+        35,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phi lam ca hoi khoang 200 nghin",
+    "entities": [
+      [
+        12,
+        18,
+        "FOOD"
+      ],
+      [
+        26,
+        35,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tim lai mon bap cai xao thit heo cho gia dinh 4 nguoi",
+    "entities": [
+      [
+        12,
+        32,
+        "FOOD"
+      ],
+      [
+        37,
+        53,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "nấu bắp cải cho 1 suất hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        11,
+        "FOOD"
+      ],
+      [
+        16,
+        22,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "co mon thit vien ap chao nao lam bang airfryer mat 30 phut khong",
+    "entities": [
+      [
+        7,
+        24,
+        "FOOD"
+      ],
+      [
+        38,
+        46,
+        "DEVICE"
+      ],
+      [
+        51,
+        58,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn healthy cho cho bé giá giá rẻ",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        27,
+        "QUANTITY"
+      ],
+      [
+        32,
+        38,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muon an xoai an sang tam sinh vien",
+    "entities": [
+      [
+        8,
+        12,
+        "FOOD"
+      ],
+      [
+        13,
+        20,
+        "DIET"
+      ],
+      [
+        25,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món sườn kho nào làm bằng noi chien mất 20 phút không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        38,
+        "DEVICE"
+      ],
+      [
+        43,
+        50,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn rau muống xào bò dam da tầm vừa túi tiền",
+    "entities": [
+      [
+        8,
+        24,
+        "FOOD"
+      ],
+      [
+        25,
+        31,
+        "DIET"
+      ],
+      [
+        36,
+        48,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món thịt đùi heo nào làm bằng noi chien khong dau mất 45 phút không",
+    "entities": [
+      [
+        7,
+        19,
+        "FOOD"
+      ],
+      [
+        33,
+        52,
+        "DEVICE"
+      ],
+      [
+        57,
+        64,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an ca basa it calo tam gia re",
+    "entities": [
+      [
+        8,
+        15,
+        "FOOD"
+      ],
+      [
+        16,
+        23,
+        "DIET"
+      ],
+      [
+        28,
+        34,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món dua luoi nào làm bằng chao mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        15,
+        "FOOD"
+      ],
+      [
+        29,
+        33,
+        "DEVICE"
+      ],
+      [
+        38,
+        45,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món than bo nào làm bằng chao mất cấp tốc không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        32,
+        "DEVICE"
+      ],
+      [
+        37,
+        44,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "có món canh xương hầm củ quả nào làm bằng airfryer mất siêu tốc không",
+    "entities": [
+      [
+        7,
+        28,
+        "FOOD"
+      ],
+      [
+        42,
+        50,
+        "DEVICE"
+      ],
+      [
+        55,
+        63,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "gợi ý món mì ăn liền làm trong 20 phút",
+    "entities": [
+      [
+        10,
+        20,
+        "FOOD"
+      ],
+      [
+        31,
+        38,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thực đơn an nhe cho 4 phần ăn giá sinh viên",
+    "entities": [
+      [
+        9,
+        15,
+        "DIET"
+      ],
+      [
+        20,
+        29,
+        "QUANTITY"
+      ],
+      [
+        34,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "có món tom the nào làm bằng noi chien mất 45 phút không",
+    "entities": [
+      [
+        7,
+        14,
+        "FOOD"
+      ],
+      [
+        28,
+        37,
+        "DEVICE"
+      ],
+      [
+        42,
+        49,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn canh bí xanh sườn non it dau mo tầm sinh viên",
+    "entities": [
+      [
+        8,
+        29,
+        "FOOD"
+      ],
+      [
+        30,
+        39,
+        "DIET"
+      ],
+      [
+        44,
+        53,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu sa tế gon nhe",
+    "entities": [
+      [
+        13,
+        18,
+        "FOOD"
+      ],
+      [
+        19,
+        26,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu canh bí đỏ thịt bằm high-protein",
+    "entities": [
+      [
+        13,
+        32,
+        "FOOD"
+      ],
+      [
+        33,
+        45,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don healthy cho gia dinh 4 nguoi gia gia binh dan",
+    "entities": [
+      [
+        9,
+        16,
+        "DIET"
+      ],
+      [
+        21,
+        37,
+        "QUANTITY"
+      ],
+      [
+        42,
+        54,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon sup khoai tay ca rot nao lam bang noi chien mat 20 phut khong",
+    "entities": [
+      [
+        7,
+        27,
+        "FOOD"
+      ],
+      [
+        41,
+        50,
+        "DEVICE"
+      ],
+      [
+        55,
+        62,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "thuc don vegetarian cho cho 2 nguoi gia 50k",
+    "entities": [
+      [
+        9,
+        19,
+        "DIET"
+      ],
+      [
+        24,
+        35,
+        "QUANTITY"
+      ],
+      [
+        40,
+        43,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "co mon hoa qua dam nao lam bang noi sup mat 10 phut khong",
+    "entities": [
+      [
+        7,
+        18,
+        "FOOD"
+      ],
+      [
+        32,
+        39,
+        "DEVICE"
+      ],
+      [
+        44,
+        51,
+        "TIME"
+      ]
+    ]
+  },
+  {
+    "text": "muon an canh bi do thit xay keto tam tam 80k",
+    "entities": [
+      [
+        8,
+        27,
+        "FOOD"
+      ],
+      [
+        28,
+        32,
+        "DIET"
+      ],
+      [
+        37,
+        44,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "chi phí làm mi 3 mien khoảng 100.000đ",
+    "entities": [
+      [
+        12,
+        21,
+        "FOOD"
+      ],
+      [
+        29,
+        37,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu ca moi cho 4 phần ăn hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        10,
+        "FOOD"
+      ],
+      [
+        15,
+        24,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "muon an thit dui heo kho trung cut an sang tam 100.000d",
+    "entities": [
+      [
+        8,
+        34,
+        "FOOD"
+      ],
+      [
+        35,
+        42,
+        "DIET"
+      ],
+      [
+        47,
+        55,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "muốn ăn mì hảo hảo eat clean tầm 50k",
+    "entities": [
+      [
+        8,
+        18,
+        "FOOD"
+      ],
+      [
+        19,
+        28,
+        "DIET"
+      ],
+      [
+        33,
+        36,
+        "PRICE"
+      ]
+    ]
+  },
+  {
+    "text": "nấu sườn kho cho 2 người hết bao nhiêu",
+    "entities": [
+      [
+        4,
+        12,
+        "FOOD"
+      ],
+      [
+        17,
+        24,
+        "QUANTITY"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu ca nuc nhieu dam",
+    "entities": [
+      [
+        13,
+        19,
+        "FOOD"
+      ],
+      [
+        20,
+        29,
+        "DIET"
+      ]
+    ]
+  },
+  {
+    "text": "tìm cách nấu cá hồi an chay",
+    "entities": [
+      [
+        13,
+        19,
+        "FOOD"
+      ],
+      [
+        20,
+        27,
+        "DIET"
+      ]
+    ]
+  }
+]

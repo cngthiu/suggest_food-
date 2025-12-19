@@ -87,7 +87,7 @@ def test_cart(recipe_id, servings=2):
 
 if __name__ == "__main__":
     # 1. Hỏi tìm món gà
-    top_recipe_id = test_query("Cá kho tộ nấu như nào, cần những gì vậy")
+    top_recipe_id = test_query("Tôi muốn nấu món gì đó với gà khoảng 3 người ăn")
     
     # 2. Nếu tìm thấy, tạo giỏ hàng cho món đó
     if top_recipe_id:

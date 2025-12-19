@@ -4,37 +4,38 @@ import argparse
 import sys
 import numpy as np
 from pathlib import Path
-from datasets import Dataset
+from datasets import Dataset, DatasetDict
 import evaluate
 from transformers import (
     AutoTokenizer, 
     AutoModelForTokenClassification, 
     TrainingArguments, 
     Trainer,
-    DataCollatorForTokenClassification,
-    RobertaTokenizerFast
+    DataCollatorForTokenClassification
 )
 
-# Thêm đường dẫn gốc để import utils
+# Thêm đường dẫn gốc để import utils nếu cần
 sys.path.append(os.getcwd())
-try:
-    from serverAI.inference.utils import norm_text
-except ImportError:
-    def norm_text(s, **kwargs): return s
 
-# Định nghĩa nhãn (Labels) - Cần khớp với dữ liệu NER của bạn
+# 1. DANH SÁCH NHÃN ĐẦY ĐỦ (Phải khớp chính xác với LABEL_MAP trong script sinh dữ liệu)
 LABEL_LIST = [
     "O", 
     "B-FOOD", "I-FOOD", 
+    "B-DIET", "I-DIET", 
     "B-TIME", "I-TIME", 
     "B-QUANTITY", "I-QUANTITY", 
-    "B-PRICE", "I-PRICE"
+    "B-PRICE", "I-PRICE",
+    "B-DEVICE", "I-DEVICE"
 ]
 ID2LABEL = {i: l for i, l in enumerate(LABEL_LIST)}
 LABEL2ID = {l: i for i, l in enumerate(LABEL_LIST)}
 
 def prepare_data(data_path):
-    """Đọc dữ liệu từ JSON và chuyển đổi sang định dạng tokens/ner_tags"""
+    """Đọc dữ liệu từ JSON và chuyển đổi sang định dạng tokens/ner_tags chuẩn HuggingFace"""
+    if not os.path.exists(data_path):
+        print(f"[ERROR] Không tìm thấy file: {data_path}")
+        return None
+
     with open(data_path, 'r', encoding='utf-8') as f:
         raw_data = json.load(f)
     
@@ -44,23 +45,19 @@ def prepare_data(data_path):
         text = item['text']
         entities = item['entities']
         
-        # Tokenize cơ bản bằng khoảng trắng (pre-tokenization)
+        # Pre-tokenization cơ bản theo khoảng trắng
         words = text.split()
         tags = ["O"] * len(words)
         
-        # Tạo map từ vị trí ký tự sang index của từ
+        # Map vị trí ký tự sang index của từ để gán nhãn chính xác
         char_to_word_idx = []
-        cursor = 0
         for i, w in enumerate(words):
             char_to_word_idx.extend([i] * len(w))
-            cursor += len(w)
-            if i < len(words) - 1:
-                char_to_word_idx.append(-1) # Khoảng trắng
-                cursor += 1
+            char_to_word_idx.append(-1) # Cho khoảng trắng
         
-        # Gán nhãn cho từng từ
         for start, end, label in entities:
             try:
+                # Tìm word index của ký tự bắt đầu và kết thúc
                 start_word_idx = char_to_word_idx[start]
                 end_word_idx = char_to_word_idx[end - 1]
                 
@@ -68,8 +65,9 @@ def prepare_data(data_path):
                 
                 tags[start_word_idx] = f"B-{label}"
                 for i in range(start_word_idx + 1, end_word_idx + 1):
-                    tags[i] = f"I-{label}"
-            except IndexError:
+                    if i < len(tags):
+                        tags[i] = f"I-{label}"
+            except (IndexError, KeyError):
                 continue
                 
         tag_ids = [LABEL2ID.get(t, 0) for t in tags]
@@ -79,25 +77,26 @@ def prepare_data(data_path):
     return Dataset.from_dict(formatted_data)
 
 def tokenize_and_align(examples, tokenizer):
-    """Tokenize lại bằng PhoBERT tokenizer và căn chỉnh nhãn"""
+    """Tokenize sub-words và căn chỉnh nhãn cho PhoBERT"""
     tokenized_inputs = tokenizer(
         examples["tokens"], 
         truncation=True, 
-        is_split_into_words=True
+        is_split_into_words=True,
+        max_length=128
     )
     
     labels = []
-    for i, label in enumerate(examples[f"ner_tags"]):
+    for i, label in enumerate(examples["ner_tags"]):
         word_ids = tokenized_inputs.word_ids(batch_index=i)
         previous_word_idx = None
         label_ids = []
         for word_idx in word_ids:
             if word_idx is None:
-                label_ids.append(-100) # Token đặc biệt ([CLS], [SEP])
+                label_ids.append(-100) # [CLS], [SEP]
             elif word_idx != previous_word_idx:
-                label_ids.append(label[word_idx]) # Token đầu tiên của từ
+                label_ids.append(label[word_idx]) # Token đầu tiên của một từ
             else:
-                label_ids.append(-100) # Các sub-token tiếp theo (bỏ qua khi tính loss)
+                label_ids.append(-100) # Các sub-tokens còn lại
             previous_word_idx = word_idx
         labels.append(label_ids)
     
@@ -128,41 +127,29 @@ def compute_metrics(p):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--data", required=True, help="File ner_train.json")
-    ap.add_argument("--output", required=True, help="Folder lưu model")
-    ap.add_argument("--epochs", type=int, default=5)
+    ap.add_argument("--train", required=True, help="Đường dẫn file ner_train.json")
+    ap.add_argument("--valid", required=True, help="Đường dẫn file ner_valid.json")
+    ap.add_argument("--output", required=True, help="Thư mục lưu model sau khi train")
+    ap.add_argument("--epochs", type=int, default=10) # Tăng lên 10 để hội tụ tốt hơn
     args = ap.parse_args()
 
     model_checkpoint = "vinai/phobert-base-v2"
-    print(f"Loading {model_checkpoint}...")
-    # -------------------------------    
-    # Sử dụng trực tiếp AutoTokenizer với cấu hình chuẩn cho PhoBERT
-    try:
-        tokenizer = AutoTokenizer.from_pretrained(
-            model_checkpoint, 
-            use_fast=True, 
-            add_prefix_space=True  # Bắt buộc cho tác vụ Token Classification
-        )
-    except Exception as e:
-        print(f"[ERROR] Không thể load Tokenizer: {e}")
-        sys.exit(1)
-
-    if not tokenizer.is_fast:
-        print("[ERROR] Tokenizer không hỗ trợ Fast mode. Hãy cài đặt: pip install transformers[sentencepiece]")
-        sys.exit(1)
-    # -------------------------------
-
-    print("Chuẩn bị dữ liệu...")
-    raw_dataset = prepare_data(args.data)
-    # Chia train/test
-    dataset = raw_dataset.train_test_split(test_size=0.1)
     
-    tokenized_datasets = dataset.map(
+    # Load Tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_checkpoint, use_fast=True, add_prefix_space=True)
+
+    print("--- Đang chuẩn bị dữ liệu NER ---")
+    train_ds = prepare_data(args.train)
+    valid_ds = prepare_data(args.valid)
+    
+    ds = DatasetDict({"train": train_ds, "validation": valid_ds})
+    
+    tokenized_datasets = ds.map(
         lambda x: tokenize_and_align(x, tokenizer), 
         batched=True
     )
 
-    print("Cấu hình model...")
+    # Load Model
     model = AutoModelForTokenClassification.from_pretrained(
         model_checkpoint, 
         num_labels=len(LABEL_LIST),
@@ -170,37 +157,39 @@ def main():
         label2id=LABEL2ID
     )
 
+    # Cấu hình Trainer
     training_args = TrainingArguments(
         output_dir=args.output,
         eval_strategy="epoch",
         save_strategy="epoch",
-        learning_rate=2e-5,
+        learning_rate=3e-5, # Tăng nhẹ LR cho data sinh
         per_device_train_batch_size=16,
+        per_device_eval_batch_size=16,
         num_train_epochs=args.epochs,
         weight_decay=0.01,
-        save_total_limit=2, # Chỉ giữ 2 model tốt nhất để tiết kiệm ổ cứng
-        logging_steps=10
+        save_total_limit=2,
+        load_best_model_at_end=True, # Tự động giữ model có F1 cao nhất
+        metric_for_best_model="f1",
+        logging_steps=20
     )
-
-    data_collator = DataCollatorForTokenClassification(tokenizer=tokenizer)
 
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=tokenized_datasets["train"],
-        eval_dataset=tokenized_datasets["test"],
+        eval_dataset=tokenized_datasets["validation"],
         tokenizer=tokenizer,
-        data_collator=data_collator,
+        data_collator=DataCollatorForTokenClassification(tokenizer=tokenizer),
         compute_metrics=compute_metrics,
     )
 
-    print("Bắt đầu huấn luyện...")
+    print("--- Bắt đầu huấn luyện PhoBERT NER ---")
     trainer.train()
 
-    print(f"Lưu model tại {args.output}...")
+    # Lưu model cuối cùng
     trainer.save_model(args.output)
     tokenizer.save_pretrained(args.output)
-    print("✅ Hoàn tất!")
+    print(f"✅ Đã lưu model tại: {args.output}")
 
 if __name__ == "__main__":
     main()
